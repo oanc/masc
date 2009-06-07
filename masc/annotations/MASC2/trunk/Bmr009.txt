@@ -1,0 +1,7665 @@
+
+  
+
+  
+
+
+  
+
+    
+      Starts -
+    
+    
+      No.
+    
+    
+      No.
+    
+    
+      No.
+    
+    
+      That's a different thing. 
+    
+    
+      There's another - I don't know. It starts with a P_ or something. I forget the word for it,
+    
+    
+      Oh.
+    
+    
+      but it's - it's um
+    
+    
+       
+    
+    
+      Typically when you - you're ab- r-
+    
+    
+      starting around forty for most people,
+    
+    
+      it starts to harden and then it's just harder for the lens to
+    
+    
+      Oh.
+    
+    
+      shift things and th- the - the  symptom  is typically that you -
+    
+    
+      Uh-huh.
+    
+    
+      
+    
+    
+      you have to hold stuff uh uh further away to -
+    
+    
+      Yeah.
+    
+    
+      to see it.
+    
+    
+      In fact, uh m- my brother's a  gerontological psychologist and he - he uh
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      came up with an - an uh - a uh body age test which uh
+    
+    
+      gets down to sort of only three measurements that are good enough st-  statistical   predictors of all the rest of it.
+    
+    
+      
+    
+    
+      And one of them is - is the distance
+    
+    
+      
+    
+    
+       Yeah.
+    
+    
+       that you  have   to hold it at. 
+    
+    
+      Give someone a piece of paper and then they -
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      We're - we're live by the way, so we've got a good intro here
+    
+    
+      Oh.
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      Oh. Yeah.  About  how  old  I am. O_K.
+    
+    
+      Yep.  We can edit that out if you want.
+    
+    
+      
+    
+    
+      Oh, that's  optional.  
+    
+    
+      No, that's O_K.
+    
+    
+      Mm-hmm.
+    
+    
+      
+    
+    
+      O_K. So.
+    
+    
+       You know .
+    
+    
+       This  time the form
+    
+    
+      discussion should be very short, right?
+    
+    
+      
+    
+    
+      
+    
+    
+      It  also  should be   later. 
+    
+    
+      
+    
+    
+      O_K.
+    
+    
+      Because Jane uh is not  here  yet.
+    
+    
+      Good point.
+    
+    
+      And uh she'll be most interested in that.
+    
+    
+      
+    
+    
+      Uh, she's probably  least  involved in the signal-processing stuff so maybe we can just -
+    
+    
+      just uh, I don't think we should go though an  elaborate  thing,
+    
+    
+      but um uh Jose and I were just talking about
+    
+    
+      
+    
+    
+      the uh
+    
+    
+      
+    
+    
+      uh, speech e- energy thing,
+    
+    
+       The   -
+    
+    
+      Yeah.
+    
+    
+      and I uh - We didn't talk about the derivatives. But I think,
+    
+    
+      you know, the - the - i-
+    
+    
+      
+    
+    
+      if I can -
+    
+    
+      if you don't mind my - my speaking for you for a bit,
+    
+    
+      um 
+    
+    
+      Uh. Right now,  that  he's not really showing any kind of uh distinction,
+    
+    
+      but uh -  but  we discussed a couple of the possible things that uh he can look at.
+    
+    
+      Um. And uh one is that uh this is all in  log  energy and log energy is basically compressing the distances
+    
+    
+      
+    
+    
+      uh  between things.
+    
+    
+      Um  Another is that he needs to play with the - the different uh  uh temporal
+    
+    
+      sizes. He was - he - he was taking everything over two hundred milliseconds
+    
+    
+      
+    
+    
+      uh, and uh he's going to vary that number and also look at moving windows, as we discussed before.
+    
+    
+      
+    
+    
+      Um
+    
+    
+      
+    
+    
+      And uh - and the other thing is that the - yeah doing the -
+    
+    
+      
+    
+    
+      subtracting off the mean and the variance in the -
+    
+    
+       uh and dividing it by the  standard deviation in the log domain,
+    
+    
+      
+    
+    
+      may not be  the right thing to do.
+    
+    
+      Hi. Yeah.
+    
+    
+      
+    
+    
+      Hi Jane!
+    
+    
+      We just started.
+    
+    
+      Could you take that mike there?
+    
+    
+      Are these the  long  term means? Like, over the whole - I mean,
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      the means of   what? 
+    
+    
+      Thanks.
+    
+    
+      Uh B- Between -
+    
+    
+      All the frames in the  conversation?  Or of things that -
+    
+    
+      between -
+    
+    
+      No.
+    
+    
+      Between -
+    
+    
+      No.
+    
+    
+      Neither. It's uh between the pauses  uh for some segment.
+    
+    
+      Oh.
+    
+    
+      And so i- i- his - his - He's making the constraint it has to be at least two hundred milliseconds.
+    
+    
+      Oh.
+    
+    
+      
+    
+    
+      And so you take that. And then he's -
+    
+    
+      he's uh  measuring  at the frame level -
+    
+    
+      still at the frame level,
+    
+    
+      Right.
+    
+    
+       of what  -
+    
+    
+      and then - and then just uh normalizing with that larger amount.
+    
+    
+      
+    
+    
+      um and -
+    
+    
+      But one thing he was pointing out is when he - he looked at a bunch of examples in log domain, it  is  actually pretty hard to see
+    
+    
+      
+    
+    
+      the  change. 
+    
+    
+      And you can sort of  see that, because of j- of just
+    
+    
+      putting it on the board that
+    
+    
+      Yep.
+    
+    
+      
+    
+    
+      if you sort of have  log-X_  plus
+    
+    
+      log- X_ ,
+    
+    
+      Yeah, maybe it's not log  distributed . 
+    
+    
+      that's the  log  of  X_  plus the  log  of  two  and it's just,  you know, it - it diminishes the  effect of having two of them.
+    
+    
+      Mmm. Yeah.
+    
+    
+      
+    
+    
+      
+    
+    
+      But you could do like a C_D_ F  there instead? I mean, we don't  know  that the distribution here is
+    
+    
+      Um.
+    
+    
+      Yes, right.
+    
+    
+      normally.
+    
+    
+      So -
+    
+    
+      So just some kind of a simple -
+    
+    
+      So what I was suggesting to him is that -
+    
+    
+      Actually, a  P_D_F .
+    
+    
+      But, you know, uh
+    
+    
+      P_D_F
+    
+    
+      But,  either   way.  Yeah.
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      Yeah, eith- eith- uh
+    
+    
+      Something like that where it's sort of data driven.
+    
+    
+      
+    
+    
+      B- Yeah, but I think  also
+    
+    
+      u-
+    
+    
+      I think a good first indicator is when the - the - the researcher looks at
+    
+    
+      
+    
+    
+      examples of the data
+    
+    
+      and can  not  see
+    
+    
+      a change  in how big the - the signal is,
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      when the two speaker -
+    
+    
+      Then, that's a problem
+    
+    
+      right there.
+    
+    
+      Yeah.
+    
+    
+      Oh yeah.
+    
+    
+      So.
+    
+    
+      I think you should at  least  be able,
+    
+    
+      doing casual looking and can get the sense, " Hey,  there's something  there. " and then you can play around with the measures.
+    
+    
+      Oh yeah.
+    
+    
+      Yeah.
+    
+    
+      And when he's looking in the log domain he's not really seeing it.
+    
+    
+      So. And when he's looking in straight  energy  he  is, 
+    
+    
+      
+    
+    
+      so that's a good place to start.
+    
+    
+      Yeah.
+    
+    
+      Um.
+    
+    
+      So that was - that was the discussion we just had.
+    
+    
+      Um.
+    
+    
+      
+    
+    
+      The other thing
+    
+    
+      Actually we ca- had a  question  for  Adam  in this.
+    
+    
+      
+    
+    
+      How -
+    
+    
+      Uh, when you did the
+    
+    
+      
+    
+    
+      sampling?
+    
+    
+      uh  over the  speech segments or s- or sampling over the -
+    
+    
+      the individual channels in order to do the e-
+    
+    
+      uh the  amplitude equalization,
+    
+    
+      
+    
+    
+      did you do it over
+    
+    
+      just the entire - everything in the mike channels? You didn't try to find speech?
+    
+    
+      No, I just took over the entire s- uh entire channel
+    
+    
+      um  sampled ten minutes randomly.
+    
+    
+      Right, O_K. So then  that  means that someone who didn't speak
+    
+    
+       very much
+    
+    
+      
+    
+    
+      would be largely represented by silence.
+    
+    
+      Yep.
+    
+    
+      
+    
+    
+      And someone who would - who would be -
+    
+    
+      So the normalization factor
+    
+    
+       probably  is  i- i- i-
+    
+    
+      Yeah, this was quite quick and dirty, and it was just for   listening. 
+    
+    
+       is - is -
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      O_K.
+    
+    
+      And for  listening  it seems to work really  well. 
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      So.
+    
+    
+      Yeah.
+    
+    
+      But that's -
+    
+    
+      Right. So th-
+    
+    
+      But, it's not -
+    
+    
+      Yeah.
+    
+    
+      Not a good measure. 
+    
+    
+      
+    
+    
+      O_K.
+    
+    
+      So yeah there - there - there -
+    
+    
+      There's a good chance then given that
+    
+    
+      different people  do  talk different amounts  that there is -
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      there - there is still a lot more to be gained from gain norm- normalization with some
+    
+    
+      Mmm.
+    
+    
+      Yes, absolutely.
+    
+    
+      sort if -
+    
+    
+      if we can figure out a way to do it.
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      Uh. But
+    
+    
+      we were agreed that in addition to that 
+    
+    
+      
+    
+    
+      uh there should be 
+    
+    
+      s- stuff related  to  pitch and harmonics and so forth.
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      So we didn't talk at all about uh the other derivatives, but uh again just - just looking at -
+    
+    
+      
+    
+    
+      Uh, I think uh Liz has a very good point,
+    
+    
+      that in fact it would be much more graphic just to show -
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      Well, actually, you  do  have some distributions here,
+    
+    
+      Yeah.
+    
+    
+      uh for  these  cases.
+    
+    
+      You have some histograms,
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      um  and  uh,
+    
+    
+      they don't look very separate.
+    
+    
+       uh   separated.
+    
+    
+      This is the - the first derivate of  log of frame  energy
+    
+    
+       What  -
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      uh without any kind of normalization.
+    
+    
+      Yeah.
+    
+    
+      Log energy.
+    
+    
+      These the-
+    
+    
+      Sorry.
+    
+    
+      These are the - the first experiments uh with comment uh
+    
+    
+      Frame energy. 
+    
+    
+      Except that 
+    
+    
+      it's hard to judge this because the - they're not normalized.
+    
+    
+      It's just number of frames.
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      But yeah, even so.
+    
+    
+      W-
+    
+    
+      
+    
+    
+      I mean, what I meant is, even if you use  linear,   you know,  raw  
+    
+    
+      "Number" - 
+    
+    
+      
+    
+    
+      measures, like  raw energy or whatever,
+    
+    
+      maybe
+    
+    
+      we shouldn't make any assumptions about the distribution's  shape, 
+    
+    
+      and just use -
+    
+    
+      you know, use the distribution to model the -
+    
+    
+       
+    
+    
+      the mean, or what- y-
+    
+    
+      you know, rather than the mean take some -
+    
+    
+      Yeah. But - And so in - in  these  he's  got 
+    
+    
+      Yeah.
+    
+    
+      that.
+    
+    
+      He's got some pictures.
+    
+    
+      Yeah.
+    
+    
+      But he doesn't - he doesn't in the -
+    
+    
+      he- i-
+    
+    
+       just  in  derivatives, 
+    
+    
+      Yeah. 
+    
+    
+      but not in the -
+    
+    
+      Oh.
+    
+    
+      but he d-
+    
+    
+      Right. So, we don't  know what they look like  on the,  tsk - 
+    
+    
+      but he doesn't -
+    
+    
+      doesn't -
+    
+    
+      But he didn't h- have it for the energy.
+    
+    
+      For the raw.
+    
+    
+      He had it for the derivatives.
+    
+    
+      Yeah.
+    
+    
+      So.
+    
+    
+      Yeah.
+    
+    
+      I mean, there might be something there. I don't know.
+    
+    
+      Huh.
+    
+    
+      Yeah.
+    
+    
+      Interesting 
+    
+    
+      
+    
+    
+      Here I - I
+    
+    
+      
+    
+    
+      Oh that - yeah that's a good q-
+    
+    
+      in -
+    
+    
+      did - did you have this sort of thing, for just the -
+    
+    
+      just the l-
+    
+    
+      r- uh the -
+    
+    
+      the
+    
+    
+      unnormalized
+    
+    
+      No
+    
+    
+      log energy?
+    
+    
+      I - I - I haven't  the result 
+    
+    
+      O_K. Yeah. So she - she's right. That's a -
+    
+    
+      but it's the - it's the - the - the following.
+    
+    
+      Well it might be just good to know what it looks like. 
+    
+    
+      Cuz -
+    
+    
+      Yeah. That's -
+    
+    
+      Huh?
+    
+    
+      That's uh  cuz I'd mentioned scatter plots before but she's right, I mean, even before you get the scatter plots, just looking at a  single  feature
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      uh,
+    
+    
+      looking at the distribution,  is  a good thing to do.
+    
+    
+       Catal-  uh - Combining the different possibilities of uh the parameters.
+    
+    
+      I - I - I - I mean the - the - the scatter plot
+    
+    
+       combining eh different  n- two combination.
+    
+    
+      
+    
+    
+      combination of two,  of energy and derivate -
+    
+    
+      Yeah, but - but what she's saying 
+    
+    
+      is, which is right, is  le-
+    
+    
+      I mean, let's start with the - Before we get complicated,
+    
+    
+      let's start with the  most   basic  wh- thing,
+    
+    
+      which is   we're  arguing
+    
+    
+      that if you take energy -
+    
+    
+      uh if you  look  at the  energy, 
+    
+    
+      that, when two people are speaking at the same time, usually
+    
+    
+       
+    
+    
+      there'll be  more  energy than when one is right? 
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      That's - that sort of hypothesis. And the first way you'd look at that,
+    
+    
+      That's right. 
+    
+    
+      uh s-
+    
+    
+      she's, you know, absolutely right, is that you would
+    
+    
+      just take a look at the  distribution  of those two  things, 
+    
+    
+      Yeah.
+    
+    
+       much  as you've  plotted  them  here, 
+    
+    
+      You know, but just - but just -
+    
+    
+      Yeah.
+    
+    
+       just uh do it -
+    
+    
+      
+    
+    
+      Well in this case you have  three. 
+    
+    
+      You have the  silence,  and that - that's fine.
+    
+    
+      Yeah.
+    
+    
+      So,
+    
+    
+      uh with three colors or three shades or whatever,
+    
+    
+      just - just look at those distributions.
+    
+    
+      Yeah.
+    
+    
+      And then, given that as a base, you can see if that gets improved,
+    
+    
+      
+    
+    
+      you know, or - or -
+    
+    
+       or  worsened   by the -
+    
+    
+      looking at  regular  energy,
+    
+    
+      looking at  log  energy, we were just proposing that maybe it's -
+    
+    
+      you know, it's harder to  see with the log energy,
+    
+    
+      Yeah.
+    
+    
+      um
+    
+    
+      and uh
+    
+    
+      also these different normalizations,
+    
+    
+       does   a particular choice of normalization make it better?
+    
+    
+      But I had maybe made it too  complicated 
+    
+    
+      by suggesting
+    
+    
+      early on, that you look at  scatter  plots because that's looking at a distribution in  two  dimensions.
+    
+    
+      Yeah.
+    
+    
+      Let's start off just in  one, 
+    
+    
+      Yeah.
+    
+    
+      uh, with this  feature. 
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      I think that's probably the most basic thing, before anything very  complicated. 
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      Um
+    
+    
+      And then we- w- I think we're agreed that
+    
+    
+      I agree, yeah.
+    
+    
+       pitch-related  things are - are - are going to be a - a really likely candidate
+    
+    
+      Uh-huh.
+    
+    
+      to  help. 
+    
+    
+      Um 
+    
+    
+      O_K.
+    
+    
+      But 
+    
+    
+      since -
+    
+    
+      
+    
+    
+      uh  your  intuition
+    
+    
+      from looking at some of the  data, 
+    
+    
+      is that when you looked at the regular energy,
+    
+    
+      that it  did  in fact usually go  up, 
+    
+    
+      
+    
+    
+       when two people were  talking, 
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      Yeah, yeah, yeah.
+    
+    
+      that's - eh
+    
+    
+      you know, you should be able to come up with a measure which will
+    
+    
+       match your intuition.
+    
+    
+      And she's right,
+    
+    
+      that a -
+    
+    
+      that having a -
+    
+    
+      
+    
+    
+      But -
+    
+    
+      having - 
+    
+    
+      having this  table,  with a whole bunch of things,  with the standard deviation, the variance and so forth,
+    
+    
+      Uh-huh.
+    
+    
+      it's - it's -
+    
+    
+      it's  harder  to interpret than just looking at the -
+    
+    
+      Yeah.
+    
+    
+      But -
+    
+    
+      the same kind of picture you have here.
+    
+    
+      It - it's curious but uh I f- I found it in the - in the mixed file,
+    
+    
+      in one channel
+    
+    
+       that eh in several - oh e- eh several times eh you have an speaker
+    
+    
+      talking alone
+    
+    
+      Mm-hmm.
+    
+    
+      with a high level of energy
+    
+    
+      Mm-hmm.
+    
+    
+      eh
+    
+    
+      in the middle eh a zone of overlapping
+    
+    
+      Mm-hmm.
+    
+    
+      with
+    
+    
+      mmm less energy
+    
+    
+      and
+    
+    
+      eh  come  with another speaker with high energy and the
+    
+    
+      Mm-hmm.
+    
+    
+      overlapping zone
+    
+    
+      has
+    
+    
+      eh less energy.
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      So there'll be some cases for which -
+    
+    
+      Because there  reach very many  
+    
+    
+      Right.
+    
+    
+      But, the qu- So -
+    
+    
+      So they'll be -
+    
+    
+      
+    
+    
+      This is - 
+    
+    
+      
+    
+    
+      I w- want to  point   to visual things,
+    
+    
+      
+    
+    
+      
+    
+    
+      But I mean they - there'll be time -
+    
+    
+      There'll be overlap
+    
+    
+      between the distributions,
+    
+    
+      
+    
+    
+      but the question is,
+    
+    
+      Yeah.
+    
+    
+      "If it's a  reasonable  feature at  all, 
+    
+    
+      there's  some  separation."
+    
+    
+      Yeah.
+    
+    
+      Especially
+    
+    
+      locally.
+    
+    
+      So.  Locally.  And the other thing is I-
+    
+    
+       just locally , yeah.
+    
+    
+      Mm-hmm.
+    
+    
+      And -
+    
+    
+      Sorry.  I - 
+    
+    
+      I was just going to say that - that 
+    
+    
+      right now we're just  exploring. 
+    
+    
+      What you would imagine  eventually,  is that you'll feed all of these features into some 
+    
+    
+      Yeah.
+    
+    
+      discriminative system.
+    
+    
+      Yeah.
+    
+    
+      Yeah. 
+    
+    
+      And so even if - if one of the features
+    
+    
+      does a good job at  one  type of overlap, another feature might do a good job at  another  type of overlap.
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+       
+    
+    
+      Yeah, this is the -
+    
+    
+      Right. I mean the -
+    
+    
+      the reason I had suggested the scatter f- p- features is I used to do this a lot,
+    
+    
+      when we had
+    
+    
+      thirteen or fifteen or twenty features  to look at.
+    
+    
+      
+    
+    
+      
+    
+    
+      um
+    
+    
+      Because something is a  good  feature
+    
+    
+      uh by itself,
+    
+    
+      you don't really know how it'll behave in combination and so it's nice to have as many -
+    
+    
+      as many together at the same time as possible
+    
+    
+      in uh in some reasonable visual form. There's cool graphic things people have had sometimes to put together three or four in some funny -
+    
+    
+      
+    
+    
+      funny way.
+    
+    
+      But it's true
+    
+    
+      that you  shouldn't  do  any  of that unless you know
+    
+    
+      that
+    
+    
+      the  individual  ones, at least, have -
+    
+    
+      Yeah.
+    
+    
+      have some uh -
+    
+    
+      Well,  especially  for  normalizing.  I mean,
+    
+    
+      some hope
+    
+    
+      Mm-hmm.
+    
+    
+      it's  really  important to  pick a normalization that matches the distribution for that feature.
+    
+    
+      Mm-hmm.
+    
+    
+      And it may not be the same
+    
+    
+      for all the types of overlaps or
+    
+    
+      the windows may not be
+    
+    
+      the same.
+    
+    
+       e-  Actually, I was wondering, 
+    
+    
+      right now
+    
+    
+      you're taking a -
+    
+    
+       all  of the  speech,
+    
+    
+      from the whole meeting,
+    
+    
+      and you're trying to find points of overlap,
+    
+    
+      but we don't really know which speaker is overlapping with which speaker, right?
+    
+    
+      Right.
+    
+    
+      Yeah.
+    
+    
+      So I mean another way would just be to take
+    
+    
+      the speech from  just,  say, Morgan,
+    
+    
+      And  just  Jane and then  just  their overlaps,
+    
+    
+      like -
+    
+    
+      but by hand, by cheating,
+    
+    
+      
+    
+    
+      and looking at
+    
+    
+      you know, if you can detect something  that  way, because if we  can't  do it  that  way, there's no
+    
+    
+      No prayer. 
+    
+    
+      good way that we're going to be able to do it.
+    
+    
+      That - You know, there might be something
+    
+    
+       helpful  and  cleaner  about looking at just  individuals and then that combination alone.
+    
+    
+      Yeah.
+    
+    
+       Plus,  I think it
+    
+    
+      Mm-hmm.
+    
+    
+      has more elegant -
+    
+    
+      e-
+    
+    
+      The m- the right model will be  easier to see that way.
+    
+    
+      So if - I don't know, if you go through and you find
+    
+    
+      Yeah.
+    
+    
+       Adam,  cuz he has a lot of overlaps and some other speaker who also has e- enough speech and just
+    
+    
+      sort of look at those
+    
+    
+      Yeah.
+    
+    
+       three  cases of Adam and the other person and the overlaps, maybe -
+    
+    
+       
+    
+    
+      and just look at the  distributions,  maybe there  is  a clear
+    
+    
+      Yeah.
+    
+    
+      Uh-huh.
+    
+    
+      pattern but we just can't
+    
+    
+      see it because there's too many
+    
+    
+      combinations of - of people
+    
+    
+      Yeah.
+    
+    
+      that can overlap.
+    
+    
+      I had the same intuition last - last - last week.
+    
+    
+      So.
+    
+    
+      Yeah.
+    
+    
+      Just seems sort of complex.
+    
+    
+      I think it's - to start with it's s-
+    
+    
+      your - your idea of simplifying,
+    
+    
+      starting with something that
+    
+    
+      
+    
+    
+       you can see
+    
+    
+       eh you know without
+    
+    
+      the 
+    
+    
+      extra 
+    
+    
+      layers of -
+    
+    
+      Right.
+    
+    
+      Cuz if energy doesn't matter  there,  like -
+    
+    
+      I don't think this is true, but what if
+    
+    
+       To study  individual?
+    
+    
+      Sorry, what?
+    
+    
+      Hmm?
+    
+    
+      To study individual?
+    
+    
+      
+    
+    
+      Well, you - you - you don't have to study  everybody  individually but 
+    
+    
+      
+    
+    
+      The - the - the -
+    
+    
+      Well, to study the simplest case
+    
+    
+      But -
+    
+    
+      just simple case and
+    
+    
+      to get rid of extra -
+    
+    
+      Consider -
+    
+    
+      the one that has the lot of data associated with it.
+    
+    
+      
+    
+    
+      Right.
+    
+    
+      Cuz what if it's the case and I don't think this is true -
+    
+    
+      That was a  great  overlap by the way. 
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      What if it's the case that when two people overlap they equate their -
+    
+    
+      you know, there's a  conservation of energy and everybody -
+    
+    
+      
+    
+    
+       both   people talk more softly? I don't think this happens at  all. 
+    
+    
+      
+    
+    
+      Or - or what if what if the equipment -
+    
+    
+      Or they get louder.
+    
+    
+      what if the  equipment  adjusts somehow,
+    
+    
+      there's some
+    
+    
+      equalizing in there?
+    
+    
+      Yeah
+    
+    
+      or -
+    
+    
+      Uh,
+    
+    
+      I mean.
+    
+    
+      no we  don't  have  that. 
+    
+    
+      
+    
+    
+      But.
+    
+    
+      
+    
+    
+      Well, but -
+    
+    
+      O_K. 
+    
+    
+      But I think that's what I was  saying  about
+    
+    
+      different types of
+    
+    
+      Saturation.
+    
+    
+       overlap. 
+    
+    
+       
+    
+    
+      There are - there are different
+    
+    
+      
+    
+    
+      types,
+    
+    
+      and  within  those types,
+    
+    
+      like as  Jose  was saying, that  sounded like a backchannel overlap,
+    
+    
+      meaning the kind that's  a friendly  encouragement,  like "Mm-hmm.", "Great!", "Yeah!"
+    
+    
+      Yeah.
+    
+    
+      And it  doesn't  take - you don't take the  floor. 
+    
+    
+      Um, but,
+    
+    
+      some of  those,  as you showed, I think can be discriminated by the duration of the overlap.
+    
+    
+      Yeah.
+    
+    
+      So.
+    
+    
+      It -
+    
+    
+      Actually the s- new student, Don, who um Adam has met, and he was
+    
+    
+      at one of our meetings - He's 
+    
+    
+      getting his feet wet and then he'll be starting again
+    
+    
+       in mid-January. He's interested in trying to distinguish the types of overlap.
+    
+    
+      I don't know if he's talked with you yet.
+    
+    
+      Yeah.
+    
+    
+      But in sort of honing in on these different types and -
+    
+    
+      I don't consi-
+    
+    
+      Now I don't consider that possibility.
+    
+    
+      This is a s- a general studio of the overlapping
+    
+    
+      So maybe -
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      we're studying the -
+    
+    
+      So it might be something that we can
+    
+    
+      Well  I -
+    
+    
+       help by categorizing some of them and then,
+    
+    
+      i-
+    
+    
+      I -
+    
+    
+      I - I would s-
+    
+    
+      you know, look at that. 
+    
+    
+      actually  still  recommend that he do the overall thing
+    
+    
+      because  it would be the  quickest  thing for him to do.
+    
+    
+      
+    
+    
+      He could - You see, he already has all his stuff in place, he has the histogram mechanism,
+    
+    
+      Yeah.
+    
+    
+      he has the stuff that subtracts out -
+    
+    
+      and all he has to do
+    
+    
+      is change it uh
+    
+    
+      uh from - from log to plain energy
+    
+    
+      and plot the histogram
+    
+    
+      and  look  at it.
+    
+    
+      And  then  he should go on and do the other  stuff 
+    
+    
+      Yeah.
+    
+    
+      bec-
+    
+    
+      but -
+    
+    
+      
+    
+    
+      Yeah, no. I  didn't  mean that -
+    
+    
+      But this will -
+    
+    
+      that -
+    
+    
+      for  you  to do that, but I was thinking if -
+    
+    
+      if Don and I are trying to get   categories  and we label some  data  for you, and we say this is what we think is going -
+    
+    
+      Mm-hmm.
+    
+    
+      Mm-hmm.
+    
+    
+      So you don't have to worry about it. And here's the three types of overlaps. And we'll - we'll do the  labeling  for you.
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      Hm- hmm. 
+    
+    
+      Um.
+    
+    
+      Consider different class of overlap?
+    
+    
+      Yeah, that we would be working on  anyway. 
+    
+    
+       If there's time. 
+    
+    
+      Yeah.
+    
+    
+      Then maybe  you can  try  some different things for those three  cases,  and see if that helps, or -
+    
+    
+      Yeah.
+    
+    
+      This is the thing I - I comment with you before,
+    
+    
+      that uh we have a great variation of th- situation of overlapping.
+    
+    
+      Mm-hmm.
+    
+    
+      And the behavior for energy is,
+    
+    
+      uh log energy,
+    
+    
+      
+    
+    
+      is not uh the same all the time.
+    
+    
+       
+    
+    
+      Mm-hmm.
+    
+    
+      And -
+    
+    
+      
+    
+    
+      But I guess I was just saying that - that right now
+    
+    
+      
+    
+    
+      uh
+    
+    
+      from the  means  that you gave,
+    
+    
+      I don't have  any  sense
+    
+    
+      of whether
+    
+    
+      even,
+    
+    
+      you know, there are  any  significant number of cases for which there is distinct - and I would imagine there  should  be
+    
+    
+      Yeah.
+    
+    
+      some -
+    
+    
+      you know, there should be -
+    
+    
+      The distributions
+    
+    
+      should be  somewhat   separated. 
+    
+    
+       Yeah.
+    
+    
+      
+    
+    
+      Uh and
+    
+    
+      I - I would still guess that if they are not separated at  all, 
+    
+    
+      Yeah.
+    
+    
+      that there's some -
+    
+    
+      there's - there's most likely something wrong in the way that we're measuring it.
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      Um,
+    
+    
+      
+    
+    
+      but 
+    
+    
+      um
+    
+    
+      For instance, I mean I wouldn't expect that it was very  common 
+    
+    
+       overall,  that
+    
+    
+      when two people were talking at the same time,
+    
+    
+      that it would - that it really was
+    
+    
+       lower,  although sometimes, as you say, it  would. 
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      Yeah, no, that was - That was a jok-
+    
+    
+      So.
+    
+    
+      So.
+    
+    
+      or a sort of,
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      
+    
+    
+      a case where - where you would  never  know that unless you actually
+    
+    
+      I mean. No. It could - it probably  does  happen sometimes.
+    
+    
+      Yeah.
+    
+    
+      go and look at
+    
+    
+      Right.
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      two individuals. So.
+    
+    
+      Yeah.
+    
+    
+      Mind if I turned that light off? The flickering is annoying me.
+    
+    
+      
+    
+    
+      O_K.
+    
+    
+      
+    
+    
+      
+    
+    
+      It  might  the  case,  though, that the significant energy, just as Jose was saying,  comes  in the  non-backchannel  cases.
+    
+    
+      Because in back-  Most  people when they're talking don't change their own
+    
+    
+       energy when they get a backchannel, cuz they're not really  predicting  the backchannel.
+    
+    
+      Mm-hmm.
+    
+    
+      And sometimes it's a nod and sometimes it's an "mm-hmm". And the  "mm-hmm " is really usually very low  energy. 
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      So maybe those don't actually have much difference in energy. But
+    
+    
+       all the  other  cases might.
+    
+    
+       e-
+    
+    
+      and the backchannels are sort of easy to spot
+    
+    
+      s- in terms of their words or - I mean, just listen to it. So.
+    
+    
+      Yeah.
+    
+    
+       e-
+    
+    
+      But -
+    
+    
+      and - and again what they - what difference there  was  would kind of be lost in taking the log,
+    
+    
+      so, 
+    
+    
+      Well, it would be lost  no matter what you  do.  It just -
+    
+    
+       as well.
+    
+    
+      Yeah.
+    
+    
+      Mmm,
+    
+    
+      no, if it's -
+    
+    
+      if i-
+    
+    
+      if it's -
+    
+    
+      Tone
+    
+    
+      Well, it  won't  be as  big. 
+    
+    
+      I mean, even if you take the  log,  you can - your model just has a more sensitive  measures. So.
+    
+    
+      Yeah.
+    
+    
+      Sure, but  tone  might be very
+    
+    
+      Yeah, you're "mm-hmm" tone is going to be very different.
+    
+    
+      Yeah.
+    
+    
+      Right.
+    
+    
+      Right.
+    
+    
+      You could imagine doing  specialized  ones for different  types  of backchannels,
+    
+    
+      if you could - if you had a good model for it.
+    
+    
+      Your "mm-hmm" detector.
+    
+    
+      
+    
+    
+      If - if you're - a-
+    
+    
+       
+    
+    
+      I guess my point is, if you're doing essentially a linear separation, taking the log first  does  in fact make it harder to separate.
+    
+    
+      Right.
+    
+    
+      Yeah.
+    
+    
+      So it's -
+    
+    
+      So, uh if you i- i-
+    
+    
+      So i- if there - if there close to things it does
+    
+    
+      Yeah.
+    
+    
+      it's a  nonlinear  operation that  does  in fact change the distinction. If you're doing a non- if you're doing some fancy thing then - then yeah.
+    
+    
+      And right now we're essentially doing this linear thing by looking across here and - and saying we're going to cut it here.
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      Um
+    
+    
+      and that - that's the indicator that we're getting.
+    
+    
+      But  anyway,  yeah, we're not  disagreeing on any of this, we should look at it more uh - more finely,
+    
+    
+      but uh uh I think that -
+    
+    
+      This often happens, you do fairly complicated things,
+    
+    
+      and then you stand back from them and you realize that you haven't done something simple.
+    
+    
+      
+    
+    
+      So
+    
+    
+      uh, if you generated something like that just for the energy and see,
+    
+    
+      and then, a- a- a- as - as Liz says, when they g- have uh uh smaller um, more coherent groups to look at, that would be another interesting thing later.
+    
+    
+      Uh-huh.
+    
+    
+      Uh-huh.
+    
+    
+      And then that should give us some indication -
+    
+    
+       between  those, should give us some indication of whether there's anything to be achieved f- from energy at  all. 
+    
+    
+      And then you can move on to the uh 
+    
+    
+      uh more  pitch related stuff.
+    
+    
+      Mm-hmm.
+    
+    
+      
+    
+    
+      I - I - I think this is a good idea.
+    
+    
+      O_K.
+    
+    
+       Not  consider the log
+    
+    
+      Mm-hmm.
+    
+    
+      energy.
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      But then the -
+    
+    
+      Have you started looking at the pitch related  stuff at all, or - ? 
+    
+    
+      The - ? 
+    
+    
+      Pitch  related?
+    
+    
+      Harmonicity and so on?
+    
+    
+      I - I'm preparing the - the program but I don't - I don't begin
+    
+    
+      
+    
+    
+      Preparing to -
+    
+    
+      because eh
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      I saw your email and
+    
+    
+       I agree with you
+    
+    
+      Yeah.
+    
+    
+      it's better to -
+    
+    
+      I suppose it's better to - to consider the - the energy this kind of parameter
+    
+    
+      
+    
+    
+      
+    
+    
+      Oh, that's  not  what I  meant. 
+    
+    
+      bef-
+    
+    
+      No, no. I - I - I -
+    
+    
+      I - Well,
+    
+    
+      we  certainly  should  see  this but I - I - I -
+    
+    
+      I think that the harm-
+    
+    
+      
+    
+    
+      I  certainly  wasn't saying this was  better  than the
+    
+    
+      harmonicity and pitch related things I was just saying
+    
+    
+      I - I go on with the - with the
+    
+    
+       Yeah. 
+    
+    
+      pitch, aha!
+    
+    
+       O_K.
+    
+    
+      Yeah, I was just saying -
+    
+    
+      I - I - I - I understood uh that eh
+    
+    
+       I - I had to finish
+    
+    
+       by the moment with the
+    
+    
+      
+    
+    
+      and - and concentrate my - my energy in that problem. 
+    
+    
+      O_K. O_K.
+    
+    
+      
+    
+    
+      
+    
+    
+      O_K. But I think, like, all these derivatives and second derivatives and all these other very fancy things, I think I would just sort of  look  at the energy  and then
+    
+    
+      get into the  harmonicity  as - as
+    
+    
+      O_K. I go on
+    
+    
+      a suggestion.
+    
+    
+      with the pitch.
+    
+    
+      Uh
+    
+    
+      O_K. So maybe uh
+    
+    
+      since w- we're trying to
+    
+    
+      uh compress the meeting,
+    
+    
+      um, I know  Adam  had some  form  stuff he wanted to talk about
+    
+    
+      and did you have some?
+    
+    
+      
+    
+    
+      I wanted to ask just s- something on the end of  this  top- topic. So,
+    
+    
+      when I presented my results about the uh distribution of overlaps and the speakers and the profiles of the speakers,
+    
+    
+      Uh-huh.
+    
+    
+      at the bottom of that I  did  have a  proposal,  and I had plan to go  through  with it, of - of co-  coding  the types of overlaps that people were  involved  in s-
+    
+    
+      just with reference to speaker style so,
+    
+    
+      Oh.
+    
+    
+      you know, with reference - and you know I said that on my - in my  summary,  that
+    
+    
+      That'd be great.
+    
+    
+      Yeah, I remem- Right.
+    
+    
+       you know so it's like people may have different amounts of being  overlapped  with or overlapping
+    
+    
+      but that in itself is not  informative  without knowing what  types  of overlaps they're involved in so
+    
+    
+       I  was planning to do a taxonomy of  types  overlaps with reference to  that. 
+    
+    
+       That  would be  great.  That would be really  great. 
+    
+    
+      Yeah.
+    
+    
+      So,
+    
+    
+      but it you know it's like
+    
+    
+      Hmm.
+    
+    
+      it sounds like you also have uh something in that  direction. 
+    
+    
+      
+    
+    
+      Is - is it -
+    
+    
+      We have nothing - You know, basically, we got  his  environment  set up. He's - he's a double-E_ 
+    
+    
+      
+    
+    
+      you know. So.
+    
+    
+      It's mostly that,
+    
+    
+       if we  had  to  label it ourselves, we - we  would  or we'd have to, to get started,
+    
+    
+      but if -  It -
+    
+    
+      it would be much better if  you  can do it.
+    
+    
+       You'd  be much better  at doing it also because
+    
+    
+      
+    
+    
+      you know, I - I'm not -
+    
+    
+      Interesting. 
+    
+    
+      I don't  have  a good feel for how they should be sorted out, and I really didn't wanna
+    
+    
+      go into that if I didn't have to. So if -
+    
+    
+      If you're w- willing to do that or - or -
+    
+    
+      Well maybe we can O_K.
+    
+    
+      It would be interesting, though, to talk, maybe not at the meeting,
+    
+    
+      Yeah.
+    
+    
+      but at some other time about what are the classes.
+    
+    
+      Mm-hmm. 
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      Mm-hmm.
+    
+    
+      I think  that's  a research  effort in and of itself,
+    
+    
+      Yeah, it would be interesting.
+    
+    
+      because you can  read  the literature, but I don't know how it'll  turn out and,
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      
+    
+    
+      It seems like we also s- with reference to a purpose, too, that we we'd want to have them coded.
+    
+    
+      I would think it's interesting, yeah.
+    
+    
+      You know, it's  always  an interesting question.
+    
+    
+      Yeah.
+    
+    
+      That'd be  great. 
+    
+    
+      Yeah.
+    
+    
+      Yep.
+    
+    
+      That'd be  really  great. And we'd still have some  funding
+    
+    
+      O_K.
+    
+    
+      I can do that.
+    
+    
+      uh- uh-
+    
+    
+      for this project, like probably,
+    
+    
+      if we had to hire some - like an undergrad, because uh Don is being
+    
+    
+      hhh.
+    
+    
+      covered half time on something else -
+    
+    
+      Mm-hmm.
+    
+    
+      I mean,
+    
+    
+      he - we're not paying him  the full
+    
+    
+      R_A-ship for -  all  the  time.  So.
+    
+    
+      
+    
+    
+      um
+    
+    
+      If we got it to where we wanted - we needed someone to do that - I don't think there's really enough
+    
+    
+       data  where - where -
+    
+    
+      Mm-hmm.
+    
+    
+      Yeah, I see this as a prototype,
+    
+    
+      Yeah.
+    
+    
+      to use the only the -
+    
+    
+      Yeah.
+    
+    
+      the already transcribed meeting as just a prototype.
+    
+    
+      I - I think a- a- another
+    
+    
+      parameter we c- we -
+    
+    
+      But -
+    
+    
+      we can consider is eh the  duration.
+    
+    
+      Mm-hmm.
+    
+    
+      Another e- e- m-
+    
+    
+      besides eh the - the class of overlap,
+    
+    
+      the duration.
+    
+    
+      Because is possible  eh some s- s- um eh
+    
+    
+      some classes eh has eh 
+    
+    
+      a type of a duration, eh,
+    
+    
+       a duration very short
+    
+    
+      Mm-hmm.
+    
+    
+      uh when we have -
+    
+    
+      Yeah, definitely. 
+    
+    
+      Yeah, maybe -
+    
+    
+      It may be  correlated. 
+    
+    
+       we have overlapping with speech.
+    
+    
+      Is possible
+    
+    
+      Mm-hmm.
+    
+    
+      to have.
+    
+    
+      And it's interesting,
+    
+    
+       I think,
+    
+    
+       to consider the - the  window   of normalization,
+    
+    
+       normalization window.
+    
+    
+      Eh  because eh if we have a type of,
+    
+    
+       a kind of eh
+    
+    
+      overlap, eh
+    
+    
+      backchannel overlap,
+    
+    
+      with a short duration,
+    
+    
+      is possible
+    
+    
+       eh to normali- i- i-
+    
+    
+      that if we normalize eh with eh 
+    
+    
+      eh consider only the - the eh window
+    
+    
+      eh by the left eh ri- eh 
+    
+    
+      side on the right side
+    
+    
+      overlapping with a - a very
+    
+    
+       eh oh a small window
+    
+    
+      eh the - if the fit of normalization is eh
+    
+    
+      mmm
+    
+    
+      bigger
+    
+    
+      eh in that overlapping zone eh very short
+    
+    
+      Mm-hmm. 
+    
+    
+      Yeah, that's true. The window shouldn't be  larger  than the  backchannel. 
+    
+    
+      I - I me-
+    
+    
+      I - I understand.
+    
+    
+      I mean that you have
+    
+    
+      Yeah. 
+    
+    
+      eh you have a backchannel, eh, eh - you have a overlapping zone
+    
+    
+      very short
+    
+    
+      and you consider
+    
+    
+      eh n- eh
+    
+    
+      all the channel
+    
+    
+      to normalize
+    
+    
+      Mm-hmm.
+    
+    
+      this very short eh -
+    
+    
+      Mm-hmm.
+    
+    
+      for example "mmm mm-hmm hmm"
+    
+    
+      
+    
+    
+      eh
+    
+    
+      And the energy is not eh height
+    
+    
+      eh I think if you consider all the channel
+    
+    
+      to normalize and the channel is
+    
+    
+       mmm
+    
+    
+      bigger 
+    
+    
+      Mm-hmm.
+    
+    
+      eh eh eh
+    
+    
+      compared with the - with the overlapping
+    
+    
+      eh duration,
+    
+    
+       eh the effect
+    
+    
+      is
+    
+    
+      mmm
+    
+    
+       stronger  
+    
+    
+      eh 
+    
+    
+      that
+    
+    
+      I - I mean the - the e- effect of the normalization
+    
+    
+      eh with the mean and the - and the variance
+    
+    
+      Mm-hmm.
+    
+    
+      eh is different that if you consider
+    
+    
+       only a
+    
+    
+       window
+    
+    
+      compared
+    
+    
+      eh with the n- the duration of overlapping.
+    
+    
+      
+    
+    
+       Not  -
+    
+    
+      You - you want it
+    
+    
+       around  the overlapping part. You want it to include something that's not in  overlapping  but -
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      Mm-hmm.
+    
+    
+      but uh
+    
+    
+      I - I don't know. Is - s-
+    
+    
+      Yeah.
+    
+    
+      Well it's a  sliding   window,  right? So if you take the - the measure
+    
+    
+      If -
+    
+    
+      Mm-hmm.
+    
+    
+      Yeah.
+    
+    
+      in the center of the overlapped  piece,
+    
+    
+      Yeah.
+    
+    
+      you know, there'd better be some-
+    
+    
+       something.  But if your window is  really   huge  then yeah you're right you won't even - The portion of the - 
+    
+    
+      Yeah,
+    
+    
+      This is the -
+    
+    
+      of the backchannel won't - won't effect anything. But you -
+    
+    
+      This is the - the idea,
+    
+    
+       to consider only the - the small window
+    
+    
+      Yeah. So.
+    
+    
+      near - near -
+    
+    
+      near the - the overlapping zone.
+    
+    
+      You know, you shouldn't be more than 
+    
+    
+      like -  You should  definitely  not be  three  times as big as your -
+    
+    
+      as your  backchannel.
+    
+    
+      Yeah.
+    
+    
+      Mm-hmm.
+    
+    
+      Then you're gonna w- have a wash.
+    
+    
+      
+    
+    
+      And hopefully it's more like
+    
+    
+      
+    
+    
+      I'm not sure that's  necessarily  true. 
+    
+    
+      on the order of -
+    
+    
+      Yeah?
+    
+    
+      
+    
+    
+      
+    
+    
+      It  is  an  empirical  question, it seems like.
+    
+    
+      Yea-
+    
+    
+      Because -
+    
+    
+      Yeah.
+    
+    
+      because it -
+    
+    
+      because
+    
+    
+      Yeah.
+    
+    
+      um
+    
+    
+      again if you're just  compensating  for the  gain, 
+    
+    
+      you know, the fact that this - this gain thing was crude,
+    
+    
+      and the gain wh-
+    
+    
+      if someone is speaking relatively
+    
+    
+      at consistent  level, 
+    
+    
+      just to - to give a - an extreme example,
+    
+    
+      all you're doing is compensating for that.
+    
+    
+      And  then you  still s-
+    
+    
+      And then if you look at the frame with  respect  to that,
+    
+    
+      it still should - should uh
+    
+    
+       change 
+    
+    
+      Yeah, it  depends  how different your normalization is, as you slide your window across. I mean.  That's  something we don't know.
+    
+    
+      Mm-hmm.
+    
+    
+      
+    
+    
+      It's possible to try it both ways, isn't it?
+    
+    
+      Well, I mean we're also talking about
+    
+    
+      in this small 
+    
+    
+      a couple of different things. I mean, one is your  analysis  window and then the other is any sort of normalization that you're doing.
+    
+    
+      Yeah I was talking about the n- normalization window.
+    
+    
+      And the -
+    
+    
+      And they could be quite different.
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      Right.
+    
+    
+      This was sort of where -
+    
+    
+      Yeah. That's true.
+    
+    
+      Yep.
+    
+    
+      
+    
+    
+      where we were  last  week.
+    
+    
+      Yeah.
+    
+    
+      But, anyway
+    
+    
+      We - we'll have to look at some core things.
+    
+    
+      Um.
+    
+    
+      O_K.
+    
+    
+      O_K.
+    
+    
+      But that'd be great if - if you're marking those and -
+    
+    
+      Great.
+    
+    
+      O_K.
+    
+    
+      um.
+    
+    
+      Yeah.
+    
+    
+      But
+    
+    
+      it  is  definitely true that we need to have the  time  marks,
+    
+    
+      Mm-hmm.
+    
+    
+      
+    
+    
+      and I was assuming  that  will be  inherited  because,
+    
+    
+      Yep, I agree.
+    
+    
+      if you have the words and they're roughly aligned in time
+    
+    
+      
+    
+    
+      Mm-hmm.
+    
+    
+      via
+    
+    
+      forced alignment or whatever we end up using,
+    
+    
+      
+    
+    
+      then
+    
+    
+      you know, this  student and I would be looking at the time
+    
+    
+      marks and classifying all the frames inside those as whatever labels
+    
+    
+      Coming off of the other -
+    
+    
+      Yeah.
+    
+    
+      Good. So, it wouldn't be 
+    
+    
+      Jane gave
+    
+    
+      I wasn't planning to label the time marks.
+    
+    
+      
+    
+    
+      I can give you
+    
+    
+      I was thinking that that would come from the engineering side, yeah.
+    
+    
+      my  transcription   file, no?
+    
+    
+      
+    
+    
+      I don't think you  need  to.
+    
+    
+      Yeah. That should be linked to the words which are linked to time somehow, right?
+    
+    
+      There you go.
+    
+    
+      Well we're not any time  soon  going to get a forced  alignment.   So.
+    
+    
+      Not now.
+    
+    
+      Yeah. 
+    
+    
+      Um
+    
+    
+      If it's not hand-marked then we're not going to get the times.
+    
+    
+      Well, it's something that w-
+    
+    
+      Well, we - we wouldn't be able to do  any  work without a forced alignment  anyway,  so somehow if -
+    
+    
+      Yes
+    
+    
+      once he gets going we're gonna
+    
+    
+      hafta come up with one and
+    
+    
+      Yes.
+    
+    
+      Yeah.
+    
+    
+      I mean w- I guess we could do a very  bad  one with Broadcast News.
+    
+    
+      Good.
+    
+    
+      So whatever you would label would be
+    
+    
+      Good.
+    
+    
+      attached to the words, I think.
+    
+    
+      Great!
+    
+    
+      Good, good. Mm-hmm.
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      Well again for the close  mike
+    
+    
+      stuff,
+    
+    
+      That might be good enough.
+    
+    
+      we could come up -
+    
+    
+      take a s-
+    
+    
+      take the Switchboard
+    
+    
+      system or something, and -
+    
+    
+      Yeah.
+    
+    
+      Um
+    
+    
+      It'd be worth a try. It would be interesting to see what we get.
+    
+    
+      Just, you know, low-pass filter the speech and -
+    
+    
+      Cuz there's - there's a lot of work you can't do  without  that, I mean,
+    
+    
+      how - how would you -
+    
+    
+      Yeah.
+    
+    
+      You'd have to go in and measure every
+    
+    
+      start and stop point
+    
+    
+      next to a word
+    
+    
+      is y- if you're interested in anything to do with words. So.
+    
+    
+      Yep.
+    
+    
+      It would be  very  inefficient.
+    
+    
+      Yeah. 
+    
+    
+      Mm-hmm.
+    
+    
+      Anyway  So that'd be great.
+    
+    
+      Good. O_K.
+    
+    
+      Yeah.
+    
+    
+      There's something we should
+    
+    
+      talk about later but
+    
+    
+      maybe not just now.
+    
+    
+      But, uh,
+    
+    
+      should talk about our options as far as the uh
+    
+    
+      uh 
+    
+    
+      transcription
+    
+    
+      
+    
+    
+      
+    
+    
+      Yep, if I_B_M doesn't -
+    
+    
+      But. Well, w-
+    
+    
+      O_K. Good.
+    
+    
+      
+    
+    
+      But
+    
+    
+      
+    
+    
+      Do we hafta  turn -
+    
+    
+      
+    
+    
+      we'll do that  later. 
+    
+    
+      Are we supposed to keep recording here?
+    
+    
+      Yeah. Let's do that later.
+    
+    
+      Yeah  Right.
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      
+    
+    
+      We'll talk about it later.
+    
+    
+      Yeah.
+    
+    
+      So 
+    
+    
+      
+    
+    
+      uh
+    
+    
+      Uh "forms".  You had something on forms.
+    
+    
+      Forms
+    
+    
+      Next iteration of forms.
+    
+    
+      Oops. 
+    
+    
+      Oh! Oh  good,  O_K.
+    
+    
+      Um.
+    
+    
+      Oh.
+    
+    
+      How - So it's two pages per person?
+    
+    
+      Nope.
+    
+    
+      One's a digit form, one's a speaker form.
+    
+    
+      Oh!
+    
+    
+      So one is a one time only  speaker form and the other is the digits.
+    
+    
+      Oh,  I  see.
+    
+    
+      Oh it's the  same. 
+    
+    
+      Oh no no.  Is - is new  Is O_K.
+    
+    
+      So don't fill these out.
+    
+    
+      
+    
+    
+       
+    
+    
+      Alright.
+    
+    
+      This is just the suggestion for uh what the new forms would look like.
+    
+    
+      So, they incorporate the changes  that we talked about.
+    
+    
+      Date and time. 
+    
+    
+      
+    
+    
+      Uh why did you switch the order of the Date and Time fields?
+    
+    
+      This is rather a low-level, but  
+    
+    
+      On which one?
+    
+    
+      On - on the  new  one,  Time  comes first and  then  Date,
+    
+    
+      but  I  thought -
+    
+    
+      Oh you mean on the  digit  form?
+    
+    
+      This is -
+    
+    
+      this is rather a low level question, but -
+    
+    
+      Uh, because
+    
+    
+      but it  used  -  used  to be Date came  first. 
+    
+    
+      the user fills out the first three fields and I fill out the rest.
+    
+    
+      Oh  I  see.
+    
+    
+      Well,  how  would the -
+    
+    
+      So it  was   intentional.  It's an interesting observation, but it was intentional.
+    
+    
+      How would the user know the time if they didn't know the date?
+    
+    
+      Because the  date  is when you actually read the digits and the  time 
+    
+    
+      
+    
+    
+      and, excuse me, the  time  is when you actually read the  digits, 
+    
+    
+      but I'm filling out the  date   beforehand.  If you look at the form in front of you?
+    
+    
+      that you're going to fill out when you read the digits?
+    
+    
+      Yeah.
+    
+    
+      you'll see I've already filled in the  date  but not the  time. 
+    
+    
+      
+    
+    
+       I  always assumed -
+    
+    
+      So the  time  is supposed to be pretty  exact,  because I've just been taking beginning time -
+    
+    
+      Yeah, me too. 
+    
+    
+      time of the meeting.
+    
+    
+      Yeah,
+    
+    
+      Yeah, I've noticed that in the  forms. 
+    
+    
+      I - yeah.
+    
+    
+      
+    
+    
+      The - the  reason  I put the  time  in, is so that the  person 
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      Me too.
+    
+    
+      who's extracting the digits, meaning me,
+    
+    
+      
+    
+    
+      Oh!
+    
+    
+      will know where to look in the meeting,
+    
+    
+      Oh dear. We've been -
+    
+    
+      But -
+    
+    
+      to try to find the digits.
+    
+    
+      we've been  messing   up  your  forms. 
+    
+    
+      I  know. 
+    
+    
+      I am put - I am putting the beginning of the meeting.
+    
+    
+      
+    
+    
+      So you should call it, like, "digits start time". Or.
+    
+    
+      
+    
+    
+      And I haven't said anything.
+    
+    
+      Yep.
+    
+    
+       in - on there .
+    
+    
+      
+    
+    
+      Why - What - what were you putting in?
+    
+    
+      
+    
+    
+      
+    
+    
+      Oh, well, I was saying if we started the meeting at
+    
+    
+      Yeah.
+    
+    
+      two  thirty,  I'd put two thirty, and I guess d-
+    
+    
+      e-  everyone  was putting two  thirty,  and
+    
+    
+      Yeah.
+    
+    
+      Oh.
+    
+    
+      
+    
+    
+      No, it's about fifty fifty.
+    
+    
+      I didn't  realize  there was "uh oh
+    
+    
+      I'm about to read this and I should" -
+    
+    
+      Actually it's about one third each. About one third of them are blank,  about one third of them are when the digits are read, and about one third of them are when the  meeting starts.
+    
+    
+      
+    
+    
+      Oh.
+    
+    
+      
+    
+    
+      So.
+    
+    
+      This would be a  radical  suggestion but -
+    
+    
+      I could put instructions?
+    
+    
+      Nah.
+    
+    
+      Ei- either that or maybe you could
+    
+    
+      Yeah.
+    
+    
+      maybe write down when people 
+    
+    
+      start reading digits on that  particular   session.
+    
+    
+      But if I'm not at the meeting, I can't do that.
+    
+    
+       I know, O_K.
+    
+    
+      Yeah, he's been setting stuff up and going away. So.
+    
+    
+       That's a good point.
+    
+    
+       I  see. Good point good point.
+    
+    
+      For some reason he doesn't want to sit through every meeting that's -
+    
+    
+      Yep, but that is the reason Name, Email and Time are where they are.
+    
+    
+      Oh, O_K. Alright.
+    
+    
+      Yeah.
+    
+    
+      I rest my -
+    
+    
+      And then the others are later on.
+    
+    
+      Uh-huh.
+    
+    
+      O_K. w-
+    
+    
+      And the Seat is this number?
+    
+    
+      Mm-hmm.
+    
+    
+      Seat and Session. 
+    
+    
+      "For official use only"
+    
+    
+      That's -
+    
+    
+      
+    
+    
+      "use only" 
+    
+    
+      
+    
+    
+       Well, he's  very  professional. 
+    
+    
+      
+    
+    
+      
+    
+    
+      Actually you could -
+    
+    
+      
+    
+    
+      Well that  does  raise another  question,  which is why is the "Professional use only" line not higher?
+    
+    
+      
+    
+    
+      Why doesn't it come in at the point of Date and Seat?
+    
+    
+      Oh.
+    
+    
+      What?
+    
+    
+      Because we're filling in  other  things.
+    
+    
+      What?
+    
+    
+      Well, because -
+    
+    
+      If y-
+    
+    
+      your - your professional use, you're gonna already have the date,
+    
+    
+      and the s-
+    
+    
+      What - which form are you talking about?
+    
+    
+      Well I'm comparing the  new  one with the  old  one.
+    
+    
+      This is the digit form.
+    
+    
+      Oh.
+    
+    
+      Oh you're talking about the  digit  form. The digit form doesn't -
+    
+    
+      Yeah.
+    
+    
+      Digit.
+    
+    
+      Digit form.
+    
+    
+      Oh! I wasn't supposed to -
+    
+    
+      Yeah.
+    
+    
+      Sorry.
+    
+    
+      The digit - No, that's  alright.  The digit form doesn't have a "for official use only" line.
+    
+    
+      Sorry. 
+    
+    
+      It just has a  line, 
+    
+    
+       which is what you're supposed to read.
+    
+    
+      That - uh O_K.
+    
+    
+       
+    
+    
+      So on the  digits  form,
+    
+    
+      Sorry about that. Yeah.
+    
+    
+      everything  above  the line is a  fill-in  form
+    
+    
+       and everything  below  the line is digits that the user  reads. 
+    
+    
+      Yeah.
+    
+    
+      O_K.
+    
+    
+      
+    
+    
+      Alright s- but I didn't mean to derail our discussion here, so you really wanted to start with this other form.
+    
+    
+      No, either way is fine I just -
+    
+    
+      You just started  talking  about something, and I didn't know which  form  you were  referring  to.
+    
+    
+      Alright yeah, I was comparing - so th- this is -
+    
+    
+      So I was looking at the  change  first. So it's like we started with  this  and now we've got a  new  version of it
+    
+    
+      wi-  with reference to this. So the  digit  form, we had one already.
+    
+    
+      Now the f- the fields
+    
+    
+      are  slightly   different. 
+    
+    
+      So the main thing that the person fills out
+    
+    
+      um  is the name and email and
+    
+    
+      Yeah.
+    
+    
+      time?
+    
+    
+      Right.
+    
+    
+      Ah! 
+    
+    
+      You do the rest?
+    
+    
+      Yep.
+    
+    
+      Just as uh - as I have
+    
+    
+      Right.
+    
+    
+      for all the others.
+    
+    
+      What -
+    
+    
+      And there's an  addition  of the native  language, 
+    
+    
+      which is a  bit  redundant.
+    
+    
+      This one has Native Language and this one does too.
+    
+    
+      That's because the one, the digit form that has native language is the  old  form not the  new  form.
+    
+    
+      Oh! Thank you.  Thank you, thank you. There we go.
+    
+    
+      Yeah.
+    
+    
+        Oh,  yeah.  I'll  catch up here.
+    
+    
+      O_K,  I  see.
+    
+    
+      
+    
+    
+      "South Midland,  North  Midland" 
+    
+    
+      That's the old and that's the new. 
+    
+    
+      
+    
+    
+      Yeah this was the problem with these categories, I -
+    
+    
+      I picked those categories from TIMIT.
+    
+    
+       I  don't know what those are. 
+    
+    
+      
+    
+    
+      
+    
+    
+       Actually,  the only way  I  know is from working with the database and having to figure it out.
+    
+    
+      What -
+    
+    
+      With TIMIT, yeah?
+    
+    
+      uh-huh.
+    
+    
+      What i-
+    
+    
+      So is South Midland like Kansas? and North Midland like - like uh Illinois, or - ? 
+    
+    
+      So, I was gonna ask wh-
+    
+    
+      w-
+    
+    
+      Well yeah.
+    
+    
+      Yeah.
+    
+    
+      Nor- um -
+    
+    
+      I mean. So - so what accent are  we  speaking?
+    
+    
+      Western?
+    
+    
+      
+    
+    
+      By definition?
+    
+    
+      And for simple for - for me?
+    
+    
+      Is mean my native language Spanish -
+    
+    
+      Probably Western, yeah.
+    
+    
+      Well,
+    
+    
+      Spanish?
+    
+    
+      eh
+    
+    
+      The original
+    
+    
+      is the center of Spain and the
+    
+    
+       beca- 
+    
+    
+      Yeah, I mean you could call it whatever you want.
+    
+    
+       For the foreign language we couldn't
+    
+    
+      classify every single one. So I just left it blank and you can put whatever you want. 
+    
+    
+      Because
+    
+    
+      is different, the Span- uh
+    
+    
+       the Spanish language from the - the north of Spain, of the south, of the west and the -
+    
+    
+      Sure.
+    
+    
+      But. 
+    
+    
+      
+    
+    
+      So I'm not sure what to do about the Region field for English variety.
+    
+    
+      Yeah.
+    
+    
+      You know, when I wrote - I was writing those down, I was thinking, "You know, these are great  if you're a  linguist ".
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      But  I  don't know how to -  I  don't know how to -  I  don't know how to categorize them.
+    
+    
+      Actually even if you 
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+       t-
+    
+    
+      If you're -
+    
+    
+      if e- 
+    
+    
+      This wasn't developed by -
+    
+    
+      th- these regions weren't -
+    
+    
+      if y- 
+    
+    
+      if you're a T_I or M_I_T  from  nineteen eighty-five.
+    
+    
+      Yeah
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      So I guess my only  question  was if - if you were a South Midland speaking
+    
+    
+      region, person?
+    
+    
+      Mm-hmm.
+    
+    
+      Would you  know  it? Is that what you would  call  yourself?
+    
+    
+      I don't  know. 
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      You know, I think if you're talking -
+    
+    
+      if you're thinking in terms of  places,  
+    
+    
+      as opposed to 
+    
+    
+      names different peop-
+    
+    
+      names people have given to  different ways of talking, 
+    
+    
+      I would think
+    
+    
+      North Midwest, and South Midwest would be more common than saying Midland, right, I mean, I -
+    
+    
+      Yeah. Now  the usage -
+    
+    
+      I went to s-
+    
+    
+       Maybe  we can give them a li-  like a little map? 
+    
+    
+      
+    
+    
+      with the regions and they just -
+    
+    
+      No, I'm serious. 
+    
+    
+      
+    
+    
+      No, that's not bad.
+    
+    
+      Because
+    
+    
+      i- at this -
+    
+    
+      Yeah.
+    
+    
+      it takes less time, and it's sort of cute there's no figure.
+    
+    
+      
+    
+    
+      in that side -
+    
+    
+      in that side of the - the paper. 
+    
+    
+      
+    
+    
+      Well.
+    
+    
+      Well just a little - You know, it doesn't have  all  the  detail,  but you sort of -
+    
+    
+      But
+    
+    
+      what if you moved five times and - and uh
+    
+    
+      
+    
+    
+      Well,  I  was thinking you could have ma-  multiple  ones
+    
+    
+      No, but you're categorized.
+    
+    
+      That's the same -
+    
+    
+      and then the amount of time - so,  roughly. 
+    
+    
+      So. You could say,
+    
+    
+       you know "ten years
+    
+    
+      
+    
+    
+       on the east coast,
+    
+    
+      Well,
+    
+    
+      five years on the west coast" or something or other.
+    
+    
+      We - I think we don't want
+    
+    
+      to get that level of detail
+    
+    
+      at this form. I think that's alright if we want to follow up.
+    
+    
+      But.
+    
+    
+      I guess we  don't  really  know. 
+    
+    
+      I mean I -
+    
+    
+      As I said, I don't think there's a  huge   benefit
+    
+    
+      to this region thing. It - it gets -
+    
+    
+      The problem is that
+    
+    
+      for  some  things it's really
+    
+    
+      clear and usually  listening to    it
+    
+    
+      you can tell right away if it's a New York or Boston accent,
+    
+    
+      but New York and Boston are two -
+    
+    
+      well, I guess they have the N_Y_C, but
+    
+    
+      New England has a bunch of very different
+    
+    
+      dialects and -
+    
+    
+      Mm-hmm.
+    
+    
+      and  so does
+    
+    
+      um
+    
+    
+      Yeah, so I  picked  these regions cuz we had  talked  about  TIMIT,  and those are right from  TIMIT. 
+    
+    
+      S- So do other places.
+    
+    
+      Right. And so
+    
+    
+      these would be  satisfying like
+    
+    
+      So.
+    
+    
+      a speech  research  community if we released the  database, 
+    
+    
+      
+    
+    
+      
+    
+    
+      but as to whether subjects know where they're from, I'm not sure because
+    
+    
+      um
+    
+    
+      I  know  that they had to fill this out for  Switchboard.  This is i- almost exactly the same as Switchboard
+    
+    
+      regions or
+    
+    
+      Oh. O_K. 
+    
+    
+      very close. Yeah.
+    
+    
+      Um
+    
+    
+      And I don't know how they filled that out.
+    
+    
+      But th- if Midland -
+    
+    
+      Yeah, Midland is the one that's
+    
+    
+      difficult I guess.
+    
+    
+      
+    
+    
+      I think a  lot  of people - Yeah.
+    
+    
+      Also Northwest you've got Oreg- Washington and Oregon now which
+    
+    
+      uh y- people don't know if it's western or northern.
+    
+    
+      Yeah,  I  certainly don't. I mean, I was saying I don't even know what  I  speak.
+    
+    
+      It's like Northwest 
+    
+    
+      
+    
+    
+      
+    
+    
+      Oh, what  is  Northern?
+    
+    
+      Am I speaking -
+    
+    
+      Am I speaking
+    
+    
+      Western?
+    
+    
+      
+    
+    
+      
+    
+    
+      Well and what - and what's  Northern? 
+    
+    
+      I think originally it  was  North -
+    
+    
+      Northwest
+    
+    
+      Northwest?
+    
+    
+      Yeah.
+    
+    
+      But -
+    
+    
+      Yeah, so  this  is a real problem. I don't know what to do about it. 
+    
+    
+      Yeah.
+    
+    
+      I wouldn't know how to characterize mine either. And - and so I would think -
+    
+    
+      
+    
+    
+      I c-
+    
+    
+      I would say, I've - I've got a  mix  of California and Ohio. 
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      I think at the  first  level, for example,  we  speak the  same. 
+    
+    
+      I don't know.
+    
+    
+      our - our dialects
+    
+    
+      Uh-huh.
+    
+    
+      Or  whatever you -  region  are the same. But I don't know what it  is. 
+    
+    
+      So.
+    
+    
+      Well, you have a like techno-speak accent I think. 
+    
+    
+      a  techno-speak  accent?
+    
+    
+       A techno- 
+    
+    
+      Yeah, you know?
+    
+    
+      
+    
+    
+      A - a geek region?
+    
+    
+      Well it's -
+    
+    
+      
+    
+    
+      Geek region. 
+    
+    
+      I mean I - you can sort of identify it f-
+    
+    
+      
+    
+    
+      
+    
+    
+      It's - it's -
+    
+    
+      Is different. Is different. 
+    
+    
+      not - not that that's -
+    
+    
+      
+    
+    
+      but - but
+    
+    
+      maybe that -
+    
+    
+      maybe we could
+    
+    
+      
+    
+    
+       leave  this and see what people -
+    
+    
+      
+    
+    
+      See what people choose
+    
+    
+       and then um
+    
+    
+      let them just fill in if they don't -
+    
+    
+      I mean I don't know what else we can do, cuz -
+    
+    
+      I'm wondering about a question like, "Where are you from mostly?"
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      Yeah. 
+    
+    
+      But I - I'm s-
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      I'm - now that you mentioned it though, I am - really  am  confused by "Northern".
+    
+    
+      
+    
+    
+      I agree.
+    
+    
+      
+    
+    
+      I really  am.  I mean,
+    
+    
+      I agree.
+    
+    
+      Yeah.
+    
+    
+      I agree.
+    
+    
+      if - if you're 
+    
+    
+      in New  England,  that's North.
+    
+    
+      If you're - i- if you're
+    
+    
+      
+    
+    
+      Scandinavian, the Minnesota area's north.
+    
+    
+      Uh yeah. That's -
+    
+    
+      That's North Midland.
+    
+    
+      But that's  also  North  Midland,  right?
+    
+    
+      Yeah.
+    
+    
+      Oh, . - O_K.
+    
+    
+      And - and - and Oregon and -
+    
+    
+      Yeah. Of course, that's  very  different from, like,  Michigan, 
+    
+    
+      and Oregon and Washington are - are  Western,  but
+    
+    
+      Mmm.
+    
+    
+      or -
+    
+    
+      they're also  Northern. 
+    
+    
+      Mm-hmm.
+    
+    
+      uh, Idaho?
+    
+    
+      Well there are hardly any subjects from Idaho.
+    
+    
+      Montana?
+    
+    
+       No problem. 
+    
+    
+      
+    
+    
+       Just rule them out.
+    
+    
+      
+    
+    
+      There's only a few people in Idaho. 
+    
+    
+      There are hardly any subjects from "beep" 
+    
+    
+      
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      Sorry.
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      No,  that's  -
+    
+    
+      And - is - in those -
+    
+    
+      Maybe -
+    
+    
+      Maybe we -
+    
+    
+      Maybe we  should  put a little map and say "put an X_  on  where you're from", 
+    
+    
+      Yeah really.
+    
+    
+      And if you put -
+    
+    
+      We could ask where they're  from.  Yeah. But-
+    
+    
+      It'd be pretty simple, yeah.
+    
+    
+      Yeah.
+    
+    
+      We went back to that.
+    
+    
+      If you put eh the state?
+    
+    
+      
+    
+    
+      Well well we sort of -
+    
+    
+      Where are you from mostly?
+    
+    
+      We - we went - we went around this and then  a lot of people
+    
+    
+      Uh-huh.
+    
+    
+      ended up saying that it -
+    
+    
+      Mm-hmm.
+    
+    
+      You know.
+    
+    
+      
+    
+    
+      Well, I like the idea of asking "what variety of English do you speak" as opposed to where you're from
+    
+    
+      Yeah.
+    
+    
+      Because th- if we  start  asking where we're  from,   again  you have to start saying, "well, is that the  language  you speak or is that just where you're  from? "
+    
+    
+      Hmm?
+    
+    
+      Right.
+    
+    
+      Right.
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      I mean it gives us good information on where they're  from,  but
+    
+    
+      Let's - Mm-hmm.
+    
+    
+      And -
+    
+    
+      
+    
+    
+      that doesn't  tell us anything - well,  enough  about their -
+    
+    
+      
+    
+    
+      We could always ask them if they're from -
+    
+    
+      I mean. So - so I would say Germany
+    
+    
+      
+    
+    
+      like -
+    
+    
+      You know am I speaking with German accent I don't  think  so.
+    
+    
+      Oh.
+    
+    
+      
+    
+    
+      Right.
+    
+    
+      Well, see,  I'm  thinking "Where are you from  mostly "
+    
+    
+      Oh, O_K yeah.
+    
+    
+      because, you know, then you have some - some kind of subjective  amount  of  time  factored into it.
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      Yep.
+    
+    
+      
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      Yeah, I guess I could  try  to put - squeeze in a little  map.  I mean there's not a lot of r- of room
+    
+    
+      I'd say, uh,
+    
+    
+      "Boston, New York City, the South and Regular".
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      Well -
+    
+    
+      
+    
+    
+      I think  of  those,  Northern  is the only one that I don't even know what they're meaning.
+    
+    
+      And - And -
+    
+    
+      
+    
+    
+      Oh, I don't know.
+    
+    
+      Yeah.
+    
+    
+      Yeah. 
+    
+    
+      That's a joke. That's - 
+    
+    
+      
+    
+    
+      So let's make it up.
+    
+    
+      
+    
+    
+      S- I mean, who cares. Right? We can make up our own - So we can say "Northwest",
+    
+    
+      "Rest of West" or something.
+    
+    
+      You know.
+    
+    
+      "West"
+    
+    
+      and
+    
+    
+      Ye- hhh.
+    
+    
+      
+    
+    
+      I don't think the Northwest people speak any differently than I do.
+    
+    
+      Um 
+    
+    
+      I mean.
+    
+    
+      It doesn't even -
+    
+    
+      Yeah, exactly. That's not really a region.
+    
+    
+      
+    
+    
+      "Do you come from the Louisiana Purchase?"
+    
+    
+      I -
+    
+    
+      So we could take out "North" -
+    
+    
+      
+    
+    
+      And usually here - people here know what is their
+    
+    
+      "Northern".
+    
+    
+      
+    
+    
+      kind of mmm
+    
+    
+      lang- English language?
+    
+    
+      That - that's exactly what we're arguing about. We don't know.
+    
+    
+      eh here-
+    
+    
+      That's - Yeah, w- It's - In -
+    
+    
+      Is easy for people to know?
+    
+    
+      It's - it's harder in America
+    
+    
+      anywhere else, basically.
+    
+    
+      because you have -
+    
+    
+      
+    
+    
+      I mean  some  of them are very obvious. If you - if you talk to someone speaking with  Southern  drawl, you know.
+    
+    
+      N- m-
+    
+    
+      Yeah.
+    
+    
+      Yeah, or Boston.
+    
+    
+      Or Boston, yeah.
+    
+    
+      I can't do it, but -
+    
+    
+      Or Boston?
+    
+    
+      
+    
+    
+      And those people, if you ask them to self-identify their accent  they  know.
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      Yeah, they  do. 
+    
+    
+      They know very well.
+    
+    
+      Yeah I agree I agree. I agree.
+    
+    
+      They know they don't speak the same as the
+    
+    
+      But
+    
+    
+      And they're  proud  of it.
+    
+    
+      
+    
+    
+       day o- 
+    
+    
+      Yeah.
+    
+    
+      Yeah, exactly. 
+    
+    
+      is Boston New England?
+    
+    
+      It's  identity  thing.
+    
+    
+      And they're glad to tell you.
+    
+    
+       style.
+    
+    
+      Well.
+    
+    
+      Depends who you ask, I suppose. 
+    
+    
+      W- 
+    
+    
+       Oh. 
+    
+    
+      I guess that's the problem with these  categories. 
+    
+    
+      
+    
+    
+      But that's why they have New York City but -
+    
+    
+      
+    
+    
+      Well, we ca-
+    
+    
+      Well, Boston's ,  too .
+    
+    
+      Well, why can't we just say characterize -
+    
+    
+      Or -
+    
+    
+      something like char- characterize your accent
+    
+    
+      "Characterize your accent  if you can."
+    
+    
+      and - and so  I  would say, "I don't know".
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      Right, which probably means you have a very -
+    
+    
+      But someone from Boston with a really strong coloration would know. And so would an R_less Maine -
+    
+    
+      And that's actually good.
+    
+    
+      Yeah.
+    
+    
+      or something, yeah.
+    
+    
+      I was - I was thinking of something along that line because  if you  don't   know, 
+    
+    
+      How-
+    
+    
+      Good.
+    
+    
+      then,
+    
+    
+      you know, ruling out the fact that you're totally  inept or something,
+    
+    
+      
+    
+    
+      Hmm.
+    
+    
+      
+    
+    
+      if somebody doesn't know, it probably means their accent isn't very strong compared to the sort of
+    
+    
+      Well,
+    
+    
+      
+    
+    
+      I mean,
+    
+    
+      midwest
+    
+    
+      Hmm?
+    
+    
+      
+    
+    
+      it wasn't that long ago that we had somebody here who was from  Texas  who was absolutely  sure  that he didn't have any  accent  left.
+    
+    
+      standard.
+    
+    
+      
+    
+    
+      
+    
+    
+      And - and had - he had a
+    
+    
+      pretty
+    
+    
+      O_K, so. I propose,  take out Northern
+    
+    
+      
+    
+    
+      
+    
+    
+       noticeable   drawl. 
+    
+    
+      add, don't know.
+    
+    
+      Oh.  Yeah. I - I would say more - more  sweepingly,  "how would you characterize your
+    
+    
+      Yeah.
+    
+    
+      accent?"
+    
+    
+      So you want to change the  instructions  also not just say  region? 
+    
+    
+       W-
+    
+    
+      
+    
+    
+      Well, I think this discussion has made me think that's s- something to consider.
+    
+    
+       I  don't know if I - if I read this form, I  think  they're going to ask  it -
+    
+    
+      they're going to  answer  the same  way  if you say, "What's variety of English do you speak?  Region."
+    
+    
+      as if you say "what variety of region - region  do you speak?
+    
+    
+      Please characterize your accent?"
+    
+    
+      
+    
+    
+      They're going to answer the same way.
+    
+    
+      I guess -
+    
+    
+      Well, I was not sure that - I -
+    
+    
+      Mmm.
+    
+    
+      So. I was suggesting not having the  options,  just having them -
+    
+    
+      
+    
+    
+      Oh, I see.
+    
+    
+      Huh. 
+    
+    
+      Well what we  talked  about with  that  is  is so that they would understand the granularity.
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      Yes, but if, as Liz is suggesting, people who have strong accents  know 
+    
+    
+      that they do -
+    
+    
+      
+    
+    
+      I mean that's what I had  before,  and you told me to list the regions to  list  them.
+    
+    
+      
+    
+    
+      and are -
+    
+    
+      
+    
+    
+      Each - each one has pros and cons I mean we - we -
+    
+    
+      Right.
+    
+    
+      Well, I know.
+    
+    
+      Right. Right.
+    
+    
+      So.
+    
+    
+      That's true.
+    
+    
+      
+    
+    
+      Yeah last week - last week I was sort of r- arguing for having it wide open, but then everybody said "Oh, no, but then it will be hard to interpret
+    
+    
+      
+    
+    
+      
+    
+    
+      because some people will say Cincinnati and some will say Ohio". And.
+    
+    
+      I mean I  had  it wide open last week and - and you said  TIMIT. 
+    
+    
+      What if we put in  both? 
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      And - Would people -
+    
+    
+      That's what the "Other" is for.
+    
+    
+      No, I mean what if we put in both ways of asking them?
+    
+    
+      So. One is  Region and the another one is "if you  had  to  characterize   yourself  - your  accent, 
+    
+    
+      what would you say?"
+    
+    
+      Won't they answer the same thing?
+    
+    
+      Well they might only answer only one of the questions but
+    
+    
+      if
+    
+    
+      Yeah that's fine.
+    
+    
+      You know.
+    
+    
+      
+    
+    
+      They might say "Other" for Region because they don't know what category to use
+    
+    
+       Actually  - 
+    
+    
+      
+    
+    
+      Right. It just -
+    
+    
+      but they might have something -
+    
+    
+      because it  is   easier  to have it open ended.
+    
+    
+      And we - we might  learn  from what they  say,  as to which one's a better  way to ask it.
+    
+    
+       W-
+    
+    
+      But - I - Cuz I really don't know.
+    
+    
+      This is just a  small  thing but
+    
+    
+      
+    
+    
+      um
+    
+    
+      It says "Variety" and then it gives things that e- have
+    
+    
+      American as one of the choices.
+    
+    
+      But then it says "Region", but Region actually just applies to
+    
+    
+      uh, U_S, right?
+    
+    
+      Right.
+    
+    
+      I mean that's why I put the "Other" in.
+    
+    
+      
+    
+    
+      Well, we  thought  about it.
+    
+    
+      Ah, O_K.
+    
+    
+      Yeah, O_K.
+    
+    
+      We just - We sort of thought, "yes, -"
+    
+    
+      S-
+    
+    
+      y- y- I mean -
+    
+    
+      At the last meeting, my recollection was that
+    
+    
+       we felt people would have
+    
+    
+      uh
+    
+    
+      less -
+    
+    
+      that - that there are  so  many  types  and varieties of  these other languages and we are not going to have that many subjects from these different
+    
+    
+      language groups and that it's a
+    
+    
+      Yep.
+    
+    
+      huge waste of -
+    
+    
+      of space.
+    
+    
+      O_K.
+    
+    
+      So I mean, I - I mean the way I had it  last  time  was Region was blank, it just said Region colon.
+    
+    
+      That's what  I  thought.
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      And - and  I  think that that's the best way to do it,
+    
+    
+      because - because of the problems we're  talking  about but what we said  last  week, was no, put in a  list,  so I put in a list. So should we go back to -
+    
+    
+      
+    
+    
+      Maybe we can make the list a little smaller.
+    
+    
+      
+    
+    
+      
+    
+    
+      Well, certainly dropping  "Northern " I think is right, because none of us know what that  is. 
+    
+    
+      Cuz, I mean -
+    
+    
+      
+    
+    
+      And keeping "Other",
+    
+    
+      
+    
+    
+      and then  maybe this North Midland, we call it "North Midwest".
+    
+    
+       South   Midwest, or just -
+    
+    
+      Yes I -
+    
+    
+       South   Midwest. 
+    
+    
+      Does that make sense?
+    
+    
+      I - I  think  so. Yeah.
+    
+    
+      South Midwest?
+    
+    
+      That would help me - Yeah. Cuz -
+    
+    
+      U- unless you're from Midland, Kansas. But. Yeah.
+    
+    
+      Midland -
+    
+    
+      I don't know where Midland is 
+    
+    
+      
+    
+    
+      There's a -
+    
+    
+      Or Midland - Midland -
+    
+    
+      Is "Midwest" one word?
+    
+    
+      Is it Midland -
+    
+    
+      Midland - Midland,  Texas  or Midland,  Kansas?  I forget.
+    
+    
+      
+    
+    
+      Y- yeah, one w-
+    
+    
+      But there's a  town. 
+    
+    
+      
+    
+    
+      
+    
+    
+      Oh.
+    
+    
+      in - in there. I forget what it is .
+    
+    
+      
+    
+    
+      I don't think that's what they mean.
+    
+    
+      But, yeah. So.  Kansas  would be  South Midland. Right?
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      Y- yeah.
+    
+    
+      And - and wouldn't - Yeah.
+    
+    
+      
+    
+    
+       Southern Midland.  
+    
+    
+      So, th-
+    
+    
+      And  Colorado,  right across the  border,  would be
+    
+    
+       I'm  from  Kansas, 
+    
+    
+      actually.
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+       North  Midland.
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      
+    
+    
+      Colora- Oh, right. And then, the -
+    
+    
+      And uh -
+    
+    
+      
+    
+    
+      the - dropping North,  so it would be
+    
+    
+      Western. It's just one big
+    
+    
+      shebang,
+    
+    
+      where, of course, you have  huge  variation in dialects, but - 
+    
+    
+      
+    
+    
+      But you  do  in the others,  too.  So.
+    
+    
+      But that's true of New England too.
+    
+    
+      but so do you - Yeah.
+    
+    
+      
+    
+    
+      So. I mean only one -
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      Yeah.
+    
+    
+      Well, I shouldn't  say  that. I have no clue. I was going to say the only one that  doesn't  have a huge variety is New York  City.  But I have no idea whether it does or not.
+    
+    
+      It  does  seem - I mean. I - I would
+    
+    
+      U-
+    
+    
+      think that these categories would be more -
+    
+    
+      w-
+    
+    
+      would be easier for an an-  analyst  to put in rather than the subject himself.
+    
+    
+      
+    
+    
+      
+    
+    
+      I think that - that was what  happened  with TIMIT,
+    
+    
+      
+    
+    
+      was that it  was  an analyst.
+    
+    
+      O_K.
+    
+    
+      Wait a minute. Where does -
+    
+    
+      Yeah, I don't know  how  it came from.
+    
+    
+      Where does -
+    
+    
+       d- w-
+    
+    
+      O_K.
+    
+    
+      Where - Where's - where does uh
+    
+    
+      
+    
+    
+      
+    
+    
+      New - New York west of - west of uh New York City
+    
+    
+      and 
+    
+    
+      Pennsylvania 
+    
+    
+      uh
+    
+    
+      and uh
+    
+    
+      
+    
+    
+      So.  That's  New  England  I think. Yeah.
+    
+    
+      New England
+    
+    
+      N-
+    
+    
+      
+    
+    
+       No,  it's not.
+    
+    
+       Oh, no.
+    
+    
+      
+    
+    
+      I sort of thought they were part of the - one of the  Midlands. 
+    
+    
+      Oh no.
+    
+    
+      No, no.  No. Pennsylvania is not -
+    
+    
+      "Other", it goes under "Other", definitely under "Other".
+    
+    
+      
+    
+    
+      
+    
+    
+      Well, you know,  Pennsylvania  has a pretty strong  dialect   and it's   totally  different than -
+    
+    
+      Pennsylvania - Yeah. Pennsylvania is  not  New England.
+    
+    
+      and uh New  Jersey  is not New England and  Maryland  is not New England and none of those are the  South. 
+    
+    
+      O_K. So.
+    
+    
+      Another suggestion.
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      Rather than have circle fill in forms,
+    
+    
+      
+    
+    
+      say "Region, open paren, E_G_ Southern comma Western comma close paren colon."
+    
+    
+      
+    
+    
+      O_K.
+    
+    
+      O_K!
+    
+    
+      That's good.
+    
+    
+      Yeah.
+    
+    
+      Fine by me, fine by me.
+    
+    
+      Sure!
+    
+    
+      
+    
+    
+      I like that.
+    
+    
+      Yeah.
+    
+    
+      Let's just - And we'll see what we get.
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      We're all  sufficiently  tired of this
+    
+    
+      Be easier on the subjects.
+    
+    
+      
+    
+    
+      that we're  agreeing  with you.
+    
+    
+      
+    
+    
+      I think that's fine.
+    
+    
+      So.  
+    
+    
+      No. I think - 
+    
+    
+      I like that. I like that.
+    
+    
+      
+    
+    
+      You like it?
+    
+    
+      O_K.
+    
+    
+      Yeah, I do.
+    
+    
+      
+    
+    
+      Good.
+    
+    
+      Actually, maybe we do one non-English one as well.
+    
+    
+      Southern, Cockney?
+    
+    
+      Yeah, and -
+    
+    
+      Yeah.
+    
+    
+      Is that a  real accent?
+    
+    
+      Sure, yeah!
+    
+    
+      Yeah.
+    
+    
+      How do you spell it?
+    
+    
+      I think that's fine.
+    
+    
+      
+    
+    
+      Cockney?
+    
+    
+      
+    
+    
+      C_O -
+    
+    
+      N_ E _Y?
+    
+    
+      Yeah.
+    
+    
+      You could say  Liverpool.  
+    
+    
+      
+    
+    
+      
+    
+    
+      Liverpuddlian.
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      Actually, Liverpool doesn't l- Yeah. It's -
+    
+    
+      Alright.
+    
+    
+      
+    
+    
+      Well. Well. I mean, pure -
+    
+    
+      O_K, we'll do it that way. Actually, I like that a lot.
+    
+    
+      
+    
+    
+      
+    
+    
+      O_K.
+    
+    
+      Because that get's at  both  of the things we were trying to do,
+    
+    
+      the granularity,
+    
+    
+      and the person can just self-assess and we don't have to argue about what these regions are.
+    
+    
+      That's right.
+    
+    
+      Yeah.
+    
+    
+      O_K.
+    
+    
+      And it's easy on the subjects.
+    
+    
+      
+    
+    
+      Yep.
+    
+    
+      Now I have one suggestion on the next section.
+    
+    
+      Mm-hmm.
+    
+    
+      Mm-hmm.
+    
+    
+      So you have native language, you have region,
+    
+    
+      and then you have time spent in English speaking country.
+    
+    
+      Now, I wonder if it might be useful to have another open field saying "which one
+    
+    
+      parenthesis S_ 
+    
+    
+      paren-  closed  parenthesis". 
+    
+    
+      Cuz if they spent  time in -
+    
+    
+      in Britain  and  America -
+    
+    
+      Yes.
+    
+    
+      
+    
+    
+      It doesn't have to be ex-  all  - at  all  exact, just in the same open field
+    
+    
+      format that you have.
+    
+    
+      Yep, just which one. I think that's fine.
+    
+    
+      Mm-hmm.
+    
+    
+      Mm-hmm.
+    
+    
+      with a - with an S_  
+    
+    
+      "which one
+    
+    
+      sss, 
+    
+    
+      optional S_. 
+    
+    
+      
+    
+    
+      O_K.
+    
+    
+      
+    
+    
+      Yeah. 
+    
+    
+      We uh -
+    
+    
+      We done?
+    
+    
+      Yep.
+    
+    
+      Yeah, that's good.
+    
+    
+      O_K.
+    
+    
+      um
+    
+    
+      s- e-
+    
+    
+      Any - any other
+    
+    
+      uh open mike topics or should we go  right to the digits?
+    
+    
+      Um, did you guys get my email on the multitrans?
+    
+    
+      That -
+    
+    
+      O_K.
+    
+    
+      Isn't that wonderful! Yeah.
+    
+    
+      Excellent! Thank you!
+    
+    
+       I'm s- 
+    
+    
+      Yeah. So.
+    
+    
+      So. I - I have a version  also  which actually  displays  all the channels.
+    
+    
+      I ha- It's really great.
+    
+    
+      But it's hideously slow.
+    
+    
+      
+    
+    
+      So you - this is n-  Dan's  patches, Dan Ellis's patches.
+    
+    
+      The - what - the ones I applied, that you can actually do are Dan's, because it doesn't slow it down.
+    
+    
+      M-
+    
+    
+      Fantastic!
+    
+    
+      Just uses a lot of memory.
+    
+    
+      So when you say " slow ", does that mean to -
+    
+    
+      No, the - the one that's installed is fine. It's not slow at all.
+    
+    
+       I  wrote another version.
+    
+    
+      Which, instead of having the  one  pane with the  one  view,
+    
+    
+      It has  multiple  panes  with the views.
+    
+    
+      Yeah.
+    
+    
+      Mm-hmm.
+    
+    
+      But the  problem  with it
+    
+    
+      is the  drawing  of those  waveforms  is  so   slow 
+    
+    
+      that every time you do  anything  it just crawls.
+    
+    
+      Mm-hmm.
+    
+    
+      It's really bad.
+    
+    
+      It's -
+    
+    
+      So, it - it's the redrawing of the w-
+    
+    
+      That's a consideration. 
+    
+    
+      Mm-hmm.
+    
+    
+      oh uh-huh,
+    
+    
+      w- as you move.
+    
+    
+      As you  play,  as you  move,  as you  scroll. 
+    
+    
+      Just about  anything,  and it - it was so slow it was not usable.
+    
+    
+      And this'll be a -
+    
+    
+      So that's why I didn't install it and didn't pursue it.
+    
+    
+      hav- having the multiwave will be a big help cuz -
+    
+    
+      in terms of like disentangling overlaps and things,
+    
+    
+      Oh  yeah. 
+    
+    
+      that'll be a  big  help.
+    
+    
+      
+    
+    
+      So.
+    
+    
+      Yeah. 
+    
+    
+      I  think  that the one Dan has is usable enough.
+    
+    
+      It doesn't  display  the others. It  displays  just the mixed signal.
+    
+    
+      Mm-hmm.
+    
+    
+      But you can  listen  to any of them.
+    
+    
+      That's excellent. He also has version control which is another nice
+    
+    
+      Yeah.
+    
+    
+      e- so you -
+    
+    
+      No, he  suggested  that, but he didn't -
+    
+    
+      e- the patches that you -
+    
+    
+       It's not installed.
+    
+    
+      Oh, I  thought  it was in one of those  patches. 
+    
+    
+      No.
+    
+    
+      No.
+    
+    
+      Oh O_K.
+    
+    
+      Well.
+    
+    
+      So is there any hope for actually displaying
+    
+    
+      Alright.
+    
+    
+      the wave form?
+    
+    
+      Um, not if we're going to use Tcl-T_K
+    
+    
+      O_K.
+    
+    
+      At least not if we're going to use  Snack. 
+    
+    
+      I mean you would have to do something ourselves. 
+    
+    
+      Well, or use the one that crawls.
+    
+    
+      O_K.
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      Well, I'm -
+    
+    
+      I  probably   would   be   trying  to  use   the  - 
+    
+    
+      whatever's  there.  And
+    
+    
+      
+    
+    
+      Why don't we - we  see  how Dan's works and if it -
+    
+    
+      it's useful to have the -
+    
+    
+      Yeah. 
+    
+    
+      If we really need the display -
+    
+    
+      I mean.
+    
+    
+      I wonder - I'm just wondering if we can  display  things other than the  wave  form. So. Suppose we have a  feature  -
+    
+    
+      a  feature  stream.
+    
+    
+      And it's just, you know, a - a
+    
+    
+      Yeah.
+    
+    
+      uni-dimensional feature,
+    
+    
+      varying in time.
+    
+    
+      And we want to plot  that,  instead of the whole wave form.
+    
+    
+      I mean.
+    
+    
+      Yeah.
+    
+    
+      That might be faster. Right? So.
+    
+    
+      Yeah.
+    
+    
+      We - we could  do  that but that would mean changing
+    
+    
+      the code.
+    
+    
+      I mean this isn't a program  we  wrote.
+    
+    
+      Yeah.
+    
+    
+      This is a program that we got from someone else,
+    
+    
+      O_K.
+    
+    
+      and we've done  patches  on.
+    
+    
+      O_K.
+    
+    
+      Mm-hmm.
+    
+    
+      Yeah.
+    
+    
+      Well, I'll talk to you about it and we can see but
+    
+    
+      Cou-
+    
+    
+      So.
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      i- e-
+    
+    
+      I mean, y-
+    
+    
+      it's  definitely   great to have the other one. That's -
+    
+    
+      
+    
+    
+      
+    
+    
+      If there was some -
+    
+    
+      Is there some  way  to  have someone write
+    
+    
+      
+    
+    
+      patches
+    
+    
+      in something faster and -
+    
+    
+      and -
+    
+    
+      link it  in,  or something? Or is that -
+    
+    
+      Not easily. I mean y-  yes  we could  do  that. You could - you can write
+    
+    
+      widgets in C_.
+    
+    
+      Yeah.
+    
+    
+      And try to do it that way but I just don't think -
+    
+    
+      it -
+    
+    
+      Let's  try  it with Dan's and if that isn't  enough, 
+    
+    
+      Right. 
+    
+    
+      we can do it otherwise. I  think  it  is,  cuz when I was  playing  with it, the  mixed  signal has it all  in  there.
+    
+    
+      And so it's really - It's not too bad to find places in the - in the stream
+    
+    
+      O_K.
+    
+    
+      where things are happening.
+    
+    
+      
+    
+    
+      And it's also -
+    
+    
+      Hmm?
+    
+    
+      So I - I don't think it'll be bad.
+    
+    
+      also the case that - that uh this  multi-wave   thing
+    
+    
+       is proposed to the -
+    
+    
+      So. Dan proposed it to the Transcriber central people,
+    
+    
+      and it's likely that uh - So. And - and
+    
+    
+      they responded favorably looks as though it will be incorporated in the future version.
+    
+    
+      Oh.
+    
+    
+      They said that the only reason they hadn't had the multi- the parallel
+    
+    
+      uh  stream  one  before  was simply that
+    
+    
+       they hadn't had time to do it.
+    
+    
+      And uh
+    
+    
+      Yeah.
+    
+    
+       so it's likely that this - this may be entered into the ch- this central
+    
+    
+      .
+    
+    
+      They may well have  not  had much  demand  for it.
+    
+    
+      And if - if -
+    
+    
+      Well that's - that's - that's true, too.
+    
+    
+      Yeah.
+    
+    
+      This is a -
+    
+    
+      Yeah.
+    
+    
+      So. You mean they could - they could do it and it would be  fast enough if  they  do it? Or - ? 
+    
+    
+       a useful thing for  us. 
+    
+    
+      
+    
+    
+      Oh. No.
+    
+    
+      Depends on how much  work  they did.
+    
+    
+      I just mean - I just mean that it's - that - that his - So.
+    
+    
+       Oh .
+    
+    
+       This one that
+    
+    
+      we now have
+    
+    
+      Mm-hmm.
+    
+    
+       does  have the status of
+    
+    
+       potentially being incorporated
+    
+    
+      l-  likely  being incorporated into the central code.
+    
+    
+      
+    
+    
+      O_K.
+    
+    
+      Now, tha- Now, if we develop  further 
+    
+    
+      then, y- uh, I don't -
+    
+    
+      I mean it's - I think it's a nice feature to have it -
+    
+    
+      
+    
+    
+      I think if - if - if one of us sat down and  coded  it, so that it could be  displayed  fast enough
+    
+    
+      set that way.
+    
+    
+      I'm sure they would be  quite  willing to  incorporate  it.
+    
+    
+      Mm-hmm.
+    
+    
+      But it's  not  a trivial  task. 
+    
+    
+      O_K. 
+    
+    
+      Mm-hmm. Yeah.
+    
+    
+      I just like the idea of it being something that's,
+    
+    
+      you know, tied back into the  original,  so that other people can benefit from it.
+    
+    
+      Yeah.
+    
+    
+       
+    
+    
+      Yeah.
+    
+    
+      However. I  also  understand that you can have
+    
+    
+      
+    
+    
+      
+    
+    
+       widgets that are  very  useful for their purpose and that you don't need to
+    
+    
+      always go that w- route.
+    
+    
+      Yeah.
+    
+    
+      O_K.
+    
+    
+      anyway, shall we do digits?
+    
+    
+      Yeah. 
+    
+    
+      Yeah. Let's do digits,
+    
+    
+      uh, and then we'll turn off the mikes, and then I have one other thing to discuss.
+    
+    
+      O_K.
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      I actually have to leave. So.
+    
+    
+      O_K.
+    
+    
+      Um.
+    
+    
+      I mean  I had to leave at three thirty, 
+    
+    
+      Uh-oh. 
+    
+    
+      so I can -
+    
+    
+      Oh.
+    
+    
+      O_K.
+    
+    
+      
+    
+    
+      Well, you want to go  first?  Or.
+    
+    
+      Well, I can wait  for the digits but I
+    
+    
+       can't   stay  for the  discussion  I c-
+    
+    
+       I have to make a  call. 
+    
+    
+      So.
+    
+    
+      O_K. Well, we'll talk to you about it -
+    
+    
+      Well, should we - e- should we switch off the g-
+    
+    
+      Um.
+    
+    
+      Do you wanna go do digits or do you wanna just  skip  digits?
+    
+    
+      No, I can do digits  if  -
+    
+    
+      Then -
+    
+    
+      if -
+    
+    
+      
+    
+    
+      But I don't wanna butt  in, 
+    
+    
+      Alright.
+    
+    
+      or something.
+    
+    
+      You go ahead.
+    
+    
+      
+    
+    
+      But if there's something on the  rest  of the -
+    
+    
+      I'm - I'll be around just have to make call before quarter of. So.
+    
+    
+      Mm-hmm.
+    
+    
+      Uh
+    
+    
+      So I -
+    
+    
+      
+    
+    
+      Or we can talk about it.
+    
+    
+      Ke-
+    
+    
+      Why don't you read the digits?
+    
+    
+      O_K.  Alright.
+    
+    
+      
+    
+    
+      Yeah, why don't you read the digits and then you can  go.
+    
+    
+      
+    
+    
+      Oh, this is the new one.
+    
+    
+      
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      Yeah, don't -
+    
+    
+      Alright.
+    
+    
+      The -
+    
+    
+      Don't read the old one.
+    
+    
+      And the
+    
+    
+      time is.
+    
+    
+      O_K.
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      This is transcript two seven five one, two seven seven zero  
+    
+    
+      nine two five four four 
+    
+    
+      O_ four O_ one six 
+    
+    
+      zero five nine zero seven 
+    
+    
+      one seven nine zero eight three eight 
+    
+    
+      two 
+    
+    
+      three 
+    
+    
+      four zero zero seven zero three zero 
+    
+    
+      six four three seven 
+    
+    
+      seven six eight nine 
+    
+    
+      eight four 
+    
+    
+      nine nine five one 
+    
+    
+      O_ 
+    
+    
+      zero zero eight 
+    
+    
+      one zero six 
+    
+    
+      three four 
+    
+    
+      four two 
+    
+    
+      five five nine 
+    
+    
+      six seven zero 
+    
+    
+      seven 
+    
+    
+      eight O_ five three three 
+    
+    
+      Transcript uh two seven one one dash two seven three zero. 
+    
+    
+      seven five seven six 
+    
+    
+      eight eight seven zero 
+    
+    
+      nine seven four four four 
+    
+    
+      O_ O_ one nine 
+    
+    
+      zero zero one six seven 
+    
+    
+      two two nine 
+    
+    
+      three four six one seven 
+    
+    
+      four five seven zero one 
+    
+    
+      five s-  
+    
+    
+      five six four two nine five O_ 
+    
+    
+      six 
+    
+    
+      seven 
+    
+    
+      eight zero seven five six 
+    
+    
+      O_ one five nine 
+    
+    
+      zero four four zero five 
+    
+    
+      one five two two 
+    
+    
+      two eight one O_ two four O_ 
+    
+    
+      three 
+    
+    
+      four 
+    
+    
+      five 
+    
+    
+      seven one eight two 
+    
+    
+      Transcript two six five one, two six seven O_. 
+    
+    
+      four 
+    
+    
+      five zero four seven nine seven two 
+    
+    
+      
+    
+    
+      seven one three six five 
+    
+    
+      eight three O_ eight 
+    
+    
+      nine six zero five six 
+    
+    
+      O_ 
+    
+    
+      zero 
+    
+    
+      one 
+    
+    
+      two zero two 
+    
+    
+      four three eight two 
+    
+    
+      five two zero seven seven eight three 
+    
+    
+      six seven six 
+    
+    
+      seven nine seven one seven 
+    
+    
+      eight 
+    
+    
+      nine 
+    
+    
+      O_ O_ two two 
+    
+    
+      one three seven 
+    
+    
+      two five five 
+    
+    
+      three five seven one five three eight 
+    
+    
+      four eight one one zero 
+    
+    
+      Transcript number two six seven one dash two six nine zero 
+    
+    
+      five 
+    
+    
+      six 
+    
+    
+      seven O_ eight three O_ 
+    
+    
+      nine two two 
+    
+    
+      O_ three six O_ seven O_ four 
+    
+    
+      zero six 
+    
+    
+      one 
+    
+    
+      two seven one O_ one two four 
+    
+    
+      three 
+    
+    
+      four zero six seven two 
+    
+    
+      six four seven eight 
+    
+    
+      seven four 
+    
+    
+      eight three O_ 
+    
+    
+      nine 
+    
+    
+      O_ 
+    
+    
+      zero 
+    
+    
+      one zero eight nine nine 
+    
+    
+      three one nine 
+    
+    
+      four two seven seven five 
+    
+    
+      five seven five two 
+    
+    
+      Transcript two six nine one, two seven one O_. 
+    
+    
+      six nine 
+    
+    
+      seven 
+    
+    
+      eight 
+    
+    
+      nine zero 
+    
+    
+      zero two six eight two two four 
+    
+    
+      one four zero eight 
+    
+    
+      two three three three 
+    
+    
+      three 
+    
+    
+      four nine two four five zero six 
+    
+    
+      five 
+    
+    
+      six O_ six 
+    
+    
+      eight four one three four 
+    
+    
+      nine three four 
+    
+    
+      O_ eight six 
+    
+    
+      zero 
+    
+    
+      one 
+    
+    
+      two 
+    
+    
+      three 
+    
+    
+      five two seven one eight four eight 
+    
+    
+      six six six two O_ seven one 
+    
+    
+      O_K
+    
+    
+      O_K.
+    
+    
+      Turn it  off. 
+    
+    
+       
+    
+    
+      But wait till he -
+    
+    
+      O_K.
+    
+    
+      And  
+    
+
+  
+
+
