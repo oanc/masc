@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cesDoc xmlns="http://www.xces.org/schema/2003" version="1.0.4">
+   <text>
+      <body>
+         <div type="article" xml:lang="">
+            <p>Proposal for a Red Harvester Ant Robot: Colony Infiltration and Task Switching</p>
+            <p>Sonia Roberts</p>
+            <p>11/27/07</p>
+            <p>Introduction</p>
+            <p/>
+            <p>Background</p>
+            <p>Science fiction writers have been anticipating humanoid androids that could pass a Turing Test for years. Unfortunately, as of yet, no robot has managed to fool a human for more than a few seconds, and no robot has been created that can integrate itself into human society. Infiltrating insect societies, however, is much simpler. Extensive research has been done on the interactions of social insects such as honeybees, ants and cockroaches, and in fact robots have passed undetected in cockroach society performing single simple behaviors already (Halloy et al, 2007). No robot has yet been constructed, however, that could pass undetected within a colony of the red harvester ants species Pogonomyrmex barbatus; nor has a robot managed to pass undetected in a society of insects while combining in its design several different behaviors and the thresholds of stimulation required to switch between them. Such a robot would allow for both long-term studies of ant-robot interactions and studies of task-switching in the robots. I propose here the theoretical construction and programming of a robot (hereafter referred to as Antie) that will be able to infiltrate a red harvester ant nest, switching between the foraging, patrolling and midden work behaviors.</p>
+            <p/>
+            <p>Environment</p>
+            <p>The red harvester ant lives in hot, dry deserts, building its nests in light yellowy sand and foraging for seeds deposited by winds and rain. The ants forage for more than 30 different varieties of seeds, many of which do not grow in the desert (Gordon, 54), where only a few varieties of small shrubs, small herbaceous flowering plants and short grasses do grow (Gordon, 51). Other insects and creatures, including other species of ants, are present in the desert, but red harvester ants seem to be relatively undisturbed by these animals (Gordon, 7-11). Though fights sometimes do break out with other red harvester ants from different nests, intraspecies interactions tend not to be aggressive (Gordon, 11). Because of this, I will ignore other ant species in the design of Antie, and will not create a fighting behavior. Antie will be equipped to navigate in this environment and will be designed to find seeds in sandy soil.</p>
+            <p/>
+            <p>The Ant &amp; the Robot</p>
+            <p>Ants of this species are of two types: breeding ants (queens and drones) and sterile female workers. Queens and drones will not be considered in this proposal, as their behaviors and design is much more specialized and would be applicable only during the breeding season, which occurs but once per year. The behaviors of the sterile workers may be divided into several subcategories: brood care, nest maintenance, patrolling and foraging. Little is known about brood care, as this occurs only in the deepest regions of the nest and observation would generally require the destruction of the nest. Nest maintenance and seed processing are likewise difficult to observe in the deeper regions of the nest, but the sorting and deposition of waste dirt and nest garbage outside of the nest (midden work) occurs close enough to the surface to be observable. Patrolling and foraging, too, occur for the most part outside of the nest, and have therefore been studied extensively (ex., Schafer, et al, 2006; Gordon, et al, 2002; Gordon, 2002; Gordon, 1987). It is therefore these three behaviors that I would like to focus on in this proposal: the others remain a bit too mysterious to yet model, and the ability of a robot to pass undetected in the depths of a colony would be very difficult to observe.</p>
+            <p>These three behaviors each present different puzzles to the ant and to the modeler, though there is some overlap, particularly with navigational problems. In the case of midden work, Antie must be able to identify garbage, grasp it, carry it out of the nest, and deposit it about halfway down the mound before returning to repeat the process ad infinitum (or until stimulated to switch behaviors). Patrolling may be divided into two distinct sub-behaviors, nest patrolling and trail patrolling. An ant engaged in nest patrolling must exit the nest at the proper time in the morning and wander about for a bit on the nest mound, presumably taking measurements of the temperature and humidity in some way and making sure that it is safe for the other ants to exit. Perhaps the level of degradation of the nest patrollers’ cuticular hydrocarbons after this short foray into the sun and heat acts as an indication of the outside conditions to the foragers, who may then, upon smelling the returning patroller, be stimulated either to forage or to remain inactive inside the nest. An ant engaged in trail patrolling must exit the nest, wander around searching for food sources, identify food upon discovery and return to the nest to show the foragers where the food is. This is thought to be accomplished by the deposition of chemical markers from a gland on the abdomen that the patroller drags along the ground on her return route to the nest that the foragers may then follow (Gordon, 33-34; Holldobler et al, 1990, as cited in Webb, 1998). In addition to following these trails to the food, foragers must also be able to identify food, grasp it and carry it back to the nest. Ants engaged in all three behaviors must be able to identify other nestmates and their current tasks (as well as indicate to other ants their own nestmate status and current task), walk, navigate both within and outside of the nest, and of course switch tasks at appropriate times.</p>
+            <p/>
+            <p>The Agent </p>
+            <p/>
+            <p>Chassis</p>
+            <p>Antie will be implemented on a tiny Road Warrior robotic system. Behaviors will be coded in Interactive C, for which some pseudocode is included. Sensors will include a thermometer, photoreceptors, bump sensors, a polarization compass, and a series of chemical receptors. Antie be a circular robot, no more than 1cm in diameter (the length of a red harvester ant), with two driving wheels and one rear wheel for stabilization. A gripper will be located on the front of the robot consisting of two elongated tongs. Antie will also feature a skirt of bump sensors, sonar detectors and chemical emitters, including sacs of hydrocarbons extracted from ants of the nest being infiltrated and pheromones for successful patrolling and foraging. These sacs will be refilled at a filling station each morning as Antie determines that they are getting depleted. Antie will likewise recharge at a special station at night just inside the nest entrance. For the purposes of this proposal, I will assume that Antie has enough battery life to remain powered the whole day. A rudimentary blueprint of Antie is attached. (Fig 1)</p>
+            <p/>
+            <p>Sensors</p>
+            <p>In order to inform itself about its environment, Antie will need a number of sensors. In an attempt to mimic the red harvester ant as closely as possible, these sensors include a thermometer, photoreceptors, bump sensors and sonar, a polarization compass, and a series of chemical receptors on a pair of stalks corresponding to the antennae. On its front grippers, Antie will have a tactile skin to sense pressure. The locations of the rest of these sensors will depend on their function.</p>
+            <p>The thermometer will be located on the rear of the robot to keep it out of the way, and will detect and input to the robot the outside temperature in degrees Celsius. Harvester ants do not exit the nest when the outside temperature is above 52 degrees Celsius (Gordon, 9), and the ability to use a temperature gradient will enable in-nest navigation.</p>
+            <p>Antie will also be equipped with one photoreceptor located in the middle of the top of its chassis corresponding to the ant’s eyes. These will be useful for initiating patrolling behavior in the morning and shutting off behaviors at night: the patrollers first poke their heads out of the nest shortly after sunrise and scuttle back in at night (Gordon, 5).</p>
+            <p>The bump sensors and sonar will form a skirt around Antie to keep it from colliding with other objects. The sonar will constantly be detecting nearby objects and initiate an escape maneuver when their inputs pass a certain threshold of stimulation, and the bump sensors will, when depressed, also initiate the escape function. The sonar will correspond to the ant’s limited optical object detection ability, and the bump sensors will allow the robot to detect collisions.</p>
+            <p>The polarization compass will consist of two polarized light sensors placed at 45 and -45 degrees from the center front of Antie, respectively, that will orient Antie towards a desired polarization pattern. These sensors would correspond to the cells in the ants’ eyes sensitive to polarized light, and research has shown that many insects, including ants, do navigate using a path integration system synthesizing input from a polarization compasses and from a sort of odometer (Labhart, et al, 2002). Antie would use a system for processing the input from its polarization compass based on the compass designed by Lambrinos, Moller, Labhart, Pfeifer and Wehner in 2000, consisting of two photodiodes with blue filters and polarizers. (Fig 2) The difference of their logarithmized signals would be returned to Antie, who will use a simultaneous model to navigate returns to the nest: Upon each exit from the nest, Antie will take a single 360o scan of the sky, and will orient itself according to an analytical procedure to derive compass information from different polarization patterns perceived later. This should be sufficient to return Antie to the nest, given the accuracy achieved by Lambrinos, et al and the relatively short periods of time that harvester ants spend outside the nest before returning.</p>
+            <p/>
+            <p>
+               <inlinegraphic fileref="" width=""/>
+            </p>
+            <p>Fig. 2. Diagram of the polarization-opponent unit described by Lambrinos, et al (2000). The unit takes in polarization levels through the two polarization-sensitive photodiodes and feeds them into the logarithm ratio amplifier, which returns the difference of the logarithmized signals from the photodiodes. The e-vector (heading) returned from the two polarization-sensitive photodiodes (1, 2) follows a cos2-function.</p>
+            <p/>
+            <p>Ants themselves rely primarily on chemical information taken in through their antennae, and to mimic this, Antie will have chemical sensing and emitting “stalks” with which to both interact with other ants (who may be surprised to find an ant without antennae) and take in chemical information. These stalks will need to have receptors to measure the n-alkene levels present in another ant’s cuticular hydrocarbons, which research indicates is the marker for harvester ants of a nestmate’s current task, perhaps because the hydrocarbons are altered in the dry sun, causing a different ratio of n-alkanes to n-alkenes and the presence of branched n-alkanes in the hydrocarbon profile (Wagner, et al, 2001, as cited in Gordon &amp; Greene, 2003). Antie’s stalks would also have receptors for the hydrocarbons themselves, which research shows indicate to the ants whether another ant is their nestmate (Arnold, et al, 1996, as cited in Gordon &amp; Mehdiabadi, 1999), receptors to detect food, and receptors for three types of pheromones: those released by successful foragers returning with food, those released by successful patrollers returning to the nest, and those marking piles of trash as midden. Research shows that successful foragers returning to the nest do have a different effect on the inactive workers than unsuccessful foragers returning (Schafer, et al, 2006). Returning successful patrollers have an even greater effect on foraging activity: foragers will not leave the nest unless a patroller returns (Gordon, 2002), and the rate of foraging in a colony can be controlled by rolling glass beads coated with cuticular hydrocarbons extracted from patrollers into the nest (Gordon &amp; Greene, 2003; Greene &amp; Gordon, 2007). Midden seems to be marked in some olfactory way, since removing midden from nests makes them more likely to be invaded by other species (Gordon, 35). For the purposes of this proposal, I will assume that the nest maintenance and food processing ants have marked the midden with a particular pheromone. All of these chemical receptors will be arranged in an array on a pair of chemical stalks, with four of each type of receptor per stalk. This technique, described by Ishida, et al (2001), has been shown to improve the chemical plume-tracking abilities of robots. The wires will lead back down through the stalk to the on-board PC.</p>
+            <p>Finally, Antie will have tactile sensors on its grippers to analyze the pressure being exerted on a gripped object. These sensors will be of the type patented by Peterson, et al (Patent #4,492,949), and will feature several layers of electrically insulating and parallel flexible conductive rods arranged such that an exerted pressure may be measured in output voltage. These will correspond to the muscles of the ant’s mandibles, which provide sensorimotor feedback to the ant when grasping objects. A table of the sensors and their relation to the ant’s sensory system is provided below.</p>
+            <p/>
+            <p>Fig 3. Table of sensors and their relations to the ant.</p>
+            <informaltable frame="all">
+               <tgroup cols="4"><tbody><row>
+                     <entry>
+                        <p>Sensor</p>
+                     </entry>
+                     <entry>
+                        <p>Relation to Ant</p>
+                     </entry>
+                     <entry>
+                        <p>Placement on Antie</p>
+                     </entry>
+                     <entry>
+                        <p>Function</p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <p>Sonar detectors</p>
+                     </entry>
+                     <entry>
+                        <p>Eyes; object perception</p>
+                     </entry>
+                     <entry>
+                        <p>Skirt</p>
+                     </entry>
+                     <entry>
+                        <p>Prevent object collisions!</p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <p>Thermometer</p>
+                     </entry>
+                     <entry>
+                        <p>Ants respond to different temperatures</p>
+                     </entry>
+                     <entry>
+                        <p>Rear</p>
+                     </entry>
+                     <entry>
+                        <p>In-nest navigation; tells Antie when to stop engaging in extra-nest activity</p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <p>“Successful forager” pheromone chemical detectors</p>
+                     </entry>
+                     <entry>
+                        <p>Antennae</p>
+                     </entry>
+                     <entry>
+                        <p>Stalks</p>
+                     </entry>
+                     <entry>
+                        <p>Forager behavior activation</p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <p>“Successful patroller” pheromone chemical detectors</p>
+                     </entry>
+                     <entry>
+                        <p>Antennae</p>
+                     </entry>
+                     <entry>
+                        <p>Stalks</p>
+                     </entry>
+                     <entry>
+                        <p>Detect and follow trails left by patrollers</p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <p>Photoreceptor</p>
+                     </entry>
+                     <entry>
+                        <p>Eyes; light perception</p>
+                     </entry>
+                     <entry>
+                        <p>Center top</p>
+                     </entry>
+                     <entry>
+                        <p>Find surface from inside nest; tell patrollers when to begin patrolling in the morning</p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <p>Hydrocarbon alkene level detectors</p>
+                     </entry>
+                     <entry>
+                        <p>Antennae</p>
+                     </entry>
+                     <entry>
+                        <p>Stalks</p>
+                     </entry>
+                     <entry>
+                        <p>Determine what task other ants are engaged in</p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <p>Cuticular hydrocarbon detectors</p>
+                     </entry>
+                     <entry>
+                        <p>Antennae</p>
+                     </entry>
+                     <entry>
+                        <p>Stalks</p>
+                     </entry>
+                     <entry>
+                        <p>Determine whether an ant is a nestmate</p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <p>Chemical seed detectors</p>
+                     </entry>
+                     <entry>
+                        <p>Antennae</p>
+                     </entry>
+                     <entry>
+                        <p>Stalks</p>
+                     </entry>
+                     <entry>
+                        <p>Determine whether an object is a seed or not</p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <p>Polarized photoreceptors </p>
+                     </entry>
+                     <entry>
+                        <p>Retina</p>
+                     </entry>
+                     <entry>
+                        <p>45 and -45 degrees from center on top</p>
+                     </entry>
+                     <entry>
+                        <p>Polarization compass</p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <p>Midden pheromone chemical receptors</p>
+                     </entry>
+                     <entry>
+                        <p>Antennae</p>
+                     </entry>
+                     <entry>
+                        <p>Stalks</p>
+                     </entry>
+                     <entry>
+                        <p>Determine whether an object is midden or not</p>
+                     </entry>
+                  </row></tbody></tgroup>
+            </informaltable>
+            <p/>
+            <p/>
+            <p>Motors</p>
+            <p>Antie’s motors will allow it to move around and interact with its environment and fellow ants. There will be two individually operated motors to drive the two side wheels in lieu of legs. Two simultaneously operated motors will open and close the grippers, emulating the grasping power of the ant’s mandibles. A third motor will lift and lower the grippers, allowing Antie to raise and lower gripped items as an ant would by raising and lowering its head. Three small sprayers will emit successful patroller and forager pheromones and cuticular hydrocarbons from the appropriate sacs. These will be located in different places: the sprayer for the successful patroller pheromone will be located on the rear at the base of Antie, corresponding to the glands that researchers believe the ants drag along behind them to mark returning paths, while the successful forager and cuticular hydrocarbon sprayers will be located on the skirt. Antie will not spray different pheromones depending on its task, on the assumption that its time in the sun will alter its hydrocarbons enough that its tasks will be recognizable to other ants. Almost all motor output will be a direct function of sensory input as indicated in the following section.</p>
+            <p/>
+            <p>The Behavior</p>
+            <p/>
+            <p>Antie will have a hybrid software architecture: a subsumption hierarchy will be responsible for switching between behaviors, but many sub-behaviors will operate on a schema basis. Pseudocode will approximate this architecture as closely as possible, and where appropriate, different subroutines running on a schema basis will be marked.</p>
+            <p/>
+            <p>Common Behaviors</p>
+            <p>A few sub-behaviors will be necessary for more than one behavior. To ease Antie’s on-board memory requirements and processing capabilities (and to make all the rest of the pseudocode easier for the reader to understand), I propose a few global variables and subroutines.</p>
+            <p>The following global variables will be used throughout the pseudocode, and are compiled here for ease of reference:</p>
+            <p/>
+            <p>// number representing calibration for speed</p>
+            <p>double calibrate = 0;</p>
+            <p/>
+            <p>// constant representing the light at sunrise</p>
+            <p>double sunrise;</p>
+            <p/>
+            <p>// outputs</p>
+            <p>double left_motor_OP = 0;// left wheel motor</p>
+            <p>double right_motor_OP = 0; // right wheel motor</p>
+            <p/>
+            <p>// inputs</p>
+            <p>double photo_IP;// photoreceptor</p>
+            <p>double temp_IP;// thermometer</p>
+            <p/>
+            <p>// Array inputs from left and right midden pheromone </p>
+            <p>// detectors. Assume a function to determine more precise</p>
+            <p>// location, returning these variables:</p>
+            <p>double left_midden_IP;</p>
+            <p>double right_midden_IP;</p>
+            <p/>
+            <p>// Array inputs from left and right alkene sensors. Assume a </p>
+            <p>// function to determine location:</p>
+            <p>double left_alk_avg_IP;</p>
+            <p>double right_alk_avg_IP;</p>
+            <p/>
+            <p>// Array inputs from left and right successful forager </p>
+            <p>// sensors. Assume a function to determine location:</p>
+            <p>double left_sucfor_IP;</p>
+            <p>double right_sucfor_IP;</p>
+            <p/>
+            <p>// Array inputs from left and right “successful patroller”</p>
+            <p>// sensors. Assume a function to determine location:</p>
+            <p>double left_sucpat_IP;</p>
+            <p>double right_sucpat_IP;</p>
+            <p/>
+            <p>// Array inputs from left and right nestmate hydrocarbon </p>
+            <p>// detectors. Assume a function to determine location:</p>
+            <p>double left_hydrocarb_IP;</p>
+            <p>double right_hydrocarb_IP;</p>
+            <p/>
+            <p>// Array inputs from left and right chemical seed detectors.</p>
+            <p>// Assume a function to determine location:</p>
+            <p>double left_seed_IP;</p>
+            <p>double right_seed_IP;</p>
+            <p/>
+            <p/>
+            <p>// inputs from left and right sonar sensors:</p>
+            <p>double left_sonar_IP;</p>
+            <p>double right_sonar_IP;</p>
+            <p/>
+            <p>// Booleans representing detection</p>
+            <p>boolean food_detect = false; // is an object food?</p>
+            <p>boolean midden_detect = false; // is an object midden?</p>
+            <p>boolean nestmate_detect = false; // is an object a nestmate?</p>
+            <p>boolean sucfor_detect = false; // successful forager</p>
+            <p>boolean forager_detect = false; // forager</p>
+            <p>boolean midworker_detect = false; // midden worker</p>
+            <p>poolean patroller_detect = false; // patroller</p>
+            <p>boolean sucpat_detect = false; // successful patroller</p>
+            <p/>
+            <p>// thresholds at which inputs may be declared to</p>
+            <p>// have been detected</p>
+            <p>double food_threshold;</p>
+            <p>double midden_threshold;</p>
+            <p>double hydrocarb_threshold; // nestmate hydrocarbons</p>
+            <p>boolean forage_active = false; // activation status as forager</p>
+            <p/>
+            <p/>
+            <p>Common behaviors will include a forward cruise and turning mechanism, procedures to determine the orientation towards nest and the distance from the nest when outside, in-nest navigation, an escape function for when objects are detected or bumped into, object identification and gripping, a generic algorithm for pheromone plume and chemical trail following, and the identification of other ants.</p>
+            <p>For a simple start, the forward cruise function will merely take in a double integer representing a speed and cause Antie to move forward at this speed.</p>
+            <p/>
+            <p>// Forward cruise</p>
+            <p>// Takes in a number representing the desired speed.</p>
+            <p>// Causes robot to cruise forward at said speed.</p>
+            <p>// Speeds assumed to be on a 1-10 scale (10 being fastest).</p>
+            <p/>
+            <p>void forCruz(double speed) {</p>
+            <p>// Each wheel input "gets" the appropriate speed</p>
+            <p>// Calibrate is a double representing a calibration</p>
+            <p>// initialized to zero and altered as necessary.</p>
+            <p/>
+            <p>// The robot will receive the “GO” command as long as</p>
+            <p>// this function is running.</p>
+            <p/>
+            <p>left_motor_OP = speed + calibrate;</p>
+            <p>right_motor_OP = speed;</p>
+            <p>} // end forCruz</p>
+            <p/>
+            <p>A similar rotate function will be used to orient Antie towards a particular heading.</p>
+            <p/>
+            <p>// Rotate</p>
+            <p>// Takes in a desired angle to rotate the robot and </p>
+            <p>// rotates accordingly</p>
+            <p>// Assume that 10s is sufficient to rotate the robot </p>
+            <p>// completely around one wheel; this may be changed </p>
+            <p>// in implementation.</p>
+            <p/>
+            <p>void rotate(int angle) {</p>
+            <p>// If angle to turn is to the right, rotate left wheel </p>
+            <p>// for a portion of 10s in accordance with desired </p>
+            <p>// angle's proportion of a circle</p>
+            <p>if(angle&gt;0) {</p>
+            <p>while ([timer] &lt; 10 * angle / 360) {</p>
+            <p>left_motor_OP = 5;</p>
+            <p>right_motor_OP = 0;</p>
+            <p>}</p>
+            <p>// else rotate right wheel for appropriate portion of 10s</p>
+            <p>else {</p>
+            <p>while ([timer] &lt; 10 * angle / 360) {</p>
+            <p>left_motor_OP = 0;</p>
+            <p>right_motor_OP = 5;</p>
+            <p>} // end while</p>
+            <p>} // end else</p>
+            <p>} // end rotate</p>
+            <p/>
+            <p>These behaviors will often be used in other subroutines running on a schema basis, and when combined with the forward cruise function, should cause the robot to move at an angle.</p>
+            <p>In order to orient itself toward the nest while navigating outside, Antie will need to determine which direction the nest is in and rotate toward that heading, and also how far from the nest it is at its current location. The orientation and distance should be calculable by the polarization pattern according to the system set up by Lambrinos, et al. Antie will therefore have a polarization function that will return a compass direction toward which it should orient in order to return home to the nest, and a distance function that will return the shortest direct distance. We may assume that this first function will return a direction in degrees, positive or negative, and that the second function will return a distance in centimeters. The first function might look something like this:</p>
+            <p/>
+            <p>// Nest Orient</p>
+            <p>// Takes in the polarization sensitive photo diode inputs</p>
+            <p>// and returns the location of the nest in degrees.</p>
+            <p>int nestOrient(double left_POL_IP, double right_POL_IP) {</p>
+            <p>int degrees = 0;</p>
+            <p>// Calculates direction of nest, and returns as degrees.</p>
+            <p>return degrees;</p>
+            <p>} // end nestOrient</p>
+            <p/>
+            <p>The second function, which would return the distance in centimeters, might look something like this:</p>
+            <p/>
+            <p>// Nest Distance</p>
+            <p>// Takes in the polarization sensitive photo diode inputs</p>
+            <p>// and returns the current distance to the nest.</p>
+            <p>int nestDist(double left_POL_IP, double right_POL_IP) {</p>
+            <p>int dist = 0;</p>
+            <p>// Calculates distance from nest, returning distance in cm.</p>
+            <p>return dist;</p>
+            <p>} // end nestDist</p>
+            <p/>
+            <p>In-nest navigation will be a function of the temperature, read by Antie’s thermometer and a light source. To exit, Antie will seek a high temperature until the photoreceptor reaches a threshold of stimulation indicating sunlight, and to get deeper, Antie will seek a lower temperature. The code may look something like this:</p>
+            <p/>
+            <p>// Exit Nest</p>
+            <p>// Uses temperature gradient to navigate towards the nest</p>
+            <p>// entrance from inside</p>
+            <p/>
+            <p>void nestExit() {</p>
+            <p>// Reads temperature, scoots forward 1s, reads temperature</p>
+            <p>// again, takes the difference, and determines whether current </p>
+            <p>// heading is increasing temperature reading. If not, rotates // 45 degrees and tries again.</p>
+            <p>while(photo_IP &lt; sunrise) {</p>
+            <p>double temp = temp_IP;</p>
+            <p>while([timer] &lt; 1){</p>
+            <p>forCruz(5);</p>
+            <p>}</p>
+            <p>temp -= temp_IP;</p>
+            <p>if(temp&gt;0) rotate(45);</p>
+            <p>} // end nestExit</p>
+            <p/>
+            <p>To enter the nest, such as at the end of a task, Antie will perform the same function, except it will seek a lower temperature instead of a higher temperature, it will avoid light, and it will only activate while Antie is less than 10cm from the nest entrance. This void function will be called nestEnter(), and will take in no inputs. </p>
+            <p>To avoid bumping into things (including other ants), Antie be provided with an escape function. Each of Antie’s eight bump sensors will cause the robot to rotate a different amount, and the sonar will cause it to rotate 90 degrees in the opposite direction. Regardless, this will be a very simple function. I will include one example:</p>
+            <p/>
+            <p>// Escape</p>
+            <p>// Escapes from danger when bump sensors or sonar are </p>
+            <p>// activated.</p>
+            <p/>
+            <p>void escape() {</p>
+            <p>// Declare and initialize left bump sensors in </p>
+            <p>// order from front to back.</p>
+            <p>bump_left1;</p>
+            <p>bump_left2;</p>
+            <p>bump_left3;</p>
+            <p>bump_left4;</p>
+            <p>// Declare and initialize right bump sensors in </p>
+            <p>// order from front to back.</p>
+            <p>// Sonar sensors are globally declared.</p>
+            <p/>
+            <p>if(bump_left1) {</p>
+            <p>// reverse … (at reduced speed)</p>
+            <p>forCruz(-3);</p>
+            <p>// … and rotate!</p>
+            <p>rotate(45);</p>
+            <p>}</p>
+            <p>} // end escape</p>
+            <p/>
+            <p>Because this function responds to the sensors on Antie’s around the sides and only its sonar detectors will be able to detect objects in front of it, this escape function will not prevent Antie from being able to locate and pick up objects such as seeds.</p>
+            <p>Before picking objects up, however, Antie will need to identify them. This object detection process will be activated when the front bump sensor is stimulated or when both sonar detectors are stimulated. Chemical inputs will be checked to see what this object is most likely to be given its smell. Objects will include midden and food. The code may look something like this:</p>
+            <p/>
+            <p>// Object Identification</p>
+            <p>// Identifies an object that has snuck up on the </p>
+            <p>// unsuspecting robot.</p>
+            <p/>
+            <p>void objID() {</p>
+            <p>// Declare and initialize front bump sensor.</p>
+            <p>// Sonar sensors are globally declared.</p>
+            <p/>
+            <p>// Check inputs to determine which smell is strongest</p>
+            <p>// if food smell is detected at higher rate and </p>
+            <p>// above the food threshold for detection, Antie </p>
+            <p>// assumes object is food</p>
+            <p>while (bump_front || (sonar_left_IP &amp;&amp; sonar_right_IP)) {</p>
+            <p>if(((left_midden_IP + right_midden_IP) </p>
+            <p>&lt; ((left_food_IP + right_food_IP))</p>
+            <p>&amp;&amp; ((left_food_IP + right_food_IP) </p>
+            <p>&gt; food_threshold) {</p>
+            <p>food_detect = true;</p>
+            <p>}</p>
+            <p>// if midden smell is detected at higher rate </p>
+            <p>// and above threshold for midden detection, </p>
+            <p>// Antie assumes object is midden</p>
+            <p>else if(((left_midden_IP + right_midden_IP) </p>
+            <p>&gt; ((left_food_IP + right_food_IP))</p>
+            <p>&amp;&amp; ((left_midden_IP + right_midden_IP) </p>
+            <p>&gt; midden_threshold) {</p>
+            <p>midden_detect = true;</p>
+            <p>}</p>
+            <p>} // end objID</p>
+            <p/>
+            <p>Once the object has been identified, Antie may grip it and lift it. A simple void function grip() taking in no inputs will tighten the grippers until a certain threshold of pressure is reached, at which point the grippers will be lifted for carrying. A void function release() will perform this same action in reverse.</p>
+            <p>Antie will also need to follow several different kinds of chemical gradient trails: it will need to track the trails left by successful patrollers, and localize the source of food-odors and midden-odors. Implementations of chemical gradient following robots using two sensors on “antennae” stalks has been successful in with analog robots in the past (Webb, 1998), regardless of the potential problem of airflow causing a disturbed gradient over evaporating pheromones. As a partial control for the problem of imprecise sensing, a function will perform an analysis of the array information coming on from Antie’s four sensors on each stalk. The differences between these outputs is what is being compared everywhere there is a “left_IP” or “right_IP.” Antie will use the chemical gradient algorithm of Braitenberg’s aggressive type 2 vehicle described in his book “Vehicles: Experiments in Synthetic Psychology,” as this was found through a series of experiments by Russell, et al (2003) to be very efficient when compared to several biomimetic models. Because the same general algorithm will be followed for the localization of all three chemical traces, I will provide pseudocode for only one generic subroutine. Note that a portion of this subroutine does run on a schema basis:</p>
+            <p/>
+            <p>// Follow Gradient</p>
+            <p>// Follows a generic chemical gradient, seeking a higher</p>
+            <p>// concentration.</p>
+            <p/>
+            <p>void gradientFollow() {</p>
+            <p>// Compares left and right inputs and activates opposite</p>
+            <p>// motor to a greater degree. </p>
+            <p>if (left_IP &gt; right_IP) {</p>
+            <p>[schema] {</p>
+            <p>rotate(-90);</p>
+            <p>forCruz(5);</p>
+            <p>} // end schema</p>
+            <p>} // end if</p>
+            <p>if (right_IP &gt; left_IP) {</p>
+            <p>[schema] {</p>
+            <p>rotate(90);</p>
+            <p>forCruz(5);</p>
+            <p>} // end schema</p>
+            <p>} // end if</p>
+            <p>else forCruz(5);</p>
+            <p>} // end gradientFollow</p>
+            <p/>
+            <p>For the purposes of calls later in the pseudocode, I will refer to these subroutines as trailFollow(), findFood(), and findMidden(). All three are void and take no inputs.</p>
+            <p>The final common subroutine will be one for the identification of other ants. When both sonar sensors are stimulated simultaneously, Antie will check hydrocarbon inputs and determine whether the detected object is a nestmate. As harvester ants tend not to engage aggressively with non-nestmates, Antie will only identify other ants as ants if they belong to its nest. Research has shown that red harvester ants may identify the tasks nestmates are engaged in based on the ratio of n-alkenes to n-alkanes in their hydrocarbons and the presence or absence of branched n-alkanes. The difference in ratio is caused by the time ants spend outside in the sun, which depletes their n-alkene levels. Antie will attempt to determine the tasks of other ants by sensing only the n-alkene levels. The code will be similar to the object identification subroutine and may look something like this:</p>
+            <p/>
+            <p>// Ant Identification</p>
+            <p>// Identifies an ant that has snuck up on the </p>
+            <p>// unsuspecting robot.</p>
+            <p/>
+            <p>void antID() {</p>
+            <p>while (left_sonar_IP &amp;&amp; right_sonar_IP) {</p>
+            <p>// Are hydrocarbons present? (Is this a nestmate?)</p>
+            <p>if((left_hydrocarb_IP + right_hydrocarb_IP)</p>
+            <p>&gt; hydrocarb_threshold) {</p>
+            <p>nestmate_detect = true;</p>
+            <p>// In what task is the nestmate engaged?</p>
+            <p>if (n-alkene level is appropriate for a forager) {</p>
+            <p>forager_detect = true;</p>
+            <p>}</p>
+            <p>if (n-alkene level is appropriate for a patroller) {</p>
+            <p>patroller_detect = true;</p>
+            <p>}</p>
+            <p>if (n-alkene level is appropriate for a midden worker) {</p>
+            <p>midworker_detect = true;</p>
+            <p>} // If not midden work, foraging or patrolling, ignore</p>
+            <p>} // If not nestmate, ignore</p>
+            <p>}</p>
+            <p>} // end antID</p>
+            <p/>
+            <p>Using these basic common behaviors, more complex behaviors may be coded.</p>
+            <p>Red harvester ants do not retain one task throughout their lifespan, but instead change their behaviors as is appropriate for the colony (Gordon, 1996). Research has shown that red harvester ants switch tasks partially as a function of age (ex., Ingram, et al, 2005) and partially as a function of interactions with other workers (ex., Schafer et al, 2006; Gordon, 2002; Greene &amp; Gordon, 2007). Younger ants work more inside the nest, and older ants work more outside the nest. As a result, I will model the three main behaviors in the order that they are to be engaged in. Midden work, which consists of moving dirt between the inside of the nest and the outside, will occur first; patrolling, which involves a shorter overall amount of time spent outside, will occur second; and foraging will be the final behavior. Finally, I will discuss a main method encoding the task switching between these behaviors.</p>
+            <p>The midden work behavior will be Antie’s default initial behavior. It will be initiated in the morning by the sunrise, and will continue until the outside temperature reaches 52­­­oC, at which point all red harvester ants must return to the nest. As previously stated, a midden worker must identify midden, grasp it, and carry it to the surface, depositing it halfway down the mound before returning to collect more midden. A program encoding this behavior might look like this:</p>
+            <p/>
+            <p>//////////////////////////////////////////////////////////</p>
+            <p>// MIDDEN WORK</p>
+            <p>//////////////////////////////////////////////////////////</p>
+            <p>// Antie will leave nest in the morning after sunrise,</p>
+            <p>// carrying bits of midden halfway down the nest mound</p>
+            <p>// and depositing them. Antie will return to the nest and</p>
+            <p>// repeat this task until the temperature reaches above</p>
+            <p>// 52 degrees Celsius.</p>
+            <p/>
+            <p>void midden() {</p>
+            <p/>
+            <p>// Initiated by sunrise, stopped by temperature</p>
+            <p>while (photo_IP &gt; sunrise &amp;&amp; temp_IP &lt; 52) {</p>
+            <p>// Find midden and identify any found objects. If</p>
+            <p>// they are midden, grip and carry outside nest.</p>
+            <p>findMidden();</p>
+            <p>objID();</p>
+            <p>if(midden_detect) {</p>
+            <p>grip();</p>
+            <p>nestExit();</p>
+            <p>// cruise to halfway down the nest mound</p>
+            <p>while(nestDistance() &lt; 25) {</p>
+            <p>forCruz();</p>
+            <p>}</p>
+            <p>release();</p>
+            <p>// reset midden_detect</p>
+            <p>midden_detect = 0;</p>
+            <p>nestEnter();</p>
+            <p>} // end if</p>
+            <p>} // end while</p>
+            <p>} // end midden</p>
+            <p/>
+            <p>The second behavior, patrolling, involves two sub-behaviors: nest patrolling and trail patrolling. Nest patrolling will involve leaving the nest, roaming around on the nest mound for a few minutes, and reentering the nest. This behavior will be implemented in two parts, with a task-switching algorithm based on age. Research shows that ants do change their behaviors based partly on their perceived life expectancy (Moron, et al, 2007), and that task-switching is partly genetically controlled by a switch in gene expression as the individual ages (Ingram, et al, 2005). It is therefore reasonable to assign a constant age at which Antie will switch from nest patrolling to trail patrolling. In order to perform both of these functions, Antie will need a subroutine to explore in a zig-zag fashion, as harvester ants do (Gordon, 34). Harvester ants display a preference to wander in familiar territory, though foragers and patrollers do sometimes wander into other nests’ territories (Gordon, 57-60). To control for this behavior, Antie’s explore subroutine will display a preference for exploration in places where there is a low gradient of nestmate pheromones. This model is reasonable because patrollers and foragers change their explored territory from day to day, even though they do retain some more commonly chosen paths (Gordon, 45). The code may look something like this:</p>
+            <p/>
+            <p>// Explore</p>
+            <p>// Takes in desired distance from nest to explore </p>
+            <p>// in cm and moves in a slightly randomized zigzag </p>
+            <p>// pattern</p>
+            <p/>
+            <p>void explore(int distance, int time) {</p>
+            <p>// Local Variables</p>
+            <p>int time=0; // integer representing the time to </p>
+            <p> // wander one direction</p>
+            <p>int angle=0; // integer representing number of </p>
+            <p> // degrees to rotate</p>
+            <p>int dir=0; // integer representing the direction to </p>
+            <p> // turn (0=right, 1=left)</p>
+            <p/>
+            <p>// Random number generator to add a bit of wanderlust</p>
+            <p>RandomGenerator rGen = new RandomGenerator();</p>
+            <p/>
+            <p>// While loop; robot will keep zigging and zagging </p>
+            <p>// for a set amount of time</p>
+            <p>while ([timer] &lt; time) {</p>
+            <p>if (ant's distance from nest &lt; distance) {</p>
+            <p>// int time gets a random number of seconds </p>
+            <p>// between 3 and 10</p>
+            <p>time = rGen.nextInt(3,10);</p>
+            <p>// int angle gets a random number of degrees </p>
+            <p>// between 15 and 75</p>
+            <p>angle = rGen.nextInt(15,75);</p>
+            <p/>
+            <p>// function call to rotation subroutine</p>
+            <p>// if dir is 0, rotate to the right; if dir </p>
+            <p>// is 1, rotate to the left.</p>
+            <p>if (dir==0) {</p>
+            <p>dir = 1; // dir changes direction- turn </p>
+            <p> // left next time</p>
+            <p>rotate(angle); // rotate to the right</p>
+            <p>} else {</p>
+            <p>dir = 0; // dir changes direction- turn </p>
+            <p> // right next time</p>
+            <p>rotate(-angle); // rotate to the left</p>
+            <p>} // end rotation call</p>
+            <p/>
+            <p>// while loop to count down number of seconds </p>
+            <p>// using a timer</p>
+            <p>while ( [timer] &lt; time) {</p>
+            <p>// command to go forward is given</p>
+            <p>goForward = 1;</p>
+            <p>// call to forward cruise function; </p>
+            <p>// straight cruise</p>
+            <p>forCruz(5,5);</p>
+            <p>} // end timer while loop</p>
+            <p>} // end distance from nest while loop</p>
+            <p>// if ant is approaching the desired distance,</p>
+            <p>// double back (at angle) to explore more!</p>
+            <p>if (ant's distance from nest ==</p>
+            <p>distance - some small constant) {</p>
+            <p>rotate(135);</p>
+            <p>} // end if</p>
+            <p>// Avoid leaving nest territory</p>
+            <p>else if (nestmate pheromones IP &lt; very low threshold) {</p>
+            <p>while([short timer]) {</p>
+            <p>forCruz(5); // explore a bit further</p>
+            <p>} // end while</p>
+            <p>rotate(45);</p>
+            <p>} // end if</p>
+            <p>} // end if (distance from nest &lt; distance)</p>
+            <p>} // end explore</p>
+            <p/>
+            <p>Nest patrollers will only call this behavior for a short distance before returning to the nest to idle for a few minutes and exit again. Trail patrollers will go much further, until food sources are found, and will then orient towards the nest and create trails for the foragers to follow. A general site of food is all that the patroller need find; the foragers will dig through the sand for the food. Code for the patrolling behavior might look like this (note that part is on a schema basis):</p>
+            <p/>
+            <p>/////////////////////////////////////////////////////////////</p>
+            <p>// PATROLLING</p>
+            <p>/////////////////////////////////////////////////////////////</p>
+            <p>//</p>
+            <p>// Main patrolling behavior function.</p>
+            <p>// Includes nest patrolling, trail patrolling and the</p>
+            <p>// stimulation and thresholds to initiate and switch between</p>
+            <p>// the two.</p>
+            <p/>
+            <p>// Nest Patrolling</p>
+            <p>// Patrollers' first job of the day: exit the nest and</p>
+            <p>// explore the nest mound, taking measurements.</p>
+            <p>void nestPatrol() {</p>
+            <p>while (photo_IP &gt; [light at sunrise]</p>
+            <p>&amp;&amp; temp_IP &lt; 52 degrees Celsius ) {</p>
+            <p>nestExit();</p>
+            <p>// Nest mounds are generally up to 1m across</p>
+            <p>// Thus, explore in a 50cm radius (Gordon, 6)</p>
+            <p>explore(50, 120);</p>
+            <p>[schema] {</p>
+            <p>rotate(nestOrient());</p>
+            <p>forCruz(5);</p>
+            <p>nestEnter();</p>
+            <p>}</p>
+            <p>wait a short time</p>
+            <p>} // end if</p>
+            <p>} // end nestPatrol</p>
+            <p/>
+            <p>// Trail Patrolling</p>
+            <p>// Patrollers exit nest and attempt to find food. Once food</p>
+            <p>// is found, they mark a trail leading back to it while</p>
+            <p>// taking the most efficient route home.</p>
+            <p>void trailPatrol() {</p>
+            <p>while (photo_IP &gt; [light at sunrise]</p>
+            <p>&amp;&amp; temp_IP &lt; 52 degrees Celsius ) {</p>
+            <p>nestExit();</p>
+            <p>// Explore no further than about 15m from nest, for no</p>
+            <p>// more than 20 minutes</p>
+            <p>if (food_IP &gt; some low threshold){</p>
+            <p>findFood();</p>
+            <p>if (food_detect) {</p>
+            <p>[schema] {</p>
+            <p>rotate(nestOrient());</p>
+            <p>forCruz(5);</p>
+            <p>spray “successful patroller” pheromone</p>
+            <p>nestEnter();</p>
+            <p>}</p>
+            <p>wait a short time</p>
+            <p>}</p>
+            <p>}</p>
+            <p>else {</p>
+            <p>explore(1500, 20 * 60);</p>
+            <p>[schema] {</p>
+            <p>rotate(nestOrient());</p>
+            <p>forCruz(5);</p>
+            <p>nestEnter();</p>
+            <p>}</p>
+            <p>wait a short time</p>
+            <p>}</p>
+            <p>} // end if</p>
+            <p>} // end trailPatrol</p>
+            <p/>
+            <p>For the task-switching in the patrolling behavior, assume some variable “age” that Antie has been keeping track of using the CPU’s clock pulses to track the time since its last bootup. The integers nestpatrol_age and trailpatrol_age will represent the ages at which it is appropriate to switch to these tasks.</p>
+            <p/>
+            <p>// PATROLLING</p>
+            <p>// Task-switching hierarchy for the two types of patrolling</p>
+            <p>void patrol() {</p>
+            <p>while (age &gt; nestpatrol_age &amp;&amp; age &lt; trailpatrol_age) {</p>
+            <p>nestPatrol();</p>
+            <p>}</p>
+            <p>while (age &gt; trailpatrol_age &amp;&amp; age &lt; forage_age) {</p>
+            <p>trailPatrol();</p>
+            <p>}</p>
+            <p>}</p>
+            <p/>
+            <p>The final behavior, foraging, will involve one extra subroutine that will employ an algorithm designed by R. Andrew Russell to localize an object through sand based on a chemical plume. This will emulate the digging that foragers must often do in order to locate seeds, and will enable Antie to accurately retrieve seeds for its host nest. This algorithm will keep track of the last two intensities of the desired chemical input and compare them. It would also keep track of whether the last rotation was clockwise or counter-clockwise. The code for this, adapted from Russell’s paper, might look like this:</p>
+            <p/>
+            <p>// Hex-path search</p>
+            <p>// Localizes an object through sand using chemical detection</p>
+            <p>void hexSearch() {</p>
+            <p>double intense1 = inensity at n-1;</p>
+            <p>double intense2 = intensity at n-2;</p>
+            <p>while (nothing in grippers) {</p>
+            <p>if (((intense2 &gt; intense 1)</p>
+            <p>&amp;&amp; last rotation was counterclockwise)</p>
+            <p>||</p>
+            <p>(((intense2 &lt; intense1)</p>
+            <p>&amp;&amp; last rotation was clockwise)) {</p>
+            <p>rotate(-60);</p>
+            <p>while([short timer]) {</p>
+            <p>forCruz(5);</p>
+            <p>}</p>
+            <p>} // end if</p>
+            <p>else {</p>
+            <p>rotate(60);</p>
+            <p>while([short timer]) {</p>
+            <p>forCruz(5);</p>
+            <p>} // end while</p>
+            <p>} // end else</p>
+            <p>} // end while</p>
+            <p>} // end hexSearch</p>
+            <p/>
+            <p>Foragers will follow trails marked by patrollers to their conclusion before collecting food to bring back to the nest, even if more tantalizing food presents itself in their path (Gordon, 47). To address this, a strict subsumption hierarchy will make sure that the foragers do not stop to collect food too soon. The code might look like this:</p>
+            <p/>
+            <p>/////////////////////////////////////////////////////////////</p>
+            <p>// FORAGING</p>
+            <p>/////////////////////////////////////////////////////////////</p>
+            <p>//</p>
+            <p>// Main foraging behavior function.</p>
+            <p>// Foragers will exit the nest upon activation and follow</p>
+            <p>// a trail laid by the patrollers. Upon completion of the</p>
+            <p>// trail-following, will locate and grip food, returning</p>
+            <p>// to the nest. Boolean forage_today represents Antie’s</p>
+            <p>// activation status for each day once it has switched to </p>
+            <p>// the foraging behavior.</p>
+            <p/>
+            <p>void forage() {</p>
+            <p>// Wait for a successful patroller to return.</p>
+            <p>if (sucpat_detect) forage_today = true;</p>
+            <p>while (forage_today &amp;&amp; temp_IP &lt; 52) {</p>
+            <p>nestExit();</p>
+            <p>trailFollow(); // Follow successful patroller trail.</p>
+            <p>// Note that this is NOT a schema basis, which would </p>
+            <p>// cause Antie to stop and retrieve food encountered en </p>
+            <p>// route.</p>
+            <p>// When end of plume is reached, retrieve food.</p>
+            <p>while (!food_detect) {</p>
+            <p>// while food has not yet been found, continue searching </p>
+            <p>// and identifying found objects</p>
+            <p>hexSearch();</p>
+            <p>objID();</p>
+            <p>}</p>
+            <p>// Once that loop has been broken, return to nest</p>
+            <p>[schema] {</p>
+            <p>// grip food and return to nest</p>
+            <p>grip();</p>
+            <p>rotate(nestOrient());</p>
+            <p>forCruz(5);</p>
+            <p>nestEnter();</p>
+            <p>}</p>
+            <p>// release food just inside nest entrance</p>
+            <p>release();</p>
+            <p>} // end while</p>
+            <p>} // end forage</p>
+            <p/>
+            <p>Of course, what makes Antie an innovative robot is the task-switching between these larger behaviors. Because the midden work behavior is Antie’s initial default behavior, I will not address task switching to midden work. Workers probably switch to patrolling based on their perceived life expectancy and as a function of a gene whose expression changes between young and old ants, and this is easily emulated using a clock pulse counter in Antie’s CPU that will count its “age” since last boot. To remind the reader, this technique was implemented earlier in this proposal to create the limited task-switching between nest patrolling and trail patrolling. The switch from patrolling to foraging has been modeled as a function of successful foragers’ returns with great accuracy by Schafer, et al (2006), and evidence from experiments in which successful foragers were removed before reentry to the nest does support the theory that returning successful foragers have an effect on the activation of new foragers (Gordon, 2002). Activated foragers form a queue to exit the nest and exit at a steady rate. According to Schafer’s, et al. model of forager activation, every time a successful forager returns and no foragers are currently in line to exit, a fraction (modeled at 0.0035) of inactive foragers joins the queue. For the purposes of modeling Antie, I will assume that the switches between these behaviors are permanent, irreversible and partly a function of age, with new foragers being activated by returning successful foragers. The code to model this task-switching might look something like this:</p>
+            <p/>
+            <p>/////////////////////////////////////////////////////////////</p>
+            <p>// TASK-SWITCHING</p>
+            <p>/////////////////////////////////////////////////////////////</p>
+            <p>//</p>
+            <p>// Main function of Antie’s software. Examines the task-</p>
+            <p>// switching criteria and determines when Antie will perform </p>
+            <p>// what behavior. Int “age” is an integer representing the</p>
+            <p>// time since Antie’s last boot, corresponding to the age</p>
+            <p>// of an ant being simulated. Int nestpatrol_age refers to the </p>
+            <p>// starting age at which Antie will begin to nest patrol; </p>
+            <p>// forage_age refers to the starting age at which Antie may be </p>
+            <p>// activated to forage. This would correspond to the change in </p>
+            <p>// gene expression described by Gordon (2002).</p>
+            <p/>
+            <p>main() {</p>
+            <p>// default to midden work</p>
+            <p>while (age &lt; nestpatrol_age) {</p>
+            <p>midden();</p>
+            <p>} // end while</p>
+            <p>// switch to patrolling behavior based on age</p>
+            <p>while (nestpatrol_age &lt; age &amp;&amp; age &lt; forage_ave) {</p>
+            <p>patrol();</p>
+            <p>} // end while</p>
+            <p>// switch to foraging as a function of time, but </p>
+            <p>// remain inactive until stimulated by returning </p>
+            <p>// successful foragers</p>
+            <p>// Assume that inactive foragers will not smell different </p>
+            <p>// from patrollers, which was their last task, because </p>
+            <p>// they have not yet spent sufficient time in the sun.</p>
+            <p>if (sucfor_detect at time n-1 == false </p>
+            <p>&amp;&amp; sucfor_detect at time n == 1) {</p>
+            <p>0.0035 probability: forage_active = true;</p>
+            <p>}</p>
+            <p/>
+            <p>while (age &gt; forage_age &amp;&amp; forage_active) {</p>
+            <p>forage();</p>
+            <p>}</p>
+            <p>} // end main</p>
+            <p/>
+            <p/>
+            <p>Conclusion</p>
+            <p/>
+            <p>Antie will be a fully autonomous, situated and embodied agent, infiltrating a red harvester ant colony and providing valuable information not only about the hypothesized rules of these ants’ behaviors and their task-switching thresholds, but also about the combination of complex behaviors into a single autonomous system with the ability to switch between behaviors as necessary. Biomimetic robots have long been a rich source of information for both biologists and robotics engineers, and complex robots that can switch tasks as the situation demands and communicate information about current tasks could be useful for further studies of complex robot behaviors as well as for the obvious practical applications of robot swarms, such as on the battlefield and standard building maintenance.</p>
+            <p/>
+            <p/>
+            <p/>
+            <p/>
+            <p/>
+            <p/>
+            <p/>
+            <p/>
+            <p/>
+            <p>REFERENCES</p>
+            <p/>
+            <p>Braitenberg, V. Vehicles: Experiments in Synthetic Psychology. MIT Press: Cambridge, MA, 1984.</p>
+            <p/>
+            <p>Gordon, D.M., &amp; Greene, M.J. Cuticular hydrocarbons inform task decisions. Nature 32 (2003).</p>
+            <p/>
+            <p>Gordon, D.M. The regulation of foraging activity in red harvester ant colonies. American Naturalist 159, 509-518 (2002).</p>
+            <p/>
+            <p>Gordon, Deborah. Ants at Work: How an Insect Society is Organized. Norton: New York, NY, 2000.</p>
+            <p/>
+            <p>Gordon, D.M. The organization of work in social insect colonies. Nature 380, 121-124 (1996).</p>
+            <p/>
+            <p>Greene, M.J., &amp; Gordon, D.M. Interaction rate informs harvester ant task decisions. Behavioral Ecology: Advance Access, published January 22, 2007.</p>
+            <p/>
+            <p>Halloy, J., Sempo, G., Caprari, G., Rivault, C., Asadpour, M., Tache, F., Said, I., Durier, V., Canonge, S., Ame, J.M., Detrain, C., Correl, N., Matrinoli, A., Mondala, F., Siegwart, R., &amp; Deneubourg, J.L. Social integration of robots into groups of cockroaches to control self-organized choices. Science 318, 1155-1158 (2007).</p>
+            <p/>
+            <p>Holldobler, B., &amp; Wilson, E.O. (1990). The ants. Berlin: Springer-Verlag. As cited in Webb, B. Robots, crickets and ants: models of neural control of chemotaxis and phonotaxis. Neural Networks 11, 1479-1496 (1998).</p>
+            <p/>
+            <p>Ingram, K.K., Oefner, P., &amp; Gordon, D.M. Task-specific expression of the foraging gene in harvester ants. Molecular Ecology 14, 813-818 (2005).</p>
+            <p/>
+            <p>Ishida, H., Nakamoto, T., Moriizumi, T., Kikas, T., &amp; Janata, J. Biol. Bull 200, 222-226 (2001).</p>
+            <p>Labhart, T., &amp; Meyer, E.P. Neural mechanisms in insect navigation: polarization compass and odometer. Current Opinion in Neurobiology 12, 707-714 (2002).</p>
+            <p/>
+            <p>Lambrinos, D., Moller, R., Labhart, T., Pfeifer, R., &amp; Wehner, Rudiger. A mobile robot employing insect strategies for navigation. Robotics and Autonomous Systems 30, 39-64 (2000).</p>
+            <p/>
+            <p>Moron, D., Witek, M., &amp; Woychiechowski, M., Division of labor among workers with different life expectancy in the ant Myrmica scabrinodis. Association for the Study of Animal Behavior (2007), doi:10.1016/j.anbehav.2007.06.005.</p>
+            <p/>
+            <p>Peterson, R.R., Schubert, D.W., &amp; Cholakis, P.N. "Tactile sensors for robot gripper and the like." U.S. Patent 4,492,949. 8 January 1985.</p>
+            <p/>
+            <p>Russell, R.A. Chemical source location and the RoboMole project. Intelligent Robotics Research Centre, Monash University, Clayton, Australia. Contact: andy.russell@eng.monash.edu.au</p>
+            <p/>
+            <p>Russel, R.A., Bab-Hadiashar, A., Shepherd, R.L., &amp; Wallace, G.G. A comparison of reactive robot chemotaxis algorithms. Robotics and Autonomous Systems 45, 83-97 (2003).</p>
+            <p/>
+            <p>Schafer, R.J., Holmes, S., &amp; Gordon, D.M. Forager activation and food availability in harvester ants. Animal Behavior 71, 815-822 (2006).</p>
+            <p/>
+            <p>Webb, B. Robots, crickets and ants: models of neural control of chemotaxis and phonotaxis. Neural Networks 11, 1479-1496 (1998).</p>
+            <p/>
+         </div>
+      </body>
+   </text>
+</cesDoc>
