@@ -15,7 +15,7 @@
             
             The Ant & the Robot
             Ants of this species are of two types: breeding ants (queens and drones) and sterile female workers. Queens and drones will not be considered in this proposal, as their behaviors and design is much more specialized and would be applicable only during the breeding season, which occurs but once per year. The behaviors of the sterile workers may be divided into several subcategories: brood care, nest maintenance, patrolling and foraging. Little is known about brood care, as this occurs only in the deepest regions of the nest and observation would generally require the destruction of the nest. Nest maintenance and seed processing are likewise difficult to observe in the deeper regions of the nest, but the sorting and deposition of waste dirt and nest garbage outside of the nest (midden work) occurs close enough to the surface to be observable. Patrolling and foraging, too, occur for the most part outside of the nest, and have therefore been studied extensively (ex., Schafer, et al, 2006; Gordon, et al, 2002; Gordon, 2002; Gordon, 1987). It is therefore these three behaviors that I would like to focus on in this proposal: the others remain a bit too mysterious to yet model, and the ability of a robot to pass undetected in the depths of a colony would be very difficult to observe.
-            These three behaviors each present different puzzles to the ant and to the modeler, though there is some overlap, particularly with navigational problems. In the case of midden work, Antie must be able to identify garbage, grasp it, carry it out of the nest, and deposit it about halfway down the mound before returning to repeat the process ad infinitum (or until stimulated to switch behaviors). Patrolling may be divided into two distinct sub-behaviors, nest patrolling and trail patrolling. An ant engaged in nest patrolling must exit the nest at the proper time in the morning and wander about for a bit on the nest mound, presumably taking measurements of the temperature and humidity in some way and making sure that it is safe for the other ants to exit. Perhaps the level of degradation of the nest patrollers‚Äô cuticular hydrocarbons after this short foray into the sun and heat acts as an indication of the outside conditions to the foragers, who may then, upon smelling the returning patroller, be stimulated either to forage or to remain inactive inside the nest. An ant engaged in trail patrolling must exit the nest, wander around searching for food sources, identify food upon discovery and return to the nest to show the foragers where the food is. This is thought to be accomplished by the deposition of chemical markers from a gland on the abdomen that the patroller drags along the ground on her return route to the nest that the foragers may then follow (Gordon, 33-34; Holldobler et al, 1990, as cited in Webb, 1998). In addition to following these trails to the food, foragers must also be able to identify food, grasp it and carry it back to the nest. Ants engaged in all three behaviors must be able to identify other nestmates and their current tasks (as well as indicate to other ants their own nestmate status and current task), walk, navigate both within and outside of the nest, and of course switch tasks at appropriate times.
+            These three behaviors each present different puzzles to the ant and to the modeler, though there is some overlap, particularly with navigational problems. In the case of midden work, Antie must be able to identify garbage, grasp it, carry it out of the nest, and deposit it about halfway down the mound before returning to repeat the process ad infinitum (or until stimulated to switch behaviors). Patrolling may be divided into two distinct sub-behaviors, nest patrolling and trail patrolling. An ant engaged in nest patrolling must exit the nest at the proper time in the morning and wander about for a bit on the nest mound, presumably taking measurements of the temperature and humidity in some way and making sure that it is safe for the other ants to exit. Perhaps the level of degradation of the nest patrollers’ cuticular hydrocarbons after this short foray into the sun and heat acts as an indication of the outside conditions to the foragers, who may then, upon smelling the returning patroller, be stimulated either to forage or to remain inactive inside the nest. An ant engaged in trail patrolling must exit the nest, wander around searching for food sources, identify food upon discovery and return to the nest to show the foragers where the food is. This is thought to be accomplished by the deposition of chemical markers from a gland on the abdomen that the patroller drags along the ground on her return route to the nest that the foragers may then follow (Gordon, 33-34; Holldobler et al, 1990, as cited in Webb, 1998). In addition to following these trails to the food, foragers must also be able to identify food, grasp it and carry it back to the nest. Ants engaged in all three behaviors must be able to identify other nestmates and their current tasks (as well as indicate to other ants their own nestmate status and current task), walk, navigate both within and outside of the nest, and of course switch tasks at appropriate times.
             
             The Agent 
             
@@ -25,17 +25,17 @@
             Sensors
             In order to inform itself about its environment, Antie will need a number of sensors. In an attempt to mimic the red harvester ant as closely as possible, these sensors include a thermometer, photoreceptors, bump sensors and sonar, a polarization compass, and a series of chemical receptors on a pair of stalks corresponding to the antennae. On its front grippers, Antie will have a tactile skin to sense pressure. The locations of the rest of these sensors will depend on their function.
             The thermometer will be located on the rear of the robot to keep it out of the way, and will detect and input to the robot the outside temperature in degrees Celsius. Harvester ants do not exit the nest when the outside temperature is above 52 degrees Celsius (Gordon, 9), and the ability to use a temperature gradient will enable in-nest navigation.
-            Antie will also be equipped with one photoreceptor located in the middle of the top of its chassis corresponding to the ant‚Äôs eyes. These will be useful for initiating patrolling behavior in the morning and shutting off behaviors at night: the patrollers first poke their heads out of the nest shortly after sunrise and scuttle back in at night (Gordon, 5).
-            The bump sensors and sonar will form a skirt around Antie to keep it from colliding with other objects. The sonar will constantly be detecting nearby objects and initiate an escape maneuver when their inputs pass a certain threshold of stimulation, and the bump sensors will, when depressed, also initiate the escape function. The sonar will correspond to the ant‚Äôs limited optical object detection ability, and the bump sensors will allow the robot to detect collisions.
-            The polarization compass will consist of two polarized light sensors placed at 45 and -45 degrees from the center front of Antie, respectively, that will orient Antie towards a desired polarization pattern. These sensors would correspond to the cells in the ants‚Äô eyes sensitive to polarized light, and research has shown that many insects, including ants, do navigate using a path integration system synthesizing input from a polarization compasses and from a sort of odometer (Labhart, et al, 2002). Antie would use a system for processing the input from its polarization compass based on the compass designed by Lambrinos, Moller, Labhart, Pfeifer and Wehner in 2000, consisting of two photodiodes with blue filters and polarizers. (Fig 2) The difference of their logarithmized signals would be returned to Antie, who will use a simultaneous model to navigate returns to the nest: Upon each exit from the nest, Antie will take a single 360o scan of the sky, and will orient itself according to an analytical procedure to derive compass information from different polarization patterns perceived later. This should be sufficient to return Antie to the nest, given the accuracy achieved by Lambrinos, et al and the relatively short periods of time that harvester ants spend outside the nest before returning.
+            Antie will also be equipped with one photoreceptor located in the middle of the top of its chassis corresponding to the ant’s eyes. These will be useful for initiating patrolling behavior in the morning and shutting off behaviors at night: the patrollers first poke their heads out of the nest shortly after sunrise and scuttle back in at night (Gordon, 5).
+            The bump sensors and sonar will form a skirt around Antie to keep it from colliding with other objects. The sonar will constantly be detecting nearby objects and initiate an escape maneuver when their inputs pass a certain threshold of stimulation, and the bump sensors will, when depressed, also initiate the escape function. The sonar will correspond to the ant’s limited optical object detection ability, and the bump sensors will allow the robot to detect collisions.
+            The polarization compass will consist of two polarized light sensors placed at 45 and -45 degrees from the center front of Antie, respectively, that will orient Antie towards a desired polarization pattern. These sensors would correspond to the cells in the ants’ eyes sensitive to polarized light, and research has shown that many insects, including ants, do navigate using a path integration system synthesizing input from a polarization compasses and from a sort of odometer (Labhart, et al, 2002). Antie would use a system for processing the input from its polarization compass based on the compass designed by Lambrinos, Moller, Labhart, Pfeifer and Wehner in 2000, consisting of two photodiodes with blue filters and polarizers. (Fig 2) The difference of their logarithmized signals would be returned to Antie, who will use a simultaneous model to navigate returns to the nest: Upon each exit from the nest, Antie will take a single 360o scan of the sky, and will orient itself according to an analytical procedure to derive compass information from different polarization patterns perceived later. This should be sufficient to return Antie to the nest, given the accuracy achieved by Lambrinos, et al and the relatively short periods of time that harvester ants spend outside the nest before returning.
             
             
                
             
             Fig. 2. Diagram of the polarization-opponent unit described by Lambrinos, et al (2000). The unit takes in polarization levels through the two polarization-sensitive photodiodes and feeds them into the logarithm ratio amplifier, which returns the difference of the logarithmized signals from the photodiodes. The e-vector (heading) returned from the two polarization-sensitive photodiodes (1, 2) follows a cos2-function.
             
-            Ants themselves rely primarily on chemical information taken in through their antennae, and to mimic this, Antie will have chemical sensing and emitting ‚Äústalks‚Äù with which to both interact with other ants (who may be surprised to find an ant without antennae) and take in chemical information. These stalks will need to have receptors to measure the n-alkene levels present in another ant‚Äôs cuticular hydrocarbons, which research indicates is the marker for harvester ants of a nestmate‚Äôs current task, perhaps because the hydrocarbons are altered in the dry sun, causing a different ratio of n-alkanes to n-alkenes and the presence of branched n-alkanes in the hydrocarbon profile (Wagner, et al, 2001, as cited in Gordon & Greene, 2003). Antie‚Äôs stalks would also have receptors for the hydrocarbons themselves, which research shows indicate to the ants whether another ant is their nestmate (Arnold, et al, 1996, as cited in Gordon & Mehdiabadi, 1999), receptors to detect food, and receptors for three types of pheromones: those released by successful foragers returning with food, those released by successful patrollers returning to the nest, and those marking piles of trash as midden. Research shows that successful foragers returning to the nest do have a different effect on the inactive workers than unsuccessful foragers returning (Schafer, et al, 2006). Returning successful patrollers have an even greater effect on foraging activity: foragers will not leave the nest unless a patroller returns (Gordon, 2002), and the rate of foraging in a colony can be controlled by rolling glass beads coated with cuticular hydrocarbons extracted from patrollers into the nest (Gordon & Greene, 2003; Greene & Gordon, 2007). Midden seems to be marked in some olfactory way, since removing midden from nests makes them more likely to be invaded by other species (Gordon, 35). For the purposes of this proposal, I will assume that the nest maintenance and food processing ants have marked the midden with a particular pheromone. All of these chemical receptors will be arranged in an array on a pair of chemical stalks, with four of each type of receptor per stalk. This technique, described by Ishida, et al (2001), has been shown to improve the chemical plume-tracking abilities of robots. The wires will lead back down through the stalk to the on-board PC.
-            Finally, Antie will have tactile sensors on its grippers to analyze the pressure being exerted on a gripped object. These sensors will be of the type patented by Peterson, et al (Patent #4,492,949), and will feature several layers of electrically insulating and parallel flexible conductive rods arranged such that an exerted pressure may be measured in output voltage. These will correspond to the muscles of the ant‚Äôs mandibles, which provide sensorimotor feedback to the ant when grasping objects. A table of the sensors and their relation to the ant‚Äôs sensory system is provided below.
+            Ants themselves rely primarily on chemical information taken in through their antennae, and to mimic this, Antie will have chemical sensing and emitting “stalks” with which to both interact with other ants (who may be surprised to find an ant without antennae) and take in chemical information. These stalks will need to have receptors to measure the n-alkene levels present in another ant’s cuticular hydrocarbons, which research indicates is the marker for harvester ants of a nestmate’s current task, perhaps because the hydrocarbons are altered in the dry sun, causing a different ratio of n-alkanes to n-alkenes and the presence of branched n-alkanes in the hydrocarbon profile (Wagner, et al, 2001, as cited in Gordon & Greene, 2003). Antie’s stalks would also have receptors for the hydrocarbons themselves, which research shows indicate to the ants whether another ant is their nestmate (Arnold, et al, 1996, as cited in Gordon & Mehdiabadi, 1999), receptors to detect food, and receptors for three types of pheromones: those released by successful foragers returning with food, those released by successful patrollers returning to the nest, and those marking piles of trash as midden. Research shows that successful foragers returning to the nest do have a different effect on the inactive workers than unsuccessful foragers returning (Schafer, et al, 2006). Returning successful patrollers have an even greater effect on foraging activity: foragers will not leave the nest unless a patroller returns (Gordon, 2002), and the rate of foraging in a colony can be controlled by rolling glass beads coated with cuticular hydrocarbons extracted from patrollers into the nest (Gordon & Greene, 2003; Greene & Gordon, 2007). Midden seems to be marked in some olfactory way, since removing midden from nests makes them more likely to be invaded by other species (Gordon, 35). For the purposes of this proposal, I will assume that the nest maintenance and food processing ants have marked the midden with a particular pheromone. All of these chemical receptors will be arranged in an array on a pair of chemical stalks, with four of each type of receptor per stalk. This technique, described by Ishida, et al (2001), has been shown to improve the chemical plume-tracking abilities of robots. The wires will lead back down through the stalk to the on-board PC.
+            Finally, Antie will have tactile sensors on its grippers to analyze the pressure being exerted on a gripped object. These sensors will be of the type patented by Peterson, et al (Patent #4,492,949), and will feature several layers of electrically insulating and parallel flexible conductive rods arranged such that an exerted pressure may be measured in output voltage. These will correspond to the muscles of the ant’s mandibles, which provide sensorimotor feedback to the ant when grasping objects. A table of the sensors and their relation to the ant’s sensory system is provided below.
             
             Fig 3. Table of sensors and their relations to the ant.
             
@@ -83,7 +83,7 @@
                   
                   
                      
-                        ‚ÄúSuccessful forager‚Äù pheromone chemical detectors
+                        “Successful forager” pheromone chemical detectors
                      
                      
                         Antennae
@@ -97,7 +97,7 @@
                   
                   
                      
-                        ‚ÄúSuccessful patroller‚Äù pheromone chemical detectors
+                        “Successful patroller” pheromone chemical detectors
                      
                      
                         Antennae
@@ -197,14 +197,14 @@
             
             
             Motors
-            Antie‚Äôs motors will allow it to move around and interact with its environment and fellow ants. There will be two individually operated motors to drive the two side wheels in lieu of legs. Two simultaneously operated motors will open and close the grippers, emulating the grasping power of the ant‚Äôs mandibles. A third motor will lift and lower the grippers, allowing Antie to raise and lower gripped items as an ant would by raising and lowering its head. Three small sprayers will emit successful patroller and forager pheromones and cuticular hydrocarbons from the appropriate sacs. These will be located in different places: the sprayer for the successful patroller pheromone will be located on the rear at the base of Antie, corresponding to the glands that researchers believe the ants drag along behind them to mark returning paths, while the successful forager and cuticular hydrocarbon sprayers will be located on the skirt. Antie will not spray different pheromones depending on its task, on the assumption that its time in the sun will alter its hydrocarbons enough that its tasks will be recognizable to other ants. Almost all motor output will be a direct function of sensory input as indicated in the following section.
+            Antie’s motors will allow it to move around and interact with its environment and fellow ants. There will be two individually operated motors to drive the two side wheels in lieu of legs. Two simultaneously operated motors will open and close the grippers, emulating the grasping power of the ant’s mandibles. A third motor will lift and lower the grippers, allowing Antie to raise and lower gripped items as an ant would by raising and lowering its head. Three small sprayers will emit successful patroller and forager pheromones and cuticular hydrocarbons from the appropriate sacs. These will be located in different places: the sprayer for the successful patroller pheromone will be located on the rear at the base of Antie, corresponding to the glands that researchers believe the ants drag along behind them to mark returning paths, while the successful forager and cuticular hydrocarbon sprayers will be located on the skirt. Antie will not spray different pheromones depending on its task, on the assumption that its time in the sun will alter its hydrocarbons enough that its tasks will be recognizable to other ants. Almost all motor output will be a direct function of sensory input as indicated in the following section.
             
             The Behavior
             
             Antie will have a hybrid software architecture: a subsumption hierarchy will be responsible for switching between behaviors, but many sub-behaviors will operate on a schema basis. Pseudocode will approximate this architecture as closely as possible, and where appropriate, different subroutines running on a schema basis will be marked.
             
             Common Behaviors
-            A few sub-behaviors will be necessary for more than one behavior. To ease Antie‚Äôs on-board memory requirements and processing capabilities (and to make all the rest of the pseudocode easier for the reader to understand), I propose a few global variables and subroutines.
+            A few sub-behaviors will be necessary for more than one behavior. To ease Antie’s on-board memory requirements and processing capabilities (and to make all the rest of the pseudocode easier for the reader to understand), I propose a few global variables and subroutines.
             The following global variables will be used throughout the pseudocode, and are compiled here for ease of reference:
             
             // number representing calibration for speed
@@ -237,7 +237,7 @@
             double left_sucfor_IP;
             double right_sucfor_IP;
             
-            // Array inputs from left and right ‚Äúsuccessful patroller‚Äù
+            // Array inputs from left and right “successful patroller”
             // sensors. Assume a function to determine location:
             double left_sucpat_IP;
             double right_sucpat_IP;
@@ -288,7 +288,7 @@
             // Calibrate is a double representing a calibration
             // initialized to zero and altered as necessary.
             
-            // The robot will receive the ‚ÄúGO‚Äù command as long as
+            // The robot will receive the “GO” command as long as
             // this function is running.
             
             left_motor_OP = speed + calibrate;
@@ -345,7 +345,7 @@
             return dist;
             } // end nestDist
             
-            In-nest navigation will be a function of the temperature, read by Antie‚Äôs thermometer and a light source. To exit, Antie will seek a high temperature until the photoreceptor reaches a threshold of stimulation indicating sunlight, and to get deeper, Antie will seek a lower temperature. The code may look something like this:
+            In-nest navigation will be a function of the temperature, read by Antie’s thermometer and a light source. To exit, Antie will seek a high temperature until the photoreceptor reaches a threshold of stimulation indicating sunlight, and to get deeper, Antie will seek a lower temperature. The code may look something like this:
             
             // Exit Nest
             // Uses temperature gradient to navigate towards the nest
@@ -365,7 +365,7 @@
             } // end nestExit
             
             To enter the nest, such as at the end of a task, Antie will perform the same function, except it will seek a lower temperature instead of a higher temperature, it will avoid light, and it will only activate while Antie is less than 10cm from the nest entrance. This void function will be called nestEnter(), and will take in no inputs. 
-            To avoid bumping into things (including other ants), Antie be provided with an escape function. Each of Antie‚Äôs eight bump sensors will cause the robot to rotate a different amount, and the sonar will cause it to rotate 90 degrees in the opposite direction. Regardless, this will be a very simple function. I will include one example:
+            To avoid bumping into things (including other ants), Antie be provided with an escape function. Each of Antie’s eight bump sensors will cause the robot to rotate a different amount, and the sonar will cause it to rotate 90 degrees in the opposite direction. Regardless, this will be a very simple function. I will include one example:
             
             // Escape
             // Escapes from danger when bump sensors or sonar are 
@@ -383,14 +383,14 @@
             // Sonar sensors are globally declared.
             
             if(bump_left1) {
-            // reverse ‚Ä¶ (at reduced speed)
+            // reverse … (at reduced speed)
             forCruz(-3);
-            // ‚Ä¶ and rotate!
+            // … and rotate!
             rotate(45);
             }
             } // end escape
             
-            Because this function responds to the sensors on Antie‚Äôs around the sides and only its sonar detectors will be able to detect objects in front of it, this escape function will not prevent Antie from being able to locate and pick up objects such as seeds.
+            Because this function responds to the sensors on Antie’s around the sides and only its sonar detectors will be able to detect objects in front of it, this escape function will not prevent Antie from being able to locate and pick up objects such as seeds.
             Before picking objects up, however, Antie will need to identify them. This object detection process will be activated when the front bump sensor is stimulated or when both sonar detectors are stimulated. Chemical inputs will be checked to see what this object is most likely to be given its smell. Objects will include midden and food. The code may look something like this:
             
             // Object Identification
@@ -424,7 +424,7 @@
             } // end objID
             
             Once the object has been identified, Antie may grip it and lift it. A simple void function grip() taking in no inputs will tighten the grippers until a certain threshold of pressure is reached, at which point the grippers will be lifted for carrying. A void function release() will perform this same action in reverse.
-            Antie will also need to follow several different kinds of chemical gradient trails: it will need to track the trails left by successful patrollers, and localize the source of food-odors and midden-odors. Implementations of chemical gradient following robots using two sensors on ‚Äúantennae‚Äù stalks has been successful in with analog robots in the past (Webb, 1998), regardless of the potential problem of airflow causing a disturbed gradient over evaporating pheromones. As a partial control for the problem of imprecise sensing, a function will perform an analysis of the array information coming on from Antie‚Äôs four sensors on each stalk. The differences between these outputs is what is being compared everywhere there is a ‚Äúleft_IP‚Äù or ‚Äúright_IP.‚Äù Antie will use the chemical gradient algorithm of Braitenberg‚Äôs aggressive type 2 vehicle described in his book ‚ÄúVehicles: Experiments in Synthetic Psychology,‚Äù as this was found through a series of experiments by Russell, et al (2003) to be very efficient when compared to several biomimetic models. Because the same general algorithm will be followed for the localization of all three chemical traces, I will provide pseudocode for only one generic subroutine. Note that a portion of this subroutine does run on a schema basis:
+            Antie will also need to follow several different kinds of chemical gradient trails: it will need to track the trails left by successful patrollers, and localize the source of food-odors and midden-odors. Implementations of chemical gradient following robots using two sensors on “antennae” stalks has been successful in with analog robots in the past (Webb, 1998), regardless of the potential problem of airflow causing a disturbed gradient over evaporating pheromones. As a partial control for the problem of imprecise sensing, a function will perform an analysis of the array information coming on from Antie’s four sensors on each stalk. The differences between these outputs is what is being compared everywhere there is a “left_IP” or “right_IP.” Antie will use the chemical gradient algorithm of Braitenberg’s aggressive type 2 vehicle described in his book “Vehicles: Experiments in Synthetic Psychology,” as this was found through a series of experiments by Russell, et al (2003) to be very efficient when compared to several biomimetic models. Because the same general algorithm will be followed for the localization of all three chemical traces, I will provide pseudocode for only one generic subroutine. Note that a portion of this subroutine does run on a schema basis:
             
             // Follow Gradient
             // Follows a generic chemical gradient, seeking a higher
@@ -477,7 +477,7 @@
             
             Using these basic common behaviors, more complex behaviors may be coded.
             Red harvester ants do not retain one task throughout their lifespan, but instead change their behaviors as is appropriate for the colony (Gordon, 1996). Research has shown that red harvester ants switch tasks partially as a function of age (ex., Ingram, et al, 2005) and partially as a function of interactions with other workers (ex., Schafer et al, 2006; Gordon, 2002; Greene & Gordon, 2007). Younger ants work more inside the nest, and older ants work more outside the nest. As a result, I will model the three main behaviors in the order that they are to be engaged in. Midden work, which consists of moving dirt between the inside of the nest and the outside, will occur first; patrolling, which involves a shorter overall amount of time spent outside, will occur second; and foraging will be the final behavior. Finally, I will discuss a main method encoding the task switching between these behaviors.
-            The midden work behavior will be Antie‚Äôs default initial behavior. It will be initiated in the morning by the sunrise, and will continue until the outside temperature reaches 52¬≠¬≠¬≠oC, at which point all red harvester ants must return to the nest. As previously stated, a midden worker must identify midden, grasp it, and carry it to the surface, depositing it halfway down the mound before returning to collect more midden. A program encoding this behavior might look like this:
+            The midden work behavior will be Antie’s default initial behavior. It will be initiated in the morning by the sunrise, and will continue until the outside temperature reaches 52­­­oC, at which point all red harvester ants must return to the nest. As previously stated, a midden worker must identify midden, grasp it, and carry it to the surface, depositing it halfway down the mound before returning to collect more midden. A program encoding this behavior might look like this:
             
             //////////////////////////////////////////////////////////
             // MIDDEN WORK
@@ -511,7 +511,7 @@
             } // end while
             } // end midden
             
-            The second behavior, patrolling, involves two sub-behaviors: nest patrolling and trail patrolling. Nest patrolling will involve leaving the nest, roaming around on the nest mound for a few minutes, and reentering the nest. This behavior will be implemented in two parts, with a task-switching algorithm based on age. Research shows that ants do change their behaviors based partly on their perceived life expectancy (Moron, et al, 2007), and that task-switching is partly genetically controlled by a switch in gene expression as the individual ages (Ingram, et al, 2005). It is therefore reasonable to assign a constant age at which Antie will switch from nest patrolling to trail patrolling. In order to perform both of these functions, Antie will need a subroutine to explore in a zig-zag fashion, as harvester ants do (Gordon, 34). Harvester ants display a preference to wander in familiar territory, though foragers and patrollers do sometimes wander into other nests‚Äô territories (Gordon, 57-60). To control for this behavior, Antie‚Äôs explore subroutine will display a preference for exploration in places where there is a low gradient of nestmate pheromones. This model is reasonable because patrollers and foragers change their explored territory from day to day, even though they do retain some more commonly chosen paths (Gordon, 45). The code may look something like this:
+            The second behavior, patrolling, involves two sub-behaviors: nest patrolling and trail patrolling. Nest patrolling will involve leaving the nest, roaming around on the nest mound for a few minutes, and reentering the nest. This behavior will be implemented in two parts, with a task-switching algorithm based on age. Research shows that ants do change their behaviors based partly on their perceived life expectancy (Moron, et al, 2007), and that task-switching is partly genetically controlled by a switch in gene expression as the individual ages (Ingram, et al, 2005). It is therefore reasonable to assign a constant age at which Antie will switch from nest patrolling to trail patrolling. In order to perform both of these functions, Antie will need a subroutine to explore in a zig-zag fashion, as harvester ants do (Gordon, 34). Harvester ants display a preference to wander in familiar territory, though foragers and patrollers do sometimes wander into other nests’ territories (Gordon, 57-60). To control for this behavior, Antie’s explore subroutine will display a preference for exploration in places where there is a low gradient of nestmate pheromones. This model is reasonable because patrollers and foragers change their explored territory from day to day, even though they do retain some more commonly chosen paths (Gordon, 45). The code may look something like this:
             
             // Explore
             // Takes in desired distance from nest to explore 
@@ -626,7 +626,7 @@
             [schema] {
             rotate(nestOrient());
             forCruz(5);
-            spray ‚Äúsuccessful patroller‚Äù pheromone
+            spray “successful patroller” pheromone
             nestEnter();
             }
             wait a short time
@@ -644,7 +644,7 @@
             } // end if
             } // end trailPatrol
             
-            For the task-switching in the patrolling behavior, assume some variable ‚Äúage‚Äù that Antie has been keeping track of using the CPU‚Äôs clock pulses to track the time since its last bootup. The integers nestpatrol_age and trailpatrol_age will represent the ages at which it is appropriate to switch to these tasks.
+            For the task-switching in the patrolling behavior, assume some variable “age” that Antie has been keeping track of using the CPU’s clock pulses to track the time since its last bootup. The integers nestpatrol_age and trailpatrol_age will represent the ages at which it is appropriate to switch to these tasks.
             
             // PATROLLING
             // Task-switching hierarchy for the two types of patrolling
@@ -657,7 +657,7 @@
             }
             }
             
-            The final behavior, foraging, will involve one extra subroutine that will employ an algorithm designed by R. Andrew Russell to localize an object through sand based on a chemical plume. This will emulate the digging that foragers must often do in order to locate seeds, and will enable Antie to accurately retrieve seeds for its host nest. This algorithm will keep track of the last two intensities of the desired chemical input and compare them. It would also keep track of whether the last rotation was clockwise or counter-clockwise. The code for this, adapted from Russell‚Äôs paper, might look like this:
+            The final behavior, foraging, will involve one extra subroutine that will employ an algorithm designed by R. Andrew Russell to localize an object through sand based on a chemical plume. This will emulate the digging that foragers must often do in order to locate seeds, and will enable Antie to accurately retrieve seeds for its host nest. This algorithm will keep track of the last two intensities of the desired chemical input and compare them. It would also keep track of whether the last rotation was clockwise or counter-clockwise. The code for this, adapted from Russell’s paper, might look like this:
             
             // Hex-path search
             // Localizes an object through sand using chemical detection
@@ -694,7 +694,7 @@
             // Foragers will exit the nest upon activation and follow
             // a trail laid by the patrollers. Upon completion of the
             // trail-following, will locate and grip food, returning
-            // to the nest. Boolean forage_today represents Antie‚Äôs
+            // to the nest. Boolean forage_today represents Antie’s
             // activation status for each day once it has switched to 
             // the foraging behavior.
             
@@ -727,16 +727,16 @@
             } // end while
             } // end forage
             
-            Of course, what makes Antie an innovative robot is the task-switching between these larger behaviors. Because the midden work behavior is Antie‚Äôs initial default behavior, I will not address task switching to midden work. Workers probably switch to patrolling based on their perceived life expectancy and as a function of a gene whose expression changes between young and old ants, and this is easily emulated using a clock pulse counter in Antie‚Äôs CPU that will count its ‚Äúage‚Äù since last boot. To remind the reader, this technique was implemented earlier in this proposal to create the limited task-switching between nest patrolling and trail patrolling. The switch from patrolling to foraging has been modeled as a function of successful foragers‚Äô returns with great accuracy by Schafer, et al (2006), and evidence from experiments in which successful foragers were removed before reentry to the nest does support the theory that returning successful foragers have an effect on the activation of new foragers (Gordon, 2002). Activated foragers form a queue to exit the nest and exit at a steady rate. According to Schafer‚Äôs, et al. model of forager activation, every time a successful forager returns and no foragers are currently in line to exit, a fraction (modeled at 0.0035) of inactive foragers joins the queue. For the purposes of modeling Antie, I will assume that the switches between these behaviors are permanent, irreversible and partly a function of age, with new foragers being activated by returning successful foragers. The code to model this task-switching might look something like this:
+            Of course, what makes Antie an innovative robot is the task-switching between these larger behaviors. Because the midden work behavior is Antie’s initial default behavior, I will not address task switching to midden work. Workers probably switch to patrolling based on their perceived life expectancy and as a function of a gene whose expression changes between young and old ants, and this is easily emulated using a clock pulse counter in Antie’s CPU that will count its “age” since last boot. To remind the reader, this technique was implemented earlier in this proposal to create the limited task-switching between nest patrolling and trail patrolling. The switch from patrolling to foraging has been modeled as a function of successful foragers’ returns with great accuracy by Schafer, et al (2006), and evidence from experiments in which successful foragers were removed before reentry to the nest does support the theory that returning successful foragers have an effect on the activation of new foragers (Gordon, 2002). Activated foragers form a queue to exit the nest and exit at a steady rate. According to Schafer’s, et al. model of forager activation, every time a successful forager returns and no foragers are currently in line to exit, a fraction (modeled at 0.0035) of inactive foragers joins the queue. For the purposes of modeling Antie, I will assume that the switches between these behaviors are permanent, irreversible and partly a function of age, with new foragers being activated by returning successful foragers. The code to model this task-switching might look something like this:
             
             /////////////////////////////////////////////////////////////
             // TASK-SWITCHING
             /////////////////////////////////////////////////////////////
             //
-            // Main function of Antie‚Äôs software. Examines the task-
+            // Main function of Antie’s software. Examines the task-
             // switching criteria and determines when Antie will perform 
-            // what behavior. Int ‚Äúage‚Äù is an integer representing the
-            // time since Antie‚Äôs last boot, corresponding to the age
+            // what behavior. Int “age” is an integer representing the
+            // time since Antie’s last boot, corresponding to the age
             // of an ant being simulated. Int nestpatrol_age refers to the 
             // starting age at which Antie will begin to nest patrol; 
             // forage_age refers to the starting age at which Antie may be 
@@ -771,7 +771,7 @@
             
             Conclusion
             
-            Antie will be a fully autonomous, situated and embodied agent, infiltrating a red harvester ant colony and providing valuable information not only about the hypothesized rules of these ants‚Äô behaviors and their task-switching thresholds, but also about the combination of complex behaviors into a single autonomous system with the ability to switch between behaviors as necessary. Biomimetic robots have long been a rich source of information for both biologists and robotics engineers, and complex robots that can switch tasks as the situation demands and communicate information about current tasks could be useful for further studies of complex robot behaviors as well as for the obvious practical applications of robot swarms, such as on the battlefield and standard building maintenance.
+            Antie will be a fully autonomous, situated and embodied agent, infiltrating a red harvester ant colony and providing valuable information not only about the hypothesized rules of these ants’ behaviors and their task-switching thresholds, but also about the combination of complex behaviors into a single autonomous system with the ability to switch between behaviors as necessary. Biomimetic robots have long been a rich source of information for both biologists and robotics engineers, and complex robots that can switch tasks as the situation demands and communicate information about current tasks could be useful for further studies of complex robot behaviors as well as for the obvious practical applications of robot swarms, such as on the battlefield and standard building maintenance.
             
             
             
@@ -819,5 +819,6 @@
             Webb, B. Robots, crickets and ants: models of neural control of chemotaxis and phonotaxis. Neural Networks 11, 1479-1496 (1998).
             
          
+    
       
    
