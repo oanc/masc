@@ -1,357 +1,905 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
+<cesAna xmlns="http://www.xces.org/schema/2003" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xces.org/schema/2003 completed 3 29">
    <struct type="Date" from="44" to="68">
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="DateNameRev"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
    </struct>
    <struct type="Person" from="151" to="160">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+   </struct>
+   <struct type="Person" from="165" to="179">
+      <feat name="gender" value="male"/>
    </struct>
    <struct type="Organization" from="198" to="209">
-      <feat name="orgType" value="null"/>
+      <feat name="orgType" value="corporation"/>
+      <feat name="rule1" value="TheOrgXKey"/>
+      <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="Date" from="211" to="215">
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="TempYear2"/>
+      <feat name="rule2" value="YearOnlyFinal"/>
    </struct>
-   <struct type="Person" from="495" to="508">
-      <feat name="gender" value="male"/>
+   <struct type="Location" from="514" to="522">
+      <feat name="locType" value="city"/>
    </struct>
    <struct type="Location" from="524" to="534">
       <feat name="locType" value="province"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
+   </struct>
+   <struct type="Location" from="535" to="540">
+      <feat name="locType" value="us_region"/>
    </struct>
    <struct type="Location" from="542" to="545">
       <feat name="locType" value="country"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
-   <struct type="Person" from="699" to="703">
-      <feat name="gender" value="female"/>
+   <struct type="Person" from="593" to="607">
+      <feat name="gender" value="male"/>
    </struct>
-   <struct type="Person" from="1101" to="1105">
-      <feat name="gender" value="female"/>
+   <struct type="Organization" from="677" to="693">
+      <feat name="orgType" value="corporation"/>
+   </struct>
+   <struct type="Organization" from="1928" to="1946">
+      <feat name="orgType" value="corporation"/>
    </struct>
    <struct type="Date" from="2606" to="2615">
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="ModifierDate"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
    </struct>
-   <struct type="Person" from="2643" to="2650">
-      <feat name="gender" value="female"/>
+   <struct type="Location" from="2643" to="2650">
+      <feat name="matches" value="[60593, 60595, 60602, 60609, 60621]"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="locType" value="us_region"/>
    </struct>
-   <struct type="Location" from="2904" to="2912">
+   <struct type="Location" from="2898" to="2912">
+      <feat name="locType" value="city"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
+   </struct>
+   <struct type="Location" from="2916" to="2979">
+      <feat name="locType" value="region"/>
+   </struct>
+   <struct type="Location" from="2986" to="2994">
       <feat name="locType" value="city"/>
    </struct>
-   <struct type="Person" from="3605" to="3612">
-      <feat name="gender" value="female"/>
+   <struct type="Location" from="3605" to="3612">
+      <feat name="matches" value="[60593, 60595, 60602, 60609, 60621]"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="locType" value="region"/>
+   </struct>
+   <struct type="Location" from="3657" to="3674">
+      <feat name="locType" value="facility"/>
    </struct>
    <struct type="Person" from="3875" to="3887">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
-   <struct type="Person" from="3983" to="3988">
+   <struct type="Person" from="3977" to="3988">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60597, 60598, 60600, 60603, 60608]"/>
    </struct>
-   <struct type="Person" from="4282" to="4287">
+   <struct type="Person" from="4273" to="4287">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60597, 60598, 60600, 60603, 60608]"/>
+   </struct>
+   <struct type="Location" from="4457" to="4474">
+      <feat name="locType" value="facility"/>
    </struct>
    <struct type="Person" from="4584" to="4589">
       <feat name="gender" value="female"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="GazPersonFirst"/>
    </struct>
-   <struct type="Person" from="4796" to="4801">
+   <struct type="Person" from="4787" to="4801">
       <feat name="gender" value="male"/>
    </struct>
    <struct type="Person" from="4848" to="4860">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
-   <struct type="Person" from="4864" to="4871">
-      <feat name="gender" value="female"/>
+   <struct type="Location" from="4864" to="4871">
+      <feat name="matches" value="[60593, 60595, 60602, 60609, 60621]"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="locType" value="region"/>
    </struct>
-   <struct type="Person" from="5948" to="5953">
+   <struct type="Person" from="5942" to="5953">
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Person" from="6796" to="6799">
+   <struct type="Person" from="6013" to="6023">
+      <feat name="gender" value="unknown"/>
+   </struct>
+   <struct type="Person" from="6066" to="6074">
       <feat name="gender" value="male"/>
    </struct>
    <struct type="Person" from="7000" to="7003">
-      <feat name="gender" value="null"/>
+      <feat name="rule1" value="GazPerson"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60605, 60631, 60664]"/>
+      <feat name="gender" value="unknown"/>
+   </struct>
+   <struct type="Location" from="7129" to="7141">
+      <feat name="locType" value="facility"/>
    </struct>
    <struct type="Location" from="7215" to="7228">
       <feat name="locType" value="region"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Person" from="7480" to="7485">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
-   <struct type="Person" from="8549" to="8554">
+   <struct type="Person" from="8540" to="8554">
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Person" from="9226" to="9233">
-      <feat name="gender" value="female"/>
+   <struct type="Location" from="9226" to="9233">
+      <feat name="matches" value="[60593, 60595, 60602, 60609, 60621]"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="locType" value="region"/>
    </struct>
    <struct type="Person" from="9721" to="9733">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="10374" to="10379">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonFirstContext2"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="10489" to="10494">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="10824" to="10836">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="10933" to="10938">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonFirstContext2"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Location" from="10960" to="10981">
+      <feat name="locType" value="facility"/>
    </struct>
    <struct type="Person" from="11339" to="11344">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="11364" to="11369">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="11408" to="11413">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="11443" to="11448">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="FirstPersonStop"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="11501" to="11506">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Organization" from="11636" to="11659">
+      <feat name="orgType" value="corporation"/>
    </struct>
    <struct type="Person" from="11728" to="11733">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
-   <struct type="Person" from="11771" to="11778">
-      <feat name="gender" value="female"/>
+   <struct type="Location" from="11771" to="11778">
+      <feat name="matches" value="[60593, 60595, 60602, 60609, 60621]"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="locType" value="region"/>
    </struct>
-   <struct type="Person" from="11833" to="11849">
+   <struct type="Person" from="11824" to="11849">
       <feat name="gender" value="male"/>
    </struct>
    <struct type="Person" from="12266" to="12271">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Location" from="12293" to="12314">
+      <feat name="locType" value="facility"/>
    </struct>
    <struct type="Person" from="12561" to="12566">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="12815" to="12820">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Person" from="12894" to="12902">
+      <feat name="gender" value="male"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="rule" value="Unknown"/>
+   </struct>
+   <struct type="Location" from="12921" to="12952">
+      <feat name="locType" value="facility"/>
+   </struct>
+   <struct type="Location" from="13067" to="13079">
+      <feat name="locType" value="facility"/>
    </struct>
    <struct type="Person" from="13169" to="13174">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonFirstContext2"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Location" from="13497" to="13509">
+      <feat name="locType" value="facility"/>
    </struct>
    <struct type="Date" from="13514" to="13522">
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="ModifierDate"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+   </struct>
+   <struct type="Organization" from="13822" to="13850">
+      <feat name="orgType" value="newspaper/media"/>
    </struct>
    <struct type="Person" from="13942" to="13954">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="14272" to="14277">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
-   <struct type="Organization" from="15104" to="15125">
-      <feat name="orgType" value="null"/>
+   <struct type="Person" from="14989" to="15006">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Organization" from="15109" to="15125">
+      <feat name="orgType" value="newspaper/media"/>
+   </struct>
+   <struct type="Organization" from="15343" to="15387">
+      <feat name="orgType" value="newspaper/media"/>
+   </struct>
+   <struct type="Person" from="16016" to="16024">
+      <feat name="kind" value="PN"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="rule" value="Unknown"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="gender" value="male"/>
    </struct>
    <struct type="Person" from="16113" to="16116">
-      <feat name="gender" value="null"/>
+      <feat name="rule1" value="GazPerson"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60605, 60631, 60664]"/>
+      <feat name="gender" value="unknown"/>
    </struct>
    <struct type="Person" from="16662" to="16667">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="16901" to="16906">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Person" from="16943" to="16951">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Location" from="17145" to="17153">
+      <feat name="locType" value="city"/>
    </struct>
    <struct type="Person" from="17169" to="17174">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Location" from="17187" to="17199">
+      <feat name="locType" value="facility"/>
+   </struct>
+   <struct type="Person" from="17230" to="17235">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="17237" to="17242">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="17712" to="17717">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
    </struct>
    <struct type="Person" from="17775" to="17788">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+   </struct>
+   <struct type="Person" from="17940" to="17945">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
    </struct>
    <struct type="Location" from="18288" to="18294">
-      <feat name="locType" value="null"/>
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="InLoc1"/>
    </struct>
-   <struct type="Location" from="18299" to="18302">
+   <struct type="Location" from="18299" to="18309">
       <feat name="rule " value="LocConjLoc2"/>
-   </struct>
-   <struct type="Location" from="18303" to="18309">
       <feat name="locType" value="city"/>
+   </struct>
+   <struct type="Organization" from="18440" to="18450">
+      <feat name="orgType" value="newspaper/media"/>
+   </struct>
+   <struct type="Person" from="19055" to="19060">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
    </struct>
    <struct type="Person" from="19784" to="19788">
       <feat name="gender" value="male"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+   </struct>
+   <struct type="Location" from="19810" to="19821">
+      <feat name="locType" value="facility"/>
    </struct>
    <struct type="Person" from="19843" to="19847">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
    </struct>
    <struct type="Person" from="19901" to="19914">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
    </struct>
    <struct type="Person" from="20094" to="20098">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFirstContext"/>
+      <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Person" from="20123" to="20130">
-      <feat name="gender" value="null"/>
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFirstContext"/>
+      <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Person" from="20301" to="20305">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
    </struct>
    <struct type="Person" from="20796" to="20801">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Date" from="20907" to="20915">
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="GazDateWords"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
    </struct>
-   <struct type="Person" from="21637" to="21661">
-      <feat name="gender" value="null"/>
+   <struct type="Person" from="21148" to="21153">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
    </struct>
-   <struct type="Person" from="21699" to="21704">
-      <feat name="gender" value="female"/>
+   <struct type="Location" from="21699" to="21704">
+      <feat name="locType" value="country"/>
    </struct>
    <struct type="Person" from="23257" to="23261">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
    </struct>
    <struct type="Person" from="23768" to="23781">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
    </struct>
    <struct type="Person" from="24098" to="24103">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Person" from="24163" to="24177">
+      <feat name="gender" value="male"/>
    </struct>
    <struct type="Person" from="24215" to="24219">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+   </struct>
+   <struct type="Person" from="24233" to="24241">
       <feat name="gender" value="male"/>
    </struct>
    <struct type="Person" from="24243" to="24248">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="24720" to="24725">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="24870" to="24874">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
    </struct>
    <struct type="Person" from="25242" to="25247">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Location" from="25481" to="25489">
+      <feat name="locType" value="city"/>
    </struct>
    <struct type="Location" from="25491" to="25494">
       <feat name="locType" value="city"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Location" from="25699" to="25708">
-      <feat name="locType" value="post"/>
+      <feat name="locType" value="city"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
+   </struct>
+   <struct type="Person" from="25948" to="25956">
+      <feat name="gender" value="male"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="rule" value="Unknown"/>
    </struct>
    <struct type="Person" from="26162" to="26167">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Person" from="26191" to="26196">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="26261" to="26269">
+      <feat name="gender" value="male"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="rule" value="Unknown"/>
+   </struct>
+   <struct type="Person" from="26449" to="26457">
+      <feat name="gender" value="male"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="rule" value="Unknown"/>
+   </struct>
+   <struct type="Person" from="26470" to="26475">
+      <feat name="gender" value="male"/>
    </struct>
    <struct type="Person" from="26497" to="26502">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="27505" to="27510">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Person" from="28130" to="28135">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
    </struct>
    <struct type="Person" from="28138" to="28143">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Person" from="28283" to="28291">
+      <feat name="gender" value="male"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="rule" value="Unknown"/>
    </struct>
    <struct type="Person" from="28302" to="28307">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="28512" to="28525">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
    </struct>
    <struct type="Person" from="28732" to="28735">
-      <feat name="gender" value="null"/>
+      <feat name="rule1" value="GazPerson"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60605, 60631, 60664]"/>
+      <feat name="gender" value="unknown"/>
    </struct>
    <struct type="Person" from="28795" to="28799">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFirstContext"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
    </struct>
    <struct type="Person" from="28804" to="28809">
-      <feat name="gender" value="null"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="PersonFirstContext"/>
    </struct>
    <struct type="Person" from="29110" to="29114">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
    </struct>
    <struct type="Person" from="29145" to="29150">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="29244" to="29249">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60647, 60669]"/>
+   </struct>
+   <struct type="Location" from="29302" to="29310">
+      <feat name="locType" value="city"/>
    </struct>
    <struct type="Person" from="29478" to="29483">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonFirstContext2"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Location" from="29538" to="29547">
+      <feat name="locType" value="city"/>
+   </struct>
+   <struct type="Person" from="29824" to="29832">
+      <feat name="rule" value="Unknown"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="kind" value="PN"/>
+      <feat name="NMRule" value="Unknown"/>
    </struct>
    <struct type="Person" from="29880" to="29885">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="29963" to="29968">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="30344" to="30348">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+   </struct>
+   <struct type="Person" from="30431" to="30439">
+      <feat name="rule" value="Unknown"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="kind" value="PN"/>
+      <feat name="NMRule" value="Unknown"/>
    </struct>
    <struct type="Person" from="30467" to="30472">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Person" from="30563" to="30568">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
    </struct>
    <struct type="Person" from="30579" to="30583">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
    </struct>
    <struct type="Person" from="30692" to="30696">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
    </struct>
    <struct type="Person" from="30824" to="30828">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
    </struct>
    <struct type="Person" from="30934" to="30939">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Location" from="31057" to="31098">
+      <feat name="locType" value="facility"/>
    </struct>
    <struct type="Person" from="31452" to="31456">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
    </struct>
    <struct type="Person" from="31544" to="31549">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Location" from="31766" to="31777">
+      <feat name="locType" value="facility"/>
+   </struct>
+   <struct type="Person" from="31905" to="31913">
+      <feat name="rule" value="Unknown"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="kind" value="PN"/>
+      <feat name="NMRule" value="Unknown"/>
    </struct>
    <struct type="Person" from="32119" to="32124">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Date" from="32218" to="32221">
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="GazDate"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+   </struct>
+   <struct type="Person" from="32854" to="32862">
+      <feat name="gender" value="male"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="rule" value="Unknown"/>
+   </struct>
+   <struct type="Person" from="33469" to="33477">
+      <feat name="gender" value="male"/>
    </struct>
    <struct type="Person" from="33608" to="33613">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Person" from="33888" to="33896">
+      <feat name="gender" value="male"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="rule" value="Unknown"/>
+   </struct>
+   <struct type="Person" from="33980" to="33988">
+      <feat name="gender" value="male"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="rule" value="Unknown"/>
    </struct>
    <struct type="Person" from="34000" to="34005">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Person" from="34269" to="34277">
+      <feat name="rule" value="Unknown"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="kind" value="PN"/>
+      <feat name="NMRule" value="Unknown"/>
    </struct>
    <struct type="Person" from="34438" to="34443">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Location" from="34514" to="34519">
+      <feat name="locType" value="city"/>
+   </struct>
+   <struct type="Person" from="34600" to="34608">
+      <feat name="rule" value="Unknown"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="kind" value="PN"/>
+      <feat name="NMRule" value="Unknown"/>
+   </struct>
+   <struct type="Person" from="35337" to="35345">
+      <feat name="gender" value="male"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="rule" value="Unknown"/>
    </struct>
    <struct type="Person" from="35633" to="35638">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="36051" to="36056">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Organization" from="36520" to="36556">
+      <feat name="orgType" value="corporation"/>
+   </struct>
+   <struct type="Person" from="36640" to="36648">
+      <feat name="gender" value="male"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="rule" value="Unknown"/>
    </struct>
    <struct type="Person" from="36652" to="36657">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Person" from="37114" to="37122">
+      <feat name="gender" value="male"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="rule" value="Unknown"/>
    </struct>
    <struct type="Person" from="37320" to="37325">
       <feat name="gender" value="female"/>
-   </struct>
-   <struct type="Person" from="37407" to="37416">
-      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="37654" to="37659">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="38054" to="38058">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
    </struct>
    <struct type="Person" from="38226" to="38231">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Person" from="38251" to="38259">
+      <feat name="gender" value="male"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="rule" value="Unknown"/>
    </struct>
    <struct type="Person" from="38468" to="38481">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
    </struct>
    <struct type="Person" from="38606" to="38611">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="38831" to="38836">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
+   </struct>
+   <struct type="Person" from="38841" to="38849">
+      <feat name="gender" value="male"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
+      <feat name="rule" value="Unknown"/>
    </struct>
    <struct type="Person" from="38939" to="38943">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
    </struct>
    <struct type="Person" from="39122" to="39127">
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60596, 60599, 60601, 60607, 60610, 60611, 60612, 60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60623, 60624, 60625, 60626, 60628, 60629, 60632, 60633, 60634, 60644, 60650, 60652, 60653, 60655, 60658, 60659, 60660, 60661, 60662, 60666, 60668, 60670, 60671, 60672, 60674, 60678, 60680, 60681, 60683, 60684, 60685, 60686, 60687, 60688, 60689, 60691, 60693, 60695, 60696, 60698]"/>
    </struct>
    <struct type="Person" from="39256" to="39269">
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[60635, 60638, 60639, 60640, 60643, 60648, 60649, 60651, 60654, 60663, 60665, 60667, 60673, 60675, 60676, 60677, 60679, 60692, 60694, 60697, 60699, 60854, 60855, 60856, 60857, 60858, 60859, 60860, 60861, 60862, 60863, 60864, 60865, 60866, 60867, 60868, 60869, 60870, 60871, 60872, 60873, 60874]"/>
    </struct>
 </cesAna>
