@@ -1,33 +1,962 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cesAna xmlns="http://www.xces.org/schema/2003" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xces.org/schema/2003 in process">
+<cesAna xmlns="http://www.xces.org/schema/2003" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xces.org/schema/2003 done apr 14">
+   <struct type="Person" from="34" to="50">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+   </struct>
+   <struct type="Person" from="63" to="69">
+      <feat name="gender" value="male"/>
+      <feat name="matches" value="[79418, 79442, 79444, 79446, 79453, 79454, 79471, 79475, 79519, 79521]"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+   </struct>
+   <struct type="Person" from="119" to="130">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+   </struct>
    <struct type="Organization" from="132" to="141">
       <feat name="orgType" value="arts"/>
    </struct>
    <struct type="Organization" from="146" to="159">
       <feat name="orgType" value="arts"/>
    </struct>
-   <struct type="Date" from="1886" to="1893">
-      <feat name="kind" value="date"/>
+   <struct type="Location" from="713" to="720">
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="matches" value="[79420, 79469, 79470, 79472]"/>
+      <feat name="locType" value="country"/>
    </struct>
-   <struct type="Date" from="2023" to="2030">
-      <feat name="kind" value="date"/>
+   <struct type="Person" from="825" to="843">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79421, 79449]"/>
    </struct>
-   <struct type="Date" from="2128" to="2135">
-      <feat name="safe.regex" value="true"/>
-      <feat name="kind" value="date"/>
+   <struct type="Person" from="946" to="950">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79422, 79423]"/>
    </struct>
-   <struct type="Date" from="2836" to="2843">
-      <feat name="safe.regex" value="true"/>
+   <struct type="Person" from="1043" to="1047">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79422, 79423]"/>
+   </struct>
+   <struct type="Person" from="1177" to="1183">
+      <feat name="gender" value="female"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="PersonFirstContext2"/>
+   </struct>
+   <struct type="Location" from="1364" to="1370">
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="matches" value="[79425, 79485]"/>
+      <feat name="locType" value="city"/>
+   </struct>
+   <struct type="Date" from="1496" to="1502">
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="GazDate"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+   </struct>
+   <struct type="Person" from="1510" to="1516">
+      <feat name="gender" value="female"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="PersonFirstContext2"/>
+   </struct>
+   <struct type="Person" from="1818" to="1823">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79428, 79439, 79447]"/>
+   </struct>
+   <struct type="Date" from="1955" to="1965">
+      <feat name="kind" value="date"/>
+      <feat name="rule1" value="ModifierDate"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+   </struct>
+   <struct type="Person" from="2547" to="2553">
+      <feat name="gender" value="female"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="GazPersonFirst"/>
    </struct>
    <struct type="Person" from="2859" to="2864">
       <feat name="gender" value="female"/>
    </struct>
+   <struct type="Date" from="3223" to="3233">
+      <feat name="kind" value="date"/>
+      <feat name="rule1" value="ModifierMonth"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+   </struct>
+   <struct type="Date" from="3270" to="3275">
+      <feat name="kind" value="date"/>
+      <feat name="rule1" value="GazDate"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+   </struct>
+   <struct type="Date" from="3350" to="3358">
+      <feat name="kind" value="date"/>
+      <feat name="rule1" value="GazDate"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+   </struct>
    <struct type="Person" from="3524" to="3529">
       <feat name="gender" value="female"/>
    </struct>
-   <struct type="Date" from="49081" to="49088">
-      <feat name="safe.regex" value="true"/>
+   <struct type="Person" from="3962" to="3968">
+      <feat name="gender" value="female"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+   </struct>
+   <struct type="Person" from="4496" to="4502">
+      <feat name="gender" value="female"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+   </struct>
+   <struct type="Person" from="4932" to="4938">
+      <feat name="gender" value="female"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+   </struct>
+   <struct type="Person" from="5307" to="5313">
+      <feat name="gender" value="female"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+   </struct>
+   <struct type="Date" from="6123" to="6131">
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="GazDate"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+   </struct>
+   <struct type="Person" from="6201" to="6206">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79428, 79439, 79447]"/>
+   </struct>
+   <struct type="Person" from="6959" to="6965">
+      <feat name="gender" value="female"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+   </struct>
+   <struct type="Person" from="7302" to="7315">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
+   </struct>
+   <struct type="Date" from="7381" to="7395">
+      <feat name="kind" value="time"/>
+   </struct>
+   <struct type="Person" from="9130" to="9144">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79418, 79442, 79444, 79446, 79453, 79454, 79471, 79475, 79519, 79521]"/>
+   </struct>
+   <struct type="Person" from="10070" to="10076">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
+   </struct>
+   <struct type="Person" from="10471" to="10477">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79418, 79442, 79444, 79446, 79453, 79454, 79471, 79475, 79519, 79521]"/>
+   </struct>
+   <struct type="Person" from="10569" to="10575">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
+   </struct>
+   <struct type="Person" from="10701" to="10707">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79418, 79442, 79444, 79446, 79453, 79454, 79471, 79475, 79519, 79521]"/>
+   </struct>
+   <struct type="Person" from="11123" to="11128">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79428, 79439, 79447]"/>
+   </struct>
+   <struct type="Person" from="12534" to="12541">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="12738" to="12742">
+      <feat name="gender" value="male"/>
+      <feat name="matches" value="[79421, 79449]"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+   </struct>
+   <struct type="Person" from="13234" to="13241">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="13471" to="13478">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="13665" to="13671">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
+   </struct>
+   <struct type="Person" from="14457" to="14463">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
+   </struct>
+   <struct type="Person" from="15012" to="15018">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="15266" to="15273">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="15327" to="15333">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="17346" to="17352">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
+   </struct>
+   <struct type="Person" from="17687" to="17693">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79418, 79442, 79444, 79446, 79453, 79454, 79471, 79475, 79519, 79521]"/>
+   </struct>
+   <struct type="Person" from="17839" to="17845">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79418, 79442, 79444, 79446, 79453, 79454, 79471, 79475, 79519, 79521]"/>
+   </struct>
+   <struct type="Person" from="18124" to="18130">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="18196" to="18202">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
+   </struct>
+   <struct type="Person" from="18449" to="18455">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="18899" to="18906">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="18929" to="18935">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="18950" to="18957">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="19787" to="19794">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="20023" to="20030">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Location" from="20396" to="20407">
+      <feat name="locType" value="region"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
+   </struct>
+   <struct type="Person" from="20409" to="20416">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="20651" to="20656">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+   </struct>
+   <struct type="Person" from="21268" to="21275">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="21809" to="21816">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="21898" to="21905">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="22399" to="22406">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="22556" to="22563">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="23079" to="23086">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="23307" to="23316">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+   </struct>
+   <struct type="Person" from="23661" to="23668">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="24893" to="24900">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="25029" to="25036">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="25383" to="25390">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="26051" to="26058">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="26194" to="26207">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonTitle"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79462, 79464, 79465]"/>
+   </struct>
+   <struct type="Location" from="26628" to="26632">
+      <feat name="locType" value="city"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
+   </struct>
+   <struct type="Person" from="26867" to="26874">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="27024" to="27031">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="28257" to="28264">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="28807" to="28814">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="29971" to="29984">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonTitle"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79462, 79464, 79465]"/>
+   </struct>
+   <struct type="Person" from="30285" to="30298">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonTitle"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79462, 79464, 79465]"/>
+   </struct>
+   <struct type="Person" from="30342" to="30349">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="30466" to="30473">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="30711" to="30718">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="30817" to="30824">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="31285" to="31289">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79466, 79467, 79468]"/>
+   </struct>
+   <struct type="Person" from="31327" to="31334">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Location" from="31668" to="31675">
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="matches" value="[79420, 79469, 79470, 79472]"/>
+      <feat name="locType" value="country"/>
+   </struct>
+   <struct type="Location" from="32182" to="32189">
+      <feat name="rule1" value="InLoc1"/>
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="matches" value="[79420, 79469, 79470, 79472]"/>
+      <feat name="locType" value="country"/>
+   </struct>
+   <struct type="Person" from="32912" to="32918">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79418, 79442, 79444, 79446, 79453, 79454, 79471, 79475, 79519, 79521]"/>
+   </struct>
+   <struct type="Location" from="33308" to="33315">
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="matches" value="[79420, 79469, 79470, 79472]"/>
+      <feat name="locType" value="country"/>
+   </struct>
+   <struct type="Location" from="33357" to="33363">
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="matches" value="[79473, 79511]"/>
+      <feat name="locType" value="country"/>
+   </struct>
+   <struct type="Person" from="34328" to="34335">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="34939" to="34946">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="35095" to="35101">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79418, 79442, 79444, 79446, 79453, 79454, 79471, 79475, 79519, 79521]"/>
+   </struct>
+   <struct type="Person" from="35109" to="35116">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="35629" to="35636">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="36019" to="36026">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="36550" to="36557">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="36929" to="36932">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="36947" to="36954">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="37133" to="37136">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="37140" to="37143">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="37285" to="37288">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="37372" to="37379">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="37554" to="37557">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="37695" to="37702">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="37780" to="37783">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="38200" to="38207">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="38436" to="38442">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
+   </struct>
+   <struct type="Person" from="38545" to="38551">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="38632" to="38635">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="38775" to="38782">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Location" from="39111" to="39117">
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="matches" value="[79425, 79485]"/>
+      <feat name="locType" value="city"/>
+   </struct>
+   <struct type="Person" from="39200" to="39203">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="39756" to="39760">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79487, 79491, 79492, 79494, 79496, 79498, 79499, 79500, 79501, 79502, 79504, 79505, 79506, 79507]"/>
+   </struct>
+   <struct type="Person" from="39776" to="39783">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="39911" to="39918">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="39975" to="39978">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="40117" to="40120">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="40157" to="40164">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="40766" to="40773">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="40993" to="40996">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="41208" to="41215">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="41318" to="41322">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79487, 79491, 79492, 79494, 79496, 79498, 79499, 79500, 79501, 79502, 79504, 79505, 79506, 79507]"/>
+   </struct>
+   <struct type="Person" from="41491" to="41495">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79487, 79491, 79492, 79494, 79496, 79498, 79499, 79500, 79501, 79502, 79504, 79505, 79506, 79507]"/>
+   </struct>
+   <struct type="Person" from="41597" to="41604">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="41862" to="41869">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="41958" to="41965">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="42053" to="42060">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="42346" to="42350">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79487, 79491, 79492, 79494, 79496, 79498, 79499, 79500, 79501, 79502, 79504, 79505, 79506, 79507]"/>
+   </struct>
+   <struct type="Person" from="42589" to="42596">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="42669" to="42672">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="42744" to="42748">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79487, 79491, 79492, 79494, 79496, 79498, 79499, 79500, 79501, 79502, 79504, 79505, 79506, 79507]"/>
+   </struct>
+   <struct type="Person" from="42960" to="42963">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="43022" to="43026">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79487, 79491, 79492, 79494, 79496, 79498, 79499, 79500, 79501, 79502, 79504, 79505, 79506, 79507]"/>
+   </struct>
+   <struct type="Person" from="43083" to="43090">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="43300" to="43304">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79487, 79491, 79492, 79494, 79496, 79498, 79499, 79500, 79501, 79502, 79504, 79505, 79506, 79507]"/>
+   </struct>
+   <struct type="Person" from="43433" to="43440">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="43643" to="43647">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79487, 79491, 79492, 79494, 79496, 79498, 79499, 79500, 79501, 79502, 79504, 79505, 79506, 79507]"/>
+   </struct>
+   <struct type="Person" from="43845" to="43852">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="44026" to="44030">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79487, 79491, 79492, 79494, 79496, 79498, 79499, 79500, 79501, 79502, 79504, 79505, 79506, 79507]"/>
+   </struct>
+   <struct type="Person" from="44283" to="44290">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="44590" to="44594">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79487, 79491, 79492, 79494, 79496, 79498, 79499, 79500, 79501, 79502, 79504, 79505, 79506, 79507]"/>
+   </struct>
+   <struct type="Person" from="44673" to="44676">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="44845" to="44849">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79487, 79491, 79492, 79494, 79496, 79498, 79499, 79500, 79501, 79502, 79504, 79505, 79506, 79507]"/>
+   </struct>
+   <struct type="Person" from="45117" to="45121">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79487, 79491, 79492, 79494, 79496, 79498, 79499, 79500, 79501, 79502, 79504, 79505, 79506, 79507]"/>
+   </struct>
+   <struct type="Person" from="45494" to="45501">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="45926" to="45930">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79487, 79491, 79492, 79494, 79496, 79498, 79499, 79500, 79501, 79502, 79504, 79505, 79506, 79507]"/>
+   </struct>
+   <struct type="Person" from="45983" to="45990">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="46030" to="46034">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79487, 79491, 79492, 79494, 79496, 79498, 79499, 79500, 79501, 79502, 79504, 79505, 79506, 79507]"/>
+   </struct>
+   <struct type="Person" from="46185" to="46192">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="46532" to="46538">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="46834" to="46837">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="46872" to="46879">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="47022" to="47025">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="47071" to="47078">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="47265" to="47272">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="47378" to="47385">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="47515" to="47521">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
+   </struct>
+   <struct type="Person" from="47642" to="47648">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="47658" to="47665">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="47818" to="47824">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="47940" to="47943">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="48144" to="48151">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="48333" to="48339">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="48541" to="48548">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="48564" to="48570">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="48674" to="48680">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Location" from="49606" to="49612">
+      <feat name="matches" value="[79473, 79511]"/>
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="InLoc1"/>
+   </struct>
+   <struct type="Person" from="49695" to="49698">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="49746" to="49752">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="50219" to="50222">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="51241" to="51247">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="51417" to="51423">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="51539" to="51545">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="52107" to="52110">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="52180" to="52186">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="52702" to="52708">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="52793" to="52800">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="52902" to="52908">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="53393" to="53400">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="53435" to="53438">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="53776" to="53783">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="53846" to="53849">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="54011" to="54018">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="54220" to="54227">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="54776" to="54782">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
+   </struct>
+   <struct type="Person" from="54817" to="54824">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="54833" to="54839">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79418, 79442, 79444, 79446, 79453, 79454, 79471, 79475, 79519, 79521]"/>
+   </struct>
+   <struct type="Person" from="55041" to="55048">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="55965" to="55972">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="56690" to="56697">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="56777" to="56783">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
+   </struct>
+   <struct type="Person" from="57109" to="57115">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79418, 79442, 79444, 79446, 79453, 79454, 79471, 79475, 79519, 79521]"/>
+   </struct>
+   <struct type="Person" from="57200" to="57203">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="57597" to="57600">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79477, 79478, 79479, 79480, 79481, 79482, 79484, 79486, 79488, 79489, 79490, 79495, 79497, 79503, 79508, 79509, 79512, 79513, 79515, 79516, 79517, 79522, 79523]"/>
+   </struct>
+   <struct type="Person" from="57621" to="57628">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="57890" to="57896">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[79424, 79427, 79430, 79434, 79435, 79436, 79437, 79440, 79441, 79443, 79445, 79450, 79451, 79452, 79455, 79483, 79510, 79518, 79520, 79524]"/>
    </struct>
 </cesAna>
