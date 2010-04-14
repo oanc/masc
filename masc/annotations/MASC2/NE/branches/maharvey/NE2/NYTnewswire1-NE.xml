@@ -1,18 +1,302 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
+<cesAna xmlns="http://www.xces.org/schema/2003" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xces.org/schema/2003 done apr 14">
+   <struct type="Date" from="22" to="38">
+      <feat name="rule2" value="DateTimeFinal"/>
+      <feat name="kind" value="dateTime"/>
+   </struct>
+   <struct type="Date" from="88" to="98">
+      <feat name="rule2" value="TimeYearFinal"/>
+      <feat name="kind" value="dateTime"/>
+   </struct>
+   <struct type="Organization" from="178" to="198">
+      <feat name="orgType" value="corporation"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="rule2" value="OrgFinal"/>
+   </struct>
+   <struct type="Person" from="212" to="225">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+   </struct>
+   <struct type="Date" from="229" to="233">
+      <feat name="kind" value="date"/>
+      <feat name="rule1" value="TempYear2"/>
+      <feat name="rule2" value="YearOnlyFinal"/>
+   </struct>
+   <struct type="Organization" from="234" to="260">
+      <feat name="orgType" value="newspaper/media"/>
+   </struct>
    <struct type="Location" from="268" to="275">
       <feat name="locType" value="city"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[6155, 6227, 6228]"/>
+      <feat name="rule" value="Unknown"/>
+   </struct>
+   <struct type="Location" from="277" to="283">
+      <feat name="locType" value="province"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
+   </struct>
+   <struct type="Organization" from="291" to="305">
+      <feat name="orgType" value="other"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="rule2" value="OrgFinal"/>
+      <feat name="matches" value="[6155, 6227, 6228]"/>
    </struct>
    <struct type="Organization" from="374" to="391">
-      <feat name="orgType" value="team"/>
+      <feat name="orgType" value="other"/>
+      <feat name="rule1" value="LocPersonAmbig"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
-   <struct type="Date" from="432" to="441">
-      <feat name="kind" value="date"/>
+   <struct type="Person" from="403" to="413">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[6157, 6230, 6233, 6234, 6235, 6236, 6237, 6239]"/>
    </struct>
    <struct type="Person" from="492" to="497">
+      <feat name="kind" value="PN"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="rule" value="Unknown"/>
+      <feat name="matches" value="[6157, 6230, 6233, 6234, 6235, 6236, 6237, 6239]"/>
       <feat name="gender" value="male"/>
    </struct>
    <struct type="Organization" from="503" to="509">
-      <feat name="orgType" value="team"/>
+      <feat name="orgType" value="other"/>
+   </struct>
+   <struct type="Location" from="535" to="538">
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="LocPersonAmbig"/>
+   </struct>
+   <struct type="Person" from="589" to="603">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="matches" value="[6159, 6229, 6231, 6232, 6238]"/>
+   </struct>
+   <struct type="Date" from="743" to="752">
+      <feat name="kind" value="date"/>
+      <feat name="rule1" value="ModifierDate"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+   </struct>
+   <struct type="Organization" from="758" to="764">
+      <feat name="orgType" value="other"/>
+   </struct>
+   <struct type="Person" from="847" to="863">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="1035" to="1040">
+      <feat name="rule" value="Unknown"/>
+      <feat name="matches" value="[6157, 6230, 6233, 6234, 6235, 6236, 6237, 6239]"/>
+      <feat name="kind" value="PN"/>
+      <feat name="NMRule" value="Unknown"/>
+   </struct>
+   <struct type="Organization" from="1050" to="1056">
+      <feat name="orgType" value="other"/>
+   </struct>
+   <struct type="Person" from="1160" to="1165">
+      <feat name="gender" value="male"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[6157, 6230, 6233, 6234, 6235, 6236, 6237, 6239]"/>
+      <feat name="rule" value="Unknown"/>
+   </struct>
+   <struct type="Date" from="1228" to="1232">
+      <feat name="kind" value="date"/>
+      <feat name="rule1" value="YearContext1"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+   </struct>
+   <struct type="Date" from="1258" to="1262">
+      <feat name="kind" value="date"/>
+      <feat name="rule1" value="YearContext1"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+   </struct>
+   <struct type="Organization" from="1272" to="1276">
+      <feat name="orgType" value="other"/>
+   </struct>
+   <struct type="Organization" from="1415" to="1421">
+      <feat name="safe.regex" value="true"/>
+      <feat name="orgType" value="other"/>
+   </struct>
+   <struct type="Person" from="1438" to="1451">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="PersonJobTitle"/>
+   </struct>
+   <struct type="Person" from="1602" to="1610">
+      <feat name="gender" value="female"/>
+   </struct>
+   <struct type="Person" from="1929" to="1934">
+      <feat name="rule" value="Unknown"/>
+      <feat name="matches" value="[6157, 6230, 6233, 6234, 6235, 6236, 6237, 6239]"/>
+      <feat name="kind" value="PN"/>
+      <feat name="NMRule" value="Unknown"/>
+   </struct>
+   <struct type="Date" from="1954" to="1959">
+      <feat name="rule1" value="GazDateWords"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="matches" value="[6165, 6170, 6175]"/>
+      <feat name="kind" value="date"/>
+   </struct>
+   <struct type="Location" from="1963" to="1970">
+      <feat name="locType" value="city"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[6155, 6227, 6228]"/>
+      <feat name="rule" value="Unknown"/>
+   </struct>
+   <struct type="Organization" from="2005" to="2012">
+      <feat name="orgType" value="other"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="rule2" value="OrgFinal"/>
+   </struct>
+   <struct type="Person" from="2130" to="2135">
+      <feat name="rule" value="Unknown"/>
+      <feat name="matches" value="[6157, 6230, 6233, 6234, 6235, 6236, 6237, 6239]"/>
+      <feat name="kind" value="PN"/>
+      <feat name="NMRule" value="Unknown"/>
+   </struct>
+   <struct type="Person" from="2251" to="2256">
+      <feat name="gender" value="male"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[6157, 6230, 6233, 6234, 6235, 6236, 6237, 6239]"/>
+      <feat name="rule" value="Unknown"/>
+   </struct>
+   <struct type="Person" from="2407" to="2417">
+      <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
+   </struct>
+   <struct type="Person" from="2630" to="2636">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Organization" from="2642" to="2648">
+      <feat name="safe.regex" value="true"/>
+      <feat name="orgType" value="other"/>
+   </struct>
+   <struct type="Person" from="2675" to="2683">
+      <feat name="rule" value="Unknown"/>
+      <feat name="matches" value="[6159, 6229, 6231, 6232, 6238]"/>
+      <feat name="kind" value="PN"/>
+      <feat name="NMRule" value="Unknown"/>
+   </struct>
+   <struct type="Person" from="2715" to="2726">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="2728" to="2734">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Organization" from="2755" to="2773">
+      <feat name="orgType" value="other"/>
+   </struct>
+   <struct type="Date" from="2811" to="2818">
+      <feat name="kind" value="date"/>
+      <feat name="rule1" value="DateName"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+   </struct>
+   <struct type="Person" from="2851" to="2857">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="2864" to="2870">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Date" from="2922" to="2927">
+      <feat name="rule1" value="GazDateWords"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="matches" value="[6165, 6170, 6175]"/>
+      <feat name="kind" value="date"/>
+   </struct>
+   <struct type="Organization" from="2940" to="2946">
+      <feat name="safe.regex" value="true"/>
+      <feat name="orgType" value="other"/>
+   </struct>
+   <struct type="Person" from="2952" to="2958">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="3043" to="3048">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="3079" to="3085">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="3117" to="3121">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="3229" to="3233">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Organization" from="3349" to="3355">
+      <feat name="safe.regex" value="true"/>
+      <feat name="orgType" value="other"/>
+   </struct>
+   <struct type="Person" from="3385" to="3389">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="3470" to="3474">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="3486" to="3491">
+      <feat name="gender" value="male"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[6157, 6230, 6233, 6234, 6235, 6236, 6237, 6239]"/>
+      <feat name="rule" value="Unknown"/>
+   </struct>
+   <struct type="Person" from="3497" to="3505">
+      <feat name="gender" value="male"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[6159, 6229, 6231, 6232, 6238]"/>
+      <feat name="rule" value="Unknown"/>
+   </struct>
+   <struct type="Organization" from="3535" to="3541">
+      <feat name="safe.regex" value="true"/>
+      <feat name="orgType" value="other"/>
+   </struct>
+   <struct type="Date" from="3574" to="3579">
+      <feat name="rule1" value="GazDateWords"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="matches" value="[6165, 6170, 6175]"/>
+      <feat name="kind" value="date"/>
+   </struct>
+   <struct type="Person" from="3597" to="3603">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="3615" to="3626">
+      <feat name="safe.regex" value="true"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Organization" from="3738" to="3756">
+      <feat name="orgType" value="other"/>
+      <feat name="rule1" value="joinOrg"/>
+      <feat name="rule2" value="OrgFinal"/>
+   </struct>
+   <struct type="Person" from="3779" to="3787">
+      <feat name="gender" value="male"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[6159, 6229, 6231, 6232, 6238]"/>
+      <feat name="rule" value="Unknown"/>
+   </struct>
+   <struct type="Organization" from="3852" to="3858">
+      <feat name="safe.regex" value="true"/>
+      <feat name="orgType" value="other"/>
+   </struct>
+   <struct type="Person" from="4061" to="4069">
+      <feat name="kind" value="PN"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="rule" value="Unknown"/>
+      <feat name="matches" value="[6159, 6229, 6231, 6232, 6238]"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Date" from="4299" to="4308">
+      <feat name="kind" value="date"/>
+      <feat name="rule1" value="ModifierDate"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+   </struct>
+   <struct type="Date" from="4368" to="4376">
+      <feat name="kind" value="date"/>
    </struct>
 </cesAna>
