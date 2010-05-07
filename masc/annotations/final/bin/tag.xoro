@@ -1,0 +1,178 @@
+
+use java.lang.String as String;
+use java.net.URL  as URL;
+use java.io.File  as File;
+use gate.Document as Document;
+use gate.FeatureMap as FeatureMap;
+
+String ORIGINAL_SET = "Original markups";
+String PENN_SET = "PennPosTags";
+String ABBREVIATIONS = "file:/d:/corpora/masc/anc-abbreviations.txt";
+
+resource load_standoff = org.anc.gate.LoadStandoff
+{
+	name = "Load Standoff";
+	standoffASName = ORIGINAL_SET;
+}
+
+resource save_standoff = org.anc.gate.SaveStandoff
+{
+        name = "Save standoff";
+        inputASName = PENN_SET;
+}
+
+// Default tokenizer
+resource tokenizer = gate.creole.tokeniser.DefaultTokeniser
+{
+	name = "Tokenizer";
+	annotationSetName = ORIGINAL_SET;
+}
+
+// Rename 's' tags to 'Sentence' for the tagger.
+resource renamer = org.anc.gate.TagRenamer
+{
+   name = "Renamer";
+   oldName = "s";
+   newName = "Sentence";
+}
+
+// Rename 'u' tags to 'Sentence' for the tagger.
+resource urenamer = org.anc.gate.TagRenamer
+{
+   name = "Renamer";
+   oldName = "u";
+   newName = "Sentence";
+}
+
+// Gate part of speech tagger
+resource tagger = gate.creole.POSTagger
+{
+	name = "Hepple Tagger";
+	inputASName = ORIGINAL_SET;
+   outputASName = "PennPosTags";
+}
+
+resource splitter = gate.creole.splitter.SentenceSplitter
+{
+   name = "Splitter";
+   inputASName = ORIGINAL_SET;
+   outputASName = ORIGINAL_SET;
+}
+
+object[] all_resources = {
+   load_standoff, splitter, renamer, urenamer, tokenizer, tagger, save_standoff
+};
+
+object[] run_resources = {
+        urenamer, tokenizer, tagger, save_standoff
+        
+};
+
+File root = new File("c:/corpora2/masc/FINAL");
+File txtDir = new File(root, "txtfiles");
+File destDir = new File(root, "PennPosTags");      
+File logicalDir = new File(root, "logical");
+File sentenceDir = new File(root, "sentence-boundaries");
+
+void main(string[] args)
+{
+	println("Loading resources.");
+   LoadResources();
+   
+	File[] files = txtDir.listFiles();
+	int n = length(files);
+	for (int i = 0; i < n; ++i)
+	{
+		File f = files[i];
+		String filename = f.getPath();
+		if (filename.endsWith(".txt"))
+		{
+			ProcessFile(f);
+		}
+	}
+	UnloadResources();
+}
+
+void LoadResources()
+{
+   load(load_standoff);
+   int n = length(all_resources);
+   for (int i = 0; i < n; ++i)
+   {
+      load(all_resources[i]);
+   }
+}
+
+void UnloadResources()
+{
+   unload(load_standoff);
+   int n = length(all_resources);
+   for (int i = 0; i < n; ++i)
+   {
+      unload(all_resources[i]);
+   }
+}
+
+Document LoadDocument(File file)
+{
+	println("Loading document.");
+        FeatureMap fm = Factory.newFeatureMap();
+        fm.put("sourceUrl", file.toURL());
+        fm.put("encoding", "UTF-8");
+        Document doc = Factory.createResource("gate.corpora.DocumentImpl", fm);
+        load_standoff.setDocument(doc);
+        
+        String logicalFilename = file.getName().replace(".txt", "-logical.xml");
+        File standoff = new File(logicalDir, logicalFilename);
+	if (standoff.exists())
+	{
+	        load_standoff.setSourceUrl(standoff.toURL());
+        	load_standoff.execute();
+	}
+	else
+	{
+		println("No logical markup.");
+	}
+
+	String sentenceFilename = file.getName().replace(".txt", "-s.xml");
+	standoff = new File(sentenceDir, sentenceFilename);
+	if (standoff.exists())
+	{
+   	println("Loading sentences");
+	   load_standoff.setSourceUrl(standoff.toURL());
+   	load_standoff.execute();
+      renamer.setDocument(doc);
+      renamer.execute();
+      renamer.setDocument(null);
+	   load_standoff.setDocument(null);
+	}
+	else
+	{
+	   println("No sentence annotations found. Running the splitter.");
+	   splitter.setDocument(doc);
+	   splitter.execute();
+	   splitter.setDocument(null);
+	}
+   println("Document loaded.");
+   return doc;
+}
+
+void ProcessFile(File file)
+{
+	println("Processing " + file.getPath());
+        Document doc = LoadDocument(file);
+        String name = file.getName().replace(".txt", "-penn.xml");
+        File dest = new File(destDir, name);
+        save_standoff.setDestination(dest.toURL());
+
+        int n = length(run_resources);
+        for (int i = 0; i < n; ++i)
+        {
+                object PR = run_resources[i];
+                println("Running " + PR.getName());
+                PR.setDocument(doc);
+                PR.execute();
+                PR.setDocument(null);
+        }
+        
+}

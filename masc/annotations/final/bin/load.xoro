@@ -1,0 +1,37 @@
+
+use java.lang.String as String;
+use java.net.URL  as URL;
+use java.io.File  as File;
+use gate.Document as Document;
+
+resource load_standoff = org.anc.gate.LoadGrafStandoff
+{
+	name = "Load GrAF Standoff";
+}
+
+void main(string[] args)
+{
+	load(load_standoff);
+	File root = new File("d:/corpora/masc/ptb/aligned");
+	File[] files = root.listFiles();
+	int n = length(files);
+	for (int i = 0; i < n; ++i)
+	{
+		File f = files[i];
+		String filename = f.getPath();
+		if (filename.endsWith(".txt"))
+		{
+			LoadDocument(filename);
+		}
+	}
+}
+
+void LoadDocument(String path)
+{
+	println("Loading " + path);
+	String soPath = path.replaceAll(".txt", "-ptb.xml");
+	Document doc = Factory.newDocument(new URL("file:/" + path));
+	load_standoff.setDocument(doc);
+	load_standoff.setSourceUrl(new URL("file:/" + soPath));
+	load_standoff.execute();
+}

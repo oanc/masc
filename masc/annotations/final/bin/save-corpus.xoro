@@ -1,0 +1,57 @@
+
+use java.lang.String as String;
+use java.lang.Object as Object;
+use java.net.URL  as URL;
+use java.io.File  as File;
+use gate.FeatureMap as FeatureMap;
+use gate.Document as Document;
+use gate.Corpus as Corpus;
+use gate.persist.SerialDataStore as DataStore;
+
+resource load_standoff = org.anc.gate.LoadGrafStandoff
+{
+	name = "Load GrAF Standoff";
+}
+
+resource save_standoff = org.anc.gate.SaveGrafStandoff
+{
+	name = "Save GrAF Standoff";
+	annotationType = "gate-ptb";
+}
+
+void main(string[] args)
+{
+	load(save_standoff);
+	DataStore ds = new DataStore("file:/D:/Corpora/masc/gate-datastore");
+	ds.open();
+	FeatureMap fm = Factory.newFeatureMap();
+	fm.put("name", "MASC");
+	Corpus corpus = Factory.createResource("gate.corpora.CorpusImpl", fm);
+
+	File root = new File("d:/corpora/masc/ptb/aligned");
+	File[] files = root.listFiles();
+	int n = length(files);
+	for (int i = 0; i < n; ++i)
+	{
+		File f = files[i];
+		String filename = f.getPath();
+		if (filename.endsWith(".txt"))
+		{
+			Document doc = LoadDocument(filename);
+			corpus.add(doc);
+		}
+	}
+	Object lr = ds.adopt(corpus, null);
+	ds.sync(lr);
+}
+
+Document LoadDocument(String path)
+{
+	println("Loading " + path);
+	String soPath = path.replaceAll(".txt", "-ptb.xml");
+	Document doc = Factory.newDocument(new URL("file:/" + path));
+	load_standoff.setDocument(doc);
+	load_standoff.setSourceUrl(new URL("file:/" + soPath));
+	load_standoff.execute();
+	return doc;
+}

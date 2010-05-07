@@ -1,0 +1,99 @@
+use java.lang.String as String;
+use java.net.URL as URL;
+use java.io.File as File;
+
+use gate.Document as Document;
+use gate.FeatureMap as FeatureMap;
+
+use org.anc.io.SuffixFilter as Filter;
+
+String ASET = "mpqa";
+String ATYPE = "http://www.cs.pitt.edu/mpqa/";
+
+String ROOT = "D:/Corpora/masc/FINAL/opinion";
+String IN = ROOT + "/gate";
+String OUT = ROOT + "/graf";
+
+resource save_graf = org.anc.gate.SaveGrafStandoff
+{
+	name = "Save Standoff";
+	inputASName = "MPQA";
+	annotationType = "mpqa";
+	grafASName = ASET;
+	grafASType = ATYPE;
+	encoding = "UTF-8";
+}
+
+resource save_content = org.anc.gate.SaveContent
+{
+	encoding = "UTF-8";
+}
+
+resource transducer = gate.creole.Transducer
+{
+	grammarURL = _URL("file:/D:/Corpora/masc/opinion.jape");
+}
+
+void main(String[] args)
+{
+	println("Loading resources.");
+	load(save_graf);
+	load(save_content);
+	load(transducer);
+
+	Filter filter = new Filter(".xml", false);
+	File indir = new File(IN);
+	File outdir = new File(OUT);
+	File[] dirs = indir.listFiles();
+	println("Listed " + indir.getPath());
+	if (dirs == null)
+	{
+		println("dirs is null!");
+		exit;
+	}
+	for (int i = 0; i < length(dirs); ++i)
+	{
+		File dir = dirs[i];
+		File[] files = dir.listFiles(filter);
+		if (length(files) != 1)
+		{
+			println(dir.getPath() + " contains " + length(files) + " files.");
+		}
+		for (int j = 0; j < length(files); ++j)
+		{
+			ProcessFile(files[j], outdir);
+		}
+	}
+}
+
+void ProcessFile(File file, File outdir)
+{
+	String filename = file.getName();
+	String txtfile = filename.replace(".xml", ".txt");
+	String sofile = filename.replace(".xml", "-mpqa.xml");
+
+	println("Processing " + filename);
+	File f = new File(outdir, sofile);
+	URL destination = f.toURL();
+	FeatureMap fm = Factory.newFeatureMap();
+	fm.put("sourceUrl", file.toURL());
+	Document doc = Factory.createResource("gate.corpora.DocumentImpl", fm);
+
+	transducer.setDocument(doc);
+	transducer.execute();
+	transducer.setDocument(null);
+
+	save_graf.setDocument(doc);
+	save_graf.setDestination(destination);
+	save_graf.execute();
+	save_graf.setDocument(null);
+	save_graf.setDestination(null);
+
+	f = new File(outdir, txtfile);
+	destination = f.toURL();
+	save_content.setDocument(doc);
+	save_content.setDestination(destination);
+	save_content.execute();
+	save_content.setDocument(null);
+	save_content.setDestination(null);
+}

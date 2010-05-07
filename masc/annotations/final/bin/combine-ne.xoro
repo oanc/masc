@@ -1,0 +1,145 @@
+
+use java.lang.String as String;
+use java.net.URL  as URL;
+use java.io.File  as File;
+use java.util.HashSet as Set;
+
+use gate.Document as Document;
+use gate.FeatureMap as FeatureMap;
+
+String ORIGINAL_SET = "Original markups";
+
+String ROOT = "D:/Corpora/masc/FINAL";
+String DEST = ROOT + "/NE-All";
+File TXTDIR = new File(ROOT, "txtfiles");
+
+String[] DIRS = {"NE-date", "NE-location", "NE-organization", "NE-person"};
+Set filenames = new Set();
+
+resource load_standoff = org.anc.gate.LoadStandoff
+{
+	name = "Load Standoff";
+	standoffASName = ORIGINAL_SET;
+}
+
+resource save_standoff = org.anc.gate.SaveStandoff
+{
+        name = "Save standoff";
+        inputASName = ORIGINAL_SET;
+        standoffTags = [ "Date", "Location", "Organization", "Person" ];
+}
+
+
+void main(string[] args)
+{
+	println("Loading resources.");
+   LoadResources();
+   
+   /*
+	File[] files = txtDir.listFiles();
+	int n = length(files);
+	for (int i = 0; i < n; ++i)
+	{
+		File f = files[i];
+		String filename = f.getPath();
+		if (filename.endsWith(".txt"))
+		{
+			ProcessFile(f);
+		}
+	}
+	*/
+	CollectFilenames();
+	String[] names = filenames.toArray();
+//	println("Filenames:");
+	for (int i = 0; i < length(names); ++i)
+	{
+	   //println("Filename " + names[i]);
+	   ProcessFile(names[i]);
+	}
+	
+	UnloadResources();
+}
+
+void CollectFilenames()
+{
+   for (int i = 0; i < length(DIRS); ++i)
+   {
+      String path = ROOT + "/" + DIRS[i];
+      File dir = new File(path);
+      if (!dir.exists())
+      {
+         println("Directory " + dir.getPath() + " not found.");
+      }
+      else
+      {
+         File[] files = dir.listFiles();
+         for (int j = 0; j < length(files); ++j)
+         {
+            String name = files[j].getName();
+            if (!name.startsWith("."))
+            {
+               filenames.add(name);
+            }
+         }
+      }
+   }
+}
+
+void LoadResources()
+{
+   load(load_standoff);
+   load(save_standoff);
+}
+
+void UnloadResources()
+{
+   //unload(load_standoff);
+   //unload(save_standoff);
+}
+
+void ProcessFile(String name)
+{
+	println("Processing " + name);
+   Document doc = LoadDocument(name);
+   if (doc != null)
+   {
+      File dest = new File(DEST, name);
+      save_standoff.setDocument(doc);
+      save_standoff.setDestination(dest.toURL());
+      save_standoff.execute();
+   }
+}
+
+Document LoadDocument(String name)
+{
+   Document doc = null;
+   String textName = name.replace("-NE.xml", ".txt");
+   File textFile = new File(TXTDIR, textName);
+   if (textFile.exists())
+   {
+   	println("   loading document " + textName);
+      FeatureMap fm = Factory.newFeatureMap();
+      fm.put("sourceUrl", textFile.toURL());
+      fm.put("encoding", "UTF-8");
+      doc = Factory.createResource("gate.corpora.DocumentImpl", fm);
+      load_standoff.setDocument(doc);
+
+      for (int i = 0; i < length(DIRS); ++i)
+      {
+         File neDir = new File(ROOT, DIRS[i]);
+         File standoff = new File(neDir, name);
+   	   if (standoff.exists())
+   	   {
+   	      println("   loading standoff " + standoff.getPath());
+   	      load_standoff.setSourceUrl(standoff.toURL());
+   //	      println("   executing.");
+            load_standoff.execute();
+   //         println("   standoff loaded.");
+   	   }
+      }
+   }
+   //   println("Document loaded.");
+   return doc;
+}
+
+

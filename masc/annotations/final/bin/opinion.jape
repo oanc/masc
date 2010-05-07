@@ -1,0 +1,73 @@
+Phase: opinions
+Input: Token Split
+Options: control = Appelt
+
+Rule: LU_ANNOTATE_OPEN
+Priority: 20
+(
+	{Token.string == "<"}
+	{Token.string == "LU"}
+	{Token.string == "_"}
+	{Token.string == "ANNOTATE"}
+	{Token.string == ">"}
+):lu --> 
+{
+gate.AnnotationSet luSet = (gate.AnnotationSet) bindings.get("lu");
+inputAS.removeAll(luSet);
+/*
+int start = luSet.firstNode().getOffset().intValue();
+int end = luSet.lastNode().getOffset().intValue();
+gate.util.Out.prln(start + " - " + end);
+annotations.removeAll(luSet);
+String content = doc.getContent().getContent(0L, Long.MAX_VALUE).toString();
+gate.util.Out.prln(content);
+java.lang.StringBuilder buffer = new java.lang.StringBuilder();
+buffer.append(content.substring(0, start));
+while (start < end)
+{
+ buffer.append(" ");
+ ++start;
+}
+if (end < content.length())
+{	
+	buffer.append(content.substring(end));
+}
+String newContent = buffer.toString();
+gate.util.Out.prln(newContent);
+gate.corpora.DocumentContentImpl docContent = new gate.corpora.DocumentContentImpl(newContent);
+
+doc.setContent(docContent);
+*/
+}
+
+Rule: LU_ANNOTATE_CLOSE
+Priority: 20
+(
+	{Token.string == "<"}
+	{Token.string == "/"}
+	({Token,!Split})*
+	{Token.string == ">"}
+):lu -->
+{
+gate.AnnotationSet luSet = (gate.AnnotationSet) bindings.get("lu");
+inputAS.removeAll(luSet);
+/*
+int start = luSet.firstNode().getOffset().intValue();
+int end = luSet.lastNode().getOffset().intValue();
+gate.util.Out.prln(start + " - " + end);
+String content = doc.getContent().toString();
+java.lang.StringBuilder buffer = new java.lang.StringBuilder();
+buffer.append(content.substring(0, start));
+while (start < end)
+{
+ buffer.append(" ");
+ ++start;
+}
+buffer.append(content.substring(end));
+String newContent = buffer.toString();
+gate.util.Out.prln(newContent);
+gate.corpora.DocumentContentImpl docContent = new gate.corpora.DocumentContentImpl(newContent);
+
+doc.setContent(docContent);
+*/
+}
