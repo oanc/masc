@@ -4,10 +4,11 @@ source ./config.sh
 
 echo Linking annotations to tokens.
 
-LINK=$APPS/link-tokens/target/LinkTokens.jar
+LINK=./apps/link-tokens/target/LinkTokens.jar
+#LOPTS=-level=debug
 
-java $OPTS -jar $LINK -in=$IN -tok=ptbtok -type=ne
-java $OPTS -jar $LINK -in=$IN -tok=ptbtok -type=nc
-java $OPTS -jar $LINK -in=$IN -tok=ptbtok -type=vc
+java $OPTS -jar $LINK $LOPTS -in=$MASC -tok=ptbtok -type=ne
+java $OPTS -jar $LINK $LOPTS -in=$MASC -tok=ptbtok -type=nc
+java $OPTS -jar $LINK $LOPTS -in=$MASC -tok=ptbtok -type=vc
 
 

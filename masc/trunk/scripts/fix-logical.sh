@@ -2,7 +2,7 @@
 
 source ./config.sh
 
-APP=$APPS/make-tree/target/MakeTree.jar
+APP=./apps/make-tree/target/MakeTree.jar
 DEST=$WORK/logical
 
 if [ -e $DEST ] ; then

@@ -13,12 +13,12 @@ function createDir {
 #cd ../
 # Get/update the original MASC annotations.
 if [ -e $IN ] ; then
-	#echo TODO : perform an update from Subversion
+	echo "Checking Subversion for data updates."
 	cd $IN
 	svn up
 else
 	mkdir -p $IN
-	#echo TODO : Check out the data from Subversion
+	echo "Checking data out of Subversion."
 	cd $IN
 	svn co https://www.anc.org/dev/masc/trunk/1 .
 	#cp -Rf /cygdrive/c/corpora2/masc/data/originals ./data/originals

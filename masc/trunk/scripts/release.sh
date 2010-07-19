@@ -48,8 +48,8 @@ fi
 ./parse-all.sh
 
 # Divide the files into written and spoken components.
-#./divide.sh
+./divide.sh
 
 # Copies other original annotations, header, etc. and
 # packages everything.
-#./zipfiles.sh
+./package.sh
