@@ -13,7 +13,8 @@ IN=./data/originals
 OUT=./data/data
 WORK=./data/working
 RELEASE=./data/release
-APPS=$ROOT/apps
+#APPS=$ROOT/apps
+APPS=./apps
 
 # Alias for the release directory for when it is actually
 # the input directory and -in=$OUT looks wrong.
