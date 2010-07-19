@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source ./config.sh
-cd ..
+#cd ..
 
 LOPTS=-log=./release.log\ -level=trace\ -append
 # Perform quarkification

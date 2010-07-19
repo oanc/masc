@@ -10,7 +10,7 @@ function createDir {
 	mkdir -p $1
 }
 
-cd ../
+#cd ../
 # Get/update the original MASC annotations.
 if [ -e $IN ] ; then
 	#echo TODO : perform an update from Subversion
@@ -26,7 +26,7 @@ fi
 
 # TODO Should also update the scripts from subversion.
 
-cd ../../
+cd $ROOT
 
 # Remove any files from previous runs
 rm -f *.log

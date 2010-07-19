@@ -2,9 +2,10 @@
 
 source ./config.sh
 
-if [ "$1" = "build" ] ; then
-	echo Building.
-fi
+cd ..
+ROOT=`pwd`
+echo "ROOT is $ROOT"
 
+$CHECK
 echo Test complete.
 

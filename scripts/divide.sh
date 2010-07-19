@@ -2,7 +2,7 @@
 
 source ./config.sh
 
-cd ../
+cd $ROOT
 
 APP=./apps/divide-corpus/target/divide-corpus.jar
 

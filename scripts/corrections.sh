@@ -1,7 +1,8 @@
 #!/bin/bash
 
 source ./config.sh
-cd ..
+cd $ROOT
+
 echo Processing corrected files.
 
 GRAF=$IN/corrections/GrAF

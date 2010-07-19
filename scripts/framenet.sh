@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source ./config.sh
-cd ..
+#cd ..
 
 # Convert and align FrameNet
 java $OPTS -jar $CONVERT -fn $LOPTS -set=FrameNet -in=$IN/FrameNet -out=$WORK/framenet

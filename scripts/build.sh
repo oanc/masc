@@ -4,13 +4,25 @@ source ./config.sh
 
 # Build a single project used when processing MASC
 
-if [ ! -e $ROOT/apps/$1 ] ; then
-	mkdir $ROOT/apps/$1
-	cd $ROOT/apps/$1
-	svn co https://www.anc.org/dev/$1/trunk .
+if [ "$APPS" = "" ] ; then
+	echo "APPS not set."
+	exit 1
 fi
 
-cd $ROOT/apps/$1
-svn up
+TARGET=$APPS/$1
+echo Target is $TARGET
+#exit 1
+
+if [ ! -e $TARGET ] ; then
+	mkdir $TARGET
+	cd $TARGET
+	echo "Target is"
+	pwd
+	
+	svn co https://www.anc.org/dev/$1/trunk .
+else
+	cd $TARGET
+	svn up
+fi
 mvn clean package
 cd ../../

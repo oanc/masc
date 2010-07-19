@@ -2,7 +2,7 @@
 
 source config.sh
 
-cd ..
+#cd ..
 
 # Copy over the text files and headers.
 java -jar $COPY -in=$IN/txtfiles -out=$OUT

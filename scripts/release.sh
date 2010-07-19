@@ -2,13 +2,13 @@
 
 # Perform all the steps necessary to process the MASC files.
 
+# Clean up from previous runs and create required directories.
+./setup.sh
+
 # Check if we are supposed to rebuild the applications.
 if [ "$1" = "build" ] ; then
 	./build-all.sh
 fi
-
-# Clean up from previous runs and create required directories.
-./setup.sh
 
 # Process the existing XCES annotations.
 ./prep.sh
