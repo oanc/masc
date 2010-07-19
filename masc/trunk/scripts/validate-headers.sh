@@ -19,7 +19,7 @@ function create {
 	fi
 }
 
-cd ..
+#cd ..
 
 create $WORK/validation
 create $WORK/headers

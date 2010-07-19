@@ -1,10 +1,9 @@
 #!/bin/bash
 
 source ./config.sh
-APP=./apps/make-tree/target/MakeTree.jar
-DEST=$WORK/logical
 
-cd ../
+APP=$APPS/make-tree/target/MakeTree.jar
+DEST=$WORK/logical
 
 if [ -e $DEST ] ; then
 	rm -f $DEST/*.*

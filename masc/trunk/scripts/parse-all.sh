@@ -2,8 +2,8 @@
 
 source ./config.sh
 
-cd ../
+#cd ../
 
-PARSER=./apps/parse-all/target/ParseAll.jar
+PARSER=$APPS/parse-all/target/ParseAll.jar
 
 java $OPTS -jar $PARSER -in=$MASC $LOPTS

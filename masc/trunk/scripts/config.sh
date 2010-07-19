@@ -1,6 +1,7 @@
 #!/bin/bash
 
-ROOT=$HOME/masc-ci
+cd ..
+ROOT=`pwd`
 
 #if [ "$TERM" = "cygwin" ] ; then
 #	CYGROOT=/cygwin$ROOT
@@ -12,6 +13,7 @@ IN=./data/originals
 OUT=./data/data
 WORK=./data/working
 RELEASE=./data/release
+APPS=$ROOT/apps
 
 # Alias for the release directory for when it is actually
 # the input directory and -in=$OUT looks wrong.
@@ -35,4 +37,9 @@ OPTS=-Xmx800M
 
 # Logging options
 LOPTS=-log=./release.log\ -append\ -level=info
+
+if [ ! -e $APPS ] ; then
+	echo "Creating $APPS"
+	mkdir -p $APPS
+fi
 

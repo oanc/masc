@@ -6,20 +6,20 @@ source ./config.sh
 # exists locally it will be updated from the Subversion respository,
 # otherwise the code will be checked out of the repository.
 function build {
-	if [ -e $ROOT/apps/$1 ] ; then
+	if [ -e $APPS/$1 ] ; then
 		echo Updating $1
-		cd $ROOT/apps/$1
+		cd $APPS/$1
 		svn up
 	else
 		echo Creating $1
-		cd $ROOT/apps
+		cd $APPS
 		mkdir $1
 		svn co https://www.anc.org/dev/$2/trunk $1
 		cd $1
 	fi
 	echo Building $1
 	mvn package | tee -a $ROOT/maven.log
-	cd ../../
+	cd $ROOT
 }
 
 if [ -e $ROOT/maven.log ] ; then

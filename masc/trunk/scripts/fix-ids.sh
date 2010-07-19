@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source ./config.sh
-cd ..
+#cd ..
 APP=./apps/check-ids/target/CheckIds.jar
 DEST=./data/working/ids
 
