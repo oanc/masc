@@ -13,6 +13,8 @@ function build {
 	else
 		echo Creating $1
 		cd $APPS
+		echo "Current directory is "
+		pwd
 		mkdir $1
 		svn co https://www.anc.org/dev/$2/trunk $1
 		cd $1
@@ -22,9 +24,11 @@ function build {
 	cd $ROOT
 }
 
+echo "Root i $ROOT"
 if [ -e $ROOT/maven.log ] ; then
     rm -f $ROOT/maven.log
 fi
+touch $ROOT/maven.log
 
 build "convert" "GrafConvert"
 build "align" "GrafAlign"
