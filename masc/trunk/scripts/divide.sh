@@ -17,7 +17,7 @@ function clean {
 
 source ./config.sh
 
-cd $ROOT
+#cd $ROOT
 
 WRITTEN=$RELEASE/written
 SPOKEN=$RELEASE/spoken
@@ -26,19 +26,24 @@ BAK=./data/bak
 
 check $APP
 clean $RELEASE
-clean $BAK
+#clean $BAK
 clean $WRITTEN
 clean $SPOKEN
 
-echo "Making backup copy of files."
-cp $MASC/* $BAK 
+#echo "Making backup copy of files."
+#cp $MASC/* $BAK 
 
 echo "Dividing corpus."
 java $OPTS -jar $APP $LOPTS -in=$MASC -written=$WRITTEN -spoken=$SPOKEN
 
 # Now move over the original annotations and Corpus header
-ORG=./data/originals
+ORG=./data/originals/original-annotations
 
 echo "Copying original annotations."
 cp -R $ORG $RELEASE
-mv $ORG/MASC-corpus-header.xml $RELEASE
+cp $ORG/MASC-corpus-header.xml $RELEASE
+
+# Remove the SVN metadata
+#rm -RF $RELEASE/original-annotations/.svn
+#rm -RF $RELEASE/original-annotations/*/.svn
+
