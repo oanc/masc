@@ -15,5 +15,9 @@ fi
 echo "Creating $TGZ"
 #pwd
 cd $RELEASE
-tar czf $TGZ .
+FILES=
+for file in `ls` ; do
+	FILES="$file $FILES"
+done
+tar czf $TGZ $FILES
 
