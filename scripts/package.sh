@@ -7,11 +7,13 @@ VERS=1.0.2
 
 FILENAME="MASC-$VERS-$DATE.tgz"
 
-if [ -e $FILENAME ] ; then
-	rm -f $FILENAME
+TGZ=$ROOT/$FILENAME
+if [ -e $TGZ ] ; then
+	rm -f $TGZ
 fi
 
-echo "Creating $FILENAME"
+echo "Creating $TGZ"
 #pwd
-tar czf $FILENAME $RELEASE 
+cd $RELEASE
+tar czf $TGZ .
 

@@ -3,7 +3,7 @@
 source ./config.sh
 
 JAR=saxon9he.jar
-SAXON=$APPS/$JAR
+SAXON=$ROOT/apps/$JAR
 STYLE=$ROOT/scripts/annotations2.xsl
 SCHEMA=http://www.anc.org/masc/schema/docheader.xsd
 
@@ -14,10 +14,10 @@ if [ "$CYGWIN" != "" ] ; then
 fi
 
 function transform {
-	HEADER=$CYG/$ROOT/$WORK/headers/$1
+	HEADER=$ROOT/$WORK/headers/$1
 	echo Transforming $1 to $HEADER
 	pwd
-	java $OPTS -jar $SAXON -versionmsg:off -o:$HEADER $1 $STYLE 
+	java $OPTS -jar $SAXON -versionmsg:off $1 $STYLE > $HEADER
 }
 
 function create {
@@ -47,8 +47,10 @@ if [ ! -e $APPS/$JAR ] ; then
 		exit 1
 	fi
 fi
+echo "$APPS/$JAR"
+echo "$SAXON"
 
-#java $OPTS -jar $VALIDATOR -in=$MASC -out=$WORK/validation -schema=$SCHEMA -create -update -change
+java $OPTS -jar $VALIDATOR -in=$MASC -out=$WORK/validation -schema=$SCHEMA -create -update -change
 
 pushd ./data/data
 for i in `ls *.anc` ; do
