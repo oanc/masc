@@ -52,4 +52,4 @@ fi
 
 # Copies other original annotations, header, etc. and
 # packages everything.
-#./package.sh
+./package.sh

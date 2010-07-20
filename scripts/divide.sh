@@ -38,12 +38,14 @@ java $OPTS -jar $APP $LOPTS -in=$MASC -written=$WRITTEN -spoken=$SPOKEN
 
 # Now move over the original annotations and Corpus header
 ORG=./data/originals/original-annotations
+HEADER=./data/originals/MASC-corpus-header.xml
 
 echo "Copying original annotations."
-cp -R $ORG $RELEASE
-cp $ORG/MASC-corpus-header.xml $RELEASE
+cp -Rf $ORG $RELEASE
+cp -f $HEADER $RELEASE
 
 # Remove the SVN metadata
-#rm -RF $RELEASE/original-annotations/.svn
-#rm -RF $RELEASE/original-annotations/*/.svn
+rm -Rf $RELEASE/original-annotations/.svn
+rm -Rf $RELEASE/original-annotations/*/.svn
 
+echo "Done."

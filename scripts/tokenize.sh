@@ -3,7 +3,7 @@
 source ./config.sh
 #cd ..
 
-LOPTS=-log=./release.log\ -level=trace\ -append
+#LOPTS=-log=./release.log\ -level=trace\ -append
 # Perform quarkification
 java $OPTS -cp $SPLITTER org.anc.graf.splitter.App -in=$OUT -out=$WORK/tokens/ptb -type=ptb -set=PTB $LOPTS
 java $OPTS -cp $SPLITTER org.anc.graf.splitter.App -in=$OUT -out=$WORK/tokens/fn -type=fn -set=FrameNet $LOPTS
