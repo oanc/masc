@@ -20,13 +20,15 @@ FILES=
 for file in `ls` ; do
 	FILES="$file $FILES"
 done
+echo "Creating tar file."
 tar czf $TGZ $FILES
 
 WEB=/var/www/anc/masc
 if [ -e $WEB ] ; then
 	# This will (should) only be true 
 	# when running on the ANC server.
-	cp $TGX $WEB
+	cp $TGZ $WEB
 fi
 
+echo "Packaging complete."
 
