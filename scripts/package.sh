@@ -25,9 +25,10 @@ tar czf $TGZ $FILES
 
 WEB=/var/www/anc/masc
 if [ -e $WEB ] ; then
-	# This will (should) only be true 
-	# when running on the ANC server.
-	cp $TGZ $WEB
+    # This will (should) only be true 
+    # when running on the ANC server.
+    echo "Copying archive to web server."
+    cp $TGZ $WEB
 fi
 
 echo "Packaging complete."

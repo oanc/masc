@@ -17,8 +17,6 @@ function clean {
 
 source ./config.sh
 
-#cd $ROOT
-
 WRITTEN=$RELEASE/written
 SPOKEN=$RELEASE/spoken
 APP=$APPS/divide-corpus/target/divide-corpus.jar
