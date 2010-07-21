@@ -15,14 +15,13 @@ echo Target is $TARGET
 
 if [ ! -e $TARGET ] ; then
 	mkdir $TARGET
-	cd $TARGET
+	pushd $TARGET
 	echo "Target is"
-	pwd
-	
+	pwd	
 	svn co https://www.anc.org/dev/$1/trunk .
 else
-	cd $TARGET
+	pushd $TARGET
 	svn up
 fi
 mvn clean package
-cd ../../
+popd
