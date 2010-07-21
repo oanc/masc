@@ -31,6 +31,8 @@ fi
 touch $ROOT/maven.log
 
 build "convert" "GrafConvert"
+#exit
+
 build "align" "GrafAlign"
 build "check-ids" "check-ids"
 build "graph-splitter" "graph-splitter"
