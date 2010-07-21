@@ -5,7 +5,8 @@ source ./config.sh
 DATE=`date +%Y-%m-%d`
 VERS=1.0.2
 
-FILENAME="MASC-$VERS-$DATE.tgz"
+#FILENAME="MASC-$VERS-$DATE.tgz"
+FILENAME="MASC-$VERS.tgz"
 
 TGZ=$ROOT/$FILENAME
 if [ -e $TGZ ] ; then
@@ -20,4 +21,12 @@ for file in `ls` ; do
 	FILES="$file $FILES"
 done
 tar czf $TGZ $FILES
+
+WEB=/var/www/anc/masc
+if [ -e $WEB ] ; then
+	# This will (should) only be true 
+	# when running on the ANC server.
+	cp $TGX $WEB
+fi
+
 
