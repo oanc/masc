@@ -28,7 +28,7 @@ fi
 
 # Extract tokens from the PTB and FrameNet files.
 # Also links tokens to quarks.
-#./tokenize.sh
+./tokenize.sh
 
 # Make sure headers have links to all annotations files
 # and don't contain links to non-existent header files.
@@ -39,7 +39,7 @@ fi
 ./fix-logical.sh
 
 # Link NE, NC, and VC annotations to the PTB tokens.
-#./link-tokens.sh
+./link-tokens.sh
 
 # Perform a schema validation of all XML files.
 ./validate.sh
