@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cesAna xmlns="http://www.xces.org/schema/2003" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xces.org/schema/2003 completed 3 21">
+<cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
    <struct type="Date" from="72" to="81">
-      <feat name="kind" value="date"/>
-      <feat name="rule1" value="ModifierDate"/>
       <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="ModifierDate"/>
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Organization" from="178" to="199">
       <feat name="rule1" value="TheOrgXBase"/>
@@ -15,9 +15,9 @@
       <feat name="kind" value="date"/>
    </struct>
    <struct type="Location" from="526" to="532">
-      <feat name="locType" value="country"/>
-      <feat name="rule1" value="Location1"/>
       <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="locType" value="country"/>
    </struct>
    <struct type="Location" from="600" to="609">
       <feat name="rule1" value="InLoc1"/>
@@ -38,9 +38,9 @@
       <feat name="kind" value="date"/>
    </struct>
    <struct type="Date" from="696" to="700">
-      <feat name="kind" value="date"/>
-      <feat name="rule1" value="TempYear3"/>
       <feat name="rule2" value="YearOnlyFinal"/>
+      <feat name="rule1" value="TempYear3"/>
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Location" from="735" to="744">
       <feat name="rule1" value="Location1"/>
@@ -54,18 +54,19 @@
       <feat name="matches" value="[4069, 4091, 4107]"/>
       <feat name="locType" value="city"/>
    </struct>
-   <struct type="Date" from="880" to="901">
+   <struct type="Date" from="888" to="892">
       <feat name="kind" value="date"/>
-      <feat name="rule1" value="YearSpan3"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
+   </struct>
+   <struct type="Date" from="897" to="901">
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Organization" from="921" to="935">
       <feat name="orgType" value="religious"/>
    </struct>
    <struct type="Location" from="1227" to="1233">
-      <feat name="locType" value="continent"/>
-      <feat name="rule1" value="InLoc1"/>
       <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="InLoc1"/>
+      <feat name="locType" value="continent"/>
    </struct>
    <struct type="Organization" from="1252" to="1272">
       <feat name="rule1" value="TheOrgXBase"/>
@@ -74,9 +75,9 @@
       <feat name="orgType" value="political"/>
    </struct>
    <struct type="Date" from="1288" to="1292">
-      <feat name="kind" value="date"/>
-      <feat name="rule1" value="YearContext1"/>
       <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="YearContext1"/>
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Location" from="1349" to="1363">
       <feat name="matches" value="[4065, 4074]"/>
@@ -85,9 +86,9 @@
       <feat name="locType" value="region"/>
    </struct>
    <struct type="Location" from="1389" to="1396">
-      <feat name="locType" value="country"/>
-      <feat name="rule1" value="Location1"/>
       <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="locType" value="country"/>
    </struct>
    <struct type="Location" from="1406" to="1415">
       <feat name="rule1" value="Location1"/>
@@ -108,14 +109,14 @@
       <feat name="orgType" value="political"/>
    </struct>
    <struct type="Organization" from="1759" to="1779">
-      <feat name="orgType" value="political"/>
-      <feat name="rule1" value="OrgXBase"/>
       <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="OrgXBase"/>
+      <feat name="orgType" value="political"/>
    </struct>
    <struct type="Date" from="1906" to="1910">
-      <feat name="kind" value="date"/>
-      <feat name="rule1" value="TempYear3"/>
       <feat name="rule2" value="YearOnlyFinal"/>
+      <feat name="rule1" value="TempYear3"/>
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Location" from="1941" to="1950">
       <feat name="rule1" value="Location1"/>
@@ -124,9 +125,9 @@
       <feat name="locType" value="country"/>
    </struct>
    <struct type="Date" from="2037" to="2041">
-      <feat name="kind" value="date"/>
-      <feat name="rule1" value="TempYear3"/>
       <feat name="rule2" value="YearOnlyFinal"/>
+      <feat name="rule1" value="TempYear3"/>
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Location" from="2193" to="2202">
       <feat name="rule1" value="Location1"/>
@@ -135,9 +136,9 @@
       <feat name="locType" value="country"/>
    </struct>
    <struct type="Date" from="2343" to="2347">
-      <feat name="kind" value="date"/>
-      <feat name="rule1" value="YearContext1"/>
       <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="YearContext1"/>
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Location" from="2534" to="2543">
       <feat name="rule1" value="Location1"/>
@@ -152,14 +153,14 @@
       <feat name="orgType" value="political"/>
    </struct>
    <struct type="Date" from="2735" to="2739">
-      <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
       <feat name="rule1" value="YearContext1"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
-   </struct>
-   <struct type="Date" from="2830" to="2839">
       <feat name="kind" value="date"/>
-      <feat name="rule1" value="YearSpan1"/>
+   </struct>
+   <struct type="Date" from="2834" to="2839">
       <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="YearSpan1"/>
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Date" from="2883" to="2887">
       <feat name="rule1" value="TempYear3"/>
@@ -173,10 +174,11 @@
       <feat name="matches" value="[4069, 4091, 4107]"/>
       <feat name="locType" value="city"/>
    </struct>
-   <struct type="Date" from="3256" to="3277">
+   <struct type="Date" from="3264" to="3268">
       <feat name="kind" value="date"/>
-      <feat name="rule1" value="YearSpan3"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
+   </struct>
+   <struct type="Date" from="3273" to="3277">
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Location" from="3690" to="3699">
       <feat name="rule1" value="Location1"/>
@@ -184,36 +186,36 @@
       <feat name="matches" value="[4064, 4068, 4076, 4078, 4082, 4084, 4086, 4093, 4103]"/>
       <feat name="locType" value="country"/>
    </struct>
-   <struct type="Date" from="3734" to="3743">
+   <struct type="Date" from="3738" to="3743">
       <feat name="rule1" value="YearSpan1"/>
       <feat name="rule2" value="DateOnlyFinal"/>
       <feat name="matches" value="[4066, 4094]"/>
       <feat name="kind" value="date"/>
    </struct>
    <struct type="Date" from="4081" to="4086">
-      <feat name="kind" value="date"/>
-      <feat name="rule1" value="GazDateWords"/>
       <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="GazDateWords"/>
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Location" from="4251" to="4257">
-      <feat name="locType" value="country"/>
-      <feat name="rule1" value="Location1"/>
       <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="locType" value="country"/>
    </struct>
    <struct type="Date" from="4351" to="4355">
-      <feat name="kind" value="date"/>
-      <feat name="rule1" value="TempYear3"/>
       <feat name="rule2" value="YearOnlyFinal"/>
+      <feat name="rule1" value="TempYear3"/>
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Location" from="4974" to="4987">
-      <feat name="locType" value="country"/>
-      <feat name="rule1" value="Location1"/>
       <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="locType" value="country"/>
    </struct>
    <struct type="Person" from="4989" to="4992">
-      <feat name="gender" value="unknown"/>
-      <feat name="rule1" value="GazPerson"/>
       <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="GazPerson"/>
+      <feat name="gender" value="unknown"/>
    </struct>
    <struct type="Organization" from="5078" to="5098">
       <feat name="rule1" value="TheOrgXBase"/>
@@ -240,9 +242,9 @@
       <feat name="orgType" value="political"/>
    </struct>
    <struct type="Location" from="5634" to="5648">
-      <feat name="locType" value="city"/>
-      <feat name="rule1" value="Location1"/>
       <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="locType" value="city"/>
    </struct>
    <struct type="Location" from="5770" to="5779">
       <feat name="rule1" value="Location1"/>
