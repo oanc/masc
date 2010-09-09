@@ -17,8 +17,8 @@ function clean {
 
 source ./config.sh
 
-WRITTEN=$RELEASE/written
-SPOKEN=$RELEASE/spoken
+WRITTEN=$RELEASE/data/written
+SPOKEN=$RELEASE/data/spoken
 APP=$APPS/divide-corpus/target/divide-corpus.jar
 BAK=./data/bak
 
