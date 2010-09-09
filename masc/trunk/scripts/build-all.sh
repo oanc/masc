@@ -45,6 +45,7 @@ build "validator" "validator"
 build "make-tree" "make-tree"
 build "divide-corpus" "divide-corpus"
 build "parse-all" "parse-all"
+build "check-align" "check-align"
 
 echo Looking for errors.
 grep ERROR maven.log

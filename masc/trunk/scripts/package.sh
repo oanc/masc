@@ -3,7 +3,7 @@
 source ./config.sh
 
 DATE=`date +%Y-%m-%d`
-VERS=1.0.2
+VERS=1.0.3
 
 #FILENAME="MASC-$VERS-$DATE.tgz"
 FILENAME="MASC-$VERS.tgz"

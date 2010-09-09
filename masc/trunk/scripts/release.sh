@@ -18,10 +18,9 @@ fi
 
 # Convert and align the FrameNet files.
 ./framenet.sh
-
+exit 0
 # Process the "out of stream" corrections.
 ./corrections.sh
-#exit 0
 
 # Add missing IDs to sentence annotations.
 ./fix-ids.sh
@@ -46,6 +45,10 @@ fi
 
 # Run all annotation files through the GraphParser
 ./parse-all.sh
+
+# Check annotation alignment, that is whitespace at the
+# start or end of an annotation.
+./check-align.sh
 
 # Divide the files into written and spoken components.
 ./divide.sh
