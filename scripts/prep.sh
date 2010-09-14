@@ -29,10 +29,14 @@ cp $IN/CB-new/*.txt $CBWORK
 java $OPTS -jar $ALIGN $LOPTS -src=$CBWORK -target=$OUT -dest=$OUT -type=cb
 
 # Convert and align the event data.
-rm -f %IN/event/graf
-cp %IN/event/xces/*.txt %IN/event/graf
-java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=event -in=$IN/event/xces -out=$IN/event/graf -saveAs=event -id=ev
-java $OPTS -jar $ALIGN $LOPTS -src=$IN/event/graf -target=$MASC -dest=$OUT -type=event -fix=$FIX/event-fixes.xml
+EV=$WORK/event/graf
+if [ -e $EV ] ; then
+	rm -rf $EV
+fi
+mkdir $EV
+cp $IN/event/xces/*.txt $EV
+java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=event -in=$IN/event/xces -out=$EV -saveAs=event -id=ev
+java $OPTS -jar $ALIGN $LOPTS -src=$EV -target=$MASC -dest=$MASC -type=event -fix=$FIX/event-fixes.xml
 
 # Align the opinion data
 java $OPTS -jar $ALIGN $LOPTS -src=$IN/opinion/graf -target=$OUT -dest=$OUT -type=mpqa -fix=$FIX/opinion-fixes.xml
