@@ -13,6 +13,12 @@ fi
 # Process the existing XCES annotations.
 ./prep.sh
 
+# Process committed belief annotations.
+./cb.sh
+
+# Process event annotations.
+./event.sh
+
 # Convert and align the Penn Tree Bank files.
 ./ptb.sh
 
