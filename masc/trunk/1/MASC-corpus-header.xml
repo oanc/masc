@@ -4,13 +4,13 @@
     <fileDesc>
         <titleStmt>
             <title>Manually Annotated Sub-Corpus (MASC)</title>
-            <version>1.0.3</version>
+            <version>1.0.2</version>
             <funder>National Science Foundation Computing Resource Infrastructure Grant CRI-0708952</funder>
             <respStmt>
                 <resp lnk:href="http://www.anc.org">American National Corpus Project</resp>
             </respStmt>
         </titleStmt>
-        <editionStmt version="1.0"/>
+        <editionStmt version="1.03"/>
         <extent wordCount="500000"/>
         <publicationStmt>
             <distributor>American National Corpus Project</distributor>
@@ -28,7 +28,7 @@
             <telephone>+1 (215) 573-1275</telephone>
             <fax>+1 (215) 573-2175</fax>
             <eAddress>ldc@ldc.upenn.edu</eAddress>
-            <pubDate value="2010-05-31"/>
+            <pubDate value="2010-09-30"/>
             <availability lnk:href="http:www.ldc.upenn.edu/MASC" status="free"/>
             <idno type="LDCcatno"></idno>
         </publicationStmt>
@@ -170,6 +170,8 @@
             <fileType name="wordnet" suffix="wn" a.type="wn" medium="xml">
                 <requires f.type="sentence"/>
             </fileType>
+            <fileType name="opinion" suffix="mpqa" a.type="mpqa" medium="xml"/>
+            <fileType name="belief" suffix="cb" a.type="cb" medium="xml"/>
         </fileStruct>
         <annotationSets>
             <annotationSet xml:id="xces" lnk:href="http://www.xces.org/schema/2003">
@@ -183,20 +185,19 @@
                     <a.desc>Segmentation into logical elements (paragraph, section, etc.)</a.desc>
                     <a.resp lnk:href="http://www.anc.org">ANC project</a.resp>
                     <a.method type="automatic-validated"/>
-                    <!-- restricted list: automatic, manual, auomtatic-validated...-->
                     <a.doc lnk:href=""/>
                 </annotation>
                 <annotation name="nc" layer="syntax">
                     <a.desc>noun chunks (shallow parse)</a.desc>
                     <a.resp lnk:href="http://www.anc.org">ANC project</a.resp>
                     <a.method type="automatic-validated"/>
-                    <a.doc lnk:href=""/>
+                    <a.doc lnk:href="https://www.anc.org/wiki/wiki/NounChunks"/>
                 </annotation>
                 <annotation name="vc" layer="syntax">
                     <a.desc>verb chunks (shallow parse)</a.desc>
                     <a.resp lnk:href="http://www.anc.org">ANC project</a.resp>
                     <a.method type="automatic-validated"/>
-                    <a.doc lnk:href=""/>
+                    <a.doc lnk:href="https://www.anc.org/wiki/wiki/VerbChunks"/>
                 </annotation>
                 <annotation name="s" layer="seg">
                     <a.desc>sentence boundaries</a.desc>
@@ -208,14 +209,21 @@
                     <a.desc>named entities</a.desc>
                     <a.resp lnk:href="http://www.anc.org">ANC project</a.resp>
                     <a.method type="automatic-validated"/>
-                    <a.doc lnk:href=""/>
+                    <a.doc lnk:href="https://www.anc.org/wiki/wiki/NamedEntities"/>
                 </annotation>
                 <annotation name="penn" layer="tok-msd">
                     <a.desc>Tokenization and Penn POS tags produced by GATE-5.0 ANNIE
                         application</a.desc>
                     <a.resp lnk:href="http://www.anc.org">ANC project</a.resp>
                     <a.method type="automatic-validated"/>
-                    <a.doc lnk:href=""/>
+                    <a.doc lnk:href="http://gate.ac.uk/sale/tao/splitli1.html#QQ2-9-156"/>
+                    <a.doc lnk:href="http://gate.ac.uk/sale/tao/splitch6.html#x9-1410006.6"/>
+                </annotation>
+                <annotation name="cb" layer="sem">
+                    <a.desc>Committed belief annotation produced by Columbia University</a.desc>
+                    <a.resp lnk:href="http://www1.ccls.columbia.edu/">CCLS, Columbia University</a.resp>
+                    <a.method type="automatic-validated"/>
+                    <a.doc lnk:href="http://www.aclweb.org/anthology/W/W09/W09-3012.pdf"/>
                 </annotation>
             </annotationSet>
             <annotationSet xml:id="ptb" type="http://www.cis.upenn.edu/~treebank/">
@@ -249,13 +257,21 @@
                     <a.doc lnk:href="http://framenet.icsi.berkeley.edu/"/>
                 </annotation>
             </annotationSet>
-            <annotationSet xml:id="WN">
+            <annotationSet xml:id="wn">
                 <annotation name="wn" layer="sem">
                     <a.desc>WordNet sense tags</a.desc>
                     <a.resp lnk:href="http://www.anc.org">ANC project and Columbia
                         University</a.resp>
                     <a.method type="manual"/>
                     <a.doc lnk:href="http://www.anc.org/MASC/WordNet_Annotations.html"/>
+                </annotation>
+            </annotationSet>
+            <annotationSet xml:id="mpqa">
+                <annotation name="mpqa" layer="sem">
+                    <a.desc>Opinion/subjectivity annotation</a.desc>
+                    <a.resp lnk:href="http://www.cs.pitt.edu/mpqa/">University of Pittsburgh</a.resp>
+                    <a.method type="manual"/>
+                    <a.doc lnk:href="http://www.cs.pitt.edu/mpqa/"/>
                 </annotation>
             </annotationSet>
         </annotationSets>
