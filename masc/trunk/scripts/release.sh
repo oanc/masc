@@ -33,12 +33,14 @@ fi
 # and don't contain links to non-existent header files.
 ./validate-headers.sh
 
-# Not is SVN yet.
 # Link the logical annotations into a tree.
-./fix-logical.sh
+#./fix-logical.sh
 
 # Link NE, NC, and VC annotations to the PTB tokens.
 ./link-tokens.sh
+
+# Copy over hand corrected files before validation starts.
+./hand-corrected.sh
 
 # Perform a schema validation of all XML files.
 ./validate.sh
