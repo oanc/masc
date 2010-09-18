@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source config.sh
+source ./config.sh
 
 #cd ..
 
@@ -16,30 +16,19 @@ java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=np -in=$IN/noun-chunks -out
 java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=vp -in=$IN/verb-chunks -out=$OUT -saveAs=vc -rename="vp=vchunk VerbChunk=vchunk VG=vchunk" -id=vc -accept=vchunk -exf=graf:set
 java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=NE -in=$IN/ne-all -out=$OUT -rename="Person=person Date=date Location=location Organization=org @orgType=type @locType=type @gender=sex" -exf="rule rule1 rule2" -id=ne -accept="person date location org" -saveAs=ne
 
-# Convert the Committed Belief data.  One file (in CB-new) also needs to be aligned.
-CBWORK=$WORK/committed-belief
-if [ -e $CBWORK ] ; then
-	rm -f $CBWORK/*.*
-else
-	mkdir -p $CBWORK
-fi
-java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=CB -in=$IN/committed-belief -out=$OUT -saveAs=cb -id=cb
-java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=CB -in=$IN/CB-new -out=$CBWORK -saveAs=cb -id=cb
-cp $IN/CB-new/*.txt $CBWORK
-java $OPTS -jar $ALIGN $LOPTS -src=$CBWORK -target=$OUT -dest=$OUT -type=cb
 
 # Convert and align the event data.
-EV=$WORK/event/graf
-if [ -e $EV ] ; then
-	rm -rf $EV
-fi
-mkdir $EV
-cp $IN/event/xces/*.txt $EV
-java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=event -in=$IN/event/xces -out=$EV -saveAs=event -id=ev
-# The A1 files and enron-thread are invalid so we don't process them.
-rm $EV/A1*.xml
-rm $EV/enron-thread*.xml
-java $OPTS -jar $ALIGN $LOPTS -src=$EV -target=$MASC -dest=$MASC -type=event -fix=$FIX/event-fixes.xml
+#EV=$WORK/event/graf
+#if [ -e $EV ] ; then
+#	rm -rf $EV
+#fi
+#mkdir $EV
+#cp $IN/event/xces/*.txt $EV
+#java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=event -in=$IN/event/xces -out=$EV -saveAs=event -id=ev
+## The A1 files and enron-thread are invalid so we don't process them.
+#rm $EV/A1*.xml
+#rm $EV/enron-thread*.xml
+#java $OPTS -jar $ALIGN $LOPTS -src=$EV -target=$MASC -dest=$MASC -type=event -fix=$FIX/event-fixes.xml
 
 # Align the opinion data
 java $OPTS -jar $ALIGN $LOPTS -src=$IN/opinion/graf -target=$OUT -dest=$OUT -type=mpqa -fix=$FIX/opinion-fixes.xml
