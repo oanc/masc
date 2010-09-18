@@ -32,14 +32,24 @@ function create {
 
 #cd ..
 
-
 create $WORK/validation
 create $WORK/headers
 
 if [ ! -e $APPS/$JAR ] ; then
 	echo "Downloading Saxon."
+	# Determine if wget is available, if not use curl to download. At
+	# least one of the programs should be available on any system.
+	GET=`which wget`
+	if [ "$GET" = "" ] ; then
+		echo "wget not available."
+		GET=`which curl`
+		if [ "$GET" = "" ] ; then
+			echo "ERROR: curl not found either. Aborting script."
+			exit 1
+		fi
+	fi
 	pushd $APPS
-	wget http://www.anc.org/tools/saxon9he.jar
+	$GET http://www.anc.org/tools/saxon9he.jar
 	popd
 
 	if [ ! -e $SAXON ] ; then
@@ -47,6 +57,7 @@ if [ ! -e $APPS/$JAR ] ; then
 		exit 1
 	fi
 fi
+
 echo "$APPS/$JAR"
 echo "$SAXON"
 
