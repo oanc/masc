@@ -2,6 +2,18 @@
 
 source ./config.sh
 
+GET=`which wget`
+if [ "$GET" = "" ] ; then
+	echo "wget not available."
+	GET=`which curl`
+	if [ "$GET" = "" ] ; then
+		echo "ERROR: curl not found either. Aborting script."
+		exit 1
+	fi
+fi
+echo "Using $GET"
+exit 0
+
 EV=$WORK/event/graf
 cp $IN/event/xces/*.txt $EV
 rm $EV/A1*.xml
