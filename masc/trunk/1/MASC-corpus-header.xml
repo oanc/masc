@@ -4,13 +4,13 @@
     <fileDesc>
         <titleStmt>
             <title>Manually Annotated Sub-Corpus (MASC)</title>
-            <version>1.0.2</version>
+            <version>1.0.3</version>
             <funder>National Science Foundation Computing Resource Infrastructure Grant CRI-0708952</funder>
             <respStmt>
                 <resp lnk:href="http://www.anc.org">American National Corpus Project</resp>
             </respStmt>
         </titleStmt>
-        <editionStmt version="1.03"/>
+        <editionStmt version="1.0.3"/>
         <extent wordCount="500000"/>
         <publicationStmt>
             <distributor>American National Corpus Project</distributor>
@@ -39,7 +39,7 @@
             or hand validated annotations for a variety of linguistic phenomena.</projectDesc>
         <samplingDecl> The original texts in the MASC are drawn from the Open American National
             Corpus (OANC), which includes written texts and spoken transcripts of American English
-            produced since 1990. The OANC includes a braod range of genres. MASC data have been
+            produced since 1990. The OANC includes a broad range of genres. MASC data have been
             selected to include approximately equal-sized representative samples of OANC
             genres.</samplingDecl>
         <editorialDecl>
@@ -172,6 +172,7 @@
             </fileType>
             <fileType name="opinion" suffix="mpqa" a.type="mpqa" medium="xml"/>
             <fileType name="belief" suffix="cb" a.type="cb" medium="xml"/>
+            <fileType name="event" suffix="event" a.type="event" medium="xml"/>
         </fileStruct>
         <annotationSets>
             <annotationSet xml:id="xces" lnk:href="http://www.xces.org/schema/2003">
@@ -272,6 +273,14 @@
                     <a.resp lnk:href="http://www.cs.pitt.edu/mpqa/">University of Pittsburgh</a.resp>
                     <a.method type="manual"/>
                     <a.doc lnk:href="http://www.cs.pitt.edu/mpqa/"/>
+                </annotation>
+            </annotationSet>
+            <annotationSet xml:id="event">
+                <annotation name="event" layer="sem">
+                    <a.desc>Event co-reference annotation</a.desc>
+                    <a.resp lnk:href="http://www.lti.cs.cmu.edu/">Language Technologies Institute, Carnegie-Mellon University</a.resp>
+                    <a.method type="manual"/>
+                    <a.doc lnk:href="http://www.lti.cs.cmu.edu/"/>
                 </annotation>
             </annotationSet>
         </annotationSets>
