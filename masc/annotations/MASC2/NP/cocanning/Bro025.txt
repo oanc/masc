@@ -1,0 +1,2886 @@
+
+  
+
+  
+
+
+  
+
+    
+      Alright. We're on. 
+    
+    
+      Test, um. Test, test, test.
+    
+    
+      
+    
+    
+      Guess that's me. Yeah. O_K. 
+    
+    
+      Ooh, Thursday. 
+    
+    
+      
+    
+    
+      
+    
+    
+      So.
+    
+    
+      
+    
+    
+      There's two sheets of paper in front of us.
+    
+    
+      
+    
+    
+      
+    
+    
+      Yeah. So.
+    
+    
+      What are these?
+    
+    
+      This is the arm wrestling? 
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      Uh. Yeah, we formed a coalition actually. We already  made it  into  one.  
+    
+    
+      Yeah. Almost. 
+    
+    
+      Oh, good. Excellent. 
+    
+    
+      Yeah.  
+    
+    
+      Yeah.
+    
+    
+      That's the best thing. 
+    
+    
+      Mm-hmm. 
+    
+    
+       So, tell me about it.
+    
+    
+       So it's - well, it's  spectral subtraction or Wiener filtering,
+    
+    
+      um,
+    
+    
+       depending on if we put - if we square the transfer function or not.
+    
+    
+      Right.
+    
+    
+      
+    
+    
+       And then with over-estimation of the noise,
+    
+    
+      depending on the, uh - the S_N_R, with smoothing along time,
+    
+    
+      um, 
+    
+    
+      smoothing along frequency. It's very simple, smoothing things. 
+    
+    
+      Mm-hmm.
+    
+    
+      Mm-hmm.
+    
+    
+      And, um,  the best result is 
+    
+    
+      
+    
+    
+      when we apply this procedure on F_F_T bins, uh, with a Wiener filter.
+    
+    
+      
+    
+    
+      Mm-hmm.
+    
+    
+      And there is no noise addition after - after that.
+    
+    
+       O_K.  
+    
+    
+      So it's good because
+    
+    
+      
+    
+    
+       it's difficult when we have to add noise to - to - to find the right level.
+    
+    
+      
+    
+    
+       O_K.  
+    
+    
+      Are you looking at one in - in particular of these two?
+    
+    
+       
+    
+    
+      Yeah. So the sh- it's the sheet that gives fifty-f- three point sixty-six.
+    
+    
+      Mm-hmm.
+    
+    
+      Um,
+    
+    
+       the second sheet is abo- uh, about the same.
+    
+    
+       It's the same, um, idea but it's working on mel bands, 
+    
+    
+      and it's a spectral subtraction instead of Wiener filter, 
+    
+    
+      and there is also a noise addition after, uh, cleaning up the mel bins.
+    
+    
+      Mmm. 
+    
+    
+       Well, the results are similar.
+    
+    
+       Yeah. I mean,  it's -  it's actually, uh,
+    
+    
+      
+    
+    
+      
+    
+    
+      Mm-hmm.  
+    
+    
+      very similar. I mean,  if you look at databases,
+    
+    
+      uh,
+    
+    
+       the, uh,
+    
+    
+      one that has the smallest - smaller overall number is actually better on the Finnish and Spanish,
+    
+    
+      uh, but it is, uh,
+    
+    
+       It's worse on -
+    
+    
+      worse on the, uh, Aurora - I mean on the, uh, T_I- T_I-digits, uh, uh.
+    
+    
+      on the multi-condition in T_I-digits. Yeah.
+    
+    
+      Um.
+    
+    
+      Mmm. 
+    
+    
+      So, it probably doesn't matter  that  much either way.
+    
+    
+       Yeah. 
+    
+    
+      But, um, when you say u- uh, unified do you mean, uh, it's one piece of software now, or - ?
+    
+    
+      So now we are, yeah, setting up the software.
+    
+    
+      Mm-hmm.
+    
+    
+      Um, it should be ready, uh, very soon.
+    
+    
+      
+    
+    
+      Um, and we-
+    
+    
+      So what's - what's happened? I think I've missed something.
+    
+    
+       O_K. So a week ago - maybe you weren't around when - when - when Hynek and Guenther and I - ? 
+    
+    
+      
+    
+    
+      Hynek was here.
+    
+    
+      Yeah. I didn't.
+    
+    
+      Oh, O_K. So - Yeah, let's summarize.
+    
+    
+      Um - And then if I summarize somebody can tell me if I'm wrong, which will also be possibly helpful.
+    
+    
+      What did I just press here? I hope this is still working.  Um. 
+    
+    
+      
+    
+    
+      p-p-p- 
+    
+    
+      
+    
+    
+      We, uh - we looked at,  uh -
+    
+    
+       anyway  we -  after coming back from QualComm we had, you know, very strong feedback and, uh, I think it was
+    
+    
+      
+    
+    
+       Hynek and Guenter's and my opinion also that,
+    
+    
+      um,
+    
+    
+      you know, we sort of spread out to look at a number of different ways of doing noise suppression. 
+    
+    
+      
+    
+    
+      But given the limited time,
+    
+    
+      Mm-hmm.
+    
+    
+      uh, it was sort of time to  choose one. 
+    
+    
+      Mmm.
+    
+    
+      Uh, and so, uh,
+    
+    
+      th- the vector Taylor series hadn't really worked out that much. Uh, the subspace stuff, uh, had not been worked with so much. 
+    
+    
+      
+    
+    
+      Um, so it sort of came down to spectral subtraction versus Wiener filtering.
+    
+    
+      
+    
+    
+      Hmm.
+    
+    
+      Uh, we had a long discussion about how they were the same and how they were d- uh, completely different. 
+    
+    
+      
+    
+    
+      Mm-hmm.
+    
+    
+      And, uh, I mean, fundamentally they're the same sort of thing but the math is a little different so that there's a - a - 
+    
+    
+      there's an exponent difference in the index - you know, what's the ideal filtering, and depending on how you
+    
+    
+      construct the problem.
+    
+    
+       And, uh, I guess it's sort - you know, after - after that meeting it sort of made more sense to me because
+    
+    
+      Uh-huh.
+    
+    
+      
+    
+    
+      um, if you're dealing with power spectra
+    
+    
+      then how are you gonna choose your error? And typically you'll do - choose something like a variance.
+    
+    
+      
+    
+    
+      And so that means it'll be something like the square of the power spectra.
+    
+    
+      
+    
+    
+      Mm-hmm.
+    
+    
+      Whereas when you're - when you're doing the - the, uh, um,
+    
+    
+       looking at it the other way, you're gonna be dealing with signals and you're gonna end up looking at power - uh, noise power that you're trying to reduce. And so, eh - so there should be a difference 
+    
+    
+      of - you know, conceptually of - of, uh, a factor of two in the exponent.
+    
+    
+      
+    
+    
+      Mm-hmm.
+    
+    
+       But  there're so many different little factors that you adjust in terms of - of, uh,
+    
+    
+      
+    
+    
+      uh, over-subtraction and - and - and - and - and so forth, um, that
+    
+    
+      
+    
+    
+       arguably, you're c- and - and - and the choice of do you -
+    
+    
+      do you operate on the mel bands or do you operate on the F_F_T beforehand.
+    
+    
+      
+    
+    
+      There're so many other choices to make that are - are almost -
+    
+    
+      well, if not  independent,  certainly in  addition  to  the choice of whether you, uh, do spectral subtraction or Wiener filtering,
+    
+    
+      
+    
+    
+      that, um,
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      again we sort of felt
+    
+    
+      the gang should just sort of figure out which it is they wanna do and then let's pick it, go forward with it. So that's - that was - that was last week. And -
+    
+    
+      
+    
+    
+      and, uh, we said, uh, take a week, go arm wrestle,
+    
+    
+      you know, 
+    
+    
+      
+    
+    
+      Oh. 
+    
+    
+      figure it out. I mean, and th- the joke there was that each of them had specialized in one of them. And - and so they -
+    
+    
+       Oh, O_K.
+    
+    
+       so instead they went to Yosemite and bonded, and - and they came out with a single - single piece of software. So it's 
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      another - another victory for international collaboration. So.  
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      Uh. 
+    
+    
+      So - so you guys have combined - or you're going to be combining the software?
+    
+    
+      Oh boy.
+    
+    
+      Well, the piece of software has, like, plenty of options, like you can parse command-line arguments.
+    
+    
+      So depending on that, it - it becomes either spectral subtraction  or  Wiener filtering.
+    
+    
+      Oh, O_K. They're close enough.
+    
+    
+      So, ye-
+    
+    
+      Well, that's fine, but the thing is - the important thing is that there is  a  piece of software that you - that we all will be using now. Yes.
+    
+    
+      
+    
+    
+      
+    
+    
+      Yeah. Yeah. There's just one piece of software.
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      Yeah. 
+    
+    
+      I need to allow it to do everything and even more - more than this. Well, if we want to,
+    
+    
+      Right. 
+    
+    
+      like, optimize different parameters of -
+    
+    
+      Parameters. Yeah. 
+    
+    
+      
+    
+    
+      Yeah, we can do it later.
+    
+    
+      Sure. 
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      But, still - so, there will be a piece of software with,
+    
+    
+      
+    
+    
+       uh, will give this system, the fifty-three point sixty-six, by default and -
+    
+    
+      Mm-hmm.
+    
+    
+      How - how is - how good is that?
+    
+    
+      Mm-hmm. 
+    
+    
+      
+    
+    
+      I - I - I don't have a sense of -
+    
+    
+      It's just one percent off of the  best proposal.
+    
+    
+       Best system.
+    
+    
+      It's between -
+    
+    
+      i- we are  second  actually if we take this system. Right?
+    
+    
+      Yeah. 
+    
+    
+      Yeah.
+    
+    
+      O_K. Compared to the last evaluation numbers?  Yeah. 
+    
+    
+      But, uh -
+    
+    
+      
+    
+    
+      Mm-hmm. Yeah.
+    
+    
+      Yeah.
+    
+    
+      w- which we sort of were before but we were considerably far behind. And the thing is, this doesn't have neural net in yet for instance. You know?
+    
+    
+      Mm-hmm. 
+    
+    
+      So it - so, um, it's - it- it's not using our full bal- bag of tricks, if you will.
+    
+    
+      Hmm.
+    
+    
+      Mm-hmm.
+    
+    
+      And, uh, and it - it is, uh, very close in performance to the best thing that was there before. 
+    
+    
+      Uh, but, you know, looking at it another way, maybe more importantly, uh,
+    
+    
+      
+    
+    
+      we  didn't  have any explicit noise, uh, handling - stationary - dealing with - e- e- we didn't  explicitly  have anything to deal with stationary noise.
+    
+    
+      
+    
+    
+      
+    
+    
+      Mm-hmm.
+    
+    
+      And now we do.
+    
+    
+       So will the  neural net operate on
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      the output from either the Wiener filtering or the spectral subtraction?
+    
+    
+       Well, so - so - so argu-  arguably,  I mean, what we should do - I mean, I gather you have -
+    
+    
+      Or will it operate on the original?
+    
+    
+      it sounds like you have a few more days of - of nailing things down with the software and so on. But -
+    
+    
+      and then - but, um,  arguably what we should do is,
+    
+    
+      even though the software can do many things, we should for now
+    
+    
+       pick  a set of things, th- these things I would guess,
+    
+    
+      
+    
+    
+      Mm-hmm. 
+    
+    
+      and not change that. And then focus on  everything that's left.
+    
+    
+      
+    
+    
+       And I think, you know, that our goal should be by next week, when Hynek comes back,
+    
+    
+      
+    
+    
+      uh, to -
+    
+    
+      uh, really just to have a firm path, uh, for the - you know, for the time he's gone, 
+    
+    
+      of - of, uh, what things will be attacked. 
+    
+    
+      But I would - I would - I would thought- think that what we would wanna do is not futz with this stuff for a while 
+    
+    
+      because what'll happen is we'll change many other things in the system,
+    
+    
+      Mm-hmm.
+    
+    
+      
+    
+    
+      and then we'll probably wanna come back to this and possibly make some other choices. But, um.
+    
+    
+      But just conceptually, where does the neural net go? Do - do you wanna h- run it on the output of the spectrally subtracted - ?
+    
+    
+      
+    
+    
+      
+    
+    
+      Mmm. 
+    
+    
+      Well, depending on its  size  - Well, one question is, is it on the, um, server side or is it on the terminal side?
+    
+    
+      
+    
+    
+      
+    
+    
+      Uh, if it's on the  server  side, it - you probably don't have to worry too much about size. 
+    
+    
+      Mm-hmm.
+    
+    
+      
+    
+    
+      So that's kind of an argument for  that. 
+    
+    
+      
+    
+    
+      We  do  still, however, have to consider its latency. So the issue is - is, um, 
+    
+    
+      for instance, could we have a neural net that only looked at the  past? 
+    
+    
+      Right.
+    
+    
+      
+    
+    
+      Um, what we've done in  uh  - in the past is to use the neural net, uh, to transform, 
+    
+    
+      um, all of the features that we use. So this is done early on. This is essentially, 
+    
+    
+      um, um - I  guess  it's - it's more or less like a spee- a speech enhancement technique here - right? - where we're just kind of creating 
+    
+    
+      Mm-hmm.
+    
+    
+      new - if not new speech at least new - new F_F_T's that - that have - you know, which  could  be turned into speech -
+    
+    
+      
+    
+    
+      Mm-hmm. 
+    
+    
+      uh, that - that have some of the noise removed.
+    
+    
+      
+    
+    
+      Mm-hmm.
+    
+    
+      Um, after that we still do a mess of other things to - to produce a bunch of features. 
+    
+    
+      Right.
+    
+    
+      And then those features are not now currently transformed
+    
+    
+      
+    
+    
+      by the neural net.
+    
+    
+      
+    
+    
+      And then the - the way that we had it in our proposal-two before, we had the neural net transformed features  and  we had 
+    
+    
+      the  untransformed  features, which I guess you - you actually did linearly transform with the K_L_T, but - but - but - uh, to orthogonalize them - but -
+    
+    
+      Yeah. Yeah. Right.
+    
+    
+      
+    
+    
+      but they were not, uh, processed through a neural net. And Stephane's idea with that, as I recall, was that 
+    
+    
+      you'd have one part of the feature vector that was very discriminant and another part that  wasn't, 
+    
+    
+      
+    
+    
+      Mm-hmm.
+    
+    
+      uh, which would smooth things a bit for those occasions when, uh, the testing set was quite different than what you'd trained your discriminant features for.
+    
+    
+      
+    
+    
+      So, um, all of that is - is, uh - still seems like a good idea. 
+    
+    
+      The thing is now we know some other constraints. We can't have unlimited amounts of latency.
+    
+    
+      Uh, y- you know, that's still being debated by the - by people in Europe but, 
+    
+    
+      uh, no matter  how  they end up there, it's not going to be  unlimited  amounts, so we have to be a little conscious of that.
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      Um.
+    
+    
+      
+    
+    
+      So there's the neural net issue. There's the V_A_D issue. 
+    
+    
+      And, uh, there's the second stream  thing.
+    
+    
+      And I think those that we - last time we agreed that those are the three things that have to get, uh, focused on.
+    
+    
+      
+    
+    
+      What was the issue with the V_A_D?
+    
+    
+       Well, better  ones are good.
+    
+    
+      
+    
+    
+      And so the w- the default, uh,
+    
+    
+      boundaries that they provide are -
+    
+    
+      
+    
+    
+      
+    
+    
+      they're O_K, but they're not all that great?
+    
+    
+      I guess they still allow two hundred milliseconds on either side or some- ? Is that what the deal is?
+    
+    
+      Mm-hmm.
+    
+    
+      Uh, so th- um, they keep two hundred milliseconds at the beginning and end of speech. And they keep all the - Yeah.
+    
+    
+      
+    
+    
+      
+    
+    
+      Outside the beginnings and end. Uh-huh.
+    
+    
+      And all the speech pauses, which is -
+    
+    
+      
+    
+    
+      Sometimes on the SpeechDat-Car you have pauses that are more than one or two seconds.
+    
+    
+      Wow.
+    
+    
+      More than one second for sure.  Um.
+    
+    
+      Hmm.
+    
+    
+      Yeah.
+    
+    
+      And, yeah, it seems to us that this way of just dropping the beginning and end is not -
+    
+    
+      
+    
+    
+      We cou- we can do better, I think,
+    
+    
+      Mm-hmm.
+    
+    
+      because, um,
+    
+    
+       with this way of dropping the frames they improve  over the baseline by fourteen percent and
+    
+    
+       Sunil already showed that with our current V_A_D we can improve by more than twenty percent.
+    
+    
+      On top of the V_A_D that  they  provide?
+    
+    
+      
+    
+    
+      No.
+    
+    
+      
+    
+    
+      Just using either their V_A_D or
+    
+    
+      Our way.
+    
+    
+      our current V_A_D.
+    
+    
+      Oh, O_K.
+    
+    
+      So, our current V_A_D is - is more than twenty percent, while
+    
+    
+      Theirs is fourteen?
+    
+    
+      their is fourteen. Yeah.
+    
+    
+      I see.
+    
+    
+      Huh.
+    
+    
+      So.
+    
+    
+      Yeah.
+    
+    
+      And  another thing that we did also is that
+    
+    
+      we have all this training data
+    
+    
+      for - let's say, for SpeechDat-Car. We have channel zero which is clean, channel one which is far-field microphone. 
+    
+    
+       And
+    
+    
+      if we just take only the, um, V_A_D probabilities computed on the clean signal and apply them on the far-field,
+    
+    
+      uh, test utterances, 
+    
+    
+      Mm-hmm.
+    
+    
+      then results are much better.
+    
+    
+      In some cases it divides the error rate by two.
+    
+    
+      Wow.
+    
+    
+       So it means that there are stim-  still -
+    
+    
+      If - if we can have a good V_A_D, well, it would be great.
+    
+    
+      How - how much latency does the, uh - does  our  V_A_D add?
+    
+    
+      Is it significant, or - ?
+    
+    
+      Uh, right now it's, um, a neural net with nine frames. So it's forty milliseconds plus,
+    
+    
+      um,
+    
+    
+      the rank ordering, which, uh, should be
+    
+    
+      Like another ten frames.
+    
+    
+      ten - Yeah.
+    
+    
+      Rank. Oh. 
+    
+    
+      So, right now it's one hundred and forty  milliseconds.
+    
+    
+       With the rank ordering - ? I'm sorry.
+    
+    
+      The - the - the smoothing - the m- the - the filtering of the probabilities.
+    
+    
+      The -
+    
+    
+      The, um -
+    
+    
+      
+    
+    
+      on the  R_ .
+    
+    
+      Yeah. It's not a median filtering. It's just -
+    
+    
+      We don't take the median value. We take something -
+    
+    
+      Um, so we have eleven,
+    
+    
+      um,
+    
+    
+      frames. And - for the V_A_D, yeah - and we take th- the third.
+    
+    
+      Oh, this is for the V_A_D.
+    
+    
+      Yeah. Yeah.
+    
+    
+       Oh, O_K.
+    
+    
+      Yeah.
+    
+    
+       Dar-  
+    
+    
+      Um. 
+    
+    
+      Yeah.
+    
+    
+       Um.
+    
+    
+      Mmm.
+    
+    
+      So -  Yeah, I was just noticing on this that it makes reference to delay. So what's the - ? If you ignore -
+    
+    
+      
+    
+    
+      Um, the V_A_D is sort of in - in  parallel,  isn't i- isn't it, with - with the - ? I mean, it isn't  additive  with the - the, uh, L_D_A and the Wiener filtering, and so forth. Right?
+    
+    
+      
+    
+    
+      The L_D_A? 
+    
+    
+      Yeah. So - so what happened right now, we removed the delay of the L_D_A.
+    
+    
+      Mm-hmm. 
+    
+    
+      Yeah.
+    
+    
+      So we - I mean, if - so if we - if - so which is like
+    
+    
+      if we reduce the delay of V_A- So, the f- the final delay's now ba- is f- determined by the delay of the V_A_D,
+    
+    
+      
+    
+    
+      because the L_D_A doesn't have any delay.
+    
+    
+      
+    
+    
+      So if we re- if we reduce the delay of the V_A_D, I mean, it's like effectively reducing the delay.
+    
+    
+      
+    
+    
+      How - how much, uh, delay was there on the L_D_A?
+    
+    
+       So the L_D_A and the V_A_D both had a hundred millisecond delay.
+    
+    
+      So and they were in  parallel,  so which means you pick either one of them - the - the  biggest,  whatever.
+    
+    
+      Mmm.
+    
+    
+      Mm-hmm.
+    
+    
+      I see.
+    
+    
+       So, right now the L_D_A delays are more.
+    
+    
+       And there -
+    
+    
+      Oh, O_K.
+    
+    
+       And there didn't seem to be any, uh, penalty for that?
+    
+    
+      Pardon?
+    
+    
+      There didn't seem to be any penalty for making it causal?
+    
+    
+      Oh, no. It actually made it, like, point one percent better or something, actually.  Or something like that and - 
+    
+    
+       O_K.
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+       Well, may as well, then. And he says Wiener filter is - is forty milliseconds delay.
+    
+    
+      
+    
+    
+      
+    
+    
+      Yeah. So that's the one which Stephane was discussing, like -
+    
+    
+      Mmm. 
+    
+    
+       So is it - ? 
+    
+    
+      
+    
+    
+      The smoothing?
+    
+    
+      Yeah. The - you smooth it and then delay the decision by -
+    
+    
+      
+    
+    
+      So.
+    
+    
+      Right. O_K.
+    
+    
+      So that's - that's really not - not bad. So we may in fact - we'll see what they decide. We may in fact have,
+    
+    
+      
+    
+    
+      
+    
+    
+      um, the - the, uh, latency time available for - to have a neural net. I mean, sounds like we probably will. So.
+    
+    
+      
+    
+    
+      Mm-hmm.
+    
+    
+      
+    
+    
+      That'd be good. Cuz I - cuz it certainly always helped us before. So.
+    
+    
+      Uh.
+    
+    
+      What amount of latency are you thinking about when you say that?
+    
+    
+      
+    
+    
+       Well, they're - you know, they're disputing it. You know, they're saying, uh - one group is saying a hundred and thirty milliseconds and another group is saying two hundred and fifty milliseconds.
+    
+    
+      Mmm.
+    
+    
+       Two hundred and fifty is what it was before actually. So,
+    
+    
+       uh, some people are  lobbying   - lobbying  to make it shorter.
+    
+    
+      Oh.
+    
+    
+      
+    
+    
+      Hmm.
+    
+    
+      Um.
+    
+    
+      And, um.
+    
+    
+      Were you thinking of the two-fifty or the one-thirty when you said we should  have enough for the neural net?
+    
+    
+      
+    
+    
+      Well, it just - it - when we find that out it might change exactly how we do it, is all. I mean, how much effort do we put into making it causal? I mean, 
+    
+    
+      Oh, O_K.
+    
+    
+      I think the neural net will probably do better if it looks at a little bit of the future.
+    
+    
+      
+    
+    
+      Mm-hmm.
+    
+    
+      But, um, it will probably work to some extent to look only at the past.
+    
+    
+      
+    
+    
+      And we ha- you know, limited machine and human time, and  effort. And, you know, how - how much time should we put into -
+    
+    
+      into that? So it'd be helpful if we find out from the - the standards folks whether, you know, they're gonna restrict that or not.
+    
+    
+      Mm-hmm.
+    
+    
+      
+    
+    
+      Um.
+    
+    
+       But I think, you know, at this point our major concern is making the performance better and - and, um,
+    
+    
+      
+    
+    
+      if, uh, something  has  to take a little longer in latency in order to do it that's  you know, a secondary issue.
+    
+    
+      Mm-hmm.
+    
+    
+      But if we get told otherwise then, you know, we may have to c- clamp down a bit more.
+    
+    
+      Mmm. 
+    
+    
+      
+    
+    
+      So, the one - one - one difference is that - was there is like we tried computing the delta and then doing the frame-dropping. 
+    
+    
+      S-
+    
+    
+      Mm-hmm. 
+    
+    
+      The earlier system was do the frame-dropping and then compute the delta on the -
+    
+    
+      Uh-huh.
+    
+    
+      Ah. 
+    
+    
+      So this -
+    
+    
+      Which could be a kind of a funny delta. Right?
+    
+    
+      Yeah. 
+    
+    
+      Oh, oh. So that's fixed in this. Yeah, we talked about that.
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      Yeah.  Uh-huh. 
+    
+    
+      So we have no  delta.  And then - So the frame-dropping is the  last  thing that we do.
+    
+    
+      Good.
+    
+    
+      So, yeah, what we do is we compute the silence probability, convert it to that binary flag, and then in the end you c- up- upsample it to
+    
+    
+        Uh-huh.
+    
+    
+      Mm-hmm. 
+    
+    
+      
+    
+    
+      
+    
+    
+      match the final features number of -
+    
+    
+       
+    
+    
+      Did that help then?
+    
+    
+      
+    
+    
+      It seems to be helping on the well-matched condition. So that's why this improvement
+    
+    
+      I got from the last result.
+    
+    
+      So. And it actually r- reduced a little bit on the high mismatch, so in the final weightage it's
+    
+    
+      b- b- better because the well-matched is still weighted more than -
+    
+    
+       So,
+    
+    
+      
+    
+    
+      I mean, you were doing a lot of changes. Did you happen to notice how much, 
+    
+    
+      uh, the change was due to just this frame-dropping problem?  What about this? 
+    
+    
+       Uh, y- you had something on it. Right?
+    
+    
+      Just the frame-dropping problem. Yeah. But it's - it's difficult.
+    
+    
+      Sometime we - we change two - two things together and -
+    
+    
+      
+    
+    
+      But it's around  maybe - it's less than one percent.
+    
+    
+      Uh-huh.
+    
+    
+      Yeah.
+    
+    
+       Well. 
+    
+    
+       It - 
+    
+    
+      But like we're saying, if there's four or five things like that then  pretty sho- soon you're talking real improvement.  Yeah. 
+    
+    
+      Yeah. 
+    
+    
+      
+    
+    
+      Yeah. And  it  -
+    
+    
+      Yeah.
+    
+    
+      And then we have to be careful with that also - with
+    
+    
+      
+    
+    
+      the neural net because
+    
+    
+      in  the proposal the neural net was also, uh, working on - after frame-dropping.
+    
+    
+      
+    
+    
+      Mm-hmm.
+    
+    
+      Um.
+    
+    
+       Oh, that's a real good point.
+    
+    
+      So. Well, we'll have to be -
+    
+    
+      to do the same kind of correction.
+    
+    
+      
+    
+    
+      It might be  hard  if it's at the server side. Right?
+    
+    
+      Mmm.
+    
+    
+      Well, we can do the frame-dropping on the server side or
+    
+    
+      we can just be careful at the terminal side to
+    
+    
+      send a couple of more frames before and after, and -
+    
+    
+      So.
+    
+    
+      I think it's O_K.
+    
+    
+      O_K.
+    
+    
+       You have, um -
+    
+    
+      
+    
+    
+      So when you -
+    
+    
+      Uh, maybe I don't quite understand how this works, but, um, couldn't you just send all of the frames, but  mark  the ones that are supposed to be dropped?
+    
+    
+      Cuz you have a bunch more bandwidth. Right?
+    
+    
+      
+    
+    
+      Well, you could. Yeah. I mean, it - it always seemed to us that it would be kind of nice to - in addition to, uh, reducing insertions, actually use up less bandwidth.
+    
+    
+       But nobody seems to have 
+    
+    
+      Yeah. Yeah.
+    
+    
+      cared about that in this  evaluation. So.
+    
+    
+      
+    
+    
+      And that way the net could use -
+    
+    
+      If the net's on the server side then it could use all of the  frames.
+    
+    
+       Yes, it could be. It's, like, you mean you just transferred everything and then finally drop the frames after the neural net. Right?
+    
+    
+      Mm-hmm.
+    
+    
+      Mm-hmm. 
+    
+    
+      Yeah. That's - that's one thing which -
+    
+    
+      But you could even  mark  them,
+    
+    
+      Yeah. Right now we are -
+    
+    
+       before  they get to the server.
+    
+    
+      Uh, ri- Right now what - wha- what we did is, like, we just mark - we just have this additional bit which goes around the features,
+    
+    
+      
+    
+    
+      Ah.
+    
+    
+      saying it's currently a - it's a speech or a nonspeech.
+    
+    
+      
+    
+    
+      Oh, O_K.
+    
+    
+      So there is no frame-dropping till the final features, like, including the deltas are computed.
+    
+    
+      
+    
+    
+      I see.
+    
+    
+      And after the deltas are computed, you just pick up the ones that are marked silence and then drop them.
+    
+    
+      Mm-hmm.
+    
+    
+       I see.
+    
+    
+      So it would be more or less the same thing with the neural net, I guess, actually.
+    
+    
+      I see.
+    
+    
+      Mm-hmm. 
+    
+    
+      So. Yeah, that's what - that's what - that's what, uh, this is doing right now.
+    
+    
+      I see.
+    
+    
+      O_K.
+    
+    
+      Yeah.
+    
+    
+      Mm-hmm. 
+    
+    
+      
+    
+    
+      Um.
+    
+    
+      
+    
+    
+      
+    
+    
+       O_K.  
+    
+    
+       So, uh,
+    
+    
+       what's, uh - ?
+    
+    
+      That's - that's a good set of work that - that, uh - 
+    
+    
+      Just one more thing. Like, should we do something f- more for the noise estimation, because we still - ?
+    
+    
+      
+    
+    
+      
+    
+    
+       Yeah. I was wondering about that. That was - I - I had written that down there.
+    
+    
+      Yeah.
+    
+    
+      Mm-hmm. 
+    
+    
+       
+    
+    
+      Um - 
+    
+    
+      So, we, uh -
+    
+    
+      
+    
+    
+      actually I did the first experiment. This is  with just fifteen frames.
+    
+    
+      Um.
+    
+    
+      We take the first fifteen frame of each utterance to it, and average their power spectra.
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      Um.
+    
+    
+      I tried just plugging the, um,
+    
+    
+       uh, Guenter
+    
+    
+      noise estimation on this system, and it - uh, it got worse.
+    
+    
+      Um,
+    
+    
+      but of course I didn't play  with it. But - Mm-hmm.
+    
+    
+      Uh-huh.
+    
+    
+      Uh, I didn't  do much more  for noise estimation. I just tried
+    
+    
+      
+    
+    
+      this, and -
+    
+    
+       Hmm.  Yeah. Well, it's not surprising it'd be worse the first time.  But, um,
+    
+    
+      Mm-hmm. 
+    
+    
+       it does seem like,
+    
+    
+      you know, i- i- i- i-
+    
+    
+      some compromise between always depending on the first fifteen frames and
+    
+    
+      a- a- always depending on a - a pause is - is - is a good idea. 
+    
+    
+      Uh, maybe you have to weight the estimate from the first -teen - fifteen frames more heavily than - than was done in your first attempt. But -
+    
+    
+      Mm-hmm. 
+    
+    
+      but -
+    
+    
+      Yeah, I guess. 
+    
+    
+      Yeah.
+    
+    
+      Um. 
+    
+    
+      No, I mean -
+    
+    
+       Um,
+    
+    
+      do you have any way of assessing how well or how poorly the noise estimation is currently doing?
+    
+    
+      Mmm.
+    
+    
+      No, we don't.
+    
+    
+      Yeah.
+    
+    
+      We don't have nothing  that -
+    
+    
+      Is there - was there any experiment with - ?
+    
+    
+      Well, I - I did -
+    
+    
+      The only experiment where I tried was
+    
+    
+      I used the channel zero VAD for the noise estimation
+    
+    
+       and  frame-dropping. So I don't have a -
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      I don't have a split, like which one helped  more. 
+    
+    
+      
+    
+    
+      So.
+    
+    
+      It - it was the best result I could get.
+    
+    
+      Mm-hmm. 
+    
+    
+      So, that's the - 
+    
+    
+       So that's something you could do
+    
+    
+      with, um,
+    
+    
+      this final system. Right? Just do this - everything that is in this final system except,
+    
+    
+       uh,
+    
+    
+      use the channel zero.
+    
+    
+      Mm-hmm. For the noise estimation. Yeah. We can try something.
+    
+    
+      Yeah.
+    
+    
+      And then see how much better it gets.
+    
+    
+      Mm-hmm. Sure.
+    
+    
+      If it's, you know, essentially not better, then  it's probably not worth
+    
+    
+      Yeah.
+    
+    
+      any more.
+    
+    
+      Yeah. But the  Guenter's   argument is slightly different. It's, like, ev- even - even if I use a channel zero VAD, I'm just averaging the -
+    
+    
+      
+    
+    
+      
+    
+    
+      the s- power spectrum. 
+    
+    
+      But the  Guenter's   argument is, like, if it is a non-stationary  segment, then he doesn't update the noise spectrum.
+    
+    
+      
+    
+    
+      So he's, like - he tries to capture only the stationary part in it. So the averaging is, like,
+    
+    
+      
+    
+    
+      
+    
+    
+      different from  updating the noise spectrum only during stationary segments.
+    
+    
+      So, th- the  Guenter   was arguing that, I mean, even if you have a very good V_A_D, averaging it, like, over the  whole  thing is not a good idea.
+    
+    
+      
+    
+    
+      
+    
+    
+      Because you're averaging the stationary and the non-stationary, and finally you end up getting something
+    
+    
+      I see.
+    
+    
+      which is not  really  the s- because, you - anyway, you can't remove the stationary part fr- I mean,  non-stationary  part from  the signal.
+    
+    
+       So -
+    
+    
+      Not using these methods anyway. Yeah.
+    
+    
+      Yeah. So you just  update only doing - or update only the stationary components.
+    
+    
+       Yeah.  So, that's - so that's still a slight difference from what  Guenter   is trying in -
+    
+    
+       Well, yeah. And - and also there's just the fact that, um,
+    
+    
+      eh, uh,
+    
+    
+      although we're trying to do very well on this evaluation, um, we actually would like to have something that worked well in general.
+    
+    
+      Yeah, yeah.
+    
+    
+      And, um, relying on having fifteen frames at the front or something is - is pretty -
+    
+    
+       I mean, you might, you might not.
+    
+    
+      
+    
+    
+      Mmm.
+    
+    
+      Mm-hmm. 
+    
+    
+      So, um.
+    
+    
+       Um,
+    
+    
+      it'd certainly be more robust to different kinds of input if you had at least  some  updates.
+    
+    
+      
+    
+    
+      Um.
+    
+    
+      Mm-hmm. 
+    
+    
+      But, um.
+    
+    
+       Well, I don't know. What - what do you, uh -
+    
+    
+      what do you guys see as - as being what you would be doing in the next week, given
+    
+    
+      wha- what's  happened?
+    
+    
+       Cure  the VAD?
+    
+    
+      Yeah. 
+    
+    
+       What was that?
+    
+    
+       V_A_D.
+    
+    
+      
+    
+    
+      Oh.
+    
+    
+      
+    
+    
+      
+    
+    
+      And -
+    
+    
+      Oh - 
+    
+    
+       O_K.  
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      So, should we keep the same - ? I think we
+    
+    
+      might try to keep the same idea of having a neural network, but
+    
+    
+      
+    
+    
+      training it on
+    
+    
+      more data and
+    
+    
+      adding better features, I think, but - because the current network is just P_L_P features.
+    
+    
+      Well, it's trained on noisy  P_L_P -
+    
+    
+      Just the cepstra.
+    
+    
+      Yeah.
+    
+    
+      P_L_P features computed on noisy speech. But 
+    
+    
+       there is no- nothing particularly robust in these features.
+    
+    
+      No.
+    
+    
+      So, I- I- uh -
+    
+    
+      There's no RASTA, no -
+    
+    
+      So, uh, I -
+    
+    
+      I don't remember what you said  the answer to my, uh, question earlier. Will you -
+    
+    
+      
+    
+    
+      will you train the net on -  after  you've done the spectral subtraction or the Wiener filtering?
+    
+    
+       This is a different net.
+    
+    
+       
+    
+    
+      Oh.
+    
+    
+      So we have a V_A_D which is like neur- that's a neural net. 
+    
+    
+      Oh, yeah.  Hmm. 
+    
+    
+       Oh, you're talking about the V_A_D net. O_K. I see.
+    
+    
+      Yeah.
+    
+    
+      Mm-hmm. 
+    
+    
+      So that -  that  V_A_D was trained on the noisy features.
+    
+    
+      Mm-hmm.
+    
+    
+      So, right now we have, like,
+    
+    
+      uh - we have the cleaned-up features, so we can have a better
+    
+    
+      Mm-hmm.
+    
+    
+      V_A_D by training the net on  the cleaned-up speech.
+    
+    
+      
+    
+    
+      I see. I see.
+    
+    
+       Yeah, but we need a V_A_D for  uh  noise estimation also. So it's, like,
+    
+    
+      where do we want to put the V_A_D?
+    
+    
+      Uh, it's like -
+    
+    
+      Can you use the same net to do both, or - ?
+    
+    
+      For -
+    
+    
+      Can you use the same net that you - that  I  was talking about to do the V_A_D?
+    
+    
+      Mm-hmm.
+    
+    
+      
+    
+    
+      Uh, it actually comes at v- at the very end.
+    
+    
+       So the net - the final net - I mean, which is the feature net - 
+    
+    
+      Mm-hmm.
+    
+    
+      so that actually comes after a chain of, like, L_D_A plus  everything.  So it's, like, it takes a long time to get a decision out of it. And - 
+    
+    
+      and you can actually do it for  final  frame-dropping, but
+    
+    
+      Mm-hmm.
+    
+    
+      not for the V_A- f-  noise  estimation. 
+    
+    
+      
+    
+    
+       You see, the idea is that the, um,
+    
+    
+       initial  decision to - that - that you're in silence or speech happens pretty quickly.
+    
+    
+      Oh, O_K. Cuz that's used by some of these other - ? Oh, O_K.
+    
+    
+      Hmm.
+    
+    
+      And that -
+    
+    
+      Yeah. And that's sort of fed forward, and - and you say "well, flush everything, it's not speech anymore".
+    
+    
+      I see.
+    
+    
+      Yeah.
+    
+    
+       I thought that was  only  used for doing frame-dropping later on.
+    
+    
+      Um, it is used,
+    
+    
+      uh - Yeah, it's only used f-
+    
+    
+      Well, it's used for frame-dropping. 
+    
+    
+      Um, it's used for end of utterance because, you know, there's -
+    
+    
+      Mmm.   
+    
+    
+      
+    
+    
+      if you have  more than five hundred milliseconds of - of - of nonspeech then you figure it's end of utterance or something like that. So,
+    
+    
+      Mm-hmm.
+    
+    
+      
+    
+    
+      
+    
+    
+      um. 
+    
+    
+      And it seems important for, like, the on-line normalization.
+    
+    
+      Um.
+    
+    
+      We don't want to update the mean and variance during silen- long silence portions.
+    
+    
+      Um.
+    
+    
+      So it - it has to be done before
+    
+    
+      Oh.
+    
+    
+      I see.
+    
+    
+      this mean and variance normalization.
+    
+    
+      Um. 
+    
+    
+      Um.
+    
+    
+      Yeah. So probably the V_A_D and - and maybe testing out the noise  estimation a little bit.
+    
+    
+      I mean, keeping the same  method  but - but, uh,
+    
+    
+      
+    
+    
+      seeing if you cou-  but, um  noise estimation could be improved. 
+    
+    
+      Mm-hmm. 
+    
+    
+      Those are sort of related issues.
+    
+    
+      It probably makes sense to move from there.
+    
+    
+      And then, uh,
+    
+    
+      
+    
+    
+      later on in the month I think we wanna start including the  neural net at the end.
+    
+    
+       Um.
+    
+    
+       O_K. Anything else?
+    
+    
+      
+    
+    
+       The Half Dome was great.
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+       Good.
+    
+    
+      Yeah. You didn't - didn't fall.
+    
+    
+      
+    
+    
+       That's good.  
+    
+    
+      
+    
+    
+      Well, yeah. 
+    
+    
+      
+    
+    
+      Our e- our effort would have been  devastated   if you guys had   run into problems.
+    
+    
+      
+    
+    
+      
+    
+    
+      So, Hynek is coming back next week, you said?
+    
+    
+      Yeah, that's the plan.
+    
+    
+      Hmm.
+    
+    
+       I guess the week after he'll be, uh, going back to Europe, and so we wanna -
+    
+    
+      Is he in Europe right now or is he up at - ? Oh.
+    
+    
+      No, no. He's - he's - he's dropped into the U_S. Yeah. Yeah.
+    
+    
+      Hmm.
+    
+    
+      
+    
+    
+      
+    
+    
+      So. 
+    
+    
+      
+    
+    
+      Uh.  So, uh.
+    
+    
+      Uh, the idea was that, uh, we'd - we'd sort out where we were going
+    
+    
+      next with this - with this work before he, uh, left on this next trip.
+    
+    
+      
+    
+    
+       Good. 
+    
+    
+       Uh, Barry, you just got through your  quals, so I don't know if you  have much to say. But, uh.
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      Mmm. 
+    
+    
+      
+    
+    
+      No, just, uh, looking into some - some of the things that, um, 
+    
+    
+      
+    
+    
+      uh, John Ohala and Hynek, um, gave as feedback,
+    
+    
+      um, as - as a starting point for the project.
+    
+    
+      Um. 
+    
+    
+      In - in my proposal, I - I was thinking about starting from a set of, uh, phonological features,
+    
+    
+      
+    
+    
+      or a subset of them. Um, but that might not be necessarily a good idea according to, um, John.
+    
+    
+       
+    
+    
+      Mm-hmm.
+    
+    
+       He said, uh, um, these - these phonological features are - are sort of figments of imagination also.
+    
+    
+       Um. S-
+    
+    
+      Mm-hmm.
+    
+    
+      In conversational speech in particular. I think you can - you can put  them   in pretty reliably in synthetic speech. But 
+    
+    
+      Ye-
+    
+    
+      we don't have too much trouble recognizing synthetic speech since we create it in the first place. So, it's - 
+    
+    
+      Right. 
+    
+    
+      Yeah. So, um, a better way would be something more - more data-driven, just looking at the data and seeing what's similar and what's not similar.
+    
+    
+      Mm-hmm.
+    
+    
+      
+    
+    
+      
+    
+    
+      Mm-hmm.
+    
+    
+      So, I'm - I'm, um, taking a look at some of, um,
+    
+    
+      
+    
+    
+       Sangita's work on - on TRAPS. She did something where, um - 
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      w- where the TRAPS learn- She clustered the - the temporal patterns of, um, certain - certain phonemes in - in m- averaged over many, many contexts.
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+      And, uh, some things tended to cluster.
+    
+    
+      Mm-hmm.
+    
+    
+      Right? You know, like stop - stop consonants clustered really well.
+    
+    
+      Hmm.
+    
+    
+      
+    
+    
+      Um, silence was by its own self. And, uh, um,  v- vocalic was clustered. And, 
+    
+    
+      
+    
+    
+      Mm-hmm.
+    
+    
+      Mm-hmm.
+    
+    
+      um, so,
+    
+    
+      
+    
+    
+      those are  interesting things to -
+    
+    
+      So you're - now you're sort of looking to try to gather a set of these
+    
+    
+      types of features?
+    
+    
+       Right. Yeah. Just to
+    
+    
+      Mm-hmm.
+    
+    
+      see where - where I could start off from, uh, you know?
+    
+    
+      Mm-hmm.
+    
+    
+      A - a - a set of small features and
+    
+    
+      continue to iterate and find, uh, a better set.
+    
+    
+      Mm-hmm.
+    
+    
+      Yeah.
+    
+    
+       O_K. Well, short meeting.
+    
+    
+       That's O_K. 
+    
+    
+      
+    
+    
+      Yeah.
+    
+    
+      
+    
+    
+      O_K. So next week hopefully we'll - can get Hynek here to - to join us and, uh, 
+    
+    
+      
+    
+    
+      uh.
+    
+    
+       Digits, digits.
+    
+    
+      Should we do digits?
+    
+    
+       
+    
+    
+      O_K,  now . 
+    
+    
+      Go ahead, Morgan. You can start.
+    
+    
+      Alright. Let me get my glasses on so I can  see them. 
+    
+    
+      
+    
+    
+      
+    
+    
+      O_K.
+    
+    
+      
+    
+    
+      Transcript L_ dash three two seven. 
+    
+    
+      Eight two one, zero six, seven four zero zero. 
+    
+    
+      Eight zero zero one, four one seven six, one two eight one. 
+    
+    
+      Six three zero, two two four, one nine one two. 
+    
+    
+      Six five zero, eight six nine, four six two four. 
+    
+    
+      Eight nine one nine, one, four eight five. 
+    
+    
+      Six eight, four five, three eight, eight three, eight zero. 
+    
+    
+      Four five, one eight, eight two, nine one, three five. 
+    
+    
+      Zero, two three four, four four, eight one two, two. 
+    
+    
+      Transcript L_ dash three two eight. 
+    
+    
+      Nine nine zero, six zero, three nine five five. 
+    
+    
+      Nin- nine eight four, three one, six five three four. 
+    
+    
+      Two four three, one one four, four one six six. 
+    
+    
+      Four one, nine four, three three, seven six, five five. 
+    
+    
+      Five zero five, seven five four, zero seven five. 
+    
+    
+      Six six three zero, five, four eight seven. 
+    
+    
+      Seven zero one, eight one two, eight three one. 
+    
+    
+      Five seven, three four, eight seven, zero three, six eight. 
+    
+    
+      
+    
+    
+      Transcript L_ dash three two nine. 
+    
+    
+      
+    
+    
+      Nine nine seven, seven three zero, three six eight. 
+    
+    
+      Seven six two, seven one seven, zero nine nine six. 
+    
+    
+      Nine, three eight eight, nine six, nine eight seven, nine. 
+    
+    
+      Two, one two six, nine three, seven two zero, six. 
+    
+    
+      Six seven two, three zero eight, nine four nine. 
+    
+    
+      Eight, zero three two, six three, one four eight, nine. 
+    
+    
+      Six, four four four, two, six six nine. 
+    
+    
+      Three one eight, seven nine one, three two four seven. 
+    
+    
+      Transcript L_ dash three three zero. 
+    
+    
+      Two three six zero, nine, five nine three. 
+    
+    
+      Five four six, three four eight, six six seven five. 
+    
+    
+      Three seven zero four, three eight four four, eight six three six. 
+    
+    
+      Three six seven five, eight seven zero five, five seven three nine. 
+    
+    
+      One five zero, nine zero, one six two two. 
+    
+    
+      Four zero nine, two seven seven, seven zero one. 
+    
+    
+      Nine, two zero six, eight nine, six seven six, zero. 
+    
+    
+      One six four, one nine one, two four two eight. 
+    
+    
+      Transcript L_ dash three three one. 
+    
+    
+      Three seven eight eight, nine, one zero zero. 
+    
+    
+      Six two three, two seven, zero three eight five. 
+    
+    
+      One three eight, one eight, three seven nine five. 
+    
+    
+      Zero nine six, seven six one, zero one nine seven. 
+    
+    
+      Five four one two, four zero, four one, five six one two. 
+    
+    
+      Three zero nine one, six zero five seven, six five two eight. 
+    
+    
+      Three four one, one six four, seven three nine. 
+    
+    
+      
+    
+    
+      Four five two eight, eight, five O_ seven. 
+    
+    
+       
+    
+    
+       
+    
+    
+      O_K.
+    
+    
+       
+    
+    
+      And we're off.
+    
+    
+      Mm- 
+    
+
+  
+
+
