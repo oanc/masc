@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
+   <struct type="Date" from="10" to="26">
+      <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="DateName"/>
+   </struct>
+   <struct type="Date" from="28" to="42">
+      <feat name="kind" value="time"/>
+      <feat name="rule2" value="TimeOnlyFinal"/>
+      <feat name="rule1" value="TimeDigital1"/>
+   </struct>
+   <struct type="Person" from="50" to="64">
+      <feat name="gender" value="female"/>
+      <feat name="rule" value="PersonFirstLast"/>
+   </struct>
+   <struct type="Person" from="50" to="64">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="PersonLocAmbig"/>
+      <feat name="gender" value="null"/>
+   </struct>
+   <struct type="Organization" from="261" to="264">
+      <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="orgType" value="company"/>
+   </struct>
+   <struct type="Person" from="822" to="826">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="FirstPersonStop"/>
+      <feat name="gender" value="null"/>
+   </struct>
+   <struct type="Location" from="1110" to="1115">
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="locType" value="province"/>
+   </struct>
+   <struct type="Money" from="1419" to="1428">
+      <feat name="kind" value="number"/>
+      <feat name="rule" value="MoneyCurrencyUnit"/>
+   </struct>
+   <struct type="Person" from="1521" to="1533">
+      <feat name="gender" value="null"/>
+      <feat name="rule" value="PersonFirstLast"/>
+   </struct>
+   <struct type="Person" from="1521" to="1533">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="gender" value="null"/>
+   </struct>
+   <struct type="Organization" from="1535" to="1553">
+      <feat name="rule" value="LocOrg"/>
+   </struct>
+</cesAna>

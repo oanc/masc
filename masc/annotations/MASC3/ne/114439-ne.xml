@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
+   <struct type="Person" from="10" to="26">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="PersonLocAmbig"/>
+      <feat name="gender" value="null"/>
+   </struct>
+   <struct type="Person" from="10" to="26">
+      <feat name="gender" value="null"/>
+      <feat name="rule" value="PersonFirstLast"/>
+   </struct>
+   <struct type="Date" from="124" to="155">
+      <feat name="rule2" value="DateTimeFinal"/>
+      <feat name="kind" value="dateTime"/>
+   </struct>
+   <struct type="Location" from="516" to="529">
+      <feat name="rule1" value="POBoxAddress"/>
+      <feat name="rule2" value="StreetFinal"/>
+   </struct>
+   <struct type="Location" from="537" to="544">
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="locType" value="city"/>
+   </struct>
+</cesAna>

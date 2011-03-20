@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
+   <struct type="Date" from="10" to="40">
+      <feat name="rule2" value="DateTimeFinal"/>
+      <feat name="kind" value="dateTime"/>
+   </struct>
+   <struct type="Person" from="48" to="58">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="gender" value="null"/>
+   </struct>
+   <struct type="Person" from="48" to="58">
+      <feat name="gender" value="male"/>
+      <feat name="rule" value="PersonFirstLast"/>
+   </struct>
+   <struct type="Organization" from="218" to="224">
+      <feat name="rule" value="OrgInitials"/>
+   </struct>
+   <struct type="Person" from="607" to="613">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="gender" value="female"/>
+   </struct>
+   <struct type="Location" from="618" to="624">
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="locType" value="city"/>
+   </struct>
+   <struct type="Organization" from="734" to="740">
+      <feat name="rule" value="OrgInitials"/>
+   </struct>
+   <struct type="Organization" from="885" to="888">
+      <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="orgType" value="company"/>
+   </struct>
+   <struct type="Location" from="890" to="903">
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="LocPersonAmbig"/>
+      <feat name="locType" value="city"/>
+   </struct>
+</cesAna>
