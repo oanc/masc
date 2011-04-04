@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
-   <struct type="Date" from="9" to="39">
+   <struct type="Date" from="9" to="40">
       <feat name="rule2" value="DateTimeFinal"/>
       <feat name="kind" value="dateTime"/>
    </struct>
-   <struct type="Person" from="59" to="62">
-      <feat name="rule" value="PersonFinal"/>
-      <feat name="rule1" value="GazPersonFirst"/>
+   <struct type="Person" from="80" to="93">
       <feat name="gender" value="female"/>
    </struct>
-   <struct type="Person" from="297" to="307">
-      <feat name="rule" value="PersonFinal"/>
-      <feat name="rule1" value="PersonTitle"/>
-      <feat name="gender" value="null"/>
+   <struct type="Person" from="139" to="155">
+      <feat name="gender" value="female"/>
+      <feat name="rule" value="PersonFirstLast"/>
    </struct>
-   <struct type="Money" from="519" to="530">
-      <feat name="kind" value="number"/>
-      <feat name="rule" value="MoneySymbolUnit"/>
+   <struct type="Organization" from="180" to="201">
+      <feat name="orgType" value="null"/>
+      <feat name="rule1" value="OrgXBase"/>
+      <feat name="rule2" value="OrgFinal"/>
    </struct>
-   <struct type="Person" from="958" to="968">
-      <feat name="rule" value="PersonFinal"/>
-      <feat name="rule1" value="PersonTitle"/>
-      <feat name="gender" value="null"/>
+   <struct type="Organization" from="206" to="219">
+      <feat name="rule" value="LocOrg"/>
+   </struct>
+   <struct type="Person" from="1702" to="1715">
+      <feat name="gender" value="male"/>
+      <feat name="rule" value="PersonFirstLast"/>
    </struct>
 </cesAna>
