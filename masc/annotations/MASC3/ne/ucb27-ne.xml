@@ -1,47 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
+   <struct type="Person" from="10" to="26"/>
    <struct type="Date" from="177" to="208">
       <feat name="rule2" value="DateTimeFinal"/>
       <feat name="kind" value="dateTime"/>
    </struct>
    <struct type="Date" from="245" to="249">
-      <feat name="kind" value="date"/>
-      <feat name="rule2" value="YearOnlyFinal"/>
       <feat name="rule1" value="TempYear2"/>
-   </struct>
-   <struct type="Person" from="284" to="289">
-      <feat name="rule" value="PersonFinal"/>
-      <feat name="rule1" value="GazPersonFirst"/>
-      <feat name="gender" value="male"/>
-   </struct>
-   <struct type="Organization" from="295" to="308">
-      <feat name="rule2" value="OrgFinal"/>
-      <feat name="rule1" value="OrgXandY"/>
-      <feat name="orgType" value="null"/>
+      <feat name="rule2" value="YearOnlyFinal"/>
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Organization" from="411" to="416">
-      <feat name="rule2" value="OrgFinal"/>
-      <feat name="rule1" value="GazOrganization"/>
       <feat name="orgType" value="company"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="rule2" value="OrgFinal"/>
    </struct>
+   <struct type="Organization" from="418" to="423"/>
    <struct type="Organization" from="425" to="431">
-      <feat name="rule2" value="OrgFinal"/>
-      <feat name="rule1" value="GazOrganization"/>
       <feat name="orgType" value="company"/>
-   </struct>
-   <struct type="Organization" from="444" to="449">
-      <feat name="rule2" value="OrgFinal"/>
       <feat name="rule1" value="GazOrganization"/>
-      <feat name="orgType" value="company"/>
-   </struct>
-   <struct type="Person" from="451" to="462">
-      <feat name="rule" value="PersonFinal"/>
-      <feat name="rule1" value="PersonFullReverse"/>
-      <feat name="gender" value="null"/>
-   </struct>
-   <struct type="Organization" from="510" to="528">
       <feat name="rule2" value="OrgFinal"/>
-      <feat name="rule1" value="OrgXKey"/>
-      <feat name="orgType" value="null"/>
    </struct>
+   <struct type="Organization" from="433" to="437"/>
+   <struct type="Organization" from="440" to="449">
+      <feat name="orgType" value="company"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="rule2" value="OrgFinal"/>
+   </struct>
+   <struct type="Organization" from="451" to="459"/>
+   <struct type="Organization" from="461" to="464"/>
+   <struct type="Organization" from="466" to="474"/>
 </cesAna>

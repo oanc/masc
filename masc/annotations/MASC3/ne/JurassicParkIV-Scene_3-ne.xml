@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cesAna xmlns="http://www.xces.org/schema/2003" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xces.org/schema/2003 utf-8">
-   <struct type="Organization" from="50" to="55">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
-   </struct>
+<cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
+   <struct type="Location" from="9" to="31"/>
+   <struct type="Person" from="9" to="23"/>
    <struct type="Person" from="50" to="55">
       <feat name="gender" value="male"/>
    </struct>
@@ -14,76 +11,51 @@
    <struct type="Person" from="70" to="77">
       <feat name="gender" value="female"/>
    </struct>
-   <struct type="Organization" from="108" to="125">
-      <feat name="orgType" value="null"/>
-      <feat name="rule1" value="PersonOrgAmbig"/>
-      <feat name="rule2" value="OrgFinal"/>
-   </struct>
    <struct type="Person" from="229" to="240">
       <feat name="gender" value="male"/>
    </struct>
    <struct type="Location" from="257" to="266">
-      <feat name="locType" value="city"/>
-      <feat name="rule1" value="GazLocation"/>
       <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="locType" value="city"/>
    </struct>
    <struct type="Person" from="403" to="413">
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Organization" from="408" to="413">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
-   </struct>
    <struct type="Person" from="431" to="444">
-      <feat name="" value="PersonFinal"/>
-      <feat name="rule1" value="PersonFull"/>
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="" value="PersonFinal"/>
    </struct>
    <struct type="Person" from="505" to="515">
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Organization" from="510" to="515">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
-   </struct>
    <struct type="Person" from="639" to="652">
-      <feat name="" value="PersonFinal"/>
-      <feat name="rule1" value="PersonFull"/>
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="" value="PersonFinal"/>
    </struct>
    <struct type="Person" from="731" to="741">
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Organization" from="736" to="741">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
-   </struct>
    <struct type="Person" from="753" to="756">
-      <feat name="gender" value="male"/>
-      <feat name="rule1" value="GazPersonFirst"/>
       <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="gender" value="male"/>
    </struct>
    <struct type="Person" from="761" to="772">
       <feat name="gender" value="male"/>
    </struct>
    <struct type="Person" from="963" to="976">
-      <feat name="" value="PersonFinal"/>
-      <feat name="rule1" value="PersonFull"/>
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="" value="PersonFinal"/>
    </struct>
    <struct type="Person" from="1002" to="1013">
       <feat name="gender" value="male"/>
    </struct>
    <struct type="Person" from="1147" to="1154">
       <feat name="gender" value="male"/>
-   </struct>
-   <struct type="Organization" from="1174" to="1179">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="Person" from="1174" to="1179">
       <feat name="gender" value="male"/>
@@ -98,9 +70,9 @@
       <feat name="gender" value="male"/>
    </struct>
    <struct type="Date" from="1378" to="1383">
-      <feat name="rule1" value="GazDateWords"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
       <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="GazDateWords"/>
    </struct>
    <struct type="Person" from="1420" to="1427">
       <feat name="gender" value="male"/>
@@ -109,9 +81,9 @@
       <feat name="gender" value="male"/>
    </struct>
    <struct type="Person" from="1484" to="1507">
-      <feat name="" value="PersonFinal"/>
-      <feat name="rule1" value="PersonFull"/>
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="" value="PersonFinal"/>
    </struct>
    <struct type="Person" from="1576" to="1586">
       <feat name="gender" value="male"/>
@@ -122,9 +94,9 @@
       <feat name="rule" value="PersonFirstLast"/>
    </struct>
    <struct type="Person" from="1607" to="1618">
-      <feat name="" value="PersonFull"/>
-      <feat name="gender" value="male"/>
       <feat name="rule" value="PersonFinal"/>
+      <feat name="gender" value="male"/>
+      <feat name="" value="PersonFull"/>
    </struct>
    <struct type="Person" from="1716" to="1727">
       <feat name="gender" value="male"/>
@@ -133,9 +105,9 @@
       <feat name="gender" value="male"/>
    </struct>
    <struct type="Person" from="1830" to="1837">
-      <feat name="" value="PersonFinal"/>
-      <feat name="rule1" value="PersonTitle"/>
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonTitle"/>
+      <feat name="" value="PersonFinal"/>
    </struct>
    <struct type="Person" from="1903" to="1917">
       <feat name="gender" value="male"/>
@@ -146,11 +118,6 @@
    </struct>
    <struct type="Person" from="2061" to="2071">
       <feat name="gender" value="male"/>
-   </struct>
-   <struct type="Organization" from="2066" to="2071">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="Person" from="2110" to="2123">
       <feat name="gender" value="female"/>
@@ -166,9 +133,9 @@
       <feat name="gender" value="male"/>
    </struct>
    <struct type="Organization" from="2290" to="2293">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
       <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="orgType" value="company"/>
    </struct>
    <struct type="Person" from="2413" to="2425">
       <feat name="gender" value="male"/>
@@ -185,415 +152,337 @@
       <feat name="gender" value="female"/>
    </struct>
    <struct type="Person" from="3082" to="3087">
-      <feat name="gender" value="male"/>
-      <feat name="rule1" value="PersonTitle"/>
       <feat name="rule" value="female"/>
+      <feat name="rule1" value="PersonTitle"/>
+      <feat name="gender" value="male"/>
    </struct>
    <struct type="Person" from="3093" to="3098">
-      <feat name="gender" value="male"/>
-      <feat name="rule1" value="PersonTitle"/>
       <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="PersonTitle"/>
+      <feat name="gender" value="male"/>
    </struct>
    <struct type="Location" from="3304" to="3311">
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="GazLocation"/>
       <feat name="locType" value="province"/>
-      <feat name="rule1" value="GazLocation"/>
-      <feat name="rule2" value="LocFinal"/>
    </struct>
-   <struct type="Person" from="3386" to="3393">
-      <feat name="gender" value="male"/>
-      <feat name="rule1" value="PersonTitle"/>
+   <struct type="Person" from="3385" to="3392">
       <feat name="rule" value="PersonFinal"/>
-   </struct>
-   <struct type="Person" from="3546" to="3558">
+      <feat name="rule1" value="PersonTitle"/>
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Person" from="3621" to="3628">
+   <struct type="Person" from="3545" to="3557">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="3620" to="3627">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="PersonTitle"/>
       <feat name="gender" value="female"/>
+   </struct>
+   <struct type="Person" from="3818" to="3821">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="3854" to="3857">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="3926" to="3931">
+      <feat name="rule" value="PersonFinal"/>
       <feat name="rule1" value="PersonTitle"/>
-      <feat name="rule" value="PersonFinal"/>
-   </struct>
-   <struct type="Person" from="3819" to="3822">
-      <feat name="gender" value="male"/>
-      <feat name="rule1" value="GazPersonFirst"/>
-      <feat name="rule" value="PersonFinal"/>
-   </struct>
-   <struct type="Person" from="3855" to="3858">
-      <feat name="gender" value="male"/>
-      <feat name="rule1" value="GazPersonFirst"/>
-      <feat name="rule" value="PersonFinal"/>
-   </struct>
-   <struct type="Person" from="3927" to="3932">
       <feat name="gender" value="null"/>
+   </struct>
+   <struct type="Person" from="4125" to="4137">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="4682" to="4694">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="4942" to="4949">
+      <feat name="gender" value="male"/>
       <feat name="rule1" value="PersonTitle"/>
-      <feat name="rule" value="PersonFinal"/>
-   </struct>
-   <struct type="Person" from="4126" to="4138">
-      <feat name="gender" value="male"/>
-   </struct>
-   <struct type="Person" from="4683" to="4695">
-      <feat name="gender" value="male"/>
-   </struct>
-   <struct type="Organization" from="4915" to="4922">
-      <feat name="orgType" value="department"/>
-      <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
-   </struct>
-   <struct type="Person" from="4943" to="4950">
       <feat name="" value="PersonFinal"/>
-      <feat name="rule1" value="PersonTitle"/>
-      <feat name="gender" value="male"/>
    </struct>
-   <struct type="Person" from="5122" to="5133">
-      <feat name="gender" value="male"/>
-      <feat name="rule1" value="PersonTitle"/>
+   <struct type="Person" from="5121" to="5132">
       <feat name="rule" value="PersonFinal"/>
-   </struct>
-   <struct type="Person" from="5210" to="5214">
-      <feat name="gender" value="male"/>
       <feat name="rule1" value="PersonTitle"/>
-      <feat name="rule" value="PersonFinal"/>
+      <feat name="gender" value="male"/>
    </struct>
-   <struct type="Location" from="5242" to="5249">
+   <struct type="Location" from="5161" to="5167"/>
+   <struct type="Person" from="5209" to="5213">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="PersonTitle"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Location" from="5241" to="5248">
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="GazLocation"/>
       <feat name="locType" value="city"/>
-      <feat name="rule1" value="GazLocation"/>
-      <feat name="rule2" value="LocFinal"/>
    </struct>
-   <struct type="Person" from="5267" to="5279">
+   <struct type="Organization" from="5251" to="5261"/>
+   <struct type="Person" from="5266" to="5278">
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Organization" from="5543" to="5546">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
+   <struct type="Person" from="5511" to="5518"/>
+   <struct type="Organization" from="5542" to="5545">
       <feat name="rule2" value="OrgFinal"/>
-   </struct>
-   <struct type="Person" from="5580" to="5594">
-      <feat name="gender" value="male"/>
-   </struct>
-   <struct type="Organization" from="5612" to="5617">
-      <feat name="orgType" value="company"/>
       <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
+      <feat name="orgType" value="company"/>
    </struct>
-   <struct type="Person" from="5612" to="5617">
+   <struct type="Person" from="5579" to="5593">
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Person" from="5619" to="5626">
+   <struct type="Person" from="5611" to="5616">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="5618" to="5625">
       <feat name="gender" value="female"/>
    </struct>
-   <struct type="Person" from="5632" to="5639">
+   <struct type="Person" from="5631" to="5638">
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Person" from="5650" to="5657">
+   <struct type="Person" from="5649" to="5656">
       <feat name="rule1" value="PersonTitle"/>
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Organization" from="5697" to="5718">
-      <feat name="orgType" value="null"/>
+   <struct type="Organization" from="5696" to="5717">
+      <feat name="rule2" value="OrgFinal"/>
       <feat name="rule1" value="TheOrgXBase"/>
-      <feat name="rule2" value="OrgFinal"/>
+      <feat name="orgType" value="null"/>
    </struct>
-   <struct type="Person" from="5736" to="5746">
+   <struct type="Person" from="5735" to="5746">
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Organization" from="5741" to="5746">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
+   <struct type="Person" from="5760" to="5767"/>
+   <struct type="Person" from="5863" to="5870"/>
+   <struct type="Organization" from="5891" to="5894">
       <feat name="rule2" value="OrgFinal"/>
-   </struct>
-   <struct type="Organization" from="5892" to="5895">
-      <feat name="orgType" value="company"/>
       <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
+      <feat name="orgType" value="company"/>
    </struct>
-   <struct type="Location" from="5942" to="5952">
-      <feat name="locType" value="country"/>
+   <struct type="Location" from="5941" to="5951">
+      <feat name="rule2" value="LocFinal"/>
       <feat name="rule1" value="GazLocation"/>
-      <feat name="rule2" value="LocFinal"/>
+      <feat name="locType" value="country"/>
    </struct>
-   <struct type="Person" from="6044" to="6057">
+   <struct type="Person" from="6043" to="6056">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonFull"/>
       <feat name="" value="male"/>
-      <feat name="rule1" value="PersonFull"/>
-      <feat name="gender" value="female"/>
    </struct>
-   <struct type="Date" from="6327" to="6339">
-      <feat name="rule1" value="ModifierDate"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="kind" value="date"/>
-   </struct>
-   <struct type="Person" from="6487" to="6500">
-      <feat name="gender" value="female"/>
-      <feat name="rule1" value="PersonFull"/>
+   <struct type="Person" from="6486" to="6500">
       <feat name="rule" value="PersonFinal"/>
-   </struct>
-   <struct type="Person" from="6698" to="6711">
-      <feat name="gender" value="female"/>
       <feat name="rule1" value="PersonFull"/>
-      <feat name="rule" value="PersonFinal"/>
+      <feat name="gender" value="female"/>
    </struct>
-   <struct type="Organization" from="6830" to="6842">
-      <feat name="orgType" value="company"/>
+   <struct type="Person" from="6697" to="6710">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="gender" value="female"/>
+   </struct>
+   <struct type="Organization" from="6829" to="6841">
+      <feat name="rule2" value="OrgFinal"/>
       <feat name="rule1" value="LocOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
-   </struct>
-   <struct type="Location" from="6926" to="6938">
-      <feat name="locType" value="post"/>
-      <feat name="rule1" value="Location1"/>
-      <feat name="rule2" value="LocFinal"/>
-   </struct>
-   <struct type="Person" from="7105" to="7118">
-      <feat name="gender" value="female"/>
-      <feat name="rule1" value="PersonFull"/>
-      <feat name="rule" value="PersonFinal"/>
-   </struct>
-   <struct type="Person" from="7155" to="7165">
-      <feat name="gender" value="male"/>
-   </struct>
-   <struct type="Organization" from="7160" to="7165">
       <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
    </struct>
-   <struct type="Person" from="7176" to="7187">
-      <feat name="gender" value="male"/>
+   <struct type="Location" from="6925" to="6937">
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="locType" value="post"/>
    </struct>
-   <struct type="Person" from="7197" to="7201">
-      <feat name="gender" value="female"/>
-      <feat name="rule1" value="FirstName"/>
+   <struct type="Person" from="7104" to="7118">
       <feat name="rule" value="PersonFinal"/>
-   </struct>
-   <struct type="Person" from="7270" to="7283">
-      <feat name="" value="PersonFinal"/>
       <feat name="rule1" value="PersonFull"/>
       <feat name="gender" value="female"/>
    </struct>
-   <struct type="Organization" from="7407" to="7414">
-      <feat name="orgType" value="military"/>
-      <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
+   <struct type="Person" from="7154" to="7165">
+      <feat name="gender" value="male"/>
    </struct>
-   <struct type="Person" from="7522" to="7535">
+   <struct type="Person" from="7175" to="7187">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="7196" to="7200">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="FirstName"/>
+      <feat name="gender" value="female"/>
+   </struct>
+   <struct type="Person" from="7269" to="7283">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="" value="PersonFinal"/>
+   </struct>
+   <struct type="Organization" from="7406" to="7414">
+      <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="orgType" value="military"/>
+   </struct>
+   <struct type="Person" from="7521" to="7534">
       <feat name="gender" value="female"/>
       <feat name="rule" value="PersonFirstLast"/>
    </struct>
-   <struct type="Location" from="7544" to="7554">
-      <feat name="locType" value="country"/>
-      <feat name="rule1" value="GazLocation"/>
+   <struct type="Location" from="7543" to="7553">
       <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="locType" value="country"/>
    </struct>
-   <struct type="Organization" from="7559" to="7562">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
+   <struct type="Organization" from="7558" to="7561">
       <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="orgType" value="company"/>
    </struct>
-   <struct type="Person" from="7627" to="7633">
-      <feat name="" value="GazPersonFirst"/>
-      <feat name="gender" value="female"/>
+   <struct type="Person" from="7626" to="7632">
       <feat name="rule" value="PersonFinal"/>
+      <feat name="gender" value="female"/>
+      <feat name="" value="GazPersonFirst"/>
    </struct>
-   <struct type="Date" from="7777" to="7781">
-      <feat name="rule1" value="TimeAbsolute"/>
-      <feat name="rule2" value="TimeOnlyFinal"/>
-      <feat name="kind" value="time"/>
-   </struct>
-   <struct type="Organization" from="7865" to="7868">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
+   <struct type="Organization" from="7864" to="7867">
       <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="orgType" value="company"/>
    </struct>
-   <struct type="Location" from="7941" to="7951">
+   <struct type="Location" from="7940" to="7950">
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="GazLocation"/>
       <feat name="locType" value="country"/>
-      <feat name="rule1" value="GazLocation"/>
-      <feat name="rule2" value="LocFinal"/>
    </struct>
-   <struct type="Date" from="7972" to="7976">
-      <feat name="rule1" value="TimeAbsolute"/>
-      <feat name="rule2" value="TimeOnlyFinal"/>
-      <feat name="kind" value="time"/>
-   </struct>
-   <struct type="Date" from="7986" to="7998">
-      <feat name="rule1" value="ModifierDate"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="kind" value="date"/>
-   </struct>
-   <struct type="Organization" from="8148" to="8151">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
+   <struct type="Organization" from="8147" to="8150">
       <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="orgType" value="company"/>
    </struct>
-   <struct type="Date" from="8224" to="8228">
-      <feat name="rule1" value="TempYear2"/>
+   <struct type="Date" from="8223" to="8227">
+      <feat name="kind" value="date"/>
       <feat name="rule2" value="YearOnlyFinal"/>
-      <feat name="kind" value="date"/>
+      <feat name="rule1" value="TempYear2"/>
    </struct>
-   <struct type="Location" from="8241" to="8250">
-      <feat name="locType" value="city"/>
-      <feat name="rule1" value="GazLocation"/>
+   <struct type="Location" from="8240" to="8249">
       <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="locType" value="city"/>
    </struct>
-   <struct type="Person" from="8347" to="8358">
+   <struct type="Person" from="8346" to="8358">
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Organization" from="8388" to="8393">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
-   </struct>
-   <struct type="Person" from="8388" to="8393">
+   <struct type="Person" from="8387" to="8392">
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Person" from="8395" to="8402">
+   <struct type="Person" from="8394" to="8401">
       <feat name="gender" value="female"/>
    </struct>
-   <struct type="Person" from="8408" to="8415">
+   <struct type="Person" from="8407" to="8414">
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Person" from="8477" to="8491">
+   <struct type="Person" from="8476" to="8491">
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Organization" from="8538" to="8542">
-      <feat name="orgType" value="military"/>
-      <feat name="rule1" value="GazOrganization"/>
+   <struct type="Organization" from="8537" to="8541">
       <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="orgType" value="military"/>
    </struct>
-   <struct type="Person" from="8579" to="8592">
+   <struct type="Person" from="8578" to="8592">
       <feat name="gender" value="female"/>
       <feat name="" value="PersonFull"/>
    </struct>
-   <struct type="Person" from="8639" to="8649">
+   <struct type="Person" from="8638" to="8648">
       <feat name="gender" value="male"/>
       <feat name="rule" value="PersonFirstLast"/>
    </struct>
-   <struct type="Person" from="8658" to="8669">
-      <feat name="gender" value="male"/>
-      <feat name="rule1" value="PersonTitle"/>
+   <struct type="Person" from="8657" to="8668">
       <feat name="rule" value="PersonFinal"/>
-   </struct>
-   <struct type="Person" from="8674" to="8684">
+      <feat name="rule1" value="PersonTitle"/>
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Organization" from="8679" to="8684">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
+   <struct type="Person" from="8673" to="8684">
+      <feat name="gender" value="male"/>
    </struct>
-   <struct type="Person" from="8721" to="8734">
+   <struct type="Person" from="8720" to="8734">
       <feat name="" value="female"/>
       <feat name="rule1" value="PersonFull"/>
    </struct>
-   <struct type="Person" from="8774" to="8785">
+   <struct type="Person" from="8773" to="8785">
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Person" from="8804" to="8817">
+   <struct type="Person" from="8803" to="8817">
+      <feat name="gender" value="female"/>
+      <feat name="rule1" value="PersonFull"/>
       <feat name="" value="PersonFinal"/>
-      <feat name="rule1" value="PersonFull"/>
-      <feat name="gender" value="female"/>
    </struct>
-   <struct type="Person" from="8866" to="8876">
+   <struct type="Person" from="8865" to="8876">
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Organization" from="8871" to="8876">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
-   </struct>
-   <struct type="Location" from="8883" to="8888">
-      <feat name="locType" value="province"/>
-      <feat name="rule1" value="GazLocation"/>
-      <feat name="rule2" value="LocFinal"/>
-   </struct>
-   <struct type="Person" from="8898" to="8911">
-      <feat name="gender" value="female"/>
-      <feat name="rule1" value="PersonFull"/>
+   <struct type="Person" from="8897" to="8911">
       <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="gender" value="female"/>
    </struct>
+   <struct type="Person" from="8939" to="8948"/>
    <struct type="Person" from="8953" to="8964">
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Organization" from="8959" to="8964">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
-   </struct>
-   <struct type="Person" from="9129" to="9142">
-      <feat name="gender" value="female"/>
-      <feat name="rule1" value="PersonFull"/>
+   <struct type="Person" from="9128" to="9142">
       <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="gender" value="female"/>
    </struct>
-   <struct type="Person" from="9253" to="9264">
+   <struct type="Person" from="9252" to="9264">
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Person" from="9301" to="9306">
+   <struct type="Person" from="9300" to="9305">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="PersonTitle"/>
       <feat name="gender" value="null"/>
-      <feat name="rule1" value="PersonTitle"/>
-      <feat name="rule" value="PersonFinal"/>
    </struct>
-   <struct type="Person" from="9332" to="9345">
-      <feat name="gender" value="female"/>
+   <struct type="Person" from="9331" to="9344">
+      <feat name="rule" value="PersonFinal"/>
       <feat name="rule1" value="PersonFull"/>
-      <feat name="rule" value="PersonFinal"/>
+      <feat name="gender" value="female"/>
    </struct>
-   <struct type="Organization" from="9365" to="9373">
-      <feat name="orgType" value="military"/>
-      <feat name="rule1" value="GazOrganization"/>
+   <struct type="Organization" from="9364" to="9372">
       <feat name="rule2" value="OrgFinal"/>
-   </struct>
-   <struct type="Organization" from="9374" to="9380">
-      <feat name="orgType" value="military"/>
       <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
+      <feat name="orgType" value="military"/>
    </struct>
-   <struct type="Person" from="9501" to="9511">
+   <struct type="Person" from="9500" to="9511">
       <feat name="gender" value="male"/>
    </struct>
-   <struct type="Organization" from="9506" to="9511">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
-   </struct>
-   <struct type="Person" from="9518" to="9521">
-      <feat name="" value="PersonFinal"/>
+   <struct type="Person" from="9517" to="9520">
+      <feat name="gender" value="male"/>
       <feat name="rule1" value="FirstName"/>
-      <feat name="gender" value="male"/>
-   </struct>
-   <struct type="Person" from="9556" to="9567">
-      <feat name="gender" value="male"/>
-   </struct>
-   <struct type="Organization" from="9561" to="9566">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
-   </struct>
-   <struct type="Person" from="9600" to="9605">
       <feat name="" value="PersonFinal"/>
+   </struct>
+   <struct type="Person" from="9555" to="9565">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="9590" to="9597"/>
+   <struct type="Person" from="9599" to="9604">
+      <feat name="gender" value="female"/>
       <feat name="rule1" value="GazPersonFirst"/>
-      <feat name="gender" value="female"/>
+      <feat name="" value="PersonFinal"/>
    </struct>
-   <struct type="Location" from="9613" to="9620">
+   <struct type="Location" from="9612" to="9619">
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="GazLocation"/>
       <feat name="locType" value="city"/>
-      <feat name="rule1" value="GazLocation"/>
-      <feat name="rule2" value="LocFinal"/>
    </struct>
-   <struct type="Person" from="9634" to="9638">
-      <feat name="" value="male"/>
+   <struct type="Person" from="9633" to="9637">
+      <feat name="gender" value="male"/>
       <feat name="rule1" value="PersonTitle"/>
-      <feat name="gender" value="male"/>
+      <feat name="" value="male"/>
    </struct>
-   <struct type="Person" from="9707" to="9720">
-      <feat name="gender" value="female"/>
-      <feat name="rule1" value="PersonFull"/>
+   <struct type="Person" from="9706" to="9720">
       <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="gender" value="female"/>
    </struct>
-   <struct type="Location" from="9777" to="9787">
-      <feat name="locType" value="country"/>
-      <feat name="rule1" value="GazLocation"/>
+   <struct type="Location" from="9776" to="9786">
       <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="locType" value="country"/>
    </struct>
-   <struct type="Person" from="9792" to="9802">
+   <struct type="Person" from="9791" to="9802">
       <feat name="gender" value="male"/>
-   </struct>
-   <struct type="Organization" from="9797" to="9802">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
    </struct>
 </cesAna>
