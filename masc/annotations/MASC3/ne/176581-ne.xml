@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
-   <struct type="Date" from="139" to="175">
+   <struct type="Date" from="139" to="163">
       <feat name="rule2" value="DateTimeFinal"/>
       <feat name="kind" value="dateTime"/>
    </struct>
@@ -13,15 +13,16 @@
       <feat name="gender" value="male"/>
    </struct>
    <struct type="Date" from="442" to="449">
-      <feat name="rule1" value="DateName"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
       <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="DateName"/>
    </struct>
    <struct type="Person" from="590" to="603">
-      <feat name="gender" value="male"/>
-      <feat name="rule1" value="LocPersonAmbig1"/>
       <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="LocPersonAmbig1"/>
+      <feat name="gender" value="male"/>
    </struct>
+   <struct type="Organization" from="607" to="612"/>
    <struct type="Date" from="616" to="636">
       <feat name="rule2" value="DateTimeFinal"/>
       <feat name="kind" value="dateTime"/>
@@ -35,26 +36,22 @@
       <feat name="rule" value="PersonFirstLast"/>
    </struct>
    <struct type="Organization" from="882" to="893">
-      <feat name="orgType" value="null"/>
-      <feat name="rule1" value="OrgXEnding"/>
       <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="OrgXEnding"/>
+      <feat name="orgType" value="null"/>
    </struct>
    <struct type="Person" from="942" to="948">
-      <feat name="" value="GazPersonFirst"/>
-      <feat name="gender" value="male"/>
       <feat name="rule" value="PersonFinal"/>
+      <feat name="gender" value="male"/>
+      <feat name="" value="GazPersonFirst"/>
    </struct>
-   <struct type="Organization" from="2817" to="2832">
-      <feat name="orgType" value="null"/>
-      <feat name="rule1" value="OrgXEnding"/>
-      <feat name="rule2" value="OrgFinal"/>
-   </struct>
+   <struct type="Organization" from="2242" to="2257"/>
    <struct type="Person" from="2817" to="2829">
       <feat name="gender" value="male"/>
    </struct>
    <struct type="Organization" from="2856" to="2877">
-      <feat name="orgType" value="null"/>
-      <feat name="rule1" value="OrgXEnding"/>
       <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="OrgXEnding"/>
+      <feat name="orgType" value="null"/>
    </struct>
 </cesAna>
