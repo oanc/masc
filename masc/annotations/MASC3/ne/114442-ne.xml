@@ -1,31 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
-   <struct type="Date" from="9" to="40">
+   <struct type="Date" from="9" to="34">
       <feat name="rule2" value="DateTimeFinal"/>
       <feat name="kind" value="dateTime"/>
    </struct>
    <struct type="Date" from="802" to="807">
-      <feat name="kind" value="date"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
       <feat name="rule1" value="GazDateWords"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="kind" value="date"/>
+   </struct>
+   <struct type="Date" from="802" to="807">
+      <feat name="rule1" value="GazDateWords"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Date" from="1517" to="1522">
-      <feat name="kind" value="date"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
       <feat name="rule1" value="GazDateWords"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="kind" value="date"/>
+   </struct>
+   <struct type="Date" from="1517" to="1522">
+      <feat name="rule1" value="GazDateWords"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Organization" from="1569" to="1581">
-      <feat name="rule2" value="OrgFinal"/>
+      <feat name="orgType" value="null"/>
       <feat name="rule1" value="OrgXKey"/>
-      <feat name="orgType" value="null"/>
-   </struct>
-   <struct type="Location" from="1588" to="1602">
-      <feat name="rule1" value="LocationPost"/>
-      <feat name="rule2" value="LocFinal"/>
-   </struct>
-   <struct type="Organization" from="1614" to="1630">
       <feat name="rule2" value="OrgFinal"/>
-      <feat name="rule1" value="OrgXEnding"/>
-      <feat name="orgType" value="null"/>
    </struct>
+   <struct type="Organization" from="1569" to="1581">
+      <feat name="orgType" value="null"/>
+      <feat name="rule1" value="OrgXKey"/>
+      <feat name="rule2" value="OrgFinal"/>
+   </struct>
+   <struct type="Location" from="1614" to="1625"/>
+   <struct type="Location" from="1627" to="1629"/>
 </cesAna>

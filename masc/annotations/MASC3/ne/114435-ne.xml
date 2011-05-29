@@ -1,67 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
-   <struct type="Date" from="9" to="40">
+   <struct type="Date" from="9" to="34">
       <feat name="rule2" value="DateTimeFinal"/>
       <feat name="kind" value="dateTime"/>
    </struct>
-   <struct type="Money" from="88" to="103">
+   <struct type="Money" from="85" to="103">
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneyCurrencyUnit"/>
    </struct>
    <struct type="Organization" from="111" to="124">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
       <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="orgType" value="company"/>
    </struct>
    <struct type="Date" from="258" to="263">
-      <feat name="rule1" value="GazDateWords"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
       <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="GazDateWords"/>
    </struct>
-   <struct type="Money" from="321" to="336">
+   <struct type="Money" from="318" to="336">
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneyCurrencyUnit"/>
    </struct>
+   <struct type="Organization" from="345" to="358"/>
+   <struct type="Money" from="440" to="455"/>
+   <struct type="Organization" from="460" to="473"/>
    <struct type="Organization" from="482" to="492">
-      <feat name="orgType" value="government"/>
-      <feat name="rule1" value="GazOrganization"/>
       <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="orgType" value="government"/>
    </struct>
    <struct type="Date" from="598" to="607">
+      <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
       <feat name="rule1" value="GazDateWords"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="kind" value="date"/>
    </struct>
-   <struct type="Date" from="613" to="625">
-      <feat name="rule1" value="ModifierDate"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="kind" value="date"/>
-   </struct>
+   <struct type="Money" from="702" to="712"/>
+   <struct type="Money" from="739" to="749"/>
    <struct type="Date" from="753" to="761">
-      <feat name="rule1" value="GazDateWords"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
       <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="GazDateWords"/>
    </struct>
+   <struct type="Money" from="803" to="813"/>
+   <struct type="Money" from="914" to="924"/>
    <struct type="Date" from="976" to="984">
-      <feat name="rule1" value="GazDateWords"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
       <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="GazDateWords"/>
    </struct>
    <struct type="Person" from="998" to="1009">
       <feat name="rule" value="PersonUnknown"/>
       <feat name="gender" value="male"/>
    </struct>
+   <struct type="Money" from="1120" to="1130"/>
    <struct type="Date" from="1131" to="1136">
-      <feat name="rule1" value="GazDateWords"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
       <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="GazDateWords"/>
    </struct>
+   <struct type="Money" from="1191" to="1201"/>
    <struct type="Person" from="1245" to="1251">
       <feat name="gender" value="male"/>
    </struct>
+   <struct type="Person" from="1272" to="1285"/>
+   <struct type="Money" from="1323" to="1333"/>
+   <struct type="Money" from="1380" to="1390"/>
    <struct type="Person" from="1403" to="1414">
-      <feat name="" value="PersonTitle"/>
-      <feat name="gender" value="male"/>
       <feat name="rule" value="PersonFinal"/>
+      <feat name="gender" value="male"/>
+      <feat name="" value="PersonTitle"/>
    </struct>
 </cesAna>

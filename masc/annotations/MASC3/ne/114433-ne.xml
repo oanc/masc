@@ -1,45 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
-   <struct type="Date" from="54" to="85">
+   <struct type="Date" from="54" to="79">
       <feat name="rule2" value="DateTimeFinal"/>
       <feat name="kind" value="dateTime"/>
    </struct>
    <struct type="Person" from="989" to="998">
-      <feat name="gender" value="male"/>
-      <feat name="rule1" value="PersonFull"/>
       <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="989" to="998">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="gender" value="male"/>
    </struct>
    <struct type="Organization" from="1002" to="1021">
-      <feat name="orgType" value="null"/>
-      <feat name="rule1" value="PersonOrgXKey"/>
       <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="PersonOrgXKey"/>
+      <feat name="orgType" value="null"/>
    </struct>
-   <struct type="Location" from="1039" to="1042">
-      <feat name="locType" value="country"/>
-      <feat name="rule1" value="GazLocation"/>
+   <struct type="Organization" from="1002" to="1021">
+      <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="PersonOrgXKey"/>
+      <feat name="orgType" value="null"/>
+   </struct>
+   <struct type="Organization" from="1026" to="1042"/>
+   <struct type="Location" from="1067" to="1074"/>
+   <struct type="Location" from="1076" to="1078">
       <feat name="rule2" value="LocFinal"/>
-   </struct>
-   <struct type="Location" from="1045" to="1060">
-      <feat name="rule1" value="StreetName1"/>
-      <feat name="rule2" value="StreetFinal"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="locType" value="province"/>
    </struct>
    <struct type="Location" from="1076" to="1078">
-      <feat name="locType" value="province"/>
-      <feat name="rule1" value="GazLocation"/>
       <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="locType" value="province"/>
    </struct>
-   <struct type="Location" from="1223" to="1238">
-      <feat name="rule1" value="StreetName1"/>
-      <feat name="rule2" value="StreetFinal"/>
+   <struct type="Organization" from="1204" to="1220"/>
+   <struct type="Location" from="1246" to="1253"/>
+   <struct type="Location" from="1255" to="1257">
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="locType" value="province"/>
    </struct>
    <struct type="Location" from="1255" to="1257">
-      <feat name="locType" value="province"/>
-      <feat name="rule1" value="GazLocation"/>
       <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="locType" value="province"/>
    </struct>
    <struct type="Location" from="1266" to="1269">
-      <feat name="locType" value="country"/>
-      <feat name="rule1" value="GazLocation"/>
       <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="locType" value="country"/>
+   </struct>
+   <struct type="Location" from="1266" to="1269">
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="locType" value="country"/>
    </struct>
 </cesAna>
