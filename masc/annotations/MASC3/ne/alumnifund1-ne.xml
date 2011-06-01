@@ -1,44 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
-   <struct type="Organization" from="34" to="53"/>
-   <struct type="Organization" from="79" to="114"/>
-   <struct type="Organization" from="140" to="158"/>
+   <struct type="Organization" from="34" to="53">
+      <feat name="orgType" value="educational"/>
+   </struct>
+   <struct type="Organization" from="79" to="114">
+      <feat name="orgType" value="educational"/>
+   </struct>
+   <struct type="Organization" from="140" to="158">
+      <feat name="orgType" value="department"/>
+   </struct>
    <struct type="Date" from="262" to="271">
-      <feat name="kind" value="date"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
       <feat name="rule1" value="SeasonYear"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Organization" from="529" to="564">
-      <feat name="rule2" value="OrgFinal"/>
+      <feat name="orgType" value="educational"/>
       <feat name="rule1" value="TheOrgXBase"/>
-      <feat name="orgType" value="null"/>
+      <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="Organization" from="875" to="890">
-      <feat name="rule2" value="OrgFinal"/>
+      <feat name="orgType" value="educational"/>
       <feat name="rule1" value="TheOrgXBase"/>
-      <feat name="orgType" value="null"/>
+      <feat name="rule2" value="OrgFinal"/>
    </struct>
-   <struct type="Organization" from="1006" to="1009"/>
+   <struct type="Organization" from="1006" to="1009">
+      <feat name="orgType" value="educational"/>
+   </struct>
    <struct type="Organization" from="1422" to="1437">
-      <feat name="rule2" value="OrgFinal"/>
+      <feat name="orgType" value="educational"/>
       <feat name="rule1" value="TheOrgXBase"/>
-      <feat name="orgType" value="null"/>
+      <feat name="rule2" value="OrgFinal"/>
    </struct>
-   <struct type="Organization" from="1498" to="1502"/>
+   <struct type="Organization" from="1498" to="1502">
+      <feat name="orgType" value="educational"/>
+   </struct>
    <struct type="Organization" from="1705" to="1723">
-      <feat name="rule2" value="OrgFinal"/>
-      <feat name="rule1" value="GazOrganization"/>
       <feat name="orgType" value="newspaper"/>
-   </struct>
-   <struct type="Organization" from="1847" to="1870">
+      <feat name="rule1" value="GazOrganization"/>
       <feat name="rule2" value="OrgFinal"/>
+   </struct>
+   <struct type="Organization" from="1847" to="1882">
+      <feat name="orgType" value="educational"/>
       <feat name="rule1" value="TheOrgXBase"/>
-      <feat name="orgType" value="null"/>
+      <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="Person" from="2118" to="2139">
-      <feat name="rule" value="PersonFinal"/>
-      <feat name="rule1" value="LocPersonAmbig1"/>
       <feat name="gender" value="female"/>
+      <feat name="rule1" value="LocPersonAmbig1"/>
+      <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Organization" from="2247" to="2282"/>
 </cesAna>

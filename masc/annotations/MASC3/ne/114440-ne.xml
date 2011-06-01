@@ -4,29 +4,26 @@
       <feat name="gender" value="male"/>
       <feat name="rule" value="PersonFirstLast"/>
    </struct>
-   <struct type="Person" from="10" to="22">
-      <feat name="gender" value="male"/>
-      <feat name="rule" value="PersonFirstLast"/>
-   </struct>
    <struct type="Date" from="114" to="139">
       <feat name="rule2" value="DateTimeFinal"/>
       <feat name="kind" value="dateTime"/>
    </struct>
-   <struct type="Organization" from="241" to="257"/>
-   <struct type="Organization" from="259" to="275"/>
+   <struct type="Organization" from="241" to="257">
+      <feat name="orgType" value="company"/>
+   </struct>
+   <struct type="Organization" from="259" to="275">
+      <feat name="orgType" value="company"/>
+   </struct>
    <struct type="Money" from="465" to="485">
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneyCurrencyUnit"/>
    </struct>
    <struct type="Location" from="903" to="910">
-      <feat name="rule2" value="LocFinal"/>
-      <feat name="rule1" value="GazLocation"/>
       <feat name="locType" value="city"/>
-   </struct>
-   <struct type="Location" from="903" to="910">
-      <feat name="rule2" value="LocFinal"/>
       <feat name="rule1" value="GazLocation"/>
-      <feat name="locType" value="city"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
-   <struct type="Location" from="912" to="914"/>
+   <struct type="Location" from="912" to="914">
+      <feat name="locType" value="us_region"/>
+   </struct>
 </cesAna>

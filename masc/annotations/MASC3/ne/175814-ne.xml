@@ -9,15 +9,17 @@
       <feat name="rule" value="PersonFirstLast"/>
    </struct>
    <struct type="Date" from="409" to="417">
-      <feat name="kind" value="date"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
       <feat name="rule1" value="DateName"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Person" from="541" to="554">
       <feat name="gender" value="male"/>
       <feat name="rule" value="PersonFirstLast"/>
    </struct>
-   <struct type="Organization" from="558" to="563"/>
+   <struct type="Organization" from="558" to="563">
+      <feat name="orgType" value="company"/>
+   </struct>
    <struct type="Date" from="567" to="586">
       <feat name="rule2" value="DateTimeFinal"/>
       <feat name="kind" value="dateTime"/>
@@ -27,8 +29,6 @@
       <feat name="kind" value="dateTime"/>
    </struct>
    <struct type="Location" from="928" to="938">
-      <feat name="rule2" value="OrgFinal"/>
-      <feat name="rule1" value="TheOrgXKey"/>
-      <feat name="orgType" value="null"/>
+      <feat name="locType" value="us_region"/>
    </struct>
 </cesAna>

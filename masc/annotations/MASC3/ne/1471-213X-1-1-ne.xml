@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
    <struct type="Person" from="9227" to="9244">
-      <feat name="rule" value="PersonFinal"/>
+      <feat name="gender" value="unknown"/>
       <feat name="rule1" value="PersonFull"/>
-      <feat name="gender" value="male"/>
+      <feat name="rule" value="PersonFinal"/>
    </struct>
-   <struct type="Person" from="9249" to="9255"/>
-   <struct type="Organization" from="16508" to="16520"/>
+   <struct type="Person" from="9249" to="9255">
+      <feat name="gender" value="unknown"/>
+   </struct>
+   <struct type="Organization" from="16508" to="16520">
+      <feat name="orgType" value="company"/>
+   </struct>
    <struct type="Organization" from="16664" to="16690">
-      <feat name="rule2" value="OrgFinal"/>
+      <feat name="orgType" value="company"/>
       <feat name="rule1" value="OrgXEnding"/>
-      <feat name="orgType" value="null"/>
+      <feat name="rule2" value="OrgFinal"/>
    </struct>
 </cesAna>

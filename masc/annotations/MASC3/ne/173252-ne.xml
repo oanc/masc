@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
-   <struct type="Date" from="140" to="164">
+   <struct type="Date" from="140" to="176">
       <feat name="rule2" value="DateTimeFinal"/>
       <feat name="kind" value="dateTime"/>
    </struct>
@@ -10,17 +10,12 @@
       <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Organization" from="264" to="276">
-      <feat name="orgType" value="null"/>
+      <feat name="orgType" value="company"/>
       <feat name="rule1" value="ThePersonOrgAmbig"/>
       <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="Person" from="394" to="407">
       <feat name="gender" value="male"/>
-      <feat name="rule1" value="LocPersonAmbig1"/>
-      <feat name="rule" value="PersonFinal"/>
-   </struct>
-   <struct type="Person" from="394" to="407">
-      <feat name="gender" value="null"/>
       <feat name="rule" value="PersonFirstLast"/>
    </struct>
    <struct type="Person" from="415" to="429">
@@ -28,7 +23,7 @@
       <feat name="rule" value="PersonFirstLast"/>
    </struct>
    <struct type="Person" from="459" to="470">
-      <feat name="gender" value="null"/>
+      <feat name="gender" value="male"/>
       <feat name="rule1" value="LocPersonAmbig1"/>
       <feat name="rule" value="PersonFinal"/>
    </struct>
@@ -39,11 +34,6 @@
    </struct>
    <struct type="Person" from="623" to="636">
       <feat name="gender" value="male"/>
-      <feat name="rule1" value="LocPersonAmbig1"/>
-      <feat name="rule" value="PersonFinal"/>
-   </struct>
-   <struct type="Person" from="623" to="636">
-      <feat name="gender" value="null"/>
       <feat name="rule" value="PersonFirstLast"/>
    </struct>
    <struct type="Date" from="648" to="666">
@@ -51,7 +41,7 @@
       <feat name="kind" value="dateTime"/>
    </struct>
    <struct type="Person" from="705" to="717">
-      <feat name="gender" value="null"/>
+      <feat name="gender" value="male"/>
       <feat name="rule1" value="PersonFull"/>
       <feat name="rule" value="PersonFinal"/>
    </struct>
@@ -60,43 +50,27 @@
       <feat name="kind" value="dateTime"/>
    </struct>
    <struct type="Person" from="746" to="758">
-      <feat name="gender" value="null"/>
-      <feat name="rule1" value="PersonFull"/>
-      <feat name="rule" value="PersonFinal"/>
-   </struct>
-   <struct type="Person" from="780" to="796">
-      <feat name="gender" value="null"/>
+      <feat name="gender" value="male"/>
       <feat name="rule1" value="PersonFull"/>
       <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Person" from="780" to="796">
       <feat name="gender" value="male"/>
-      <feat name="rule" value="PersonFirstLast"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Person" from="834" to="850">
-      <feat name="gender" value="null"/>
-      <feat name="rule" value="PersonFirstLast"/>
-   </struct>
-   <struct type="Person" from="834" to="850">
-      <feat name="gender" value="null"/>
+      <feat name="gender" value="male"/>
       <feat name="rule1" value="LocPersonAmbig1"/>
       <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Person" from="938" to="950">
-      <feat name="gender" value="null"/>
+      <feat name="gender" value="male"/>
       <feat name="rule1" value="PersonFull"/>
       <feat name="rule" value="PersonFinal"/>
    </struct>
-   <struct type="Person" from="938" to="950">
-      <feat name="gender" value="female"/>
-      <feat name="rule" value="PersonFirstLast"/>
-   </struct>
    <struct type="Person" from="988" to="1001">
-      <feat name="gender" value="null"/>
-      <feat name="rule" value="PersonFirstLast"/>
-   </struct>
-   <struct type="Person" from="988" to="1001">
-      <feat name="gender" value="null"/>
+      <feat name="gender" value="male"/>
       <feat name="rule1" value="LocPersonAmbig1"/>
       <feat name="rule" value="PersonFinal"/>
    </struct>
@@ -115,7 +89,7 @@
       <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Organization" from="1078" to="1090">
-      <feat name="orgType" value="null"/>
+      <feat name="orgType" value="company"/>
       <feat name="rule1" value="ThePersonOrgAmbig"/>
       <feat name="rule2" value="OrgFinal"/>
    </struct>
@@ -129,9 +103,8 @@
       <feat name="rule2" value="DateOnlyFinal"/>
       <feat name="kind" value="date"/>
    </struct>
-   <struct type="Organization" from="1212" to="1243"/>
    <struct type="Organization" from="1347" to="1350">
-      <feat name="orgType" value="null"/>
+      <feat name="orgType" value="company"/>
       <feat name="rule1" value="GazOrganization"/>
       <feat name="rule2" value="OrgFinal"/>
    </struct>
@@ -141,18 +114,19 @@
       <feat name="kind" value="date"/>
    </struct>
    <struct type="Person" from="1390" to="1401">
-      <feat name="gender" value="null"/>
+      <feat name="gender" value="male"/>
       <feat name="rule1" value="PersonTitle"/>
       <feat name="rule" value="PersonFinal"/>
-   </struct>
-   <struct type="Person" from="1390" to="1401">
-      <feat name="gender" value="null"/>
-      <feat name="rule" value="PersonFirstLast"/>
    </struct>
    <struct type="Location" from="1409" to="1414">
       <feat name="locType" value="city"/>
       <feat name="rule1" value="GazLocation"/>
       <feat name="rule2" value="LocFinal"/>
+   </struct>
+   <struct type="Date" from="1415" to="1424">
+      <feat name="rule1" value="ModifierDate"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Organization" from="1467" to="1470">
       <feat name="orgType" value="null"/>
@@ -160,7 +134,7 @@
       <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="Organization" from="1521" to="1524">
-      <feat name="orgType" value="null"/>
+      <feat name="orgType" value="company"/>
       <feat name="rule1" value="GazOrganization"/>
       <feat name="rule2" value="OrgFinal"/>
    </struct>
@@ -169,15 +143,23 @@
       <feat name="rule1" value="GazPersonFirst"/>
       <feat name="rule" value="PersonFinal"/>
    </struct>
+   <struct type="Person" from="1629" to="1632">
+      <feat name="rule" value="PersonSays"/>
+   </struct>
    <struct type="Person" from="1726" to="1741">
-      <feat name="gender" value="null"/>
+      <feat name="gender" value="female"/>
       <feat name="rule1" value="PersonFull"/>
       <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Location" from="1804" to="1809">
-      <feat name="locType" value="province"/>
+      <feat name="locType" value="city"/>
       <feat name="rule1" value="GazLocation"/>
       <feat name="rule2" value="LocFinal"/>
+   </struct>
+   <struct type="Date" from="1877" to="1886">
+      <feat name="rule1" value="ModifierDate"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Location" from="1890" to="1898">
       <feat name="locType" value="city"/>
@@ -200,7 +182,7 @@
       <feat name="kind" value="date"/>
    </struct>
    <struct type="Location" from="2001" to="2006">
-      <feat name="locType" value="province"/>
+      <feat name="locType" value="city"/>
       <feat name="rule1" value="GazLocation"/>
       <feat name="rule2" value="LocFinal"/>
    </struct>
@@ -210,7 +192,7 @@
       <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Person" from="2033" to="2045">
-      <feat name="gender" value="null"/>
+      <feat name="gender" value="male"/>
       <feat name="rule1" value="PersonFull"/>
       <feat name="rule" value="PersonFinal"/>
    </struct>
@@ -219,52 +201,30 @@
       <feat name="kind" value="dateTime"/>
    </struct>
    <struct type="Person" from="2068" to="2084">
-      <feat name="gender" value="null"/>
+      <feat name="gender" value="male"/>
       <feat name="rule1" value="PersonFull"/>
-      <feat name="rule" value="PersonFinal"/>
-   </struct>
-   <struct type="Person" from="2068" to="2084">
-      <feat name="gender" value="null"/>
-      <feat name="rule" value="PersonFirstLast"/>
-   </struct>
-   <struct type="Person" from="2125" to="2140">
-      <feat name="gender" value="null"/>
-      <feat name="rule1" value="LocPersonAmbig1"/>
       <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Person" from="2125" to="2140">
       <feat name="gender" value="male"/>
-      <feat name="rule" value="PersonFirstLast"/>
-   </struct>
-   <struct type="Person" from="2228" to="2240">
-      <feat name="gender" value="null"/>
-      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule1" value="LocPersonAmbig1"/>
       <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Person" from="2228" to="2240">
       <feat name="gender" value="male"/>
-      <feat name="rule" value="PersonFirstLast"/>
-   </struct>
-   <struct type="Person" from="2278" to="2291">
-      <feat name="gender" value="null"/>
-      <feat name="rule1" value="LocPersonAmbig1"/>
-      <feat name="rule" value="PersonFinal"/>
-   </struct>
-   <struct type="Person" from="2278" to="2291">
-      <feat name="gender" value="null"/>
-      <feat name="rule" value="PersonFirstLast"/>
-   </struct>
-   <struct type="Person" from="2306" to="2322">
-      <feat name="gender" value="null"/>
       <feat name="rule1" value="PersonFull"/>
       <feat name="rule" value="PersonFinal"/>
    </struct>
+   <struct type="Person" from="2278" to="2291">
+      <feat name="gender" value="male"/>
+      <feat name="rule" value="PersonFirstLast"/>
+   </struct>
    <struct type="Person" from="2306" to="2322">
-      <feat name="gender" value="null"/>
+      <feat name="gender" value="male"/>
       <feat name="rule" value="PersonFirstLast"/>
    </struct>
    <struct type="Person" from="2346" to="2358">
-      <feat name="gender" value="null"/>
+      <feat name="gender" value="male"/>
       <feat name="rule1" value="PersonFull"/>
       <feat name="rule" value="PersonFinal"/>
    </struct>
@@ -274,7 +234,7 @@
       <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Organization" from="2394" to="2406">
-      <feat name="orgType" value="null"/>
+      <feat name="orgType" value="company"/>
       <feat name="rule1" value="TheOrgXKey"/>
       <feat name="rule2" value="OrgFinal"/>
    </struct>
@@ -289,7 +249,7 @@
       <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Organization" from="2572" to="2594">
-      <feat name="orgType" value="null"/>
+      <feat name="orgType" value="company"/>
       <feat name="rule1" value="TheOrgXKey"/>
       <feat name="rule2" value="OrgFinal"/>
    </struct>
@@ -304,7 +264,7 @@
       <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="Organization" from="2735" to="2738">
-      <feat name="orgType" value="null"/>
+      <feat name="orgType" value="company"/>
       <feat name="rule1" value="GazOrganization"/>
       <feat name="rule2" value="OrgFinal"/>
    </struct>
@@ -313,28 +273,36 @@
       <feat name="rule2" value="YearOnlyFinal"/>
       <feat name="kind" value="date"/>
    </struct>
+   <struct type="Date" from="2772" to="2786">
+      <feat name="rule1" value="null"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="kind" value="date"/>
+   </struct>
    <struct type="Location" from="2790" to="2797">
       <feat name="locType" value="city"/>
       <feat name="rule1" value="GazLocation"/>
       <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Person" from="2799" to="2806">
-      <feat name="gender" value="null"/>
-      <feat name="rule" value="PersonFirstLast"/>
-   </struct>
-   <struct type="Person" from="2799" to="2806">
-      <feat name="gender" value="null"/>
+      <feat name="gender" value="male"/>
       <feat name="rule1" value="PersonFull"/>
       <feat name="rule" value="PersonFinal"/>
    </struct>
-   <struct type="Person" from="3023" to="3034"/>
-   <struct type="Location" from="3042" to="3056"/>
+   <struct type="Date" from="2875" to="2891">
+      <feat name="rule1" value="ModifierDate"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="kind" value="date"/>
+   </struct>
+   <struct type="Date" from="2995" to="3007">
+      <feat name="rule1" value="ModifierDate"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="kind" value="date"/>
+   </struct>
    <struct type="Location" from="3158" to="3163">
       <feat name="locType" value="country"/>
       <feat name="rule1" value="GazLocation"/>
       <feat name="rule2" value="LocFinal"/>
    </struct>
-   <struct type="Organization" from="3315" to="3320"/>
    <struct type="Location" from="3331" to="3333">
       <feat name="locType" value="country"/>
       <feat name="rule1" value="GazLocation"/>
@@ -346,7 +314,7 @@
       <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Organization" from="3584" to="3616">
-      <feat name="orgType" value="null"/>
+      <feat name="orgType" value="company"/>
       <feat name="rule1" value="OrgXKey"/>
       <feat name="rule2" value="OrgFinal"/>
    </struct>
@@ -360,17 +328,18 @@
       <feat name="rule1" value="GazLocation"/>
       <feat name="rule2" value="LocFinal"/>
    </struct>
+   <struct type="Organization" from="3971" to="3979">
+      <feat name="orgType" value="department"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="rule2" value="OrgFinal"/>
+   </struct>
    <struct type="Person" from="4001" to="4005">
       <feat name="gender" value="female"/>
       <feat name="rule1" value="GazPersonFirst"/>
       <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Person" from="4042" to="4052">
-      <feat name="gender" value="null"/>
-      <feat name="rule" value="PersonFirstLast"/>
-   </struct>
-   <struct type="Person" from="4042" to="4052">
-      <feat name="gender" value="null"/>
+      <feat name="gender" value="unknown"/>
       <feat name="rule1" value="PersonFull"/>
       <feat name="rule" value="PersonFinal"/>
    </struct>
@@ -389,7 +358,6 @@
       <feat name="rule2" value="DateOnlyFinal"/>
       <feat name="kind" value="date"/>
    </struct>
-   <struct type="Person" from="4133" to="4140"/>
    <struct type="Date" from="4141" to="4146">
       <feat name="rule1" value="GazDateWords"/>
       <feat name="rule2" value="DateOnlyFinal"/>
@@ -406,16 +374,12 @@
       <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Person" from="4500" to="4511">
-      <feat name="gender" value="male"/>
-      <feat name="rule" value="PersonFirstLast"/>
-   </struct>
-   <struct type="Person" from="4500" to="4511">
       <feat name="gender" value="null"/>
       <feat name="rule1" value="PersonFull"/>
       <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Organization" from="4569" to="4593">
-      <feat name="orgType" value="null"/>
+      <feat name="orgType" value="other"/>
       <feat name="rule1" value="OrgXKey"/>
       <feat name="rule2" value="OrgFinal"/>
    </struct>
@@ -425,12 +389,12 @@
       <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Organization" from="4610" to="4618">
-      <feat name="orgType" value="government"/>
+      <feat name="orgType" value="other"/>
       <feat name="rule1" value="GazOrganization"/>
       <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="Person" from="4694" to="4703">
-      <feat name="gender" value="null"/>
+      <feat name="gender" value="male"/>
       <feat name="rule1" value="PersonTitle"/>
       <feat name="rule" value="PersonFinal"/>
    </struct>
