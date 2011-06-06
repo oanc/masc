@@ -1,33 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
-   <struct type="Person" from="36" to="47"/>
+   <struct type="Person" from="36" to="47">
+      <feat name="gender" value="male"/>
+   </struct>
    <struct type="Date" from="86" to="111">
       <feat name="rule2" value="DateTimeFinal"/>
       <feat name="kind" value="dateTime"/>
    </struct>
-   <struct type="Person" from="1205" to="1210"/>
-   <struct type="Person" from="1224" to="1229"/>
-   <struct type="Person" from="1254" to="1259"/>
+   <struct type="Person" from="1205" to="1210">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="1224" to="1229">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="1254" to="1259">
+      <feat name="gender" value="male"/>
+   </struct>
    <struct type="Organization" from="1267" to="1280">
-      <feat name="orgType" value="null"/>
-      <feat name="rule1" value="OrgXKey"/>
       <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="OrgXKey"/>
+      <feat name="orgType" value="company"/>
    </struct>
    <struct type="Organization" from="1337" to="1362">
-      <feat name="orgType" value="null"/>
-      <feat name="rule1" value="OrgXBase"/>
       <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="OrgXBase"/>
+      <feat name="orgType" value="company"/>
    </struct>
-   <struct type="Location" from="1454" to="1467"/>
-   <struct type="Location" from="1469" to="1471"/>
+   <struct type="Location" from="1454" to="1467">
+      <feat name="locType" value="city"/>
+   </struct>
+   <struct type="Location" from="1469" to="1471">
+      <feat name="locType" value="us_region"/>
+   </struct>
    <struct type="Organization" from="1628" to="1635">
-      <feat name="gender" value="male"/>
-      <feat name="rule1" value="GazPersonFirst"/>
-      <feat name="rule" value="PersonFinal"/>
+      <feat name="orgType" value="educational"/>
    </struct>
    <struct type="Organization" from="1760" to="1777">
-      <feat name="orgType" value="null"/>
-      <feat name="rule1" value="OrgXKey"/>
       <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="OrgXKey"/>
+      <feat name="orgType" value="company"/>
    </struct>
 </cesAna>

@@ -1,46 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
-   <struct type="Location" from="192" to="197"/>
-   <struct type="Location" from="438" to="443"/>
+   <struct type="Location" from="192" to="197">
+      <feat name="locType" value="city"/>
+   </struct>
+   <struct type="Location" from="438" to="443">
+      <feat name="locType" value="city"/>
+   </struct>
    <struct type="Location" from="621" to="631">
-      <feat name="rule1" value="GazFacility"/>
+      <feat name="locType" value="facility"/>
       <feat name="rule2" value="FacilityFinal"/>
+      <feat name="rule1" value="GazFacility"/>
    </struct>
    <struct type="Money" from="870" to="890">
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneyCurrencyUnit"/>
    </struct>
-   <struct type="Person" from="979" to="984"/>
+   <struct type="Person" from="979" to="984">
+      <feat name="gender" value="male"/>
+   </struct>
    <struct type="Money" from="994" to="1015">
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneyCurrencyUnit"/>
    </struct>
-   <struct type="Person" from="1302" to="1310"/>
-   <struct type="Person" from="1331" to="1335"/>
-   <struct type="Person" from="1498" to="1502"/>
+   <struct type="Person" from="1302" to="1310">
+      <feat name="gender" value="female"/>
+   </struct>
+   <struct type="Person" from="1331" to="1335">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="1498" to="1502">
+      <feat name="gender" value="male"/>
+   </struct>
    <struct type="Location" from="1839" to="1853">
-      <feat name="rule " value="InLoc"/>
+      <feat name="" value="InLoc"/>
+      <feat name="locType" value="us_region"/>
    </struct>
    <struct type="Location" from="4059" to="4061">
-      <feat name="rule2" value="LocFinal"/>
-      <feat name="rule1" value="GazLocation"/>
       <feat name="locType" value="country_abbrev"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Organization" from="4119" to="4133">
-      <feat name="rule2" value="OrgFinal"/>
+      <feat name="orgType" value="newspaper"/>
       <feat name="rule1" value="GazOrganization"/>
-      <feat name="orgType" value="company"/>
+      <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="Money" from="4662" to="4665">
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneySymbolUnit"/>
    </struct>
    <struct type="Date" from="5004" to="5008">
-      <feat name="kind" value="date"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
       <feat name="rule1" value="YearContext1"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="kind" value="date"/>
    </struct>
-   <struct type="Person" from="8161" to="8174"/>
+   <struct type="Person" from="8161" to="8174">
+      <feat name="gender" value="male"/>
+   </struct>
    <struct type="Money" from="8776" to="8779">
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneySymbolUnit"/>
@@ -53,8 +69,16 @@
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneyCurrencyUnit"/>
    </struct>
-   <struct type="Person" from="9067" to="9080"/>
-   <struct type="Person" from="9654" to="9659"/>
-   <struct type="Person" from="9707" to="9712"/>
-   <struct type="Person" from="10124" to="10137"/>
+   <struct type="Person" from="9067" to="9080">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="9654" to="9659">
+      <feat name="gender" value="female"/>
+   </struct>
+   <struct type="Person" from="9707" to="9712">
+      <feat name="gender" value="female"/>
+   </struct>
+   <struct type="Person" from="10124" to="10137">
+      <feat name="gender" value="male"/>
+   </struct>
 </cesAna>

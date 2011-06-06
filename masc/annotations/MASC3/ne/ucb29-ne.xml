@@ -1,36 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
    <struct type="Person" from="10" to="24">
-      <feat name="gender" value="null"/>
-      <feat name="rule1" value="PersonFull"/>
-      <feat name="rule" value="PersonFinal"/>
-   </struct>
-   <struct type="Person" from="10" to="24">
-      <feat name="gender" value="null"/>
+      <feat name="gender" value="female"/>
       <feat name="rule" value="PersonFirstLast"/>
    </struct>
-   <struct type="Date" from="126" to="156">
+   <struct type="Date" from="126" to="150">
       <feat name="rule2" value="DateTimeFinal"/>
       <feat name="kind" value="dateTime"/>
    </struct>
    <struct type="Person" from="291" to="297">
-      <feat name="gender" value="female"/>
-      <feat name="rule1" value="GazPersonFirst"/>
       <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="gender" value="female"/>
    </struct>
    <struct type="Person" from="377" to="382">
-      <feat name="gender" value="male"/>
-      <feat name="rule1" value="GazPersonFirst"/>
       <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="gender" value="male"/>
    </struct>
    <struct type="Location" from="384" to="391">
-      <feat name="gender" value="female"/>
-      <feat name="rule1" value="GazPersonFirst"/>
-      <feat name="rule" value="PersonFinal"/>
+      <feat name="locType" value="us_region"/>
    </struct>
    <struct type="Location" from="393" to="396">
-      <feat name="locType" value="country"/>
-      <feat name="rule1" value="GazLocation"/>
       <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="locType" value="country"/>
    </struct>
 </cesAna>

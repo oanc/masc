@@ -1,34 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
-   <struct type="Organization" from="10" to="31"/>
+   <struct type="Organization" from="10" to="31">
+      <feat name="orgType" value="department"/>
+   </struct>
    <struct type="Date" from="65" to="96">
       <feat name="rule2" value="DateTimeFinal"/>
       <feat name="kind" value="dateTime"/>
    </struct>
    <struct type="Person" from="210" to="215">
-      <feat name="gender" value="female"/>
-      <feat name="rule1" value="GazPersonFirst"/>
       <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="gender" value="female"/>
    </struct>
    <struct type="Date" from="273" to="278">
-      <feat name="rule1" value="GazDateWords"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
       <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="GazDateWords"/>
    </struct>
-   <struct type="Organization" from="877" to="883"/>
-   <struct type="Organization" from="885" to="890"/>
-   <struct type="Organization" from="895" to="899"/>
-   <struct type="Organization" from="1137" to="1143"/>
-   <struct type="Organization" from="1145" to="1150"/>
-   <struct type="Organization" from="1156" to="1165">
+   <struct type="Organization" from="877" to="883">
       <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
    </struct>
-   <struct type="Organization" from="1219" to="1233"/>
-   <struct type="Location" from="1257" to="1265"/>
-   <struct type="Location" from="1267" to="1269"/>
-   <struct type="Organization" from="1293" to="1307"/>
-   <struct type="Location" from="1351" to="1359"/>
-   <struct type="Location" from="1361" to="1363"/>
+   <struct type="Organization" from="885" to="890">
+      <feat name="orgType" value="company"/>
+   </struct>
+   <struct type="Organization" from="895" to="899">
+      <feat name="orgType" value="company"/>
+   </struct>
+   <struct type="Organization" from="1137" to="1143">
+      <feat name="orgType" value="company"/>
+   </struct>
+   <struct type="Organization" from="1145" to="1150">
+      <feat name="orgType" value="company"/>
+   </struct>
+   <struct type="Organization" from="1156" to="1165">
+      <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="orgType" value="company"/>
+   </struct>
+   <struct type="Organization" from="1219" to="1233">
+      <feat name="orgType" value="company"/>
+   </struct>
+   <struct type="Location" from="1257" to="1265">
+      <feat name="locType" value="city"/>
+   </struct>
+   <struct type="Location" from="1267" to="1269">
+      <feat name="locType" value="us_region"/>
+   </struct>
+   <struct type="Organization" from="1293" to="1307">
+      <feat name="orgType" value="company"/>
+   </struct>
+   <struct type="Location" from="1351" to="1359">
+      <feat name="locType" value="city"/>
+   </struct>
+   <struct type="Location" from="1361" to="1363">
+      <feat name="locType" value="us_region"/>
+   </struct>
 </cesAna>

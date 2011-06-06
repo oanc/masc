@@ -1,42 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
-   <struct type="Date" from="10" to="40">
+   <struct type="Date" from="10" to="34">
       <feat name="rule2" value="DateTimeFinal"/>
       <feat name="kind" value="dateTime"/>
    </struct>
    <struct type="Person" from="48" to="58">
-      <feat name="gender" value="null"/>
-      <feat name="rule1" value="PersonFull"/>
       <feat name="rule" value="PersonFinal"/>
-   </struct>
-   <struct type="Person" from="48" to="58">
+      <feat name="rule1" value="PersonFull"/>
       <feat name="gender" value="male"/>
-      <feat name="rule" value="PersonFirstLast"/>
-   </struct>
-   <struct type="Organization" from="218" to="224">
-      <feat name="rule" value="OrgInitials"/>
    </struct>
    <struct type="Person" from="607" to="616">
-      <feat name="gender" value="female"/>
-      <feat name="rule1" value="GazPersonFirst"/>
       <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="gender" value="female"/>
    </struct>
    <struct type="Location" from="618" to="624">
-      <feat name="locType" value="city"/>
-      <feat name="rule1" value="GazLocation"/>
       <feat name="rule2" value="LocFinal"/>
-   </struct>
-   <struct type="Organization" from="734" to="740">
-      <feat name="rule" value="OrgInitials"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="locType" value="city"/>
    </struct>
    <struct type="Person" from="878" to="888">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
-      <feat name="rule2" value="OrgFinal"/>
+      <feat name="gender" value="male"/>
    </struct>
    <struct type="Location" from="890" to="903">
-      <feat name="locType" value="city"/>
-      <feat name="rule1" value="LocPersonAmbig"/>
       <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="LocPersonAmbig"/>
+      <feat name="locType" value="city"/>
    </struct>
 </cesAna>

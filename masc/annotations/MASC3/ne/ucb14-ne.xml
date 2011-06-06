@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
-   <struct type="Date" from="10" to="40">
+   <struct type="Date" from="10" to="34">
       <feat name="rule2" value="DateTimeFinal"/>
       <feat name="kind" value="dateTime"/>
    </struct>
@@ -8,15 +8,9 @@
       <feat name="gender" value="female"/>
       <feat name="rule" value="PersonFirstLast"/>
    </struct>
-   <struct type="Person" from="181" to="183">
-      <feat name="rule" value="PersonConjPerson"/>
+   <struct type="Organization" from="488" to="500">
+      <feat name="orgType" value="company"/>
    </struct>
-   <struct type="Person" from="188" to="191">
-      <feat name="gender" value="male"/>
-      <feat name="rule1" value="GazPersonFirst"/>
-      <feat name="rule" value="PersonFinal"/>
-   </struct>
-   <struct type="Organization" from="488" to="500"/>
    <struct type="Money" from="540" to="548">
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneySymbolUnit"/>
@@ -25,20 +19,20 @@
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneySymbolUnit"/>
    </struct>
-   <struct type="Organization" from="570" to="587">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
+   <struct type="Organization" from="570" to="579">
       <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="orgType" value="company"/>
    </struct>
    <struct type="Date" from="588" to="592">
-      <feat name="rule1" value="TempYear2"/>
-      <feat name="rule2" value="YearOnlyFinal"/>
       <feat name="kind" value="date"/>
+      <feat name="rule2" value="YearOnlyFinal"/>
+      <feat name="rule1" value="TempYear2"/>
    </struct>
    <struct type="Date" from="633" to="638">
-      <feat name="rule1" value="GazDateWords"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
       <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="GazDateWords"/>
    </struct>
    <struct type="Money" from="641" to="648">
       <feat name="kind" value="number"/>
@@ -48,7 +42,9 @@
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneySymbolUnit"/>
    </struct>
-   <struct type="Organization" from="679" to="684"/>
+   <struct type="Organization" from="679" to="684">
+      <feat name="orgType" value="company"/>
+   </struct>
    <struct type="Money" from="726" to="733">
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneySymbolUnit"/>
@@ -57,7 +53,9 @@
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneySymbolUnit"/>
    </struct>
-   <struct type="Organization" from="755" to="765"/>
+   <struct type="Organization" from="755" to="765">
+      <feat name="orgType" value="company"/>
+   </struct>
    <struct type="Money" from="807" to="814">
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneySymbolUnit"/>
@@ -67,11 +65,10 @@
       <feat name="rule" value="MoneySymbolUnit"/>
    </struct>
    <struct type="Organization" from="841" to="850">
-      <feat name="orgType" value="company"/>
-      <feat name="rule1" value="GazOrganization"/>
       <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="orgType" value="company"/>
    </struct>
-   <struct type="Organization" from="861" to="871"/>
    <struct type="Money" from="897" to="903">
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneySymbolUnit"/>
@@ -80,7 +77,9 @@
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneySymbolUnit"/>
    </struct>
-   <struct type="Organization" from="925" to="930"/>
+   <struct type="Organization" from="925" to="930">
+      <feat name="orgType" value="company"/>
+   </struct>
    <struct type="Money" from="974" to="981">
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneySymbolUnit"/>
@@ -89,7 +88,9 @@
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneySymbolUnit"/>
    </struct>
-   <struct type="Organization" from="1007" to="1012"/>
+   <struct type="Organization" from="1007" to="1012">
+      <feat name="orgType" value="company"/>
+   </struct>
    <struct type="Money" from="1078" to="1085">
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneySymbolUnit"/>
@@ -98,11 +99,13 @@
       <feat name="kind" value="number"/>
       <feat name="rule" value="MoneySymbolUnit"/>
    </struct>
-   <struct type="Organization" from="1107" to="1112"/>
+   <struct type="Organization" from="1107" to="1112">
+      <feat name="orgType" value="company"/>
+   </struct>
    <struct type="Date" from="1151" to="1156">
-      <feat name="rule1" value="GazDateWords"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
       <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="GazDateWords"/>
    </struct>
    <struct type="Money" from="1159" to="1166">
       <feat name="kind" value="number"/>
