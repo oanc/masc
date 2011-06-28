@@ -1,34 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
-   <struct type="Date" from="140" to="164">
+   <struct type="Date" from="10" to="40">
       <feat name="rule2" value="DateTimeFinal"/>
       <feat name="kind" value="dateTime"/>
    </struct>
-   <struct type="Person" from="346" to="359">
+   <struct type="Organization" from="84" to="108">
+      <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="OrgXKey"/>
+      <feat name="orgType" value="null"/>
+   </struct>
+   <struct type="Person" from="210" to="223">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="LocPersonAmbig1"/>
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Person" from="210" to="223">
       <feat name="gender" value="male"/>
       <feat name="rule" value="PersonFirstLast"/>
    </struct>
-   <struct type="Date" from="409" to="417">
-      <feat name="rule1" value="DateName"/>
-      <feat name="rule2" value="DateOnlyFinal"/>
+   <struct type="Person" from="257" to="268">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="LocPersonAmbig1"/>
+      <feat name="gender" value="null"/>
+   </struct>
+   <struct type="Date" from="269" to="277">
       <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="DateName"/>
    </struct>
-   <struct type="Person" from="541" to="554">
-      <feat name="gender" value="male"/>
+   <struct type="Person" from="368" to="381">
+      <feat name="gender" value="female"/>
       <feat name="rule" value="PersonFirstLast"/>
    </struct>
-   <struct type="Organization" from="558" to="563">
-      <feat name="orgType" value="company"/>
+   <struct type="Person" from="368" to="381">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="LocPersonAmbig1"/>
+      <feat name="gender" value="null"/>
    </struct>
-   <struct type="Date" from="567" to="586">
+   <struct type="Date" from="394" to="413">
       <feat name="rule2" value="DateTimeFinal"/>
       <feat name="kind" value="dateTime"/>
    </struct>
-   <struct type="Date" from="669" to="688">
+   <struct type="Person" from="422" to="437">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="LocPersonAmbig1"/>
+      <feat name="gender" value="null"/>
+   </struct>
+   <struct type="Person" from="461" to="473">
+      <feat name="rule" value="PersonFinal"/>
+      <feat name="rule1" value="LocPersonAmbig1"/>
+      <feat name="gender" value="null"/>
+   </struct>
+   <struct type="Date" from="488" to="507">
       <feat name="rule2" value="DateTimeFinal"/>
       <feat name="kind" value="dateTime"/>
    </struct>
-   <struct type="Location" from="928" to="938">
-      <feat name="locType" value="us_region"/>
+   <struct type="Organization" from="552" to="576">
+      <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="OrgXKey"/>
+      <feat name="orgType" value="null"/>
+   </struct>
+   <struct type="Organization" from="731" to="747">
+      <feat name="rule2" value="OrgFinal"/>
+      <feat name="rule1" value="TheOrgXKey"/>
+      <feat name="orgType" value="null"/>
    </struct>
 </cesAna>
