@@ -2,6 +2,13 @@
 
 cd ..
 ROOT=`pwd`
+echo 'root is $ROOT'
+
+ROOT=`cygpath -m $ROOT`
+
+echo "root is" $ROOT
+
+echo
 
 #if [ "$TERM" = "cygwin" ] ; then
 #	CYGROOT=/cygwin$ROOT
@@ -26,7 +33,9 @@ MASC=$OUT
 CONVERT=./apps/convert/target/Convert.jar
 ALIGN=./apps/align/target/Align.jar
 COPY=./apps/copy-files/target/copy-files.jar
+
 SPLITTER=./apps/graph-splitter/target/graph-splitter.jar
+#SPLITTER=./apps/graph-splitter/target/graph-splitter-core-1.0.0-SNAPSHOT.jar
 VALIDATOR=./apps/validate-headers/target/ValidateHeaders.jar
 CORRECT=./apps/fix-corrections/target/FixCorrections.jar
 MAKETREE=.apps/make-tree/target/MakeTree.jar

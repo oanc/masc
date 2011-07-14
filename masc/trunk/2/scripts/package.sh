@@ -10,7 +10,11 @@ VERS=1.0.3
 #FILENAME="MASC-$VERS-$DATE.tgz"
 FILENAME="MASC-$VERS.tgz"
 
+
+
 TGZ=$ROOT/$FILENAME
+
+echo TGZ is $TGZ
 if [ -e $TGZ ] ; then
 	rm -f $TGZ
 fi
