@@ -4,10 +4,6 @@
 # fails
 set -e
 
-# set -u causes the script to fail if an uninitialized
-# variable is used.
-set -u
-
 cd ..
 ROOT=`pwd`
 #echo 'root is $ROOT'
@@ -15,6 +11,10 @@ ROOT=`pwd`
 if [ "$CYGWIN" != "" ] ; then
 	ROOT=`cygpath -m $ROOT`
 fi
+
+# set -u causes the script to fail if an uninitialized
+# variable is used.
+set -u
 
 echo "root is" $ROOT
 
