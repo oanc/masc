@@ -66,11 +66,12 @@ build "validator" "validator"
 build "make-tree" "make-tree"
 build "divide-corpus" "divide-corpus"
 build "parse-all" "parse-all"
-build "check-align" "check-align"
+#build "check-align" "check-align"
 
 #/tags/masc-1.0.3 
 
 build2 "graph-splitter" "graph-splitter"
+build2 "check-align" "check-align"
 
 echo Looking for errors.
 grep ERROR maven.log

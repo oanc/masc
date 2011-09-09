@@ -1,10 +1,20 @@
 #!/bin/bash
 
+# set -e causes the script to fail when any command
+# fails
+set -e
+
+# set -u causes the script to fail if an uninitialized
+# variable is used.
+set -u
+
 cd ..
 ROOT=`pwd`
-echo 'root is $ROOT'
+#echo 'root is $ROOT'
 
-ROOT=`cygpath -m $ROOT`
+if [ "$CYGWIN" != "" ] ; then
+	ROOT=`cygpath -m $ROOT`
+fi
 
 echo "root is" $ROOT
 
