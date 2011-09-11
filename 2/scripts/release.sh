@@ -23,23 +23,23 @@ echo "---------------------------------------------------------"
 
 echo "---------------------------------------------------------"
 # Process committed belief annotations.
-./cb.sh
+# ./cb.sh #not yet present in MASC 2
 
 echo "---------------------------------------------------------"
 # Process event annotations.
-./event.sh
+# ./event.sh #not yet present in MASC 2
 
 echo "---------------------------------------------------------"
 # Convert and align the Penn Tree Bank files.
-./ptb.sh
+#./ptb.sh
 
 echo "---------------------------------------------------------"
 # Convert and align the FrameNet files.
-./framenet.sh
+#./framenet.sh
 
 echo "---------------------------------------------------------"
 # Process the "out of stream" corrections.
-./corrections.sh
+#./corrections.sh
 
 echo "---------------------------------------------------------"
 # Add missing IDs to sentence annotations.
@@ -61,11 +61,11 @@ echo "---------------------------------------------------------"
 
 echo "---------------------------------------------------------"
 # Link NE, NC, and VC annotations to the PTB tokens.
-./link-tokens.sh
+#./link-tokens.sh
 
 echo "---------------------------------------------------------"
 # Copy over hand corrected files before validation starts.
-./hand-corrected.sh
+#./hand-corrected.sh #not yet present in MASC 2
 
 echo "---------------------------------------------------------"
 # Perform a schema validation of all XML files.
@@ -81,10 +81,11 @@ echo "---------------------------------------------------------"
 ./check-align.sh
 
 echo "---------------------------------------------------------"
+echo TODO: The divide.sh script needs to be updated.
 # Divide the files into written and spoken components.
-./divide.sh
+#./divide.sh
 
-echo "---------------------------------------------------------"
+#echo "---------------------------------------------------------"
 # Copies other original annotations, header, etc. and
 # packages everything.
-./package.sh
+#./package.sh

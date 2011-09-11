@@ -2,7 +2,7 @@
 
 # set -e causes the script to fail when any command
 # fails
-set -e
+#set -e
 
 cd ..
 ROOT=`pwd`
@@ -14,7 +14,7 @@ fi
 
 # set -u causes the script to fail if an uninitialized
 # variable is used.
-set -u
+#set -u
 
 echo "root is" $ROOT
 

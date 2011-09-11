@@ -21,9 +21,14 @@ echo openening $IN/logical
 java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=logical -in=$IN/logical -out=$OUT -rename="@speaker=who"  #original line
 #java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=logical -in=./logical -out=$OUT -rename="@speaker=who"  #updated on 4/26/2011
 
-echo opening $IN/penn-pos
-java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=hepple -in=$IN/penn-pos -out=$OUT -saveAs=penn -rename="Token=tok @category=msd" -id=penn #original line
+# Updated 9/9/2011 KBS
+echo opening $IN/Token
+java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=penn -in=$IN/Token -out=$OUT -saveAs=penn -rename="Token=tok @category=msd" -id=penn #original line
+
+#echo opening $IN/penn-pos
+#java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=hepple -in=$IN/penn-pos -out=$OUT -saveAs=penn -rename="Token=tok @category=msd" -id=penn #original line
 #java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=hepple -in=./penn-pos -out=$OUT -saveAs=penn -rename="Token=tok @category=msd" -id=penn #updated on 4/26/2011
+# End update 9/9/92011 
 
 echo opening $IN/NP
 java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=np -in=$IN/NP -out=$OUT -saveAs=nc -rename="np=nchunk NounChunk=nchunk" -id=nc -accept=nchunk -exf=graf:set
@@ -55,7 +60,8 @@ java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=NE -in=$IN/NE -out=$OUT -re
 #java $OPTS -jar $ALIGN $LOPTS -src=$EV -target=$MASC -dest=$MASC -type=event -fix=$FIX/event-fixes.xml
 
 # Align the opinion data
-java $OPTS -jar $ALIGN $LOPTS -src=$IN/opinion/graf -target=$OUT -dest=$OUT -type=mpqa -fix=$FIX/opinion-fixes.xml
+echo TODO: Check if opinion data needs to be aligned. 
+#java $OPTS -jar $ALIGN $LOPTS -src=$IN/opinion/graf -target=$OUT -dest=$OUT -type=mpqa -fix=$FIX/opinion-fixes.xml
 
 #####################################################
 ## THE REMAINDER IS PERFORMED IN SEPARATE SCRIPTS. ##

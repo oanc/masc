@@ -54,6 +54,8 @@ touch $ROOT/maven.log
 build "convert" "GrafConvert"
 #exit
 
+# Update 9/9/2011 Everything uses build2 now, that is,
+# the masc-1.0.3 tagged versions
 build "align" "GrafAlign"
 build "check-ids" "check-ids"
 #build "graph-splitter" "graph-splitter"
