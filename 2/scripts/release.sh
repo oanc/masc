@@ -57,6 +57,7 @@ echo "---------------------------------------------------------"
 
 echo "---------------------------------------------------------"
 # Link the logical annotations into a tree.
+echo "TODO: fix-logical.sh (make-tree.jar) needs fixing"
 #./fix-logical.sh
 
 echo "---------------------------------------------------------"
