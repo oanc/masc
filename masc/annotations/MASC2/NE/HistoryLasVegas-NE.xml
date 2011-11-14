@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
+   <struct type="Location" from="105" to="121">
+      <feat name="locType" value="other"/>
+   </struct>
    <struct type="Location" from="105" to="114">
       <feat name="rule1" value="Location1"/>
       <feat name="rule2" value="LocFinal"/>
@@ -10,9 +13,9 @@
       <feat name="kind" value="date"/>
    </struct>
    <struct type="Date" from="406" to="424">
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="rule1" value="ModifierDate"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="ModifierDate"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
    </struct>
    <struct type="Date" from="594" to="603">
       <feat name="kind" value="date"/>
@@ -23,11 +26,20 @@
       <feat name="matches" value="[23628, 23648, 23718]"/>
       <feat name="kind" value="date"/>
    </struct>
+   <struct type="Location" from="973" to="987">
+      <feat name="locType" value="river"/>
+   </struct>
    <struct type="Location" from="973" to="982">
       <feat name="rule1" value="Location1"/>
       <feat name="rule2" value="LocFinal"/>
       <feat name="matches" value="[23629, 23631, 23639, 23645, 23647, 23649, 23653, 23657, 23659, 23663, 23669, 23672, 23681, 23683, 23685, 23692, 23694, 23695, 23698, 23699, 23704, 23705, 23709, 23711, 23713, 23715, 23716, 23721, 23724, 23732, 23742, 23747, 23748, 23752, 23754, 23765, 23767, 23768, 23769, 23773, 23776, 23779, 23783, 23784, 23787, 23790, 23793, 23800, 23803, 23806, 23808, 23809, 23810, 23811]"/>
       <feat name="locType" value="city"/>
+   </struct>
+   <struct type="Location" from="995" to="1009">
+      <feat name="locType" value="river"/>
+   </struct>
+   <struct type="Location" from="995" to="1003">
+      <feat name="locType" value="province_state"/>
    </struct>
    <struct type="Location" from="1223" to="1232">
       <feat name="rule1" value="Location1"/>
@@ -36,9 +48,9 @@
       <feat name="locType" value="city"/>
    </struct>
    <struct type="Date" from="1904" to="1913">
-      <feat name="rule2" value="YearOnlyFinal"/>
-      <feat name="rule1" value="TempYear3"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="TempYear3"/>
+      <feat name="rule2" value="YearOnlyFinal"/>
    </struct>
    <struct type="Date" from="2308" to="2326">
       <feat name="kind" value="date"/>
@@ -50,14 +62,14 @@
       <feat name="locType" value="country"/>
    </struct>
    <struct type="Date" from="2414" to="2418">
-      <feat name="rule2" value="YearOnlyFinal"/>
-      <feat name="rule1" value="TempYear3"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="TempYear3"/>
+      <feat name="rule2" value="YearOnlyFinal"/>
    </struct>
    <struct type="Person" from="2432" to="2445">
-      <feat name="rule" value="PersonFinal"/>
-      <feat name="rule1" value="PersonLocAmbig"/>
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonLocAmbig"/>
+      <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Location" from="2512" to="2521">
       <feat name="rule1" value="Location1"/>
@@ -72,9 +84,9 @@
       <feat name="locType" value="city"/>
    </struct>
    <struct type="Date" from="2719" to="2723">
-      <feat name="rule2" value="YearOnlyFinal"/>
-      <feat name="rule1" value="TempYear3"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="TempYear3"/>
+      <feat name="rule2" value="YearOnlyFinal"/>
    </struct>
    <struct type="Person" from="2743" to="2758">
       <feat name="gender" value="male"/>
@@ -89,8 +101,8 @@
    <struct type="Location" from="2903" to="2913">
       <feat name="rule1" value="Location1"/>
       <feat name="rule2" value="LocFinal"/>
-      <feat name="matches" value="[23644, 23654]"/>
       <feat name="locType" value="province"/>
+      <feat name="" value="[23644, 23654]"/>
    </struct>
    <struct type="Location" from="2924" to="2941">
       <feat name="rule1" value="Location1"/>
@@ -99,14 +111,14 @@
       <feat name="locType" value="city"/>
    </struct>
    <struct type="Date" from="3030" to="3034">
-      <feat name="rule2" value="YearOnlyFinal"/>
-      <feat name="rule1" value="TempYear3"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="TempYear3"/>
+      <feat name="rule2" value="YearOnlyFinal"/>
    </struct>
    <struct type="Organization" from="3036" to="3042">
-      <feat name="rule " value="OrgJobTitle"/>
-      <feat name="matches" value="[23925, 23930, 23931]"/>
       <feat name="orgType" value="religious"/>
+      <feat name="matches" value="[23925, 23930, 23931]"/>
+      <feat name="rule " value="OrgJobTitle"/>
    </struct>
    <struct type="Person" from="3050" to="3063">
       <feat name="rule" value="JobTitle1"/>
@@ -131,26 +143,26 @@
       <feat name="locType" value="city"/>
    </struct>
    <struct type="Date" from="3385" to="3401">
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="rule1" value="ModifierDate"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="ModifierDate"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
    </struct>
    <struct type="Organization" from="3585" to="3591">
-      <feat name="rule" value="Unknown"/>
-      <feat name="matches" value="[23925, 23930, 23931]"/>
-      <feat name="kind" value="PN"/>
-      <feat name="NMRule" value="Unknown"/>
       <feat name="orgType" value="religious"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[23925, 23930, 23931]"/>
+      <feat name="rule" value="Unknown"/>
    </struct>
    <struct type="Date" from="3811" to="3815">
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="rule1" value="YearContext1"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="YearContext1"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
    </struct>
    <struct type="Date" from="3893" to="3897">
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="rule1" value="YearContext1"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="YearContext1"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
    </struct>
    <struct type="Location" from="3933" to="3942">
       <feat name="rule1" value="Location1"/>
@@ -165,14 +177,14 @@
       <feat name="locType" value="province"/>
    </struct>
    <struct type="Location" from="3994" to="4009">
-      <feat name="rule2" value="LocFinal"/>
-      <feat name="rule1" value="Location1"/>
       <feat name="locType" value="us_region"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Person" from="4068" to="4089">
-      <feat name="rule" value="PersonFinal"/>
-      <feat name="rule1" value="PersonLocAmbig"/>
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonLocAmbig"/>
+      <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Location" from="4172" to="4181">
       <feat name="rule1" value="Location1"/>
@@ -193,11 +205,11 @@
       <feat name="gender" value="male"/>
    </struct>
    <struct type="Organization" from="4363" to="4369">
-      <feat name="rule" value="Unknown"/>
-      <feat name="matches" value="[23925, 23930, 23931]"/>
-      <feat name="kind" value="PN"/>
-      <feat name="NMRule" value="Unknown"/>
       <feat name="orgType" value="religious"/>
+      <feat name="NMRule" value="Unknown"/>
+      <feat name="kind" value="PN"/>
+      <feat name="matches" value="[23925, 23930, 23931]"/>
+      <feat name="rule" value="Unknown"/>
    </struct>
    <struct type="Location" from="4443" to="4458">
       <feat name="locType" value="facility"/>
@@ -210,9 +222,9 @@
       <feat name="gender" value="male"/>
    </struct>
    <struct type="Date" from="4766" to="4771">
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="rule1" value="YearSpan1"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="YearSpan1"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
    </struct>
    <struct type="Person" from="4809" to="4826">
       <feat name="gender" value="male"/>
@@ -257,9 +269,9 @@
       <feat name="locType" value="facility"/>
    </struct>
    <struct type="Location" from="5356" to="5371">
-      <feat name="rule2" value="LocFinal"/>
-      <feat name="rule1" value="Location1"/>
       <feat name="locType" value="country"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Date" from="5375" to="5383">
       <feat name="rule1" value="ModifierDate"/>
@@ -285,23 +297,26 @@
       <feat name="matches" value="[23674, 23689]"/>
       <feat name="locType" value="city"/>
    </struct>
+   <struct type="Location" from="5638" to="5651">
+      <feat name="locType" value="us_region"/>
+   </struct>
    <struct type="Location" from="5769" to="5785">
       <feat name="locType" value="us_region"/>
    </struct>
    <struct type="Date" from="5891" to="5895">
-      <feat name="rule2" value="YearOnlyFinal"/>
-      <feat name="rule1" value="TempYear3"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="TempYear3"/>
+      <feat name="rule2" value="YearOnlyFinal"/>
    </struct>
    <struct type="Location" from="5914" to="5917">
-      <feat name="rule2" value="LocFinal"/>
-      <feat name="rule1" value="Location1"/>
       <feat name="locType" value="city"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Person" from="5918" to="5923">
-      <feat name="rule" value="PersonFinal"/>
-      <feat name="rule1" value="GazPersonFirst"/>
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Location" from="5925" to="5936">
       <feat name="rule1" value="Location1"/>
@@ -368,9 +383,9 @@
       <feat name="locType" value="us_region"/>
    </struct>
    <struct type="Date" from="6581" to="6592">
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="rule1" value="DateName"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="DateName"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
    </struct>
    <struct type="Location" from="6654" to="6663">
       <feat name="locType" value="city"/>
@@ -388,9 +403,9 @@
       <feat name="locType" value="city"/>
    </struct>
    <struct type="Date" from="7497" to="7514">
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="rule1" value="ModifierDate"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="ModifierDate"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
    </struct>
    <struct type="Location" from="7566" to="7575">
       <feat name="rule1" value="Location1"/>
@@ -405,9 +420,9 @@
       <feat name="locType" value="city"/>
    </struct>
    <struct type="Date" from="7725" to="7729">
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="rule1" value="YearContext1"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="YearContext1"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
    </struct>
    <struct type="Organization" from="7997" to="8018">
       <feat name="orgType" value="corporation"/>
@@ -443,14 +458,14 @@
       <feat name="locType" value="province"/>
    </struct>
    <struct type="Location" from="8226" to="8246">
-      <feat name="rule2" value="LocFinal"/>
-      <feat name="rule1" value="LocationPost"/>
       <feat name="locType" value="us_region"/>
+      <feat name="rule1" value="LocationPost"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Date" from="8250" to="8254">
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="rule1" value="YearContext1"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="YearContext1"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
    </struct>
    <struct type="Location" from="8371" to="8380">
       <feat name="rule1" value="Location1"/>
@@ -476,6 +491,9 @@
       <feat name="matches" value="[23629, 23631, 23639, 23645, 23647, 23649, 23653, 23657, 23659, 23663, 23669, 23672, 23681, 23683, 23685, 23692, 23694, 23695, 23698, 23699, 23704, 23705, 23709, 23711, 23713, 23715, 23716, 23721, 23724, 23732, 23742, 23747, 23748, 23752, 23754, 23765, 23767, 23768, 23769, 23773, 23776, 23779, 23783, 23784, 23787, 23790, 23793, 23800, 23803, 23806, 23808, 23809, 23810, 23811]"/>
       <feat name="locType" value="city"/>
    </struct>
+   <struct type="Location" from="8702" to="8712">
+      <feat name="locType" value="other"/>
+   </struct>
    <struct type="Location" from="8725" to="8736">
       <feat name="locType" value="other"/>
    </struct>
@@ -491,6 +509,7 @@
       <feat name="matches" value="[23629, 23631, 23639, 23645, 23647, 23649, 23653, 23657, 23659, 23663, 23669, 23672, 23681, 23683, 23685, 23692, 23694, 23695, 23698, 23699, 23704, 23705, 23709, 23711, 23713, 23715, 23716, 23721, 23724, 23732, 23742, 23747, 23748, 23752, 23754, 23765, 23767, 23768, 23769, 23773, 23776, 23779, 23783, 23784, 23787, 23790, 23793, 23800, 23803, 23806, 23808, 23809, 23810, 23811]"/>
       <feat name="locType" value="city"/>
    </struct>
+   <struct type="Money" from="8919" to="8931"/>
    <struct type="Location" from="8961" to="8979">
       <feat name="locType" value="other"/>
    </struct>
@@ -499,6 +518,9 @@
       <feat name="rule2" value="LocFinal"/>
       <feat name="matches" value="[23629, 23631, 23639, 23645, 23647, 23649, 23653, 23657, 23659, 23663, 23669, 23672, 23681, 23683, 23685, 23692, 23694, 23695, 23698, 23699, 23704, 23705, 23709, 23711, 23713, 23715, 23716, 23721, 23724, 23732, 23742, 23747, 23748, 23752, 23754, 23765, 23767, 23768, 23769, 23773, 23776, 23779, 23783, 23784, 23787, 23790, 23793, 23800, 23803, 23806, 23808, 23809, 23810, 23811]"/>
       <feat name="locType" value="city"/>
+   </struct>
+   <struct type="Location" from="9137" to="9146">
+      <feat name="locType" value="lake_sea_ocean"/>
    </struct>
    <struct type="Date" from="9175" to="9180">
       <feat name="rule1" value="GazDateWords"/>
@@ -510,9 +532,9 @@
       <feat name="locType" value="province"/>
    </struct>
    <struct type="Organization" from="9244" to="9254">
-      <feat name="rule2" value="OrgFinal"/>
-      <feat name="rule1" value="GazOrganization"/>
       <feat name="orgType" value="government"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="Location" from="9288" to="9298">
       <feat name="locType" value="facility"/>
@@ -533,9 +555,9 @@
       <feat name="locType" value="facility"/>
    </struct>
    <struct type="Date" from="9615" to="9619">
-      <feat name="rule2" value="YearOnlyFinal"/>
-      <feat name="rule1" value="TempYear3"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="TempYear3"/>
+      <feat name="rule2" value="YearOnlyFinal"/>
    </struct>
    <struct type="Location" from="10078" to="10095">
       <feat name="rule1" value="Location1"/>
@@ -544,9 +566,9 @@
       <feat name="locType" value="city"/>
    </struct>
    <struct type="Organization" from="10227" to="10258">
-      <feat name="rule2" value="OrgCountryFinal"/>
-      <feat name="rule1" value="OrgXBase"/>
       <feat name="orgType" value="educational"/>
+      <feat name="rule1" value="OrgXBase"/>
+      <feat name="rule2" value="OrgCountryFinal"/>
    </struct>
    <struct type="Location" from="10281" to="10302">
       <feat name="locType" value="facility"/>
@@ -558,14 +580,14 @@
       <feat name="locType" value="facility"/>
    </struct>
    <struct type="Location" from="10393" to="10402">
-      <feat name="rule2" value="LocFinal"/>
-      <feat name="rule1" value="LocGeneralKey"/>
       <feat name="locType" value="city"/>
+      <feat name="rule1" value="LocGeneralKey"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Date" from="10415" to="10430">
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="rule1" value="YearSpan1"/>
+      <feat name="" value="YearSpan1"/>
       <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
    </struct>
    <struct type="Location" from="10454" to="10461">
       <feat name="rule1" value="Location1"/>
@@ -586,42 +608,42 @@
       <feat name="locType" value="city"/>
    </struct>
    <struct type="Date" from="10729" to="10738">
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="rule1" value="YearSpan1"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="YearSpan1"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
    </struct>
    <struct type="Date" from="10757" to="10761">
-      <feat name="rule2" value="YearOnlyFinal"/>
-      <feat name="rule1" value="TempYear3"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="TempYear3"/>
+      <feat name="rule2" value="YearOnlyFinal"/>
    </struct>
    <struct type="Location" from="10806" to="10817">
-      <feat name="rule1" value="LocPersonAmbig"/>
-      <feat name="rule2" value="LocFinal"/>
       <feat name="matches" value="[23673, 23679, 23688, 23735]"/>
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="LocPersonAmbig"/>
    </struct>
    <struct type="Organization" from="10872" to="10887">
       <feat name="orgType" value="corporation"/>
    </struct>
    <struct type="Date" from="10889" to="10893">
-      <feat name="rule2" value="YearOnlyFinal"/>
-      <feat name="rule1" value="TempYear1"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="TempYear1"/>
+      <feat name="rule2" value="YearOnlyFinal"/>
    </struct>
    <struct type="Date" from="10949" to="10953">
-      <feat name="rule2" value="YearOnlyFinal"/>
-      <feat name="rule1" value="TempYear1"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="TempYear1"/>
+      <feat name="rule2" value="YearOnlyFinal"/>
    </struct>
    <struct type="Organization" from="10984" to="11004">
-      <feat name="rule2" value="LocFinal"/>
-      <feat name="rule1" value="LocKey"/>
       <feat name="orgType" value="corporation"/>
+      <feat name="rule1" value="LocKey"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Person" from="11012" to="11035">
-      <feat name="rule" value="PersonFinal"/>
-      <feat name="rule1" value="GazPersonFirst"/>
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Date" from="11101" to="11105">
       <feat name="rule1" value="TempYear3"/>
@@ -645,9 +667,9 @@
       <feat name="orgType" value="corporation"/>
    </struct>
    <struct type="Date" from="11275" to="11288">
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="rule1" value="DateName"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="DateName"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
    </struct>
    <struct type="Location" from="11313" to="11322">
       <feat name="rule1" value="Location1"/>
@@ -661,13 +683,16 @@
       <feat name="matches" value="[23638, 23736, 23745]"/>
       <feat name="locType" value="city"/>
    </struct>
+   <struct type="Organization" from="11362" to="11367">
+      <feat name="orgType" value="other"/>
+   </struct>
    <struct type="Person" from="11448" to="11454">
       <feat name="gender" value="male"/>
    </struct>
    <struct type="Date" from="11493" to="11497">
-      <feat name="rule2" value="YearOnlyFinal"/>
-      <feat name="rule1" value="TempYear3"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="TempYear3"/>
+      <feat name="rule2" value="YearOnlyFinal"/>
    </struct>
    <struct type="Person" from="11537" to="11543">
       <feat name="gender" value="male"/>
@@ -679,9 +704,9 @@
       <feat name="orgType" value="corporation"/>
    </struct>
    <struct type="Location" from="11699" to="11708">
-      <feat name="rule1" value="InLoc1"/>
-      <feat name="rule2" value="LocFinal"/>
       <feat name="matches" value="[23629, 23631, 23639, 23645, 23647, 23649, 23653, 23657, 23659, 23663, 23669, 23672, 23681, 23683, 23685, 23692, 23694, 23695, 23698, 23699, 23704, 23705, 23709, 23711, 23713, 23715, 23716, 23721, 23724, 23732, 23742, 23747, 23748, 23752, 23754, 23765, 23767, 23768, 23769, 23773, 23776, 23779, 23783, 23784, 23787, 23790, 23793, 23800, 23803, 23806, 23808, 23809, 23810, 23811]"/>
+      <feat name="rule2" value="LocFinal"/>
+      <feat name="rule1" value="InLoc1"/>
    </struct>
    <struct type="Location" from="12025" to="12034">
       <feat name="rule1" value="Location1"/>
@@ -696,14 +721,14 @@
       <feat name="locType" value="city"/>
    </struct>
    <struct type="Date" from="12088" to="12101">
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="rule1" value="YearSpan1"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="YearSpan1"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
    </struct>
    <struct type="Date" from="12105" to="12118">
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="rule1" value="YearSpan1"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="YearSpan1"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
    </struct>
    <struct type="Location" from="12120" to="12129">
       <feat name="rule1" value="Location1"/>
@@ -724,14 +749,14 @@
       <feat name="matches" value="[23755, 23758]"/>
    </struct>
    <struct type="Person" from="12380" to="12392">
-      <feat name="rule" value="PersonFinal"/>
-      <feat name="rule1" value="PersonFull"/>
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Person" from="12406" to="12417">
-      <feat name="rule2" value="LocFinal"/>
-      <feat name="rule1" value="LocPersonAmbig"/>
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="LocPersonAmbig"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Organization" from="12560" to="12572">
       <feat name="orgType" value="arts"/>
@@ -743,29 +768,29 @@
       <feat name="rule1" value="GazPersonFirst"/>
    </struct>
    <struct type="Person" from="12601" to="12612">
-      <feat name="rule" value="PersonFinal"/>
-      <feat name="rule1" value="PersonFull"/>
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Person" from="12614" to="12637">
-      <feat name="rule" value="PersonFinal"/>
-      <feat name="rule1" value="PersonFull"/>
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Person" from="12640" to="12653">
-      <feat name="rule" value="PersonFinal"/>
-      <feat name="rule1" value="PersonFull"/>
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Person" from="12659" to="12670">
-      <feat name="rule" value="PersonFinal"/>
-      <feat name="rule1" value="PersonFull"/>
       <feat name="gender" value="male"/>
+      <feat name="rule1" value="PersonFull"/>
+      <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Date" from="12736" to="12748">
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="rule1" value="DateName"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="DateName"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
    </struct>
    <struct type="Location" from="12785" to="12794">
       <feat name="rule1" value="Location1"/>
@@ -786,9 +811,9 @@
       <feat name="locType" value="facility"/>
    </struct>
    <struct type="Location" from="12965" to="12971">
-      <feat name="rule" value="PersonFinal"/>
-      <feat name="rule1" value="GazPersonFirst"/>
       <feat name="locType" value="facility"/>
+      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="rule" value="PersonFinal"/>
    </struct>
    <struct type="Location" from="12973" to="12978">
       <feat name="locType" value="facility"/>
@@ -815,9 +840,9 @@
       <feat name="locType" value="city"/>
    </struct>
    <struct type="Date" from="13693" to="13697">
-      <feat name="rule2" value="YearOnlyFinal"/>
-      <feat name="rule1" value="TempYear3"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="TempYear3"/>
+      <feat name="rule2" value="YearOnlyFinal"/>
    </struct>
    <struct type="Person" from="13729" to="13742">
       <feat name="gender" value="male"/>
@@ -846,6 +871,7 @@
    <struct type="Person" from="14184" to="14190">
       <feat name="gender" value="male"/>
    </struct>
+   <struct type="Money" from="14214" to="14226"/>
    <struct type="Location" from="14227" to="14244">
       <feat name="rule1" value="Location1"/>
       <feat name="rule2" value="LocFinal"/>
@@ -871,14 +897,14 @@
       <feat name="gender" value="male"/>
    </struct>
    <struct type="Organization" from="14635" to="14648">
-      <feat name="rule2" value="OrgFinal"/>
-      <feat name="rule1" value="OrgXBase"/>
       <feat name="orgType" value="corporation"/>
+      <feat name="rule1" value="OrgXBase"/>
+      <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="Organization" from="14907" to="14934">
-      <feat name="rule2" value="OrgFinal"/>
-      <feat name="rule1" value="TheOrgXBase"/>
       <feat name="orgType" value="government"/>
+      <feat name="rule1" value="TheOrgXBase"/>
+      <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="Location" from="15027" to="15036">
       <feat name="rule1" value="Location1"/>
@@ -893,9 +919,9 @@
       <feat name="locType" value="city"/>
    </struct>
    <struct type="Location" from="15236" to="15238">
-      <feat name="rule2" value="LocFinal"/>
-      <feat name="rule1" value="Location1"/>
       <feat name="locType" value="country"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Person" from="15414" to="15424">
       <feat name="gender" value="male"/>
@@ -913,9 +939,9 @@
       <feat name="locType" value="facility"/>
    </struct>
    <struct type="Date" from="15490" to="15503">
-      <feat name="rule2" value="DateOnlyFinal"/>
-      <feat name="rule1" value="YearSpan1"/>
       <feat name="kind" value="date"/>
+      <feat name="rule1" value="YearSpan1"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
    </struct>
    <struct type="Person" from="15505" to="15509">
       <feat name="gender" value="male"/>
@@ -930,7 +956,7 @@
       <feat name="locType" value="city"/>
    </struct>
    <struct type="Location" from="15624" to="15638">
-      <feat name="rule" value="PersonFinal"/>
+      <feat name="" value="PersonFinal"/>
       <feat name="rule1" value="PersonFull"/>
       <feat name="locType" value="facility"/>
    </struct>
@@ -952,25 +978,55 @@
       <feat name="matches" value="[23629, 23631, 23639, 23645, 23647, 23649, 23653, 23657, 23659, 23663, 23669, 23672, 23681, 23683, 23685, 23692, 23694, 23695, 23698, 23699, 23704, 23705, 23709, 23711, 23713, 23715, 23716, 23721, 23724, 23732, 23742, 23747, 23748, 23752, 23754, 23765, 23767, 23768, 23769, 23773, 23776, 23779, 23783, 23784, 23787, 23790, 23793, 23800, 23803, 23806, 23808, 23809, 23810, 23811]"/>
       <feat name="locType" value="city"/>
    </struct>
+   <struct type="Date" from="15922" to="15946">
+      <feat name="kind" value="date"/>
+   </struct>
+   <struct type="Location" from="16092" to="16097">
+      <feat name="locType" value="facility"/>
+   </struct>
+   <struct type="Location" from="16111" to="16119">
+      <feat name="locType" value="facility"/>
+   </struct>
+   <struct type="Location" from="16122" to="16129">
+      <feat name="locType" value="facility"/>
+   </struct>
+   <struct type="Location" from="16139" to="16146">
+      <feat name="locType" value="facility"/>
+   </struct>
+   <struct type="Location" from="16152" to="16157">
+      <feat name="locType" value="facility"/>
+   </struct>
+   <struct type="Location" from="16167" to="16175">
+      <feat name="locType" value="facility"/>
+   </struct>
    <struct type="Person" from="16193" to="16197">
       <feat name="gender" value="female"/>
       <feat name="rule1" value="GazPersonFirst"/>
       <feat name="rule" value="PersonFinal"/>
       <feat name="matches" value="[23789, 23792, 23794]"/>
    </struct>
+   <struct type="Location" from="16342" to="16351">
+      <feat name="locType" value="facility"/>
+   </struct>
+   <struct type="Location" from="16357" to="16366">
+      <feat name="locType" value="facility"/>
+   </struct>
    <struct type="Location" from="16372" to="16377">
-      <feat name="rule2" value="LocFinal"/>
-      <feat name="rule1" value="Location1"/>
+      <feat name="" value="Location1"/>
       <feat name="locType" value="city"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Location" from="16383" to="16391">
       <feat name="rule2" value="LocFinal"/>
       <feat name="rule1" value="LocPersonAmbig"/>
    </struct>
    <struct type="Location" from="16396" to="16400">
-      <feat name="rule2" value="LocFinal"/>
-      <feat name="rule1" value="Location1"/>
       <feat name="locType" value="city"/>
+      <feat name="rule1" value="Location1"/>
+      <feat name="rule2" value="LocFinal"/>
+   </struct>
+   <struct type="Location" from="16422" to="16428">
+      <feat name="locType" value="facility"/>
    </struct>
    <struct type="Date" from="16443" to="16452">
       <feat name="rule1" value="YearSpan1"/>
@@ -991,9 +1047,9 @@
       <feat name="locType" value="city"/>
    </struct>
    <struct type="Location" from="17125" to="17137">
-      <feat name="rule2" value="LocFinal"/>
-      <feat name="rule1" value="LocationPost"/>
       <feat name="locType" value="facility"/>
+      <feat name="rule1" value="LocationPost"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="Location" from="17143" to="17149">
       <feat name="locType" value="facility"/>
@@ -1016,14 +1072,20 @@
    <struct type="Location" from="17310" to="17318">
       <feat name="locType" value="facility"/>
    </struct>
+   <struct type="Money" from="17365" to="17377">
+      <feat name="locType" value=""/>
+   </struct>
    <struct type="Location" from="17383" to="17391">
       <feat name="safe.regex" value="true"/>
       <feat name="locType" value="facility"/>
    </struct>
    <struct type="Organization" from="17435" to="17441">
-      <feat name="rule2" value="OrgFinal"/>
-      <feat name="rule1" value="GazOrganization"/>
       <feat name="orgType" value="corporation"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="rule2" value="OrgFinal"/>
+   </struct>
+   <struct type="Organization" from="17657" to="17665">
+      <feat name="orgType" value="arts"/>
    </struct>
    <struct type="Location" from="17770" to="17779">
       <feat name="rule1" value="Location1"/>
