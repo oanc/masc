@@ -31,11 +31,12 @@ echo "---------------------------------------------------------"
 
 echo "---------------------------------------------------------"
 # Convert and align the Penn Tree Bank files.
-#./ptb.sh
+./ptb.sh
+exit
 
 echo "---------------------------------------------------------"
 # Convert and align the FrameNet files.
-#./framenet.sh
+./framenet.sh
 
 echo "---------------------------------------------------------"
 # Process the "out of stream" corrections.
