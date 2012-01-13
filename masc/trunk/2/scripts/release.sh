@@ -21,24 +21,27 @@ echo "---------------------------------------------------------"
 # Process the existing XCES annotations.
 ./prep.sh
 
-echo "---------------------------------------------------------"
+#echo "---------------------------------------------------------"
 # Process committed belief annotations.
 # ./cb.sh #not yet present in MASC 2
 
-echo "---------------------------------------------------------"
+#echo "---------------------------------------------------------"
 # Process event annotations.
 # ./event.sh #not yet present in MASC 2
 
 echo "---------------------------------------------------------"
+# Convert and align the MPQA files.
+./mpqa.sh
+
+echo "---------------------------------------------------------"
 # Convert and align the Penn Tree Bank files.
 ./ptb.sh
-exit
 
 echo "---------------------------------------------------------"
 # Convert and align the FrameNet files.
 ./framenet.sh
 
-echo "---------------------------------------------------------"
+#echo "---------------------------------------------------------"
 # Process the "out of stream" corrections.
 #./corrections.sh
 
@@ -63,9 +66,9 @@ echo "TODO: fix-logical.sh (make-tree.jar) needs fixing"
 
 echo "---------------------------------------------------------"
 # Link NE, NC, and VC annotations to the PTB tokens.
-#./link-tokens.sh
+./link-tokens.sh
 
-echo "---------------------------------------------------------"
+#echo "---------------------------------------------------------"
 # Copy over hand corrected files before validation starts.
 #./hand-corrected.sh #not yet present in MASC 2
 

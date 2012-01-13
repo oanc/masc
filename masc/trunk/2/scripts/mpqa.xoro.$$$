@@ -1,0 +1,107 @@
+use java.lang.String as String;
+use java.net.URL as URL;
+use java.io.File as File;
+
+use gate.Document as Document;
+use gate.FeatureMap as FeatureMap;
+
+String ASET = "mpqa";
+String ATYPE = "http://www.cs.pitt.edu/mpqa/2003";
+
+//String ROOT = "D:/Corpora/MASC2/ci/data";
+//String IN = ROOT + "/originals/opinion";
+//String OUT = ROOT + "/working/mpqa";
+
+resource save_graf = org.anc.gate.SaveGrafStandoff
+{
+	name = "Save Standoff";
+	inputASName = "MPQA";
+	annotationType = "mpqa";
+	grafASName = ASET;
+	grafASType = ATYPE;
+	encoding = "UTF-8";
+}
+
+resource save_content = org.anc.gate.SaveContent
+{
+	encoding = "UTF-8";
+}
+
+resource transducer = gate.creole.Transducer
+{
+	grammarURL = _URL("file:/D:/Corpora/masc/final/bin/opinion.jape");
+}
+
+void main(String[] args)
+{
+	if (length(args) != 2)
+	{
+		println("USAGE: xoro mpqa.xoro <SOURCE> <TARGET>");
+	}
+	else
+	{
+		File indir = new File(args[0]);
+		File outdir = new File(args[1]);
+		run(indir, outdir)'
+	}
+}
+
+void run(File indir, File outdir)
+{
+	println("Loading resources.");
+	load(save_graf);
+	load(save_content);
+	//load(transducer);
+
+//	Filter filter = new Filter(".xml", true);
+	//File indir = new File(IN);
+	//File outdir = new File(OUT);
+	File[] dirs = indir.listFiles();
+	if (length(dirs) != 1)
+	{
+		println(indir.getPath() + " contains " + length(dirs) + " files.");
+	}
+	for (int i = 0; i < length(dirs); ++i)
+	{
+		if (!dirs[i].getName().startsWith(".svn"))
+		{
+			ProcessFile(dirs[i], outdir);
+		}
+	}
+}
+
+void ProcessFile(File dir, File outdir)
+{
+	String dirName = dir.getName();
+	String filename = dirName + ".mpqa.xml";
+	String txtfile = dirName + ".txt";
+	String sofile = dirName + "-mpqa.xml";
+
+	File file = new File(dir, filename);
+	println("Processing " + file.getPath());
+	File f = new File(outdir, sofile);
+	URL destination = f.toURL();
+	FeatureMap fm = Factory.newFeatureMap();
+	fm.put("sourceUrl", file.toURI().toURL());
+	Document doc = Factory.createResource("gate.corpora.DocumentImpl", fm);
+
+	/*
+	transducer.setDocument(doc);
+	transducer.execute();
+	transducer.setDocument(null);
+	*/
+
+	save_graf.setDocument(doc);
+	save_graf.setDestination(destination);
+	save_graf.execute();
+	save_graf.setDocument(null);
+	save_graf.setDestination(null);
+
+	f = new File(outdir, txtfile);
+	destination = f.toURI().toURL();
+	save_content.setDocument(doc);
+	save_content.setDestination(destination);
+	save_content.execute();
+	save_content.setDocument(null);
+	save_content.setDestination(null);
+}
