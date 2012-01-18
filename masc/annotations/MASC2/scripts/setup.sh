@@ -22,7 +22,7 @@ else
 	mkdir -p $IN
 	echo "Checking data out of Subversion."
 	cd $IN
-        svn co https://www.anc.org/dev/masc/annotations/MASC2 .
+    svn co https://www.anc.org/dev/masc/annotations/MASC2 .
 	#svn co https://www.anc.org/dev/masc/trunk/1 .
 	#cp -Rf /cygdrive/c/corpora2/masc/data/originals ./data/originals
 fi
@@ -61,7 +61,8 @@ createDir $WORK
 createDir $WORK/ptb
 createDir $WORK/mpqa
 createDir $WORK/framenet
+createDir $WORK/release
 createDir $WORK/tokens/fn
 createDir $WORK/tokens/ptb
 createDir $WORK/tokens/quarks
-
+createDir $RELEASE

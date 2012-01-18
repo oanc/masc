@@ -12,7 +12,7 @@ mv -f $WORK/mpqa/mpqa-fixes.xml $FIX
 #groovy D:/Corpora/MASC2/ci/scripts/mpqafixes.groovy >> $FIX/mpqa-fixes.xml
 
 echo Aligning MPQA files.
-java $OPTS -jar $ALIGN -type=mpqa $LOPTS -src=$WORK/mpqa -target=$OUT -dest=$OUT -fix=$FIX/mpqa-fixes.xml 
+java $OPTS -jar $ALIGN -type=mpqa $LOPTS -src=$WORK/mpqa -target=$OUT -dest=$OUT -fix=$FIX/mpqa-fixes.xml
 
 echo "Done."
 

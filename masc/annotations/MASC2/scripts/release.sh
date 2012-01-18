@@ -21,6 +21,10 @@ echo "---------------------------------------------------------"
 # Process the existing XCES annotations.
 ./prep.sh
 
+echo "---------------------------------------------------------"
+# Generate the header files.
+./headers.sh
+
 #echo "---------------------------------------------------------"
 # Process committed belief annotations.
 # ./cb.sh #not yet present in MASC 2
@@ -50,6 +54,10 @@ echo "---------------------------------------------------------"
 ./fix-ids.sh
 
 echo "---------------------------------------------------------"
+# Trim white-space from annotations.
+./fix-alignment.sh
+
+echo "---------------------------------------------------------"
 # Extract tokens from the PTB and FrameNet files.
 # Also links tokens to quarks.
 ./tokenize.sh
@@ -65,7 +73,7 @@ echo "TODO: fix-logical.sh (make-tree.jar) needs fixing"
 #./fix-logical.sh
 
 echo "---------------------------------------------------------"
-# Link NE, NC, and VC annotations to the PTB tokens.
+# Link MPQA, NE, NC, and VC annotations to the Penn tokens.
 ./link-tokens.sh
 
 #echo "---------------------------------------------------------"
@@ -81,16 +89,28 @@ echo "---------------------------------------------------------"
 # start or end of an annotation.
 ./check-align.sh
 
+#exit
+
 echo "---------------------------------------------------------"
 # Convert the standoff annotation files in ./data/data to 
 # the new GrAF format before validation with the new schemas.
-# TODO: The header files need to be copied as well.
+# Also copies the headers, which are already in the new format
+# to the release directory.
 ./convert.sh
+
+echo "---------------------------------------------------------"
+# Convert the existing MASC1 files into the new format.
+./masc1.sh
 
 echo "---------------------------------------------------------"
 # Perform a schema validation of all document headers and standoff
 # annotation files.
-./validate.sh
+./validate.sh data/working/release
+
+echo "---------------------------------------------------------"
+# Generate a summary of the annotations for each file before
+# dividing.
+groovy ./summarize.groovy ../data/working/release ../
 
 echo "---------------------------------------------------------"
 echo TODO: The divide.sh and package.sh scripts needs to be updated.

@@ -4,5 +4,6 @@
 source ./config.sh
 
 echo Converting standoff files to latest GrAF version.
-groovy scripts/convert.groovy $OUT $RELEASE
-
+cp -f $OUT/*.hdr $WORK/release
+cp -f $OUT/*.txt $WORK/release
+groovy scripts/convert.groovy $OUT $WORK/release

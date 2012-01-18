@@ -6,13 +6,8 @@ echo running prep.sh
 
 #cd ..
 
-# Copy over the text files and headers.
+# Copy over the text files.
 java -jar $COPY -in=$IN/txtfiles -out=$OUT
-#java -jar $COPY -in=$IN/new-headers -out=$OUT  #original line
-#java -jar $COPY -in=./new-headers -out=$OUT  #updated on 4/26/2011
-#java -jar $COPY -in=$DATA/headers -out=$OUT # updated 1/12/2012
-#cp $DATA/working/opinion/*.xml $OUT
-groovy scripts/copyheaders.groovy $DATA/headers $OUT
 
 # Convert XCES files.
 echo opening $IN/Sentence

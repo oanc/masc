@@ -26,14 +26,14 @@ if (!destination.exists())
 	return
 }
 
-File hdrStylesheet = new File('graf-update-doc.xsl')
+File hdrStylesheet = new File('scripts/graf-update-doc.xsl')
 if (!hdrStylesheet.exists())
 {
-	println "Header stylesheet not found"
+	println "Header stylesheet not found: ${hdrStylesheet.path}"
 	return
 }
 
-File soStylesheet = new File('graf-update.xsl')
+File soStylesheet = new File('scripts/graf-update.xsl')
 if (!soStylesheet.exists())
 {
 	println "Standoff stylesheet not found."
