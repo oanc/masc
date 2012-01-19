@@ -1,12 +1,38 @@
-def getType = { name ->
-	int start = name.lastIndexOf('-')
-	if (start > 0)
+class Offset 
+{
+	int start
+	int end
+	
+	public Offset(int start, int end)
 	{
-		++start
-		return name[start..-5] 
+		this.start = start
+		this.end = end
 	}
-	return 'id'
+	
+	boolean equals(other)
+	{
+		println "Equating"
+		return (other.start == start) && (other.end == end)
+	}
+	
+	int compareTo(other)
+	{
+		println "comparing"
+		return other.start - start
+	}
+	
+	String toString()
+	{
+		"[${start}, ${end}]"
+	}
 }
 
-def name = "wsj_0006-mpqa.xml"
-println getType(name)
+def o1 = new Offset(0, 5)
+def o2 = new Offset(6, 10)
+def o3 = new Offset(0, 5)
+def o4 = new Offset(6,10)
+
+def list1 = [o1, o2]
+def list2 = [o1, o3, o4]
+
+list1.intersect(list2).each {  println "${it}" }

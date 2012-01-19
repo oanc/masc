@@ -1,0 +1,55 @@
+/*
+ * A simple Grate script to list the text for all the annotations of a 
+ * given type in a file.
+ *
+ * USAGE: grate list.gr8 ne /path/to/masc/2nd_Gore-Bush.txt
+ */
+import gate.Document
+import gate.Factory
+import gate.AnnotationSet
+
+if (this.args.size() != 2)
+{
+	println "USAGE: grate list.gr8 <type> <text file>"
+	return
+}
+
+String type = this.args[0]
+File file = new File(this.args[1])
+if (!file.exists())
+{
+	println "Text file not found."
+	return
+}
+
+String soFilename = this.args[1][0..-5] + '-' + type + '.xml'
+File soFile = new File(soFilename)
+if (!soFile.exists())
+{
+	println "Standoff annotation file ${soFilename} not found."
+	return
+}
+
+final String SET_NAME = 'Standoff'
+
+def loadPR = newResource('org.anc.gate.LoadGrafStandoff') {
+	standoffASName(SET_NAME)
+}
+
+Document doc = newDocument(file)
+loadPR.document = doc
+loadPR.sourceUrl = soFile.toURI().toURL()
+loadPR.execute()
+
+String content = doc.getContent().toString()
+
+AnnotationSet aset = doc.getAnnotations(SET_NAME)
+aset.each { a ->
+	int start = a.startNode.offset.intValue()
+	int end = a.endNode.offset.intValue()
+	if (a.type != 'tok')
+	{
+		println "${start}-${end} ${a.type} \"${content[start..end-1]}\""
+	}
+}
+

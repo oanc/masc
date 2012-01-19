@@ -1,0 +1,99 @@
+/*
+ * Compares two annotation types and ensures that no two
+ * annotations overlap. This is intended to compare disjoint
+ * annotation types (ie nouns and verbs) no ensure there is
+ * no overlap.
+ *
+ * The algorithm is simple, add all annotations to a list and sort
+ * by their start offset. If any annotations overlap then for some
+ * pair of consecutive annotions L[i] and L[i+1] in the list the
+ * following must hold:
+ *     L[i].end >= L[i+1].start
+ *
+ * USAGE: grate disjoint.gr8 nc vc /path/to/masc/2nd_Gore-Bush
+ */
+import gate.Document
+import gate.Factory
+import gate.AnnotationSet
+import gate.Annotation
+
+String getText(String content, Annotation a)
+{
+	int start = a.startNode.offset.intValue()
+	int end = a.endNode.offset.intValue()
+	return content[start..end-1]
+}
+
+if (this.args.size() != 3)
+{
+	println "USAGE: grate disjoint.gr8 <type1> <type2> <path>"
+	return
+}
+
+String type1 = this.args[0]
+String type2 = this.args[1]
+String path = this.args[2]
+File file = new File("${path}.txt")
+if (!file.exists())
+{
+	println "Text file not found."
+	return
+}
+
+String soFilename = "${path}-${type1}.xml"
+File soFile1 = new File(soFilename)
+if (!soFile1.exists())
+{
+	println "Standoff annotation file ${soFilename} not found."
+	return
+}
+soFilename = "${path}-${type2}.xml"
+File soFile2 = new File(soFilename)
+if (!soFile2.exists())
+{
+	println "Standoff annotation file ${soFilename} not found."
+	return
+}
+
+final String SET_NAME = 'Standoff'
+
+def loadPR = newResource('org.anc.gate.LoadGrafStandoff') {
+	standoffASName(SET_NAME)
+}
+
+
+Document doc = newDocument(file)
+loadPR.document = doc
+loadPR.sourceUrl = soFile1.toURI().toURL()
+loadPR.execute()
+loadPR.sourceUrl = soFile2.toURI().toURL()
+loadPR.execute()
+String content = doc.getContent().toString()
+
+AnnotationSet aset = doc.getAnnotations(SET_NAME)
+List list = []
+aset.each { a ->
+	if (a.type != 'tok')
+	{
+		list << a
+	}
+}
+
+Collections.sort(list, new gate.util.OffsetComparator())
+Iterator it = list.iterator()
+def previous = it.next()
+while (it.hasNext())
+{
+	def current = it.next()
+	if (previous.type != current.type && current.startNode.offset.intValue() < previous.endNode.offset.intValue())
+	{
+		String span1 = getText(content, previous)
+		String span2 = getText(content, current)
+		println "Overlap: ${previous.type} with ${current.type}"
+		println "    ${previous.startNode.offset} ${span1}"
+		println "    ${current.startNode.offset} ${span2}"
+	}
+	previous = current
+}
+
+println "Done."
