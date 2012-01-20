@@ -1,8 +1,8 @@
 /*
- * Compares two annotation types and ensures that no two
+ * Compares one or more annotation types and ensures that no two
  * annotations overlap. This is intended to compare disjoint
- * annotation types (ie nouns and verbs) no ensure there is
- * no overlap.
+ * annotation types (ie nouns and verbs) to ensure there are
+ * no overlaps.
  *
  * The algorithm is simple, add all annotations to a list and sort
  * by their start offset. If any annotations overlap then for some
@@ -10,7 +10,7 @@
  * following must hold:
  *     L[i].end >= L[i+1].start
  *
- * USAGE: grate disjoint.gr8 nc vc /path/to/masc/2nd_Gore-Bush
+ * USAGE: grate disjoint.gr8 /path/to/corpus nc vc
  */
 import gate.Document
 import gate.Factory
@@ -24,76 +24,119 @@ String getText(String content, Annotation a)
 	return content[start..end-1]
 }
 
-if (this.args.size() != 3)
+File getStandoff(File file, String type)
 {
-	println "USAGE: grate disjoint.gr8 <type1> <type2> <path>"
-	return
+	String basename = file.name[0..-5]
+	File parent = file.getParentFile()
+	String soName = "${basename}-${type}.xml"
+	return new File(parent, soName)
 }
 
-String type1 = this.args[0]
-String type2 = this.args[1]
-String path = this.args[2]
-File file = new File("${path}.txt")
-if (!file.exists())
+int countOverlaps(Document doc, String setName)
 {
-	println "Text file not found."
-	return
+	String content = doc.getContent().toString()
+	AnnotationSet aset = doc.getAnnotations(setName)
+	if (aset.size() == 0)
+	{
+		return 0
+	}
+	List list = []
+	aset.each { a ->
+		if (a.type != 'tok')
+		{
+			list << a
+		}
+	}
+	def comparator = new gate.util.OffsetComparator()
+	int count = 0
+
+	Collections.sort(list, comparator)
+	Iterator it = list.iterator()
+	def previous = it.next()
+	while (it.hasNext())
+	{
+		def current = it.next()
+		if (previous.type != current.type && current.startNode.offset.intValue() < previous.endNode.offset.intValue())
+		{
+			++count
+			
+			String span1 = getText(content, previous)
+			String span2 = getText(content, current)
+			println "Overlap: ${previous.type} with ${current.type}"
+			println "    ${previous.startNode.offset} ${span1}"
+			println "    ${current.startNode.offset} ${span2}"
+			
+			++count
+		}
+		previous = current
+	}
+	return count
 }
 
-String soFilename = "${path}-${type1}.xml"
-File soFile1 = new File(soFilename)
-if (!soFile1.exists())
+if (this.args.size() < 2)
 {
-	println "Standoff annotation file ${soFilename} not found."
-	return
-}
-soFilename = "${path}-${type2}.xml"
-File soFile2 = new File(soFilename)
-if (!soFile2.exists())
-{
-	println "Standoff annotation file ${soFilename} not found."
+	println "USAGE: grate disjoint.gr8 <path> <type> [<type> ...]"
 	return
 }
 
 final String SET_NAME = 'Standoff'
 
+String path = this.args[0]
+File file = new File(path)
+if (!file.exists())
+{
+	println "Input file/directory not found."
+	return
+}
+
 def loadPR = newResource('org.anc.gate.LoadGrafStandoff') {
 	standoffASName(SET_NAME)
 }
 
-
-Document doc = newDocument(file)
-loadPR.document = doc
-loadPR.sourceUrl = soFile1.toURI().toURL()
-loadPR.execute()
-loadPR.sourceUrl = soFile2.toURI().toURL()
-loadPR.execute()
-String content = doc.getContent().toString()
-
-AnnotationSet aset = doc.getAnnotations(SET_NAME)
-List list = []
-aset.each { a ->
-	if (a.type != 'tok')
-	{
-		list << a
-	}
-}
-
-Collections.sort(list, new gate.util.OffsetComparator())
-Iterator it = list.iterator()
-def previous = it.next()
-while (it.hasNext())
+def q = []
+q << file
+while (q.size())
 {
-	def current = it.next()
-	if (previous.type != current.type && current.startNode.offset.intValue() < previous.endNode.offset.intValue())
+	file = q.remove(0)
+	if (file.isDirectory())
 	{
-		String span1 = getText(content, previous)
-		String span2 = getText(content, current)
-		println "Overlap: ${previous.type} with ${current.type}"
-		println "    ${previous.startNode.offset} ${span1}"
-		println "    ${current.startNode.offset} ${span2}"
+		println "Processing ${file.path}"
+		file.listFiles().each {
+			if (it.isDirectory() || it.name.endsWith('.txt'))
+			{
+				q << it
+			}
+		}
 	}
-	previous = current
-}
+	else
+	{
+		println "Processing text file ${file.name}"
+		Document doc = newDocument(file)
+		loadPR.document = doc
+		int i = 1
+		for (; i < this.args.size(); ++i)
+		{
+			String type = this.args[i]
+			File soFile = getStandoff(file, type)
+			if (soFile.exists())
+			{
+				loadPR.sourceUrl = soFile.toURI().toURL()
+				loadPR.execute()
+			}
+			else
+			{
+				println "Standoff annotation file ${soFile.name} not found."
+			}
+		}
 
+		if (i > 1)
+		{
+			int count = countOverlaps(doc, SET_NAME)
+			if (count > 0)
+			{
+				println "${file.name}: Found ${count} overlapping annotations."
+			}
+		}
+	}
+}
 println "Done."

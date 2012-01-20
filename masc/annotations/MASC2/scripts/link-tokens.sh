@@ -11,6 +11,6 @@ LINK=./apps/link-tokens/target/LinkTokens.jar
 java $OPTS -jar $LINK $LOPTS -in=$MASC -tok=penn -type=ne
 java $OPTS -jar $LINK $LOPTS -in=$MASC -tok=penn -type=nc
 java $OPTS -jar $LINK $LOPTS -in=$MASC -tok=penn -type=vc
-java $OPTS -jar $LINK $LOPTS -in=$MASC -tok=penn -type=mpqa
+#java $OPTS -jar $LINK $LOPTS -in=$MASC -tok=penn -type=mpqa
 
 

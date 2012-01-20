@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 date 
 echo running release.sh
 
@@ -13,7 +12,7 @@ echo "---------------------------------------------------------"
 
 # Check if we are supposed to rebuild the applications.
 if [ "$1" = "build" ] ; then
-echo "---------------------------------------------------------"
+	echo "---------------------------------------------------------"
 	./build-all.sh
 fi
 
@@ -53,19 +52,9 @@ echo "---------------------------------------------------------"
 # Add missing IDs to sentence annotations.
 ./fix-ids.sh
 
-echo "---------------------------------------------------------"
+#echo "---------------------------------------------------------"
 # Trim white-space from annotations.
-./fix-alignment.sh
-
-echo "---------------------------------------------------------"
-# Extract tokens from the PTB and FrameNet files.
-# Also links tokens to quarks.
-./tokenize.sh
-
-echo "---------------------------------------------------------"
-# Make sure headers have links to all annotations files
-# and don't contain links to non-existent header files.
-./update-headers.sh
+#./fix-alignment.sh
 
 echo "---------------------------------------------------------"
 # Link the logical annotations into a tree.
@@ -76,9 +65,19 @@ echo "---------------------------------------------------------"
 # Link MPQA, NE, NC, and VC annotations to the Penn tokens.
 ./link-tokens.sh
 
+echo "---------------------------------------------------------"
+# Extract tokens from the PTB and FrameNet files.
+# Also links tokens to quarks.
+./tokenize.sh
+
 #echo "---------------------------------------------------------"
 # Copy over hand corrected files before validation starts.
 #./hand-corrected.sh #not yet present in MASC 2
+
+echo "---------------------------------------------------------"
+# Make sure headers have links to all annotations files
+# and don't contain links to non-existent header files.
+./update-headers.sh
 
 echo "---------------------------------------------------------"
 # Run all annotation files through the GraphParser
@@ -88,8 +87,6 @@ echo "---------------------------------------------------------"
 # Check annotation alignment, that is whitespace at the
 # start or end of an annotation.
 ./check-align.sh
-
-#exit
 
 echo "---------------------------------------------------------"
 # Convert the standoff annotation files in ./data/data to 
