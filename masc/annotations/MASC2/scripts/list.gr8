@@ -18,38 +18,62 @@ String type = this.args[0]
 File file = new File(this.args[1])
 if (!file.exists())
 {
-	println "Text file not found."
-	return
-}
-
-String soFilename = this.args[1][0..-5] + '-' + type + '.xml'
-File soFile = new File(soFilename)
-if (!soFile.exists())
-{
-	println "Standoff annotation file ${soFilename} not found."
+	println "Input ${file.path} not found."
 	return
 }
 
 final String SET_NAME = 'Standoff'
-
 def loadPR = newResource('org.anc.gate.LoadGrafStandoff') {
-	standoffASName(SET_NAME)
+		standoffASName(SET_NAME)
 }
 
-Document doc = newDocument(file)
-loadPR.document = doc
-loadPR.sourceUrl = soFile.toURI().toURL()
-loadPR.execute()
+// Prime the queue with a file.
+def q = [ file]
 
-String content = doc.getContent().toString()
-
-AnnotationSet aset = doc.getAnnotations(SET_NAME)
-aset.each { a ->
-	int start = a.startNode.offset.intValue()
-	int end = a.endNode.offset.intValue()
-	if (a.type != 'tok')
+// And start processing the queue.
+while (q.size())
+{
+	file = q.remove(0)
+	if (file.isDirectory())
 	{
-		println "${start}-${end} ${a.type} \"${content[start..end-1]}\""
+		file.listFiles().each {
+			if (it.isDirectory() || it.name.endsWith('.txt'))
+			{
+				q << it
+			}
+		}
+	}
+	else
+	{
+		String soFilename = file.name[0..-5] + '-' + type + '.xml'
+		File soFile = new File(file.getParentFile(), soFilename)
+		if (!soFile.exists())
+		{
+			println "Standoff annotation file ${soFilename} not found."
+			break
+		}
+		println "Listing ${file.name}"
+		//Document doc = newDocument(file)
+		Document doc = gate.Factory.newDocument(file.toURI().toURL(), 'UTF-8')
+		loadPR.document = doc
+		loadPR.sourceUrl = soFile.toURI().toURL()
+		loadPR.execute()
+
+		String content = doc.getContent().toString()
+
+		AnnotationSet aset = doc.getAnnotations(SET_NAME)
+		def list = []
+		aset.each { a ->
+			if (a.type != 'tok')
+			{
+				list << a
+			}
+		}
+		Collections.sort(list, new gate.util.OffsetComparator())
+		list.each { a ->
+			int start = a.startNode.offset.intValue()
+			int end = a.endNode.offset.intValue()
+			println "${start}-${end} ${a.type} \"${content[start..end-1]}\""
+		}
 	}
 }
-

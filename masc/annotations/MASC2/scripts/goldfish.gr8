@@ -1,0 +1,80 @@
+/*
+ * The "classic" Goldfish example from Gate.
+ *
+ * Run the default tokenizer and sentece splitter, annotate all occurences
+ * of the word "goldfish" and save the generated annotations.
+ */
+ 
+import gate.*
+import gate.creole.*
+import gate.creole.metadata.*
+
+import org.anc.io.SuffixFilter
+
+File root = new File('../data/data')
+def filter = new SuffixFilter('.txt', false)
+
+@CreoleResource
+class GoldfishPR extends gate.creole.AbstractLanguageAnalyser
+{
+	void execute()
+	{
+		println "Running custom PR on document ${document.sourceUrl.toExternalForm()}"
+	}
+}
+
+def tokenizer = newResource('gate.creole.tokeniser.DefaultTokeniser') {
+	annotationSetName('Annie')
+}
+
+def splitter = newResource('gate.creole.splitter.SentenceSplitter') {
+	inputASName('Annie')
+	outputASName('Annie')
+}
+
+println "Creating corpus"
+def corpus = newCorpus('Transient corpus') {
+	root.listFiles(filter).each { file ->
+		addDocument(file)
+	}
+}
+
+def pr = new GoldfishPR()
+gate.Gate.getCreoleRegister().registerComponent(pr.class)
+
+println "Setting up pipeline."
+def pipeline = newResource('gate.creole.SerialAnalyserController') { }
+pipeline.setCorpus(corpus)
+pipeline.add(tokenizer)
+pipeline.add(splitter)
+pipeline.add(pr)
+println "Running pipeline."
+pipeline.execute()
+println "Done."
+/*
+def process = { pr, document ->
+	pr.document = document
+	pr.execute()
+	pr.document = null
+}
+
+root.listFiles(filter).each { file -> 
+	println "Processing ${file.name}"
+	gate.Document doc = newDocument(file)
+	[tokenizer, splitter].each { pr ->
+		process(pr, doc)
+	}
+	def tokens = doc.getAnnotations('Tokens').toList()
+	Collections.sort(tokens, new gate.util.OffsetComparator())
+	String content = doc.content.toString()
+	tokens.each { token ->
+		if (token.type == 'Token')
+		{
+			int start = token.startNode.offset.intValue()
+			int end = token.endNode.offset.intValue()
+			println "${start} ${token.type} ${content[start..end-1]}"
+		}
+	}
+}
+
+*/

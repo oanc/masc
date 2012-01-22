@@ -1,38 +1,48 @@
-class Offset 
-{
-	int start
-	int end
-	
-	public Offset(int start, int end)
-	{
-		this.start = start
-		this.end = end
-	}
-	
-	boolean equals(other)
-	{
-		println "Equating"
-		return (other.start == start) && (other.end == end)
-	}
-	
-	int compareTo(other)
-	{
-		println "comparing"
-		return other.start - start
-	}
-	
-	String toString()
-	{
-		"[${start}, ${end}]"
-	}
+import javax.xml.parsers.*
+import org.xml.sax.helpers.*
+import org.xml.sax.*
+
+class Graph {
+	List nodes = []
+	List edges = []
+	List annotations = []
+	List regions = []
 }
 
-def o1 = new Offset(0, 5)
-def o2 = new Offset(6, 10)
-def o3 = new Offset(0, 5)
-def o4 = new Offset(6,10)
+class Node {
+	String id;
+	List annotations = []
+}
 
-def list1 = [o1, o2]
-def list2 = [o1, o3, o4]
+class Handler extends DefaultHandler
+{
+	void startDocument()
+	{
+		println "Starting document."
+	}
+	
+	void startElement(String ns, String localName, String qName, Attributes atts)
+	{
+		println "${ns} ${localName} ${qName}"
+		if (atts.length > 0)
+		{
+			for (int i=0; i < atts.length; ++i)
+			{
+				println "   ${atts.getQName(i)} = ${atts.getValue(i)}"
+			}
+		}
+	}
+	
+	void endDocument()
+	{
+		println "Ending document."
+	}
+	
+	
+}
+File file = new File('../data/data/wsj_0006-ne.xml')
+def reader = XMLReaderFactory.createXMLReader()
+reader.setContentHandler(new Handler())
+InputSource source = new InputSource(new FileReader(file))
+reader.parse(source)
 
-list1.intersect(list2).each {  println "${it}" }

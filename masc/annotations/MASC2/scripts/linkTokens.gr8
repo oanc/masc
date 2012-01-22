@@ -5,7 +5,24 @@ import gate.AnnotationSet
 import org.xces.graf.api.*
 import org.xces.graf.io.GraphParser
 
-IRegion getSpan(INode node)
+class Span implements Comparable
+{
+	INode node
+	int start
+	int end
+	
+	int compareTo(other)
+	{
+		int delta = start - other.start
+		if (delta)
+		{
+			return delta
+		}
+		return other.end - end
+	}
+}
+
+Span getSpan(INode node)
 {
 	int start = Integer.MAX_VALUE
 	int end = -1
@@ -21,7 +38,13 @@ IRegion getSpan(INode node)
 			}
 		}			
 	}
-	return org.xces.graf.impl.Factory.newRegion('r', start, end)
+	if (end <= start)
+	{
+		println "Node ${node.id} does not span any text."
+		return null
+	}
+	//return org.xces.graf.impl.Factory.newRegion('r', start, end)
+	return new Span(node:node, start:start, end:end)
 }
 
 
@@ -33,20 +56,26 @@ File tokFile = new File('../data/data/2nd_Gore-Bush-penn.xml')
 
 String content = txtFile.getText('UTF-8')
 IGraph entities = parser.parse(neFile)
-IGraph tokens = parser.parse(tokFile)
-List tokenList = []
-tokens.nodes().each { token ->
-	IRegion span = getSpan(token)
-}
+//IGraph tokens = parser.parse(tokFile)
+//List tokenList = []
+//tokens.nodes().each { token ->
+//	tokenList << getSpan(token)
+//}
 
 println "Parsed entities."
 entities.nodes().each { node ->
-	IRegion region = getSpan(node)
-	int start = region.start.offset
-	int end = region.end.offset
-	String text = content[start..end-1]
-	IAnnotation a = node.getAnnotation()
-	println "Node ${node.id}: ${a.label} [${start}-${end}] ${text}"
+	Span region = getSpan(node)
+	if (region)
+	{
+		int start = region.start
+		int end = region.end
+		String text = content[start..end-1]
+		IAnnotation a = node.getAnnotation()
+		if (a.label != 'tok')
+		{
+			println "Node ${node.id}: ${a.label} [${start}-${end}] ${text}"
+		}
+	}
 }
 
 /* Gate version

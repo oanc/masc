@@ -93,6 +93,7 @@ def loadPR = newResource('org.anc.gate.LoadGrafStandoff') {
 	standoffASName(SET_NAME)
 }
 
+int failed = 0 // Total number of files that contain overlapping annotations.
 def q = []
 q << file
 while (q.size())
@@ -134,9 +135,17 @@ while (q.size())
 			int count = countOverlaps(doc, SET_NAME)
 			if (count > 0)
 			{
+				++failed
 				println "${file.name}: Found ${count} overlapping annotations."
 			}
 		}
 	}
 }
-println "Done."
+if (failed == 0)
+{
+	println "All files are ok."
+}
+else
+{
+	println "${failed} files contain overlapping annotations."
+}
