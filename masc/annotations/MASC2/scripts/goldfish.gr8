@@ -8,18 +8,62 @@
 import gate.*
 import gate.creole.*
 import gate.creole.metadata.*
-
 import org.anc.io.SuffixFilter
 
 File root = new File('../data/data')
 def filter = new SuffixFilter('.txt', false)
 
 @CreoleResource
-class GoldfishPR extends gate.creole.AbstractLanguageAnalyser
+class EchoResource extends gate.creole.AbstractLanguageAnalyser
 {
 	void execute()
 	{
-		println "Running custom PR on document ${document.sourceUrl.toExternalForm()}"
+		println "Processing ${document.sourceUrl}"
+	}
+}
+
+@CreoleResource
+class GoldfishAnnotator extends gate.creole.AbstractLanguageAnalyser {
+	static final String TOKEN = ANNIEConstants.TOKEN_ANNOTATION_TYPE
+	static final String SENTENCE = ANNIEConstants.SENTENCE_ANNOTATION_TYPE
+	static final String KIND = ANNIEConstants.TOKEN_KIND_FEATURE_NAME
+	static final String STRING = ANNIEConstants.TOKEN_STRING_FEATURE_NAME
+	
+	String inputASName
+	String outputASName
+	
+	void execute() {
+		int total = 0
+		def inputAS = inputASName ? document.getAnnotations(inputASName) : document.getAnnotations()
+		def outputAS = outputASName ? document.getAnnotations(outputASName) : document.getAnnotations()
+		
+		def tokens = inputAS.get(TOKEN)
+		def sentences = inputAS.get(SENTENCE)
+		
+		document.features.clear()
+		document.features.put('Number of tokens', tokens.size())
+		document.features.put('Number of characters', document.content.toString().length())
+		document.features.put('Number of sentences', sentences.size())
+
+		int wordCount = 0
+		sentences.each { s ->
+			int sentenceGoldfishCount = 0
+			tokens = inputAS.get(TOKEN, s.startNode.offset, s.endNode.offset)
+			tokens.each { token ->
+				if (token.features[KIND]  == 'word') {
+					++wordCount
+					String word = token.features[STRING]
+					if (word == 'Goldfish') {
+						++sentenceGoldfishCount
+						outputAS.add(token.startNode.offset, token.endNode.offset, 'Goldfish', Factory.newFeatureMap())
+					}					
+				}
+			}
+			total += sentenceGoldfishCount
+			s.features['Goldfish count'] = sentenceGoldfishCount
+		}
+		document.features['Number of words'] = wordCount
+		document.features['']
 	}
 }
 
@@ -39,42 +83,29 @@ def corpus = newCorpus('Transient corpus') {
 	}
 }
 
-def pr = new GoldfishPR()
-gate.Gate.getCreoleRegister().registerComponent(pr.class)
+def register = Gate.getCreoleRegister()
+register.registerComponent(GoldfishAnnotator)
+register.registerComponent(EchoResource)
+
+def goldfishPR = new GoldfishAnnotator()
+goldfishPR.inputASName = 'Annie'
+goldfishPR.outputASName = 'Goldfish'
+
+def echoPR = new EchoResource()
 
 println "Setting up pipeline."
 def pipeline = newResource('gate.creole.SerialAnalyserController') { }
 pipeline.setCorpus(corpus)
+pipeline.add(echoPR)
 pipeline.add(tokenizer)
 pipeline.add(splitter)
-pipeline.add(pr)
+pipeline.add(goldfishPR)
 println "Running pipeline."
 pipeline.execute()
+
+println "Serializing the corpus."
+def dsDir = new File('D:/Temp/GoldfishDS')
+def store = newSerialDataStore(dsDir)
+def persisted = store.adopt(corpus, null)
+store.sync(persisted)
 println "Done."
-/*
-def process = { pr, document ->
-	pr.document = document
-	pr.execute()
-	pr.document = null
-}
-
-root.listFiles(filter).each { file -> 
-	println "Processing ${file.name}"
-	gate.Document doc = newDocument(file)
-	[tokenizer, splitter].each { pr ->
-		process(pr, doc)
-	}
-	def tokens = doc.getAnnotations('Tokens').toList()
-	Collections.sort(tokens, new gate.util.OffsetComparator())
-	String content = doc.content.toString()
-	tokens.each { token ->
-		if (token.type == 'Token')
-		{
-			int start = token.startNode.offset.intValue()
-			int end = token.endNode.offset.intValue()
-			println "${start} ${token.type} ${content[start..end-1]}"
-		}
-	}
-}
-
-*/

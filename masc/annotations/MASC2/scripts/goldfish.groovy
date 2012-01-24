@@ -5,6 +5,7 @@
  * of the word "goldfish" and save the generated annotations.
  */
  
+import gate.Gate
 import gate.Document
 import gate.Factory
 import gate.AnnotationSet
@@ -40,9 +41,11 @@ def splitter = newResource('gate.creole.splitter.SentenceSplitter') {
 	outputASName('Annie')
 }
 */
+Gate.init()
+Gate.getCreoleRegister().registerDirectories()
 FeatureMap fm = Factory.newFeatureMap()
 fm.annotationSetName = 'Annie'
-def tokenizer = Factory.createResource('gate.creole.tokenizer.DefaultTokeniser', fm)
+def tokenizer = Factory.createResource('gate.creole.tokeniser.DefaultTokeniser', fm)
 
 fm = Factory.newFeatureMap()
 fm['inputASName'] = 'Annie'
@@ -84,7 +87,7 @@ pipeline.add(tokenizer)
 pipeline.add(splitter)
 pipeline.add(pr)
 println "Running pipeline."
-//pipeline.execute()
+pipeline.execute()
 println "Synchronizing data store."
 //datastore.sync(persistedCorpus)
 //datastore.close()

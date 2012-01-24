@@ -4,8 +4,11 @@
  *
  * USAGE: grate mascds.gr8 <mascDir> <dataStoreDir>
  *
- * mascDir should be a relative path to the MASC data files.
- * dataStoreDir is the directory where the Gate DataStore will be created.
+ * mascDir the path to the MASC data files. The path can be relative to the 
+ *		script or specified as an absolute path.
+ * dataStoreDir The directory where the Gate DataStore will be created. If the
+ *		dataStoreDir does not exist it will be created. If the directory exists
+ *		and already contains a Gate data store the script will terminate.
  *
  */
 
@@ -49,8 +52,6 @@ def corpus = newCorpus('MASC 2.0.0') {
 }
 
 // Create the datastore for the corpus.
-//def ds = Factory.createDataStore('gate.persist.SerialDataStore', dsDir.toURI().toURL().toExternalForm())
-//ds.open()
 def ds = newSerialDataStore(dsDir)
 def persistedCorpus = ds.adopt(corpus, null)
 
@@ -89,5 +90,5 @@ corpus.each { doc ->
 ds.sync(persistedCorpus)
 ds.close()
 
-// Now go fire up Gate and go browse the annotations.
+// Now go fire up Gate and browse the annotations.
 println "Done."
