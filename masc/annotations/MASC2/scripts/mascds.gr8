@@ -36,7 +36,7 @@ if (!dsDir.exists() && !dsDir.mkdirs())
 }
 
 def loadPR = newResource('org.anc.gate.LoadGrafStandoff') {}
-def filter = new org.anc.io.SuffixFilter('.txt', false)
+//def filter = new org.anc.io.SuffixFilter('.txt', false)
 
 // The index is used to map URL objects to File objects and simply
 // saves us a bunch of string substitutions/replacements when trying
@@ -45,9 +45,12 @@ def index = [:]
 
 def corpus = newCorpus('MASC 2.0.0') {
 	// Add each text file to the corpus and the index.
-	mascDir.listFiles(filter).each {
-		addDocument(it)
-		index[it.toURI().toURL()] = it
+	mascDir.listFiles().each {
+		if (it.name.endsWith('.txt'))
+		{
+			addDocument(it)
+			index[it.toURI().toURL()] = it
+		}
 	}
 }
 
@@ -56,7 +59,7 @@ def ds = newSerialDataStore(dsDir)
 def persistedCorpus = ds.adopt(corpus, null)
 
 // Now process the annotation types for each document in the corpus.
-def types = ['logical', 'penn', 'ne', 'nc', 'vc', 'mpqa', 'ptb', 'fn']
+def types = ['logical', 's', 'penn', 'ne', 'nc', 'vc', 'mpqa', 'ptb', 'fn']
 corpus.each { doc ->
 	println "Corpus document ${doc.sourceUrl}"
 	// Check if the file is in in the index

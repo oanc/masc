@@ -16,7 +16,7 @@ java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=s -in=$IN/Sentence -out=$OU
 #java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=s -in=./sentence-boundaries -out=$OUT -rename="Sentence=s" -id=s  #updated on 4/26/2011
 
 echo opening $IN/logical
-java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=logical -in=$IN/logical -out=$OUT -rename="@speaker=who"  #original line
+java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=logical -in=$IN/logical -out=$OUT -rename="paragraph=p @speaker=who"  #original line
 #java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=logical -in=./logical -out=$OUT -rename="@speaker=who"  #updated on 4/26/2011
 
 # Updated 9/9/2011 KBS
