@@ -119,64 +119,9 @@
       <feat name="length" value="1"/>
       <feat name="string" value="="/>
    </struct>
-   <struct type="Token" from="56" to="57">
-      <feat name="root" value="&quot;"/>
-      <feat name="category" value="''"/>
-      <feat name="kind" value="punctuation"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="&quot;"/>
-   </struct>
-   <struct type="Token" from="57" to="60">
-      <feat name="root" value="dsr"/>
-      <feat name="category" value="NN"/>
-      <feat name="kind" value="word"/>
-      <feat name="orth" value="lowercase"/>
-      <feat name="length" value="3"/>
-      <feat name="string" value="dsr"/>
-   </struct>
-   <struct type="Token" from="60" to="61">
-      <feat name="root" value="@"/>
-      <feat name="category" value="IN"/>
-      <feat name="kind" value="punctuation"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="@"/>
-   </struct>
-   <struct type="Token" from="61" to="62">
-      <feat name="root" value="w"/>
-      <feat name="category" value="NN"/>
-      <feat name="kind" value="word"/>
-      <feat name="orth" value="lowercase"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="w"/>
-   </struct>
-   <struct type="Token" from="62" to="63">
-      <feat name="root" value="3"/>
-      <feat name="category" value="CD"/>
-      <feat name="kind" value="number"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="3"/>
-   </struct>
-   <struct type="Token" from="63" to="64">
-      <feat name="root" value="."/>
-      <feat name="category" value="."/>
-      <feat name="kind" value="punctuation"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="."/>
-   </struct>
-   <struct type="Token" from="64" to="67">
-      <feat name="root" value="org"/>
-      <feat name="category" value="NN"/>
-      <feat name="kind" value="word"/>
-      <feat name="orth" value="lowercase"/>
-      <feat name="length" value="3"/>
-      <feat name="string" value="org"/>
-   </struct>
-   <struct type="Token" from="67" to="68">
-      <feat name="root" value="&quot;"/>
-      <feat name="category" value="''"/>
-      <feat name="kind" value="punctuation"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="&quot;"/>
+   <struct type="Token" from="56" to="68">
+      <feat name="kind" value="emailAddress"/>
+      <feat name="rule" value="Emailaddress1"/>
    </struct>
    <struct type="Token" from="69" to="73">
       <feat name="string" value="sent"/>
@@ -370,65 +315,9 @@
       <feat name="length" value="1"/>
       <feat name="string" value=":"/>
    </struct>
-   <struct type="Token" from="145" to="146">
-      <feat name="root" value="w"/>
-      <feat name="category" value="NN"/>
-      <feat name="kind" value="word"/>
-      <feat name="orth" value="lowercase"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="w"/>
-   </struct>
-   <struct type="Token" from="146" to="147">
-      <feat name="root" value="3"/>
-      <feat name="category" value="CD"/>
-      <feat name="kind" value="number"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="3"/>
-   </struct>
-   <struct type="Token" from="147" to="157">
-      <feat name="root" value="c-math-erb"/>
-      <feat name="category" value="JJ"/>
-      <feat name="kind" value="word"/>
-      <feat name="orth" value="lowercase"/>
-      <feat name="length" value="10"/>
-      <feat name="string" value="c-math-erb"/>
-   </struct>
-   <struct type="Token" from="157" to="158">
-      <feat name="root" value="@"/>
-      <feat name="category" value="IN"/>
-      <feat name="kind" value="punctuation"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="@"/>
-   </struct>
-   <struct type="Token" from="158" to="159">
-      <feat name="root" value="w"/>
-      <feat name="category" value="NN"/>
-      <feat name="kind" value="word"/>
-      <feat name="orth" value="lowercase"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="w"/>
-   </struct>
-   <struct type="Token" from="159" to="160">
-      <feat name="root" value="3"/>
-      <feat name="category" value="CD"/>
-      <feat name="kind" value="number"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="3"/>
-   </struct>
-   <struct type="Token" from="160" to="161">
-      <feat name="root" value="."/>
-      <feat name="category" value="."/>
-      <feat name="kind" value="punctuation"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="."/>
-   </struct>
-   <struct type="Token" from="161" to="164">
-      <feat name="root" value="org"/>
-      <feat name="category" value="NN"/>
-      <feat name="kind" value="word"/>
-      <feat name="orth" value="lowercase"/>
-      <feat name="length" value="3"/>
-      <feat name="string" value="org"/>
+   <struct type="Token" from="145" to="164">
+      <feat name="kind" value="emailAddress"/>
+      <feat name="rule" value="Emailaddress1"/>
    </struct>
    <struct type="Token" from="178" to="185">
       <feat name="string" value="Meeting"/>
@@ -463,6 +352,14 @@
       <feat name="orth" value="upperInitial"/>
       <feat name="length" value="5"/>
       <feat name="string" value="Math-"/>
+   </struct>
+   <struct type="Token" from="200" to="203">
+      <feat name="root" value="erb"/>
+      <feat name="category" value="NNP"/>
+      <feat name="kind" value="word"/>
+      <feat name="orth" value="allCaps"/>
+      <feat name="length" value="3"/>
+      <feat name="string" value="ERB"/>
    </struct>
    <struct type="Token" from="204" to="218">
       <feat name="root" value="teleconference"/>
@@ -504,7 +401,7 @@
    </struct>
    <struct type="Token" from="240" to="241">
       <feat name="root" value="'"/>
-      <feat name="category" value="''"/>
+      <feat name="category" value="POS"/>
       <feat name="kind" value="punctuation"/>
       <feat name="length" value="1"/>
       <feat name="string" value="'"/>
@@ -518,7 +415,7 @@
    </struct>
    <struct type="Token" from="245" to="252">
       <feat name="root" value="present"/>
-      <feat name="category" value="VB"/>
+      <feat name="category" value="NN"/>
       <feat name="kind" value="word"/>
       <feat name="orth" value="upperInitial"/>
       <feat name="length" value="7"/>
@@ -916,6 +813,14 @@
       <feat name="length" value="4"/>
       <feat name="string" value="1300"/>
    </struct>
+   <struct type="Token" from="488" to="491">
+      <feat name="root" value="est"/>
+      <feat name="category" value="NNP"/>
+      <feat name="kind" value="word"/>
+      <feat name="orth" value="allCaps"/>
+      <feat name="length" value="3"/>
+      <feat name="string" value="EST"/>
+   </struct>
    <struct type="Token" from="492" to="497">
       <feat name="root" value="until"/>
       <feat name="category" value="IN"/>
@@ -1156,6 +1061,14 @@
       <feat name="length" value="5"/>
       <feat name="string" value="Math-"/>
    </struct>
+   <struct type="Token" from="649" to="652">
+      <feat name="root" value="erb"/>
+      <feat name="category" value="NNP"/>
+      <feat name="kind" value="word"/>
+      <feat name="orth" value="allCaps"/>
+      <feat name="length" value="3"/>
+      <feat name="string" value="ERB"/>
+   </struct>
    <struct type="Token" from="654" to="657">
       <feat name="root" value="stu"/>
       <feat name="category" value="NNP"/>
@@ -1351,6 +1264,14 @@
       <feat name="length" value="3"/>
       <feat name="string" value="the"/>
    </struct>
+   <struct type="Token" from="781" to="784">
+      <feat name="root" value="ams"/>
+      <feat name="category" value="NNP"/>
+      <feat name="kind" value="word"/>
+      <feat name="orth" value="allCaps"/>
+      <feat name="length" value="3"/>
+      <feat name="string" value="AMS"/>
+   </struct>
    <struct type="Token" from="784" to="785">
       <feat name="root" value="."/>
       <feat name="category" value="."/>
@@ -1435,6 +1356,14 @@
       <feat name="orth" value="lowercase"/>
       <feat name="length" value="3"/>
       <feat name="string" value="for"/>
+   </struct>
+   <struct type="Token" from="856" to="859">
+      <feat name="root" value="ams"/>
+      <feat name="category" value="NNP"/>
+      <feat name="kind" value="word"/>
+      <feat name="orth" value="allCaps"/>
+      <feat name="length" value="3"/>
+      <feat name="string" value="AMS"/>
    </struct>
    <struct type="Token" from="860" to="863">
       <feat name="string" value="has"/>
@@ -1662,10 +1591,6 @@
       <feat name="category" value="VBD"/>
       <feat name="affix" value="ed"/>
       <feat name="root" value="be"/>
-   </struct>
-   <struct type="Token" from="996" to="999">
-      <feat name="category" value="JJ"/>
-      <feat name="rule" value="NotPP"/>
    </struct>
    <struct type="Token" from="1000" to="1009">
       <feat name="root" value="necessary"/>
@@ -2258,12 +2183,13 @@
       <feat name="string" value="it"/>
    </struct>
    <struct type="Token" from="1405" to="1410">
-      <feat name="root" value="might"/>
-      <feat name="category" value="MD"/>
-      <feat name="kind" value="word"/>
-      <feat name="orth" value="lowercase"/>
-      <feat name="length" value="5"/>
       <feat name="string" value="might"/>
+      <feat name="length" value="5"/>
+      <feat name="orth" value="lowercase"/>
+      <feat name="kind" value="word"/>
+      <feat name="category" value="MD"/>
+      <feat name="affix" value=""/>
+      <feat name="root" value="may"/>
    </struct>
    <struct type="Token" from="1411" to="1417">
       <feat name="root" value="appear"/>
@@ -2838,16 +2764,10 @@
    </struct>
    <struct type="Token" from="1765" to="1770">
       <feat name="category" value="JJ"/>
-      <feat name="rule" value="NotPP"/>
-   </struct>
-   <struct type="Token" from="1765" to="1770">
       <feat name="string" value="fixed"/>
+      <feat name="root" value="fixed"/>
       <feat name="length" value="5"/>
-      <feat name="orth" value="lowercase"/>
       <feat name="kind" value="word"/>
-      <feat name="category" value="VBN"/>
-      <feat name="affix" value="ed"/>
-      <feat name="root" value="fix"/>
    </struct>
    <struct type="Token" from="1771" to="1774">
       <feat name="root" value="set"/>
@@ -3040,6 +2960,14 @@
       <feat name="orth" value="lowercase"/>
       <feat name="length" value="1"/>
       <feat name="string" value="a"/>
+   </struct>
+   <struct type="Token" from="1886" to="1889">
+      <feat name="root" value="url"/>
+      <feat name="category" value="NNP"/>
+      <feat name="kind" value="word"/>
+      <feat name="orth" value="allCaps"/>
+      <feat name="length" value="3"/>
+      <feat name="string" value="URL"/>
    </struct>
    <struct type="Token" from="1890" to="1893">
       <feat name="root" value="for"/>
@@ -3344,12 +3272,13 @@
       <feat name="root" value="match"/>
    </struct>
    <struct type="Token" from="2089" to="2091">
-      <feat name="root" value="ca"/>
-      <feat name="category" value="MD"/>
-      <feat name="orth" value="lowercase"/>
-      <feat name="length" value="2"/>
-      <feat name="string" value="ca"/>
       <feat name="kind" value="word"/>
+      <feat name="string" value="ca"/>
+      <feat name="length" value="2"/>
+      <feat name="orth" value="lowercase"/>
+      <feat name="category" value="MD"/>
+      <feat name="affix" value=""/>
+      <feat name="root" value="can"/>
    </struct>
    <struct type="Token" from="2091" to="2094">
       <feat name="root" value="n't"/>
@@ -3725,21 +3654,14 @@
       <feat name="length" value="1"/>
       <feat name="string" value="."/>
    </struct>
-   <struct type="Token" from="2326" to="2327">
-      <feat name="root" value="-"/>
+   <struct type="Token" from="2326" to="2328">
       <feat name="category" value=":"/>
-      <feat name="subkind" value="dashpunct"/>
       <feat name="kind" value="punctuation"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="-"/>
-   </struct>
-   <struct type="Token" from="2327" to="2328">
-      <feat name="root" value="-"/>
-      <feat name="category" value=":"/>
       <feat name="subkind" value="dashpunct"/>
-      <feat name="kind" value="punctuation"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="-"/>
+      <feat name="length" value="2"/>
+      <feat name="orth" value="--"/>
+      <feat name="root" value="--"/>
+      <feat name="string" value="--"/>
    </struct>
    <struct type="Token" from="2329" to="2333">
       <feat name="root" value="dave"/>
@@ -3764,57 +3686,9 @@
       <feat name="length" value="1"/>
       <feat name="string" value="&lt;"/>
    </struct>
-   <struct type="Token" from="2343" to="2346">
-      <feat name="root" value="dsr"/>
-      <feat name="category" value="NN"/>
-      <feat name="kind" value="word"/>
-      <feat name="orth" value="lowercase"/>
-      <feat name="length" value="3"/>
-      <feat name="string" value="dsr"/>
-   </struct>
-   <struct type="Token" from="2346" to="2347">
-      <feat name="root" value="@"/>
-      <feat name="category" value="IN"/>
-      <feat name="kind" value="punctuation"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="@"/>
-   </struct>
-   <struct type="Token" from="2347" to="2348">
-      <feat name="root" value="w"/>
-      <feat name="category" value="NN"/>
-      <feat name="kind" value="word"/>
-      <feat name="orth" value="lowercase"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="w"/>
-   </struct>
-   <struct type="Token" from="2348" to="2349">
-      <feat name="root" value="3"/>
-      <feat name="category" value="CD"/>
-      <feat name="kind" value="number"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="3"/>
-   </struct>
-   <struct type="Token" from="2349" to="2350">
-      <feat name="root" value="."/>
-      <feat name="category" value="."/>
-      <feat name="kind" value="punctuation"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="."/>
-   </struct>
-   <struct type="Token" from="2350" to="2353">
-      <feat name="root" value="org"/>
-      <feat name="category" value="NN"/>
-      <feat name="kind" value="word"/>
-      <feat name="orth" value="lowercase"/>
-      <feat name="length" value="3"/>
-      <feat name="string" value="org"/>
-   </struct>
-   <struct type="Token" from="2353" to="2354">
-      <feat name="root" value="&gt;"/>
-      <feat name="category" value="NN"/>
-      <feat name="kind" value="symbol"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="&gt;"/>
+   <struct type="Token" from="2343" to="2354">
+      <feat name="kind" value="emailAddress"/>
+      <feat name="rule" value="Emailaddress1"/>
    </struct>
    <struct type="Token" from="2355" to="2358">
       <feat name="root" value="tel"/>
@@ -4062,108 +3936,8 @@
       <feat name="length" value="1"/>
       <feat name="string" value="="/>
    </struct>
-   <struct type="Token" from="2483" to="2487">
-      <feat name="root" value="http"/>
-      <feat name="category" value="NN"/>
-      <feat name="kind" value="word"/>
-      <feat name="orth" value="lowercase"/>
-      <feat name="length" value="4"/>
-      <feat name="string" value="http"/>
-   </struct>
-   <struct type="Token" from="2487" to="2488">
-      <feat name="root" value=":"/>
-      <feat name="category" value=":"/>
-      <feat name="kind" value="punctuation"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value=":"/>
-   </struct>
-   <struct type="Token" from="2488" to="2489">
-      <feat name="root" value="/"/>
-      <feat name="category" value="NN"/>
-      <feat name="kind" value="punctuation"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="/"/>
-   </struct>
-   <struct type="Token" from="2489" to="2490">
-      <feat name="root" value="/"/>
-      <feat name="category" value="NN"/>
-      <feat name="kind" value="punctuation"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="/"/>
-   </struct>
-   <struct type="Token" from="2490" to="2493">
-      <feat name="root" value="www"/>
-      <feat name="category" value="NN"/>
-      <feat name="kind" value="word"/>
-      <feat name="orth" value="lowercase"/>
-      <feat name="length" value="3"/>
-      <feat name="string" value="www"/>
-   </struct>
-   <struct type="Token" from="2493" to="2494">
-      <feat name="root" value="."/>
-      <feat name="category" value="."/>
-      <feat name="kind" value="punctuation"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="."/>
-   </struct>
-   <struct type="Token" from="2494" to="2495">
-      <feat name="root" value="w"/>
-      <feat name="category" value="NN"/>
-      <feat name="kind" value="word"/>
-      <feat name="orth" value="lowercase"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="w"/>
-   </struct>
-   <struct type="Token" from="2495" to="2496">
-      <feat name="root" value="3"/>
-      <feat name="category" value="CD"/>
-      <feat name="kind" value="number"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="3"/>
-   </struct>
-   <struct type="Token" from="2496" to="2497">
-      <feat name="root" value="."/>
-      <feat name="category" value="."/>
-      <feat name="kind" value="punctuation"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="."/>
-   </struct>
-   <struct type="Token" from="2497" to="2500">
-      <feat name="root" value="org"/>
-      <feat name="category" value="NN"/>
-      <feat name="kind" value="word"/>
-      <feat name="orth" value="lowercase"/>
-      <feat name="length" value="3"/>
-      <feat name="string" value="org"/>
-   </struct>
-   <struct type="Token" from="2500" to="2501">
-      <feat name="root" value="/"/>
-      <feat name="category" value="NN"/>
-      <feat name="kind" value="punctuation"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="/"/>
-   </struct>
-   <struct type="Token" from="2501" to="2507">
-      <feat name="root" value="people"/>
-      <feat name="category" value="NNS"/>
-      <feat name="kind" value="word"/>
-      <feat name="orth" value="upperInitial"/>
-      <feat name="length" value="6"/>
-      <feat name="string" value="People"/>
-   </struct>
-   <struct type="Token" from="2507" to="2508">
-      <feat name="root" value="/"/>
-      <feat name="category" value="NN"/>
-      <feat name="kind" value="punctuation"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="/"/>
-   </struct>
-   <struct type="Token" from="2508" to="2515">
-      <feat name="root" value="raggett"/>
-      <feat name="category" value="NNP"/>
-      <feat name="kind" value="word"/>
-      <feat name="orth" value="upperInitial"/>
-      <feat name="length" value="7"/>
-      <feat name="string" value="Raggett"/>
+   <struct type="Token" from="2483" to="2515">
+      <feat name="kind" value="urlAddress"/>
+      <feat name="rule" value="Url1"/>
    </struct>
 </cesAna>
