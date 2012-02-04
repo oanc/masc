@@ -119,9 +119,22 @@
       <feat name="length" value="1"/>
       <feat name="string" value="="/>
    </struct>
-   <struct type="Token" from="56" to="68">
+   <struct type="Token" from="56" to="57">
+      <feat name="root" value="&quot;"/>
+      <feat name="category" value="''"/>
+      <feat name="kind" value="punctuation"/>
+      <feat name="length" value="1"/>
+      <feat name="string" value="&quot;"/>
+   </struct>
+   <struct type="Token" from="57" to="67">
       <feat name="kind" value="emailAddress"/>
-      <feat name="rule" value="Emailaddress1"/>
+   </struct>
+   <struct type="Token" from="67" to="68">
+      <feat name="root" value="&quot;"/>
+      <feat name="category" value="''"/>
+      <feat name="kind" value="punctuation"/>
+      <feat name="length" value="1"/>
+      <feat name="string" value="&quot;"/>
    </struct>
    <struct type="Token" from="69" to="73">
       <feat name="string" value="sent"/>
@@ -317,7 +330,6 @@
    </struct>
    <struct type="Token" from="145" to="164">
       <feat name="kind" value="emailAddress"/>
-      <feat name="rule" value="Emailaddress1"/>
    </struct>
    <struct type="Token" from="178" to="185">
       <feat name="string" value="Meeting"/>
@@ -3686,9 +3698,15 @@
       <feat name="length" value="1"/>
       <feat name="string" value="&lt;"/>
    </struct>
-   <struct type="Token" from="2343" to="2354">
+   <struct type="Token" from="2343" to="2353">
       <feat name="kind" value="emailAddress"/>
-      <feat name="rule" value="Emailaddress1"/>
+   </struct>
+   <struct type="Token" from="2353" to="2354">
+      <feat name="root" value="&gt;"/>
+      <feat name="category" value="NN"/>
+      <feat name="kind" value="symbol"/>
+      <feat name="length" value="1"/>
+      <feat name="string" value="&gt;"/>
    </struct>
    <struct type="Token" from="2355" to="2358">
       <feat name="root" value="tel"/>
@@ -3938,6 +3956,5 @@
    </struct>
    <struct type="Token" from="2483" to="2515">
       <feat name="kind" value="urlAddress"/>
-      <feat name="rule" value="Url1"/>
    </struct>
 </cesAna>

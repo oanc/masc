@@ -38,9 +38,15 @@
       <feat name="length" value="1"/>
       <feat name="string" value="&lt;"/>
    </struct>
-   <struct type="Token" from="20" to="42">
+   <struct type="Token" from="20" to="41">
       <feat name="kind" value="emailAddress"/>
-      <feat name="rule" value="Emailaddress1"/>
+   </struct>
+   <struct type="Token" from="41" to="42">
+      <feat name="root" value="&gt;"/>
+      <feat name="category" value="NN"/>
+      <feat name="kind" value="symbol"/>
+      <feat name="length" value="1"/>
+      <feat name="string" value="&gt;"/>
    </struct>
    <struct type="Token" from="43" to="47">
       <feat name="root" value="date"/>
@@ -252,11 +258,9 @@
    </struct>
    <struct type="Token" from="139" to="160">
       <feat name="kind" value="emailAddress"/>
-      <feat name="rule" value="Emailaddress1"/>
    </struct>
    <struct type="Token" from="164" to="185">
       <feat name="kind" value="emailAddress"/>
-      <feat name="rule" value="Emailaddress1"/>
    </struct>
    <struct type="Token" from="186" to="191">
       <feat name="root" value="hello"/>
@@ -1336,9 +1340,24 @@
       <feat name="affix" value=" "/>
       <feat name="root" value="address"/>
    </struct>
-   <struct type="Token" from="807" to="830">
+   <struct type="Token" from="807" to="808">
+      <feat name="root" value="("/>
+      <feat name="category" value="("/>
+      <feat name="position" value="startpunct"/>
+      <feat name="kind" value="punctuation"/>
+      <feat name="length" value="1"/>
+      <feat name="string" value="("/>
+   </struct>
+   <struct type="Token" from="808" to="829">
       <feat name="kind" value="emailAddress"/>
-      <feat name="rule" value="Emailaddress1"/>
+   </struct>
+   <struct type="Token" from="829" to="830">
+      <feat name="root" value=")"/>
+      <feat name="category" value=")"/>
+      <feat name="position" value="endpunct"/>
+      <feat name="kind" value="punctuation"/>
+      <feat name="length" value="1"/>
+      <feat name="string" value=")"/>
    </struct>
    <struct type="Token" from="831" to="833">
       <feat name="root" value="so"/>
