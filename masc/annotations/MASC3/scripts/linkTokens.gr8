@@ -1,0 +1,133 @@
+import gate.Document
+import gate.Annotation
+import gate.AnnotationSet
+
+import org.xces.graf.api.*
+import org.xces.graf.io.GraphParser
+
+class Span implements Comparable
+{
+	INode node
+	int start
+	int end
+	
+	int compareTo(other)
+	{
+		int delta = start - other.start
+		if (delta)
+		{
+			return delta
+		}
+		return other.end - end
+	}
+}
+
+Span getSpan(INode node)
+{
+	int start = Integer.MAX_VALUE
+	int end = -1
+	node.links().each { link ->
+		link.regions().each { region ->
+			if (region.start.offset < start)
+			{
+				start = region.start.offset
+			}
+			if (region.end.offset > end)
+			{
+				end = region.end.offset
+			}
+		}			
+	}
+	if (end <= start)
+	{
+		println "Node ${node.id} does not span any text."
+		return null
+	}
+	//return org.xces.graf.impl.Factory.newRegion('r', start, end)
+	return new Span(node:node, start:start, end:end)
+}
+
+
+GraphParser parser = new GraphParser()
+
+File txtFile = new File('../data/data/2nd_Gore-Bush.txt')
+File neFile = new File('../data/data/2nd_Gore-Bush-ne.xml')
+File tokFile = new File('../data/data/2nd_Gore-Bush-penn.xml')
+
+String content = txtFile.getText('UTF-8')
+IGraph entities = parser.parse(neFile)
+//IGraph tokens = parser.parse(tokFile)
+//List tokenList = []
+//tokens.nodes().each { token ->
+//	tokenList << getSpan(token)
+//}
+
+println "Parsed entities."
+entities.nodes().each { node ->
+	Span region = getSpan(node)
+	if (region)
+	{
+		int start = region.start
+		int end = region.end
+		String text = content[start..end-1]
+		IAnnotation a = node.getAnnotation()
+		if (a.label != 'tok')
+		{
+			println "Node ${node.id}: ${a.label} [${start}-${end}] ${text}"
+		}
+	}
+}
+
+/* Gate version
+List getTokens(List tokens, Annotation a)
+{
+	int start = a.startNode.offset.intValue()
+	int end = a.endNode.offset.intValue()
+	List result = []
+	boolean startFound = false
+	tokens.each { token ->
+		if (startFound)
+		{
+			if (token.endNode.offset.intValue() > end)
+			{
+				return result
+			}
+			result << token
+		}
+		else if (token.startNode.offset.intValue() >= start)
+		{
+			startFound = true
+			result << token
+		}
+	}
+	return result
+}
+println "Loading document."
+Document doc = newDocument(txtFile)
+def loadPR = newResource('org.anc.gate.LoadGrafStandoff') {
+}
+
+println "Loading standoff annotations."
+loadPR.document = doc
+loadPR.sourceUrl = neFile.toURI().toURL()
+loadPR.standoffASName = 'ne'
+loadPR.execute()
+loadPR.sourceUrl = tokFile.toURI().toURL()
+loadPR.standoffASName = 'tok'
+loadPR.execute()
+
+def comp = new gate.util.OffsetComparator()
+def entities = doc.getAnnotations('ne').toList()
+Collections.sort(entities, comp)
+def tokens = doc.getAnnotations('tok').toList()
+Collections.sort(tokens, comp)
+
+entities.each { a ->
+	println "${a.startNode.offset}-${a.endNode.offset}: ${a.type}"
+	def list = getTokens(tokens, a)
+	list.each {
+		println "    Token: ${it.startNode.offset}-${it.endNode.offset}" 
+	}
+}
+*/
+

@@ -1,0 +1,109 @@
+/*
+ * The MPQA files are Gate XML documents so we need to load the files 
+ * into Gate, save the annotations with the SaveGrafStandoff processing
+ * resource, and then save the text content. Finally, each of the MPQA files
+ * has had the string '.START' inserted into the front of the file so we
+ * need to generate the XML fix file used during alignment so this text
+ * is ignored.
+ */
+
+import groovy.xml.MarkupBuilder
+import gate.Document
+import gate.Factory
+
+if (this.args.size() == 0)
+{
+	println "USAGE: grate mpqa.gr8 <source> <destination>"
+	return
+}
+
+final String ASET = 'mpqa'
+final String ATYPE = 'http://www.cs.pitt.edu/mpqa/2003'
+
+/* Processing resource for saving GrAF standoff annotation files. */
+def saveGraf = resource('org.anc.gate.SaveGrafStandoff') {
+	inputASName('MPQA')
+	annotationType('mpqa')
+	grafASName(ASET)
+	grafASType(ATYPE)
+	encoding('UTF-8')
+}
+
+/* Processing resource to save the document content as a utf-8 text file. */
+def saveContent = resource('org.anc.gate.SaveContent') {
+	encoding('UTF-8')
+}
+
+/* A function to run the processing resource (pr) on the given Gate 
+ * document (doc). The PR will save its output to the destination file (dest).
+ * The PR's properties (document and destination) are set to null after
+ * execution so there are no lingering references that prevent garbage 
+ * collection.
+ */
+def run = { pr, doc, dest ->
+	pr.document = doc
+	pr.destination = dest.toURI().toURL()
+	pr.execute()
+	pr.document = null
+	pr.destination = null
+}
+
+/*
+ * Main script starts here.
+ */
+
+File mpqaDir = new File(this.args[0])
+if (!mpqaDir.exists()) {
+	println "MPQA directory not found."
+	return
+}
+
+File destDir = new File(this.args[1])
+if (!destDir.exists())
+{
+	println "Destination directory not found."
+	return
+}
+
+/* The list of MPQA files we've found and processed.  We
+ * need this to generate the "fix" file used by the alignment
+ * process.
+ */
+def mpqaFiles = []
+
+mpqaDir.listFiles().each { dir ->
+	if (dir.name != '.svn') {
+		// Load the file into a Gate document.
+		String filename = "${dir.name}.mpqa.xml"
+		File file = new File(dir, filename)
+		Document doc = Factory.newDocument(file.toURI().toURL())
+
+		// Derive the files to generate.
+		File soFile = new File(destDir, "${dir.name}-mpqa.xml")
+		File txtFile = new File(destDir, "${dir.name}.txt")
+		
+		// Save the file name to the list of processed files.
+		mpqaFiles << soFile.name
+		
+		// And run the Gate PRs on the document.
+		run(saveGraf, doc, soFile)
+		run(saveContent, doc, txtFile)		
+	}
+}
+
+/* Generate the "Fix" file used during alignment. Each MPQA file has the string 
+ * ".START" that needs to be ignored.
+ */
+FileWriter writer = new FileWriter(new File(destDir, "mpqa-fixes.xml"))
+def xml = new MarkupBuilder(writer)
+xml.fixes() {
+	mpqaFiles.each {
+		xml.fix(file:it) {
+			source(offset:'0') {
+				skip(n:'6')
+			}
+		}
+	} 
+}
+writer.close()
+println "Done."

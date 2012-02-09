@@ -1,0 +1,114 @@
+/*
+ * Loads the standoff anntations for each text files and adjusts the start/end offsets
+ * of any annotations what start or end with whitespace. Saves any changed annotation files.
+ */
+import gate.Document
+import gate.AnnotationSet
+import org.anc.conf.*
+
+int process(Document doc, String type)
+{
+	//println "Content is ${content}"
+	def s = doc.getContent().toString()
+	def content = s.chars
+	gate.AnnotationSet aset = doc.getAnnotations(type)
+	//println "Found ${aset.size()} annotations."
+	int count = 0
+	aset.each { a ->
+		def start = a.startNode.offset.intValue()
+		def end = a.endNode.offset.intValue()
+		def startBefore = start
+		def endBefore = end
+		boolean adjustOffsets = false
+		while (start < end && Character.isWhitespace(content[start]))
+		{
+			//println "Skipping start ${start} '${content[start]}'"
+			++start
+			adjustOffsets = true
+		}
+		while (end-1 > start && Character.isWhitespace(content[end-1]))
+		{
+			//println "Skipping end '${content[end-1]}'"
+			--end
+			adjustOffsets = true
+		}
+		//println "${start} ${end} \"${file.text[start..end-1]}\""
+		if (adjustOffsets)
+		{
+			//println "Adjusting annotation at offset ${start} '${s[startBefore..endBefore-1]}'"
+			//println "Adjusting annotation at offset ${start} '${s[start..end-1]}'"
+			if (end != endBefore)
+			{
+				println "Adjusting end node offset from ${endBefore} to ${end}"
+			}
+			a.startNode.offset = start
+			a.endNode.offset = end 
+			++count
+		}
+	}
+	return count
+}
+
+def loadPR = resource('org.anc.gate.LoadGrafStandoff') {}
+def savePR = resource('org.anc.gate.SaveGrafStandoff') {
+	encoding('UTF-8')
+ }
+ 
+FileFilter filter = new FileFilter() {
+	boolean accept(File file)
+	{
+		return file.name.endsWith('.txt')
+	}	
+}
+def SETS = [
+	ptb:'ptb',
+	fn:'fn',
+	mpqa:'mpqa'
+]
+
+def TYPES = [
+	ptb:'http://www.cis.upenn.edu/~treebank/',
+	fn:'http://framenet.icsi.berkeley.edu',
+	mpqa:'http://www.cs.pitt.edu/mpqa/2003',
+]
+
+if (this.args.size() == 0)
+{
+	println "USAGE: grate fix-alignment.gr8 <directory>"
+	return
+}
+
+final File dir = new File(this.args[0])
+//File dir = new File(DATA)
+def files = dir.listFiles(filter)
+files.each { file ->
+	Document doc = gate.Factory.newDocument(file.toURI().toURL(), 'UTF-8')
+	def content = doc.getContent().toString().chars
+	println "Loaded ${file.path}."
+	['s', 'nc', 'vc', 'ne', 'penn', 'ptb', 'fn', 'mpqa'].each { type ->
+		String filename = file.name.replace('.txt', "-${type}.xml")
+		File soFile = new File(file.getParentFile(), filename)
+		if (soFile.exists())
+		{
+			loadPR.document = doc
+			loadPR.sourceUrl = soFile.toURI().toURL()
+			loadPR.standoffASName = type
+			loadPR.execute()
+			int count = process(doc, type)
+			if (count > 0)
+			{
+				//File dest = new File(temp, soFile.name)
+			
+				println "Adjusted ${count} annotations for ${soFile.path}"
+				savePR.document = doc
+				savePR.annotationType = type
+				savePR.destination = soFile.toURI().toURL()
+				savePR.grafASName = TYPES[type] ? type : 'xces'
+				savePR.grafASType = TYPES[type] ?: 'http://www.xces.org/schema/2003'
+				savePR.inputASName = type
+				savePR.execute()
+			}
+		}
+	}
+}
+println "Done."
