@@ -7,7 +7,7 @@ echo running masc1.sh
 
 echo Converting MASC One written.
 groovy scripts/masc1.groovy D:/Corpora/MASC-1.0.3/data/written $WORK/release
-echo Converting MASC One written.
+echo Converting MASC One spoken.
 groovy scripts/masc1.groovy D:/Corpora/MASC-1.0.3/data/spoken $WORK/release
 
 echo Converting MASC One fixes.
