@@ -1,48 +1,54 @@
-import javax.xml.parsers.*
-import org.xml.sax.helpers.*
-import org.xml.sax.*
+import org.xces.graf.api.*
+import org.xces.graf.impl.*
+import org.xces.graf.io.*
 
-class Graph {
-	List nodes = []
-	List edges = []
-	List annotations = []
-	List regions = []
-}
+import org.anc.io.*
+import org.anc.util.*
+import org.anc.conf.AnnotationSpaces
 
-class Node {
-	String id;
-	List annotations = []
-}
-
-class Handler extends DefaultHandler
+if (this.args.length != 1)
 {
-	void startDocument()
+	println "USAGE: groovy test.groovy <directory>"
+	println ""
+	println "Parses all XML files in the directory with the new GrAF API (1.1.0)"
+	return
+}
+
+File root = new File(this.args[0])
+if (!root.exists())
+{
+	println "${root.path} does not exist."
+	return
+}
+
+def q = new LinkedList<File>();
+def filter = new SuffixFilter(".xml", false)
+GraphParser parser = new GraphParser();
+parser.addAnnotationSpace(AnnotationSpaces.XCES)
+parser.addAnnotationSpace(AnnotationSpaces.PTB)
+parser.addAnnotationSpace(AnnotationSpaces.Framenet)
+
+//DotRenderer dot = new DotRenderer();
+//dot.setOutputStream(System.out)
+
+println "Starting."
+q << root
+while (!q.isEmpty())
+{
+	File entry = q.remove(0)
+	if (entry.isDirectory())
 	{
-		println "Starting document."
-	}
-	
-	void startElement(String ns, String localName, String qName, Attributes atts)
-	{
-		println "${ns} ${localName} ${qName}"
-		if (atts.length > 0)
-		{
-			for (int i=0; i < atts.length; ++i)
-			{
-				println "   ${atts.getQName(i)} = ${atts.getValue(i)}"
-			}
+		println "Entry is a directory."
+		entry.eachFile {
+			q << it
 		}
 	}
-	
-	void endDocument()
+	else if (filter.accept(entry))
 	{
-		println "Ending document."
+		println "Parsing ${entry.path}"
+		IGraph graph = parser.parse(entry)
+		//dot.render(graph)
 	}
-	
-	
 }
-File file = new File('../data/data/wsj_0006-ne.xml')
-def reader = XMLReaderFactory.createXMLReader()
-reader.setContentHandler(new Handler())
-InputSource source = new InputSource(new FileReader(file))
-reader.parse(source)
 
+println "Done."

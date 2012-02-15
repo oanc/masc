@@ -20,11 +20,8 @@ echo "root is" $ROOT
 
 echo
 
-#if [ "$TERM" = "cygwin" ] ; then
-#	CYGROOT=/cygwin$ROOT
-#else
-#	CYGROOT-$ROOT
-#fi
+# System specific settings
+source ./scripts/$HOSTNAME.sh
 
 IN=./data/originals  #original
 #IN=./ #updated on 4/26/2011
