@@ -4,9 +4,11 @@
    <struct type="Sentence" from="4" to="173"/>
    <struct type="Organization" from="4" to="17">
       <feat name="orgType" value="company"/>
-      <feat name="matches" value="[15, 23, 29, 30, 31]"/>
+      <feat name="id" value="515"/>
    </struct>
-   <struct type="NounChunk" from="4" to="16"/>
+   <struct type="NounChunk" from="4" to="16">
+      <feat name="id" value="516"/>
+   </struct>
    <struct type="Token" from="4" to="8">
       <feat name="string" value="Tony"/>
       <feat name="length" value="4"/>
@@ -42,6 +44,7 @@
       <feat name="voice" value="active"/>
       <feat name="tense" value="SimPas"/>
       <feat name="type" value="FVG"/>
+      <feat name="id" value="521"/>
    </struct>
    <struct type="Token" from="18" to="22">
       <feat name="string" value="said"/>
@@ -52,6 +55,26 @@
       <feat name="affix" value="ed"/>
       <feat name="base" value="say"/>
    </struct>
+   <struct type="WHICH" from="23" to="27">
+      <feat name="id" value="524"/>
+      <feat name="person" value="third"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="number" value="either"/>
+      <feat name="type" value="anaphoric"/>
+   </struct>
+   <struct type="WHICH" from="23" to="27">
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="either"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+      <feat name="id" value="17"/>
+   </struct>
+   <struct type="WHICH" from="23" to="27">
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="either"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+   </struct>
    <struct type="Token" from="23" to="27">
       <feat name="string" value="that"/>
       <feat name="length" value="4"/>
@@ -60,29 +83,13 @@
       <feat name="category" value="IN"/>
       <feat name="base" value="that"/>
    </struct>
-   <struct type="WHICH" from="23" to="27">
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="either"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
-   </struct>
-   <struct type="WHICH" from="23" to="27">
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="either"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
-   </struct>
-   <struct type="WHICH" from="23" to="27">
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="either"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
+   <struct type="NounChunk" from="28" to="67">
+      <feat name="id" value="527"/>
    </struct>
    <struct type="Organization" from="28" to="67">
       <feat name="orgType" value="company"/>
-      <feat name="matches" value="[16, 18, 19, 28]"/>
+      <feat name="id" value="528"/>
    </struct>
-   <struct type="NounChunk" from="28" to="67"/>
    <struct type="Token" from="28" to="33">
       <feat name="string" value="Equus"/>
       <feat name="length" value="5"/>
@@ -127,6 +134,7 @@
       <feat name="voice" value="active"/>
       <feat name="tense" value="PrePer"/>
       <feat name="type" value="FVG"/>
+      <feat name="id" value="534"/>
    </struct>
    <struct type="Token" from="68" to="71">
       <feat name="string" value="has"/>
@@ -146,11 +154,6 @@
       <feat name="affix" value="ed"/>
       <feat name="base" value="propose"/>
    </struct>
-   <struct type="VG" from="81" to="89">
-      <feat name="voice" value="active"/>
-      <feat name="tense" value="Pre"/>
-      <feat name="type" value="PART"/>
-   </struct>
    <struct type="Token" from="81" to="89">
       <feat name="string" value="changing"/>
       <feat name="length" value="8"/>
@@ -160,7 +163,15 @@
       <feat name="affix" value="ing"/>
       <feat name="base" value="change"/>
    </struct>
-   <struct type="NounChunk" from="90" to="99"/>
+   <struct type="VG" from="81" to="89">
+      <feat name="voice" value="active"/>
+      <feat name="tense" value="Pre"/>
+      <feat name="type" value="PART"/>
+      <feat name="id" value="538"/>
+   </struct>
+   <struct type="NounChunk" from="90" to="99">
+      <feat name="id" value="539"/>
+   </struct>
    <struct type="Token" from="90" to="93">
       <feat name="string" value="the"/>
       <feat name="length" value="3"/>
@@ -185,7 +196,9 @@
       <feat name="category" value="IN"/>
       <feat name="base" value="for"/>
    </struct>
-   <struct type="NounChunk" from="104" to="115"/>
+   <struct type="NounChunk" from="104" to="115">
+      <feat name="id" value="543"/>
+   </struct>
    <struct type="Token" from="104" to="107">
       <feat name="string" value="the"/>
       <feat name="length" value="3"/>
@@ -210,8 +223,10 @@
       <feat name="category" value="TO"/>
       <feat name="base" value="to"/>
    </struct>
+   <struct type="NounChunk" from="119" to="125">
+      <feat name="id" value="548"/>
+   </struct>
    <struct type="Money" from="119" to="125"/>
-   <struct type="NounChunk" from="119" to="125"/>
    <struct type="Token" from="119" to="120">
       <feat name="string" value="$"/>
       <feat name="length" value="1"/>
@@ -249,7 +264,6 @@
       <feat name="category" value="IN"/>
       <feat name="base" value="in"/>
    </struct>
-   <struct type="NounChunk" from="129" to="133"/>
    <struct type="Token" from="129" to="133">
       <feat name="string" value="cash"/>
       <feat name="length" value="4"/>
@@ -257,6 +271,9 @@
       <feat name="kind" value="word"/>
       <feat name="category" value="NN"/>
       <feat name="base" value="cash"/>
+   </struct>
+   <struct type="NounChunk" from="129" to="133">
+      <feat name="id" value="555"/>
    </struct>
    <struct type="Token" from="134" to="137">
       <feat name="string" value="and"/>
@@ -266,7 +283,9 @@
       <feat name="category" value="CC"/>
       <feat name="base" value="and"/>
    </struct>
-   <struct type="NounChunk" from="138" to="143"/>
+   <struct type="NounChunk" from="138" to="143">
+      <feat name="id" value="558"/>
+   </struct>
    <struct type="Token" from="138" to="143">
       <feat name="string" value="stock"/>
       <feat name="length" value="5"/>
@@ -283,7 +302,9 @@
       <feat name="category" value="IN"/>
       <feat name="base" value="from"/>
    </struct>
-   <struct type="NounChunk" from="149" to="172"/>
+   <struct type="NounChunk" from="149" to="172">
+      <feat name="id" value="560"/>
+   </struct>
    <struct type="Token" from="149" to="151">
       <feat name="string" value="an"/>
       <feat name="length" value="2"/>
@@ -335,7 +356,9 @@
       <feat name="category" value="IN"/>
       <feat name="base" value="under"/>
    </struct>
-   <struct type="NounChunk" from="183" to="188"/>
+   <struct type="NounChunk" from="183" to="188">
+      <feat name="id" value="571"/>
+   </struct>
    <struct type="Token" from="183" to="188">
       <feat name="string" value="terms"/>
       <feat name="length" value="5"/>
@@ -353,7 +376,9 @@
       <feat name="category" value="IN"/>
       <feat name="base" value="of"/>
    </struct>
-   <struct type="NounChunk" from="192" to="208"/>
+   <struct type="NounChunk" from="192" to="208">
+      <feat name="id" value="573"/>
+   </struct>
    <struct type="Token" from="192" to="195">
       <feat name="string" value="the"/>
       <feat name="length" value="3"/>
@@ -387,9 +412,11 @@
    </struct>
    <struct type="Organization" from="210" to="215">
       <feat name="orgType" value="company"/>
-      <feat name="matches" value="[16, 18, 19, 28]"/>
+      <feat name="id" value="578"/>
    </struct>
-   <struct type="NounChunk" from="210" to="215"/>
+   <struct type="NounChunk" from="210" to="215">
+      <feat name="id" value="579"/>
+   </struct>
    <struct type="Token" from="210" to="215">
       <feat name="string" value="Equus"/>
       <feat name="length" value="5"/>
@@ -409,6 +436,7 @@
       <feat name="voice" value="none"/>
       <feat name="tense" value="Pas"/>
       <feat name="type" value="PART"/>
+      <feat name="id" value="582"/>
    </struct>
    <struct type="Token" from="217" to="224">
       <feat name="string" value="managed"/>
@@ -429,9 +457,11 @@
    </struct>
    <struct type="Organization" from="228" to="247">
       <feat name="orgType" value="company"/>
-      <feat name="matches" value="[16, 18, 19, 28]"/>
+      <feat name="id" value="585"/>
    </struct>
-   <struct type="NounChunk" from="228" to="246"/>
+   <struct type="NounChunk" from="228" to="246">
+      <feat name="id" value="586"/>
+   </struct>
    <struct type="Token" from="228" to="233">
       <feat name="string" value="Equus"/>
       <feat name="length" value="5"/>
@@ -471,10 +501,9 @@
       <feat name="category" value=","/>
       <feat name="base" value=","/>
    </struct>
-   <struct type="Location" from="249" to="256">
-      <feat name="locType" value="city"/>
+   <struct type="NounChunk" from="249" to="256">
+      <feat name="id" value="593"/>
    </struct>
-   <struct type="NounChunk" from="249" to="256"/>
    <struct type="Token" from="249" to="256">
       <feat name="string" value="Houston"/>
       <feat name="length" value="7"/>
@@ -482,6 +511,10 @@
       <feat name="kind" value="word"/>
       <feat name="category" value="NNP"/>
       <feat name="base" value="houston"/>
+   </struct>
+   <struct type="Location" from="249" to="256">
+      <feat name="locType" value="city"/>
+      <feat name="id" value="594"/>
    </struct>
    <struct type="Token" from="256" to="257">
       <feat name="string" value=","/>
@@ -494,6 +527,7 @@
       <feat name="voice" value="none"/>
       <feat name="tense" value="none"/>
       <feat name="type" value="MODAL"/>
+      <feat name="id" value="596"/>
    </struct>
    <struct type="Token" from="258" to="263">
       <feat name="string" value="would"/>
@@ -511,7 +545,9 @@
       <feat name="category" value="VB"/>
       <feat name="base" value="pay"/>
    </struct>
-   <struct type="NounChunk" from="268" to="276"/>
+   <struct type="NounChunk" from="268" to="276">
+      <feat name="id" value="599"/>
+   </struct>
    <struct type="Money" from="268" to="271"/>
    <struct type="Token" from="268" to="269">
       <feat name="string" value="$"/>
@@ -544,7 +580,9 @@
       <feat name="category" value="CC"/>
       <feat name="base" value="and"/>
    </struct>
-   <struct type="NounChunk" from="281" to="304"/>
+   <struct type="NounChunk" from="281" to="304">
+      <feat name="id" value="605"/>
+   </struct>
    <struct type="Token" from="281" to="284">
       <feat name="string" value="one"/>
       <feat name="length" value="3"/>
@@ -586,7 +624,9 @@
       <feat name="category" value="IN"/>
       <feat name="base" value="with"/>
    </struct>
-   <struct type="NounChunk" from="310" to="334"/>
+   <struct type="NounChunk" from="310" to="334">
+      <feat name="id" value="611"/>
+   </struct>
    <struct type="Token" from="310" to="311">
       <feat name="string" value="a"/>
       <feat name="length" value="1"/>
@@ -619,8 +659,10 @@
       <feat name="category" value="IN"/>
       <feat name="base" value="of"/>
    </struct>
+   <struct type="NounChunk" from="338" to="343">
+      <feat name="id" value="616"/>
+   </struct>
    <struct type="Money" from="338" to="343"/>
-   <struct type="NounChunk" from="338" to="343"/>
    <struct type="Token" from="338" to="339">
       <feat name="string" value="$"/>
       <feat name="length" value="1"/>
@@ -650,7 +692,9 @@
       <feat name="category" value="CD"/>
       <feat name="kind" value="number"/>
    </struct>
-   <struct type="NounChunk" from="344" to="351"/>
+   <struct type="NounChunk" from="344" to="351">
+      <feat name="id" value="622"/>
+   </struct>
    <struct type="Token" from="344" to="345">
       <feat name="string" value="a"/>
       <feat name="length" value="1"/>
@@ -675,7 +719,9 @@
       <feat name="category" value="IN"/>
       <feat name="base" value="for"/>
    </struct>
-   <struct type="NounChunk" from="356" to="360"/>
+   <struct type="NounChunk" from="356" to="360">
+      <feat name="id" value="627"/>
+   </struct>
    <struct type="Token" from="356" to="360">
       <feat name="string" value="each"/>
       <feat name="length" value="4"/>
@@ -694,9 +740,11 @@
    </struct>
    <struct type="Organization" from="364" to="373">
       <feat name="orgType" value="company"/>
-      <feat name="matches" value="[15, 23, 29, 30, 31]"/>
+      <feat name="id" value="630"/>
    </struct>
-   <struct type="NounChunk" from="364" to="373"/>
+   <struct type="NounChunk" from="364" to="373">
+      <feat name="id" value="629"/>
+   </struct>
    <struct type="Token" from="364" to="368">
       <feat name="string" value="Tony"/>
       <feat name="length" value="4"/>
@@ -713,7 +761,9 @@
       <feat name="category" value="NNP"/>
       <feat name="base" value="lama"/>
    </struct>
-   <struct type="NounChunk" from="373" to="406"/>
+   <struct type="NounChunk" from="373" to="406">
+      <feat name="id" value="633"/>
+   </struct>
    <struct type="Token" from="373" to="375">
       <feat name="kind" value="word"/>
       <feat name="string" value="'s"/>
@@ -791,7 +841,21 @@
       <feat name="category" value=","/>
       <feat name="base" value=","/>
    </struct>
-   <struct type="NounChunk" from="420" to="422"/>
+   <struct type="PRN" from="420" to="422">
+      <feat name="id" value="649"/>
+      <feat name="case" value="nominative"/>
+      <feat name="person" value="third"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="number" value="singular"/>
+      <feat name="type" value="anaphoric"/>
+   </struct>
+   <struct type="PRN" from="420" to="422">
+      <feat name="case" value="nominative"/>
+      <feat name="person" value="third"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="number" value="singular"/>
+      <feat name="type" value="anaphoric"/>
+   </struct>
    <struct type="Token" from="420" to="422">
       <feat name="string" value="it"/>
       <feat name="length" value="2"/>
@@ -806,25 +870,10 @@
       <feat name="cls" value="Thing"/>
       <feat name="number" value="singular"/>
       <feat name="type" value="anaphoric"/>
+      <feat name="id" value="139"/>
    </struct>
-   <struct type="PRN" from="420" to="422">
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
-      <feat name="type" value="anaphoric"/>
-   </struct>
-   <struct type="PRN" from="420" to="422">
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
-      <feat name="type" value="anaphoric"/>
-   </struct>
-   <struct type="VG" from="423" to="430">
-      <feat name="voice" value="active"/>
-      <feat name="tense" value="SimPas"/>
-      <feat name="type" value="FVG"/>
+   <struct type="NounChunk" from="420" to="422">
+      <feat name="id" value="646"/>
    </struct>
    <struct type="Token" from="423" to="430">
       <feat name="string" value="offered"/>
@@ -835,8 +884,16 @@
       <feat name="affix" value="ed"/>
       <feat name="base" value="offer"/>
    </struct>
+   <struct type="VG" from="423" to="430">
+      <feat name="voice" value="active"/>
+      <feat name="tense" value="SimPas"/>
+      <feat name="type" value="FVG"/>
+      <feat name="id" value="650"/>
+   </struct>
+   <struct type="NounChunk" from="431" to="437">
+      <feat name="id" value="653"/>
+   </struct>
    <struct type="Money" from="431" to="437"/>
-   <struct type="NounChunk" from="431" to="437"/>
    <struct type="Token" from="431" to="432">
       <feat name="string" value="$"/>
       <feat name="length" value="1"/>
@@ -866,7 +923,9 @@
       <feat name="category" value="CD"/>
       <feat name="base" value="65"/>
    </struct>
-   <struct type="NounChunk" from="438" to="445"/>
+   <struct type="NounChunk" from="438" to="445">
+      <feat name="id" value="658"/>
+   </struct>
    <struct type="Token" from="438" to="439">
       <feat name="string" value="a"/>
       <feat name="length" value="1"/>
@@ -891,7 +950,9 @@
       <feat name="category" value="IN"/>
       <feat name="base" value="in"/>
    </struct>
-   <struct type="NounChunk" from="449" to="453"/>
+   <struct type="NounChunk" from="449" to="453">
+      <feat name="id" value="662"/>
+   </struct>
    <struct type="Token" from="449" to="453">
       <feat name="string" value="cash"/>
       <feat name="length" value="4"/>
@@ -916,7 +977,9 @@
       <feat name="base" value="or"/>
    </struct>
    <struct type="Money" from="458" to="469"/>
-   <struct type="NounChunk" from="458" to="469"/>
+   <struct type="NounChunk" from="458" to="469">
+      <feat name="id" value="667"/>
+   </struct>
    <struct type="Token" from="458" to="459">
       <feat name="string" value="$"/>
       <feat name="length" value="1"/>
@@ -951,7 +1014,9 @@
    <struct type="Sentence" from="474" to="649">
       <feat name="id" value="p3s1"/>
    </struct>
-   <struct type="NounChunk" from="474" to="499"/>
+   <struct type="NounChunk" from="474" to="499">
+      <feat name="id" value="674"/>
+   </struct>
    <struct type="Token" from="474" to="477">
       <feat name="string" value="The"/>
       <feat name="length" value="3"/>
@@ -962,6 +1027,7 @@
    </struct>
    <struct type="Location" from="478" to="485">
       <feat name="locType" value="city"/>
+      <feat name="id" value="676"/>
    </struct>
    <struct type="Token" from="478" to="480">
       <feat name="string" value="El"/>
@@ -986,9 +1052,6 @@
       <feat name="category" value=","/>
       <feat name="base" value=","/>
    </struct>
-   <struct type="Location" from="487" to="492">
-      <feat name="locType" value="province"/>
-   </struct>
    <struct type="Token" from="487" to="492">
       <feat name="string" value="Texas"/>
       <feat name="length" value="5"/>
@@ -996,6 +1059,10 @@
       <feat name="kind" value="word"/>
       <feat name="category" value="NNP"/>
       <feat name="base" value="texas"/>
+   </struct>
+   <struct type="Location" from="487" to="492">
+      <feat name="locType" value="province"/>
+      <feat name="id" value="680"/>
    </struct>
    <struct type="Token" from="492" to="493">
       <feat name="string" value=","/>
@@ -1020,7 +1087,9 @@
       <feat name="category" value="IN"/>
       <feat name="base" value="of"/>
    </struct>
-   <struct type="NounChunk" from="503" to="516"/>
+   <struct type="NounChunk" from="503" to="516">
+      <feat name="id" value="685"/>
+   </struct>
    <struct type="Token" from="503" to="510">
       <feat name="string" value="Western"/>
       <feat name="length" value="7"/>
@@ -1046,7 +1115,9 @@
       <feat name="category" value="CC"/>
       <feat name="base" value="and"/>
    </struct>
-   <struct type="NounChunk" from="521" to="540"/>
+   <struct type="NounChunk" from="521" to="540">
+      <feat name="id" value="689"/>
+   </struct>
    <struct type="Token" from="521" to="528">
       <feat name="string" value="leather"/>
       <feat name="length" value="7"/>
@@ -1064,11 +1135,6 @@
       <feat name="affix" value="ies"/>
       <feat name="base" value="accessory"/>
    </struct>
-   <struct type="VG" from="541" to="545">
-      <feat name="voice" value="active"/>
-      <feat name="tense" value="SimPas"/>
-      <feat name="type" value="FVG"/>
-   </struct>
    <struct type="Token" from="541" to="545">
       <feat name="string" value="said"/>
       <feat name="length" value="4"/>
@@ -1078,7 +1144,15 @@
       <feat name="affix" value="ed"/>
       <feat name="base" value="say"/>
    </struct>
-   <struct type="NounChunk" from="546" to="565"/>
+   <struct type="VG" from="541" to="545">
+      <feat name="voice" value="active"/>
+      <feat name="tense" value="SimPas"/>
+      <feat name="type" value="FVG"/>
+      <feat name="id" value="693"/>
+   </struct>
+   <struct type="NounChunk" from="546" to="565">
+      <feat name="id" value="694"/>
+   </struct>
    <struct type="Token" from="546" to="549">
       <feat name="string" value="the"/>
       <feat name="length" value="3"/>
@@ -1107,6 +1181,7 @@
       <feat name="voice" value="none"/>
       <feat name="tense" value="none"/>
       <feat name="type" value="MODAL"/>
+      <feat name="id" value="698"/>
    </struct>
    <struct type="Token" from="566" to="571">
       <feat name="string" value="would"/>
@@ -1124,7 +1199,9 @@
       <feat name="category" value="VB"/>
       <feat name="base" value="accrue"/>
    </struct>
-   <struct type="NounChunk" from="579" to="588"/>
+   <struct type="NounChunk" from="579" to="588">
+      <feat name="id" value="702"/>
+   </struct>
    <struct type="Token" from="579" to="588">
       <feat name="string" value="dividends"/>
       <feat name="length" value="9"/>
@@ -1142,7 +1219,9 @@
       <feat name="category" value="IN"/>
       <feat name="base" value="at"/>
    </struct>
-   <struct type="NounChunk" from="592" to="602"/>
+   <struct type="NounChunk" from="592" to="602">
+      <feat name="id" value="704"/>
+   </struct>
    <struct type="Token" from="592" to="593">
       <feat name="string" value="a"/>
       <feat name="length" value="1"/>
@@ -1193,6 +1272,7 @@
       <feat name="tense" value="BeVBN"/>
       <feat name="type" value="MODAL"/>
       <feat name="neg" value="yes"/>
+      <feat name="id" value="711"/>
    </struct>
    <struct type="Token" from="608" to="613">
       <feat name="kind" value="word"/>
@@ -1235,7 +1315,9 @@
       <feat name="category" value="IN"/>
       <feat name="base" value="for"/>
    </struct>
-   <struct type="NounChunk" from="629" to="648"/>
+   <struct type="NounChunk" from="629" to="648">
+      <feat name="id" value="717"/>
+   </struct>
    <struct type="Token" from="629" to="632">
       <feat name="string" value="the"/>
       <feat name="length" value="3"/>
@@ -1279,7 +1361,9 @@
    <struct type="Sentence" from="650" to="742">
       <feat name="id" value="p3s2"/>
    </struct>
-   <struct type="NounChunk" from="650" to="659"/>
+   <struct type="NounChunk" from="650" to="659">
+      <feat name="id" value="724"/>
+   </struct>
    <struct type="Token" from="650" to="653">
       <feat name="string" value="The"/>
       <feat name="length" value="3"/>
@@ -1300,6 +1384,7 @@
       <feat name="voice" value="none"/>
       <feat name="tense" value="BeVBN"/>
       <feat name="type" value="MODAL"/>
+      <feat name="id" value="727"/>
    </struct>
    <struct type="Token" from="660" to="665">
       <feat name="string" value="would"/>
@@ -1334,7 +1419,9 @@
       <feat name="category" value="IN"/>
       <feat name="base" value="in"/>
    </struct>
-   <struct type="NounChunk" from="681" to="691"/>
+   <struct type="NounChunk" from="681" to="691">
+      <feat name="id" value="732"/>
+   </struct>
    <struct type="Token" from="681" to="685">
       <feat name="string" value="five"/>
       <feat name="length" value="4"/>
@@ -1375,7 +1462,9 @@
       <feat name="category" value="TO"/>
       <feat name="base" value="to"/>
    </struct>
-   <struct type="NounChunk" from="704" to="709"/>
+   <struct type="NounChunk" from="704" to="709">
+      <feat name="id" value="739"/>
+   </struct>
    <struct type="Token" from="704" to="709">
       <feat name="string" value="terms"/>
       <feat name="length" value="5"/>
@@ -1393,7 +1482,9 @@
       <feat name="category" value="IN"/>
       <feat name="base" value="of"/>
    </struct>
-   <struct type="NounChunk" from="713" to="734"/>
+   <struct type="NounChunk" from="713" to="734">
+      <feat name="id" value="741"/>
+   </struct>
    <struct type="Token" from="713" to="716">
       <feat name="string" value="the"/>
       <feat name="length" value="3"/>
@@ -1419,7 +1510,9 @@
       <feat name="category" value="NN"/>
       <feat name="base" value="company"/>
    </struct>
-   <struct type="NounChunk" from="734" to="741"/>
+   <struct type="NounChunk" from="734" to="741">
+      <feat name="id" value="745"/>
+   </struct>
    <struct type="Token" from="734" to="736">
       <feat name="kind" value="word"/>
       <feat name="string" value="'s"/>
@@ -1447,7 +1540,9 @@
    <struct type="Sentence" from="746" to="856">
       <feat name="id" value="p4s1"/>
    </struct>
-   <struct type="NounChunk" from="746" to="759"/>
+   <struct type="NounChunk" from="746" to="759">
+      <feat name="id" value="751"/>
+   </struct>
    <struct type="Token" from="746" to="753">
       <feat name="string" value="Neither"/>
       <feat name="length" value="7"/>
@@ -1455,10 +1550,6 @@
       <feat name="kind" value="word"/>
       <feat name="category" value="DT"/>
       <feat name="base" value="neither"/>
-   </struct>
-   <struct type="Organization" from="754" to="759">
-      <feat name="orgType" value="company"/>
-      <feat name="matches" value="[16, 18, 19, 28]"/>
    </struct>
    <struct type="Token" from="754" to="759">
       <feat name="string" value="Equus"/>
@@ -1468,6 +1559,10 @@
       <feat name="category" value="NNP"/>
       <feat name="base" value="equus"/>
    </struct>
+   <struct type="Organization" from="754" to="759">
+      <feat name="orgType" value="company"/>
+      <feat name="id" value="753"/>
+   </struct>
    <struct type="Token" from="760" to="763">
       <feat name="string" value="nor"/>
       <feat name="length" value="3"/>
@@ -1476,11 +1571,13 @@
       <feat name="category" value="CC"/>
       <feat name="base" value="nor"/>
    </struct>
+   <struct type="NounChunk" from="764" to="773">
+      <feat name="id" value="756"/>
+   </struct>
    <struct type="Organization" from="764" to="773">
       <feat name="orgType" value="company"/>
-      <feat name="matches" value="[15, 23, 29, 30, 31]"/>
+      <feat name="id" value="757"/>
    </struct>
-   <struct type="NounChunk" from="764" to="773"/>
    <struct type="Token" from="764" to="768">
       <feat name="string" value="Tony"/>
       <feat name="length" value="4"/>
@@ -1497,11 +1594,6 @@
       <feat name="category" value="NNP"/>
       <feat name="base" value="lama"/>
    </struct>
-   <struct type="VG" from="774" to="778">
-      <feat name="voice" value="active"/>
-      <feat name="tense" value="SimPas"/>
-      <feat name="type" value="FVG"/>
-   </struct>
    <struct type="Token" from="774" to="778">
       <feat name="string" value="gave"/>
       <feat name="length" value="4"/>
@@ -1511,7 +1603,15 @@
       <feat name="affix" value="ed"/>
       <feat name="base" value="give"/>
    </struct>
-   <struct type="NounChunk" from="779" to="787"/>
+   <struct type="VG" from="774" to="778">
+      <feat name="voice" value="active"/>
+      <feat name="tense" value="SimPas"/>
+      <feat name="type" value="FVG"/>
+      <feat name="id" value="761"/>
+   </struct>
+   <struct type="NounChunk" from="779" to="787">
+      <feat name="id" value="762"/>
+   </struct>
    <struct type="Token" from="779" to="780">
       <feat name="string" value="a"/>
       <feat name="length" value="1"/>
@@ -1536,7 +1636,9 @@
       <feat name="category" value="IN"/>
       <feat name="base" value="for"/>
    </struct>
-   <struct type="NounChunk" from="792" to="809"/>
+   <struct type="NounChunk" from="792" to="809">
+      <feat name="id" value="766"/>
+   </struct>
    <struct type="Token" from="792" to="795">
       <feat name="string" value="the"/>
       <feat name="length" value="3"/>
@@ -1570,11 +1672,13 @@
       <feat name="category" value="CC"/>
       <feat name="base" value="and"/>
    </struct>
+   <struct type="NounChunk" from="814" to="823">
+      <feat name="id" value="772"/>
+   </struct>
    <struct type="Organization" from="814" to="823">
       <feat name="orgType" value="company"/>
-      <feat name="matches" value="[15, 23, 29, 30, 31]"/>
+      <feat name="id" value="771"/>
    </struct>
-   <struct type="NounChunk" from="814" to="823"/>
    <struct type="Token" from="814" to="818">
       <feat name="string" value="Tony"/>
       <feat name="length" value="4"/>
@@ -1596,6 +1700,7 @@
       <feat name="tense" value="BeVBN"/>
       <feat name="type" value="MODAL"/>
       <feat name="neg" value="yes"/>
+      <feat name="id" value="775"/>
    </struct>
    <struct type="Token" from="824" to="829">
       <feat name="kind" value="word"/>
@@ -1638,7 +1743,9 @@
       <feat name="category" value="IN"/>
       <feat name="base" value="for"/>
    </struct>
-   <struct type="NounChunk" from="848" to="855"/>
+   <struct type="NounChunk" from="848" to="855">
+      <feat name="id" value="782"/>
+   </struct>
    <struct type="Token" from="848" to="855">
       <feat name="string" value="comment"/>
       <feat name="length" value="7"/>
@@ -1674,9 +1781,11 @@
    </struct>
    <struct type="Organization" from="866" to="875">
       <feat name="orgType" value="company"/>
-      <feat name="matches" value="[15, 23, 29, 30, 31]"/>
+      <feat name="id" value="788"/>
    </struct>
-   <struct type="NounChunk" from="866" to="875"/>
+   <struct type="NounChunk" from="866" to="875">
+      <feat name="id" value="787"/>
+   </struct>
    <struct type="Token" from="866" to="870">
       <feat name="string" value="Tony"/>
       <feat name="length" value="4"/>
@@ -1693,11 +1802,6 @@
       <feat name="category" value="NNP"/>
       <feat name="base" value="lama"/>
    </struct>
-   <struct type="VG" from="876" to="880">
-      <feat name="voice" value="active"/>
-      <feat name="tense" value="SimPas"/>
-      <feat name="type" value="FVG"/>
-   </struct>
    <struct type="Token" from="876" to="880">
       <feat name="string" value="said"/>
       <feat name="length" value="4"/>
@@ -1707,7 +1811,23 @@
       <feat name="affix" value="ed"/>
       <feat name="base" value="say"/>
    </struct>
-   <struct type="NounChunk" from="881" to="883"/>
+   <struct type="VG" from="876" to="880">
+      <feat name="voice" value="active"/>
+      <feat name="tense" value="SimPas"/>
+      <feat name="type" value="FVG"/>
+      <feat name="id" value="792"/>
+   </struct>
+   <struct type="PRN" from="881" to="883">
+      <feat name="case" value="nominative"/>
+      <feat name="person" value="third"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="number" value="singular"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="id" value="797"/>
+   </struct>
+   <struct type="NounChunk" from="881" to="883">
+      <feat name="id" value="796"/>
+   </struct>
    <struct type="Token" from="881" to="883">
       <feat name="string" value="it"/>
       <feat name="length" value="2"/>
@@ -1730,17 +1850,11 @@
       <feat name="number" value="singular"/>
       <feat name="type" value="anaphoric"/>
    </struct>
-   <struct type="PRN" from="881" to="883">
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
-      <feat name="type" value="anaphoric"/>
-   </struct>
    <struct type="VG" from="884" to="905">
       <feat name="voice" value="none"/>
       <feat name="tense" value="none"/>
       <feat name="type" value="MODAL"/>
+      <feat name="id" value="798"/>
    </struct>
    <struct type="Token" from="884" to="889">
       <feat name="string" value="would"/>
@@ -1766,7 +1880,9 @@
       <feat name="category" value="VB"/>
       <feat name="base" value="submit"/>
    </struct>
-   <struct type="NounChunk" from="906" to="915"/>
+   <struct type="NounChunk" from="906" to="915">
+      <feat name="id" value="802"/>
+   </struct>
    <struct type="Token" from="906" to="909">
       <feat name="string" value="the"/>
       <feat name="length" value="3"/>
@@ -1791,7 +1907,9 @@
       <feat name="category" value="TO"/>
       <feat name="base" value="to"/>
    </struct>
-   <struct type="NounChunk" from="919" to="938"/>
+   <struct type="NounChunk" from="919" to="938">
+      <feat name="id" value="806"/>
+   </struct>
    <struct type="Token" from="919" to="920">
       <feat name="string" value="a"/>
       <feat name="length" value="1"/>
@@ -1824,7 +1942,9 @@
       <feat name="category" value="IN"/>
       <feat name="base" value="of"/>
    </struct>
-   <struct type="NounChunk" from="942" to="953"/>
+   <struct type="NounChunk" from="942" to="953">
+      <feat name="id" value="811"/>
+   </struct>
    <struct type="Token" from="942" to="945">
       <feat name="string" value="the"/>
       <feat name="length" value="3"/>
@@ -1841,7 +1961,9 @@
       <feat name="category" value="NN"/>
       <feat name="base" value="company"/>
    </struct>
-   <struct type="NounChunk" from="953" to="961"/>
+   <struct type="NounChunk" from="953" to="961">
+      <feat name="id" value="814"/>
+   </struct>
    <struct type="Token" from="953" to="955">
       <feat name="kind" value="word"/>
       <feat name="string" value="'s"/>
