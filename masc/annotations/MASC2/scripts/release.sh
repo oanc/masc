@@ -1,5 +1,5 @@
-#!/bin/bash
-
+#!/bin/sh
+set -e
 date 
 echo running release.sh
 
@@ -54,7 +54,7 @@ echo "---------------------------------------------------------"
 
 #echo "---------------------------------------------------------"
 # Trim white-space from annotations.
-#./fix-alignment.sh
+./fix-alignment.sh
 
 echo "---------------------------------------------------------"
 # Link the logical annotations into a tree.
@@ -74,10 +74,10 @@ echo "---------------------------------------------------------"
 # Copy over hand corrected files before validation starts.
 #./hand-corrected.sh #not yet present in MASC 2
 
-echo "---------------------------------------------------------"
+#echo "---------------------------------------------------------"
 # Make sure headers have links to all annotations files
 # and don't contain links to non-existent header files.
-./update-headers.sh
+#./update-headers.sh
 
 echo "---------------------------------------------------------"
 # Run all annotation files through the GraphParser
@@ -112,9 +112,9 @@ groovy ./summarize.groovy ../data/working/release ../
 echo "---------------------------------------------------------"
 echo TODO: The divide.sh and package.sh scripts needs to be updated.
 # Divide the files into written and spoken components.
-#./divide.sh
+./divide.sh
 
 #echo "---------------------------------------------------------"
 # Copies other original annotations, header, etc. and
 # packages everything.
-#./package.sh
+./package.sh

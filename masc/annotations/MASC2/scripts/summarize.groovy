@@ -117,4 +117,4 @@ html.html {
 }
 
 htmlFile.text = writer.toString()
-println "Done"
+println "Saved ${htmlFile.path}"

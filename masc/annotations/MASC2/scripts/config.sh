@@ -2,7 +2,7 @@
 
 # set -e causes the script to fail when any command
 # fails
-#set -e
+set -e
 
 cd ..
 ROOT=`pwd`

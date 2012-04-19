@@ -26,7 +26,7 @@ def filter = new SuffixFilter(".xml", false)
 GraphParser parser = new GraphParser();
 parser.addAnnotationSpace(AnnotationSpaces.XCES)
 parser.addAnnotationSpace(AnnotationSpaces.PTB)
-parser.addAnnotationSpace(AnnotationSpaces.Framenet)
+parser.addAnnotationSpace(AnnotationSpaces.FrameNet)
 
 //DotRenderer dot = new DotRenderer();
 //dot.setOutputStream(System.out)
@@ -45,8 +45,45 @@ while (!q.isEmpty())
 	}
 	else if (filter.accept(entry))
 	{
+		int invalid = 0
 		println "Parsing ${entry.path}"
 		IGraph graph = parser.parse(entry)
+		for (INode node : graph.nodes())
+		{
+			if (node.getId().startsWith('n'))
+			{
+				++invalid
+			}
+		}
+		if (invalid > 0)
+		{
+			println "Invalid nodes: ${invalid}"
+		}
+		
+		invalid = 0;
+		for (IEdge edge : graph.edges())
+		{
+			if (edge.getId().startsWith('e'))
+			{
+				++invalid
+			}
+		}
+		if (invalid > 0)
+		{
+			println "Invalid edges: ${invalid}"
+		}
+		invalid = 0;
+		for (IRegion region : graph.regions())
+		{
+			if (region.getId().startsWith('r'))
+			{
+				++invalid
+			}
+		}
+		if (invalid > 0)
+		{
+			println "Invalid regions: ${invalid}"
+		}
 		//dot.render(graph)
 	}
 }

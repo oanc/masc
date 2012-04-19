@@ -5,7 +5,7 @@ source ./config.sh
 echo running package.sh
 
 DATE=`date +%Y-%m-%d`
-VERS=1.0.3
+VERS=2.0.0
 
 #FILENAME="MASC-$VERS-$DATE.tgz"
 FILENAME="MASC-$VERS.tgz"
@@ -13,10 +13,14 @@ FILENAME="MASC-$VERS.tgz"
 
 
 TGZ=$ROOT/$FILENAME
+ZIP=$ROOT/MASC-$VERS.zip
 
 echo TGZ is $TGZ
 if [ -e $TGZ ] ; then
 	rm -f $TGZ
+fi
+if [ -e $ZIP ] ; then
+	rm -f $ZIP
 fi
 
 echo "Creating $TGZ"
@@ -26,9 +30,10 @@ FILES=
 for file in `ls` ; do
 	FILES="$file $FILES"
 done
-echo "Creating tar file."
 tar czf $TGZ $FILES
 
+echo "Creating $ZIP"
+zip -r -9 -q $ZIP .
 WEB=/var/www/anc/masc
 if [ -e $WEB ] ; then
     # This will (should) only be true 
