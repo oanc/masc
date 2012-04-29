@@ -11,6 +11,6 @@ else
 	rm -f $DEST/*.*
 fi
 
-java $OPTS -jar $APP $LOPTS -in=$OUT -out=$DEST -filter=-s.xml
+java $OPTS -jar $APP $LOPTS -in=$OUT -out=$DEST -filter=-s.xml -id=s
 cp -f $DEST/*.* $OUT
 

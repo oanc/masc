@@ -11,7 +11,7 @@ XCES=$IN/corrections/XCES
 java $OPTS -jar $CORRECT -in=$GRAF -out=$OUT $LOPTS
 
 java $OPTS -jar $CONVERT -xces $LOPTS -in=$XCES -out=$OUT -set=xces -ann=s -id=s -rename="Sentence=s"
-java $OPTS -jar $CONVERT -xces $LOPTS -in=$XCES -out=$OUT -set=xces -ann=logical -rename="@speaker=who"
+java $OPTS -jar $CONVERT -xces $LOPTS -in=$XCES -out=$OUT -set=xces -ann=logical -id=logical -rename="@speaker=who"
 java $OPTS -jar $CONVERT -xces $LOPTS -in=$XCES -out=$OUT -set=xces -ann=hepple -id=penn -rename="Token=tok @category=msd" -saveAs=penn
 java $OPTS -jar $CONVERT -xces $LOPTS -in=$XCES -out=$OUT -set=xces -ann=penn -id=penn -rename="Token=tok @category=msd" -saveAs=penn
 java $OPTS -jar $CONVERT -xces $LOPTS -in=$XCES -out=$OUT -ann=nc -set=xces -rename="np=nchunk NounChunk=nchunk" -id=nc -accept=nchunk -exf=graf:set
