@@ -18,7 +18,7 @@ if [ ! -e $TARGET ] ; then
 	pushd $TARGET
 	echo "Target is"
 	pwd	
-	svn co https://www.anc.org/dev/$1/trunk .
+	svn co https://www.anc.org/dev/$1/branches/masc-2 .
 else
 	pushd $TARGET
 	svn up

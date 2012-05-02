@@ -46,8 +46,19 @@
     </xsl:template>
     
     <xsl:template match="graf:annotationSet">
+        <xsl:variable name="aspace"><xsl:value-of select="@name"/></xsl:variable>
         <annotationSpace>
-            <xsl:attribute name="as.id"><xsl:value-of select="@name"/></xsl:attribute>
+            <xsl:choose>
+                <xsl:when test="$aspace = 'PTB'">
+                    <xsl:attribute name="as.id">ptb</xsl:attribute>
+                </xsl:when>
+                <xsl:when test="$aspace = 'FrameNet'">
+                    <xsl:attribute name="as.id">fn</xsl:attribute>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:attribute name="as.id"><xsl:value-of select="@name"/></xsl:attribute>
+                </xsl:otherwise>
+            </xsl:choose>
             <!-- <xsl:attribute name="xlink:href"><xsl:value-of select="@type"/></xsl:attribute> --> 
         </annotationSpace>
     </xsl:template>
@@ -112,6 +123,24 @@
     </xsl:template>
     
     <xsl:template match="@*">
-        <xsl:copy-of select="."/>
+        <xsl:choose>
+            <xsl:when test="name() = 'as'">
+                <xsl:variable name="value"><xsl:value-of select="."/></xsl:variable>
+                <xsl:choose>
+                    <xsl:when test="$value = 'PTB'">
+                        <xsl:attribute name="as">ptb</xsl:attribute>
+                    </xsl:when>
+                    <xsl:when test="$value = 'FrameNet'">
+                        <xsl:attribute name="as">fn</xsl:attribute>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:copy-of select="."/>                        
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:copy-of select="."/>                        
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 </xsl:stylesheet>

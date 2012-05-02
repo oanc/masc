@@ -20,11 +20,11 @@ java $OPTS -cp $SPLITTER org.anc.graf.splitter.App -in=$OUT -out=$WORK/tokens/fn
 echo java $OPTS -cp $SPLITTER org.anc.graf.tokens.MergeTokens -penn=$OUT -ptb=$WORK/tokens/ptb -fn=$WORK/tokens/fn -out=$WORK/tokens/quarks $LOPTS # -source=ptb -target=fn
 java $OPTS -cp $SPLITTER org.anc.graf.tokens.MergeTokens -penn=$OUT -ptb=$WORK/tokens/ptb -fn=$WORK/tokens/fn -out=$WORK/tokens/quarks $LOPTS # -source=ptb -target=fn
 
-echo cp $WORK/tokens/fn/*.xml $OUT
+echo Copying FrameNet tokens.
 cp $WORK/tokens/fn/*.xml $OUT
 
-echo cp $WORK/tokens/ptb/*.xml $OUT
+echo Copying Penn TreeBank tokens.
 cp $WORK/tokens/ptb/*.xml $OUT
 
-echo cp $WORK/tokens/quarks/*.xml $OUT
+echo Copying quarks.
 cp $WORK/tokens/quarks/*.xml $OUT

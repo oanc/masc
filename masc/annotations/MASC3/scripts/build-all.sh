@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 source ./config.sh
@@ -17,7 +16,7 @@ function build {
 		echo "Current directory is "
 		pwd
 		mkdir $1
-		svn co https://www.anc.org/dev/$2/trunk $1
+		svn co https://www.anc.org/dev/$2/branches/masc-2 $1
 		cd $1
 	fi
 	echo Building $1
@@ -26,20 +25,17 @@ function build {
 }
 
 
-function build2 {
-#	if [ -e $APPS/$1 ] ; then
-#		echo Updating $1 from /tags/masc-1.0.3
-#		cd $APPS/$1
-#		svn up
-#	else
+function build_trunk {
+	if [ -e $APPS/$1 ] ; then
+		cd $APPS/$1
+		svn up
+	else
 		echo Creating $1
 		cd $APPS
-		echo "Current directory is "
-		pwd
 		mkdir $1
-		svn co https://www.anc.org/dev/$2/tags/masc-3.0/ $1
+		svn co https://www.anc.org/dev/$2/trunk/ $1
 		cd $1
-#	fi
+	fi
 	echo Building $1
 	mvn package | tee -a $ROOT/maven.log
 	cd $ROOT
@@ -59,7 +55,7 @@ build "convert" "GrafConvert"
 # the masc-1.0.3 tagged versions
 build "align" "GrafAlign"
 build "check-ids" "check-ids"
-#build "graph-splitter" "graph-splitter"
+build "graph-splitter" "graph-splitter"
 build "copy-files" "copy-files"
 build "validate-headers" "validate-headers"
 build "fix-corrections" "fix-corrections"
@@ -69,14 +65,19 @@ build "validator" "validator"
 build "make-tree" "make-tree"
 build "divide-corpus" "divide-corpus"
 build "parse-all" "parse-all"
-#build "check-align" "check-align"
+build "trim" "trim"
+build "check-align" "check-align"
 build "update-headers" "update-headers"
 build "masc-headers" "masc-headers"
+build "check-nodes" "check-nodes"
+build "check-docid" "check-docid"
+
+build_trunk "graf-headers" "graf-headers"
 
 #/tags/masc-1.0.3 
 
-build2 "graph-splitter" "graph-splitter"
-build2 "check-align" "check-align"
+#build2 "graph-splitter" "graph-splitter"
+#build2 "check-align" "check-align"
 
 echo Looking for errors.
 grep ERROR maven.log

@@ -19,12 +19,22 @@ function clean {
 
 source ./config.sh
 
+if [ ! -e $RELEASE/data ] ; then
+	mkdir $RELEASE/data
+fi
+
+groovy scripts/divide.groovy $DROPBOX/MASC2-3/FULL_MASC $WORK/release $RELEASE/data
+cp $DROPBOX/MASC2-3/MASC2-resource-header.xml $RELEASE
+
+exit
+
 WRITTEN=$RELEASE/data/written
 SPOKEN=$RELEASE/data/spoken
-APP=$APPS/divide-corpus/target/divide-corpus.jar
+#APP=$APPS/divide-corpus/target/divide-corpus.jar
 BAK=./data/bak
 
-check $APP
+
+#check $APP
 clean $RELEASE
 #clean $BAK
 clean $WRITTEN

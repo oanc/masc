@@ -6,6 +6,16 @@
 import javax.xml.transform.*
 import javax.xml.transform.stream.*
 
+class Counter
+{
+	static int id = 0;
+	
+	static String next()
+	{
+		return String.format("MASC1-%05d", ++id);
+	}
+}
+
 if (this.args.size() != 2)
 {
 	println "USAGE: masc1 <source> <destination>"
@@ -68,10 +78,12 @@ void process(Transformer ht, Transformer sot, File indir, File outdir) {
 		}
 		else if (it.name.endsWith('.anc'))
 		{
-			println "Transforming header ${it.name}"			
+			println "Transforming header ${it.name}"	
+//			++idCounter
 			File outFile = new File(outdir, it.name.replace('.anc', '.hdr'))
 			def ssource = new StreamSource(it)
 			def sresult = new StreamResult(outFile)
+			ht.setParameter('docId', Counter.next());
 			ht.transform(ssource,sresult)
 		}
 		else if (it.name.endsWith('.xml'))
