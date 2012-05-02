@@ -1,0 +1,65 @@
+// Converts the hand corrected files that are in GrAF format into XCES so 
+// the id values are generated correctly.
+
+import gate.Document
+import gate.Factory
+
+if (this.args.size() != 3)
+{
+	println "USAGE: grate graf-corrections.gr8 <txtDir> <source> <destination>"	
+	return
+}
+
+File txtDir = new File(this.args[0]);
+File inDir = new File(this.args[1]);
+File outDir = new File(this.args[2]);
+
+if (!txtDir.exists())
+{
+	println "Text directory not found."
+	return
+}
+
+if (!inDir.exists())
+{
+	println "Input directory not found."
+	return;
+}
+
+if (!outDir.exists())
+{
+	println "Output directory not found."
+	return;
+}
+
+/* Processing resource for saving GrAF standoff annotation files. */
+def saveXces = newResource('org.anc.gate.SaveStandoff') {
+	annotationType(null)
+	inputASName('Standoff')
+	encoding('UTF-8')
+}
+
+def loadGraf = newResource('org.anc.gate.LoadGrafStandoff') {
+	standoffASName('Standoff')	
+}
+
+inDir.listFiles().each { file ->
+	if (file.name.endsWith('.xml'))
+	{
+		println "Converting ${file.path}"
+		int dash = file.name.lastIndexOf('-')		
+		String txtFilename = file.name.substring(0, dash) + '.txt';
+		File txtFile = new File(txtDir, txtFilename)
+		loadGraf.sourceUrl = file.toURI().toURL()
+		loadGraf.document = newDocument(txtFile)
+		loadGraf.execute()
+		
+		File destFile = new File(outDir, file.name)
+		saveXces.document = loadGraf.document
+		saveXces.destination = destFile.toURI().toURL()
+		saveXces.execute()
+		
+	}
+}
+
+println "Done"
