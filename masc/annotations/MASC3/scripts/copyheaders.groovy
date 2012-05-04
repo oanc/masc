@@ -30,7 +30,7 @@ source.listFiles(filter).each {
 	}
 	else
 	{
-		println "No text file found for header ${it.name}"
+		println "No text file found for header ${it.name} : ${txtFile.path}"
 	}
 }
 

@@ -76,13 +76,14 @@ def writer = new StringWriter()
 def html = new MarkupBuilder(writer)
 
 def files = toSortedList(fileNames)
-def headings = ['txt', 'hdr', 'logical', 'penn', 'nc', 'vc', 'ne', 'mpqa', 'ptb', 'ptbtok', 'fn', 'fntok', 'seg']
+//def headings = ['txt', 'hdr', 'logical', 'penn', 'nc', 'vc', 'ne', 'mpqa', 'ptb', 'ptbtok', 'fn', 'fntok', 'seg']
+def headings = ['txt', 'hdr', 'logical', 'penn', 'nc', 'vc', 'ne', 'seg']
 //toSortedList(columns)
 
 int count = 0;
 html.html {
 	html.head {
-		html.title('MASC 2 Annotations')
+		html.title('MASC 3 Annotations')
 	}
 	html.body {
 		html.table(border:'1') {
@@ -103,11 +104,11 @@ html.html {
 					headings.each { h ->
 						if (row[h])
 						{
-							html.td(align:'center', bgcolor:'green', 'X')
+							html.td(align:'center', bgcolor:'green', ' ')
 						}
 						else
 						{
-							html.td(bgcolor:'red', "_")
+							html.td(align:'center', bgcolor:'red', "X")
 						}
 					}
 				}

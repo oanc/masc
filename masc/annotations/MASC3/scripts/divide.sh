@@ -24,38 +24,11 @@ if [ ! -e $RELEASE/data ] ; then
 fi
 
 groovy scripts/divide.groovy $DROPBOX/MASC2-3/FULL_MASC $WORK/release $RELEASE/data
-cp $DROPBOX/MASC2-3/MASC2-resource-header.xml $RELEASE
-
-exit
-
-WRITTEN=$RELEASE/data/written
-SPOKEN=$RELEASE/data/spoken
-#APP=$APPS/divide-corpus/target/divide-corpus.jar
-BAK=./data/bak
-
-
-#check $APP
-clean $RELEASE
-#clean $BAK
-clean $WRITTEN
-clean $SPOKEN
-
-#echo "Making backup copy of files."
-#cp $MASC/* $BAK 
-
-echo "Dividing corpus."
-java $OPTS -jar $APP $LOPTS -in=$MASC -written=$WRITTEN -spoken=$SPOKEN
-
-# Now move over the original annotations and Corpus header
-ORG=./data/originals/original-annotations
-HEADER=./data/originals/MASC-corpus-header.xml
-
-echo "Copying original annotations."
-cp -Rf $ORG $RELEASE
-cp -f $HEADER $RELEASE
-
-# Remove the SVN metadata
-rm -Rf $RELEASE/original-annotations/.svn
-rm -Rf $RELEASE/original-annotations/*/.svn
+HEADER=$DROPBOX/MASC2-3/MASC3-resource-header.xml
+if [ -e $HEADER ] ; then
+	cp $HEADER $RELEASE
+else
+	echo "No resource header found."
+fi
 
 echo "Done."

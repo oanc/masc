@@ -1,0 +1,97 @@
+/*
+ * This script loads all GrAF documents into a Gate corpus and saves them
+ * to a Gate DataStore for viewing in Gate.
+ *
+ * USAGE: grate mascds.gr8 <mascDir> <dataStoreDir>
+ *
+ * mascDir the path to the MASC data files. The path can be relative to the 
+ *		script or specified as an absolute path.
+ * dataStoreDir The directory where the Gate DataStore will be created. If the
+ *		dataStoreDir does not exist it will be created. If the directory exists
+ *		and already contains a Gate data store the script will terminate.
+ *
+ */
+
+import gate.*
+
+if (this.args.size() != 2)
+{
+	println "USAGE: grate mascds <mascDir> <dataStoreDir>"
+	return
+}
+
+File mascDir = new File(this.args[0])
+File dsDir = new File(this.args[1])
+
+if (!mascDir.exists())
+{
+	println "MASC directory not found."
+	return
+}
+
+if (!dsDir.exists() && !dsDir.mkdirs())
+{
+	println "Unable to create the data store directory."
+	return
+}
+
+def loadPR = newResource('org.anc.gate.LoadGrafStandoff') {}
+//def filter = new org.anc.io.SuffixFilter('.txt', false)
+
+// The index is used to map URL objects to File objects and simply
+// saves us a bunch of string substitutions/replacements when trying
+// to derive the paths to standoff annotation files.
+def index = [:]
+
+def corpus = newCorpus('MASC 2.0.0') {
+	// Add each text file to the corpus and the index.
+	mascDir.listFiles().each {
+		if (it.name.endsWith('.txt'))
+		{
+			addDocument(it)
+			index[it.toURI().toURL()] = it
+		}
+	}
+}
+
+// Create the datastore for the corpus.
+def ds = newSerialDataStore(dsDir)
+def persistedCorpus = ds.adopt(corpus, null)
+
+// Now process the annotation types for each document in the corpus.
+def types = ['logical', 's', 'penn', 'ne', 'nc', 'vc', 'mpqa', 'ptb', 'fn']
+corpus.each { doc ->
+	println "Corpus document ${doc.sourceUrl}"
+	// Check if the file is in in the index
+	File txtFile = index[doc.sourceUrl]
+	if (txtFile)
+	{
+		// Now try to load each annotation type for this file.
+		println "Found annotations for ${txtFile.path}."
+		types.each { type ->
+			def soFilename = txtFile.name.replace('.txt', "-${type}.xml")
+			def soFile = new File(txtFile.getParentFile(), soFilename)
+			if (soFile.exists())
+			{
+				// We have found a standoff annotation file. Run the
+				// LoadGrafStandoff PR on the document
+				println "   Loading ${soFile.name}"
+				loadPR.document = doc
+				loadPR.standoffASName = type
+				loadPR.sourceUrl = soFile.toURI().toURL()
+				loadPR.execute()
+			}
+		}
+	}
+	else
+	{
+		println "${doc.sourceUrl} not found in the index."
+	}
+}
+
+// Persist our changes to the data store.
+ds.sync(persistedCorpus)
+ds.close()
+
+// Now go fire up Gate and browse the annotations.
+println "Done."

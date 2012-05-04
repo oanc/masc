@@ -21,24 +21,8 @@ echo "---------------------------------------------------------"
 ./prep.sh
 
 echo "---------------------------------------------------------"
-# Generate the header files.
+# Copies the header files generated during MASC2.
 ./headers.sh
-
-##echo "---------------------------------------------------------"
-## Process committed belief annotations.
-## ./cb.sh #not yet present in MASC 2
-
-##echo "---------------------------------------------------------"
-## Process event annotations.
-## ./event.sh #not yet present in MASC 2
-
-echo "---------------------------------------------------------"
-# Convert and align the MPQA files.
-./mpqa.sh
-
-echo "---------------------------------------------------------"
-# Convert and align the Penn Tree Bank files.
-./ptb.sh
 
 echo "---------------------------------------------------------"
 # Convert and align the FrameNet files.
@@ -49,25 +33,6 @@ echo "---------------------------------------------------------"
 # and don't contain links to non-existent header files.
 ./update-headers.sh
 
-#echo "---------------------------------------------------------"
-# Process the "out of stream" corrections.
-#./corrections.sh 
-
-## This is obsolete as it modifies the actual annotations
-## and not just the GrAF representation.
-## echo "---------------------------------------------------------"
-## Add missing IDs to sentence annotations.
-##./fix-ids.sh  
-
-#echo "---------------------------------------------------------"
-# Trim white-space from annotations.
-#./fix-alignment.sh #SBI but needs fixing
-
-##echo "---------------------------------------------------------"
-## Link the logical annotations into a tree.
-##echo "TODO: fix-logical.sh (make-tree.jar) needs fixing"
-##./fix-logical.sh
-
 echo "---------------------------------------------------------"
 # Link MPQA, NE, NC, and VC annotations to the Penn tokens.
 ./link-tokens.sh #SBI
@@ -76,10 +41,6 @@ echo "---------------------------------------------------------"
 # Extract tokens from the PTB and FrameNet files.
 # Also links tokens to quarks.
 ./tokenize.sh #SBI
-
-#echo "---------------------------------------------------------"
-# Copy over hand corrected files before validation starts.
-#./hand-corrected.sh #not yet present in MASC 2
 
 echo "---------------------------------------------------------"
 # Removes leading and trailing whitespace in regions.
@@ -102,9 +63,10 @@ echo "---------------------------------------------------------"
 # to the release directory.
 ./convert.sh #SBI
 
-echo "---------------------------------------------------------"
+## TODO Change this to copy files from MASC2.
+#echo "---------------------------------------------------------"
 # Convert the existing MASC1 files into the new format.
-./masc1.sh #SBI
+#./masc1.sh 
 
 echo "---------------------------------------------------------"
 # Perform a schema validation of all document headers and standoff
@@ -125,6 +87,6 @@ echo "---------------------------------------------------------"
 ./divide.sh #SBI
 
 #echo "---------------------------------------------------------"
-# Copies other original annotations, header, etc. and
+# Copies over original annotations, header, etc. and
 # packages everything.
 ./package.sh #SBI

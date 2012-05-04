@@ -5,15 +5,22 @@ source ./config.sh
 echo running package.sh
 
 DATE=`date +%Y-%m-%d`
-VERS=2.0.0
+VERS=3.0.0
 
 #FILENAME="MASC-$VERS-$DATE.tgz"
-FILENAME="MASC-$VERS.tgz"
+NAME="MASC-$VERS"
 
+TGZ=$ROOT/$NAME.tgz
+ZIP=$ROOT/$NAME.zip
+DIR=$CORPORA/$NAME
 
+if [ ! -e $DIR ] ; then
+	mkdir -p $DIR
+fi
 
-TGZ=$ROOT/$FILENAME
-ZIP=$ROOT/MASC-$VERS.zip
+echo "Copying to local corpora directory"
+cp -r $RELEASE/data $DIR
+cp $RELEASE/*.xml $DIR
 
 echo TGZ is $TGZ
 if [ -e $TGZ ] ; then

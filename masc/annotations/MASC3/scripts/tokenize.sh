@@ -9,22 +9,20 @@ echo running tokenize.sh
 #LOPTS=-log=./release.log\ -level=trace\ -append
 # Perform quarkification
 
-echo java $OPTS -cp $SPLITTER org.anc.graf.splitter.App -in=$OUT -out=$WORK/tokens/ptb -type=ptb -set=PTB $LOPTS
-java $OPTS -cp $SPLITTER org.anc.graf.splitter.App -in=$OUT -out=$WORK/tokens/ptb -type=ptb -set=ptb $LOPTS
+#echo java $OPTS -cp $SPLITTER org.anc.graf.splitter.App -in=$OUT -out=$WORK/tokens/ptb -type=ptb -set=PTB $LOPTS
+#java $OPTS -cp $SPLITTER org.anc.graf.splitter.App -in=$OUT -out=$WORK/tokens/ptb -type=ptb -set=ptb $LOPTS
 #java $OPTS -cp $SPLITTER org.anc.graf.splitter.App -in=$OUT -out=$WORK/tokens/ptb -type=ptb -set=PTB $LOPTS
 
-
-echo java $OPTS -cp $SPLITTER org.anc.graf.splitter.App -in=$OUT -out=$WORK/tokens/fn -type=fn -set=FrameNet $LOPTS
 java $OPTS -cp $SPLITTER org.anc.graf.splitter.App -in=$OUT -out=$WORK/tokens/fn -type=fn -set=fn $LOPTS
 
-echo java $OPTS -cp $SPLITTER org.anc.graf.tokens.MergeTokens -penn=$OUT -ptb=$WORK/tokens/ptb -fn=$WORK/tokens/fn -out=$WORK/tokens/quarks $LOPTS # -source=ptb -target=fn
 java $OPTS -cp $SPLITTER org.anc.graf.tokens.MergeTokens -penn=$OUT -ptb=$WORK/tokens/ptb -fn=$WORK/tokens/fn -out=$WORK/tokens/quarks $LOPTS # -source=ptb -target=fn
+#java $OPTS -cp $SPLITTER org.anc.graf.tokens.MergeTokens -penn=$OUT -fn=$WORK/tokens/fn -out=$WORK/tokens/quarks $LOPTS 
 
 echo Copying FrameNet tokens.
 cp $WORK/tokens/fn/*.xml $OUT
 
-echo Copying Penn TreeBank tokens.
-cp $WORK/tokens/ptb/*.xml $OUT
+#echo Copying Penn TreeBank tokens.
+#cp $WORK/tokens/ptb/*.xml $OUT
 
 echo Copying quarks.
 cp $WORK/tokens/quarks/*.xml $OUT
