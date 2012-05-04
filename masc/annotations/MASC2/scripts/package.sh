@@ -7,13 +7,17 @@ echo running package.sh
 DATE=`date +%Y-%m-%d`
 VERS=2.0.0
 
-#FILENAME="MASC-$VERS-$DATE.tgz"
-FILENAME="MASC-$VERS.tgz"
+NAME="MASC-$VERS"
 
+TGZ=$ROOT/$NAME.tgz
+ZIP=$ROOT/$NAME.zip
+DIR=$CORPORA/$NAME
 
+if [ ! -e $DIR ] ; then
+fi
 
-TGZ=$ROOT/$FILENAME
-ZIP=$ROOT/MASC-$VERS.zip
+echo "Copying files to local corpora directory"
+cp -r $RELEASE $DIR
 
 echo TGZ is $TGZ
 if [ -e $TGZ ] ; then

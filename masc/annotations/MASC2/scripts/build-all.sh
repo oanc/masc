@@ -65,9 +65,13 @@ build "validator" "validator"
 build "make-tree" "make-tree"
 build "divide-corpus" "divide-corpus"
 build "parse-all" "parse-all"
+build "trim" "trim"
 build "check-align" "check-align"
 build "update-headers" "update-headers"
 build "masc-headers" "masc-headers"
+build "check-nodes" "check-nodes"
+build "check-docid" "check-docid"
+
 build_trunk "graf-headers" "graf-headers"
 
 #/tags/masc-1.0.3 

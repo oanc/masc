@@ -8,8 +8,8 @@ JAR=$APPS/update-headers/target/update-headers.jar
 
 java $OPTS -jar $JAR $OUT
 
-#echo "Done."
-#exit
+echo "Done."
+exit
 
 # The remainder of the script is obsolete, but left for posterity.
 
