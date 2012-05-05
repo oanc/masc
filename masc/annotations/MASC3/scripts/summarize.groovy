@@ -57,27 +57,42 @@ Set<String> fileNames = new HashSet<String>()
 Set<String> columns = new HashSet<String>()
 def rows = [:]
 
-dir.listFiles().each {
-	String name = getName(it)
-	String type = getType(it)
-	fileNames.add(name)
-	columns.add(type)
-	def row = rows[name]
-	if (!row)
+def Q = new LinkedList()
+Q << dir
+while (Q.size() > 0)
+{
+	File entry = Q.remove(0);
+	if (entry.isDirectory())
 	{
-		row = [:]
-		rows[name] = row
+		entry.listFiles().each {
+			Q << it
+		}
 	}
-	row[type] = true
-	//println "${it.name} ${getName(it)} ${getType(it)}"
+	else
+	{
+		String name = getName(entry)
+		String type = getType(entry)
+		fileNames.add(name)
+		columns.add(type)
+		def row = rows[name]
+		if (!row)
+		{
+			row = [:]
+			rows[name] = row
+		}
+		row[type] = true
+	}
 }
+//dir.listFiles().each {
+	//println "${it.name} ${getName(it)} ${getType(it)}"
+//}
 
 def writer = new StringWriter()
 def html = new MarkupBuilder(writer)
 
 def files = toSortedList(fileNames)
-//def headings = ['txt', 'hdr', 'logical', 'penn', 'nc', 'vc', 'ne', 'mpqa', 'ptb', 'ptbtok', 'fn', 'fntok', 'seg']
-def headings = ['txt', 'hdr', 'logical', 'penn', 'nc', 'vc', 'ne', 'seg']
+def headings = ['txt', 'hdr', 'logical', 'penn', 'nc', 'vc', 'ne', 'mpqa', 'ptb', 'ptbtok', 'fn', 'fntok', 'seg']
+//def headings = ['txt', 'hdr', 'logical', 'penn', 'nc', 'vc', 'ne', 'seg']
 //toSortedList(columns)
 
 int count = 0;

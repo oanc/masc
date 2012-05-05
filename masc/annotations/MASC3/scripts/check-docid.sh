@@ -10,5 +10,5 @@ if [ -e docid.txt ] ; then
 	rm docid.txt
 fi
 
-java $OPTS -jar $APP $LOPTS -in=$WORK/release
+java $OPTS -jar $APP $LOPTS -in=$RELEASE/data
 

@@ -2,6 +2,24 @@
 
 echo running divide.sh
 
+source ./config.sh
+HEADER=$DROPBOX/MASC2-3/MASC-resource-header.xml
+
+if [ ! -e $RELEASE/data ] ; then
+	mkdir $RELEASE/data
+fi
+
+groovy scripts/divide.groovy $DROPBOX/MASC2-3/FULL_MASC $WORK/release $RELEASE/data
+if [ -e $HEADER ] ; then
+	echo "Copying $HEADER to $RELEASE"
+	cp $HEADER $RELEASE
+else
+	echo "No resource header found at $HEADER"
+fi
+
+echo "Done."
+exit 
+
 function check {
 	if [ ! -e $1 ] ; then
 		echo "$1 not found"
@@ -17,18 +35,3 @@ function clean {
     fi
 }
 
-source ./config.sh
-
-if [ ! -e $RELEASE/data ] ; then
-	mkdir $RELEASE/data
-fi
-
-groovy scripts/divide.groovy $DROPBOX/MASC2-3/FULL_MASC $WORK/release $RELEASE/data
-HEADER=$DROPBOX/MASC2-3/MASC3-resource-header.xml
-if [ -e $HEADER ] ; then
-	cp $HEADER $RELEASE
-else
-	echo "No resource header found."
-fi
-
-echo "Done."

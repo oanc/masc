@@ -1,8 +1,11 @@
 #!/bin/bash
 
-for i in `ls ../data/working/release/*.txt` ; do
-	header=`echo $i | sed 's/txt/hdr/'`
+source ./config.sh
+
+for file in `find $RELEASE/data -type f -name \*.txt` ; do
+	header=`echo $file | sed 's/txt/hdr/'`
 	if [ ! -e $header ] ; then
-		echo `echo $i | sed 's|../data/working/release/||'`
+		echo $header
 	fi
 done
+

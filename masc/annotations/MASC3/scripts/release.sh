@@ -74,17 +74,17 @@ echo "---------------------------------------------------------"
 ./validate.sh data/working/release #SBI
 
 echo "---------------------------------------------------------"
-# Generate a summary of the annotations for each file before
-# dividing.
-groovy ./summarize.groovy ../data/working/release ../
-./check-ids.sh
-./check-nodes.sh
-./check-docid.sh
-
-echo "---------------------------------------------------------"
 #echo TODO: The divide.sh and package.sh scripts needs to be updated.
 # Divide the files into written and spoken components.
 ./divide.sh #SBI
+
+echo "---------------------------------------------------------"
+# Copy MASC 1/2 file to the release directory
+./masc2.sh
+
+echo "---------------------------------------------------------"
+# Perform sanity checks and write reports.
+./reports.sh
 
 #echo "---------------------------------------------------------"
 # Copies over original annotations, header, etc. and

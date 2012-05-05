@@ -80,7 +80,7 @@ source.eachFile { file ->
 	}
 }
 
-File outfile = new File("../unindexed.txt")
+File outfile = new File("unindexed.txt")
 println "Writing ${outfile.path}"
 PrintStream out = new PrintStream(outfile)
 unindexed.each { key,value ->

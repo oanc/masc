@@ -20,7 +20,7 @@ fi
 
 echo "Copying to local corpora directory"
 cp -r $RELEASE/data $DIR
-cp $RELEASE/*.xml $DIR
+#cp $RELEASE/*.xml $DIR
 
 echo TGZ is $TGZ
 if [ -e $TGZ ] ; then
