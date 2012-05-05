@@ -14,10 +14,12 @@ ZIP=$ROOT/$NAME.zip
 DIR=$CORPORA/$NAME
 
 if [ ! -e $DIR ] ; then
+	mkdir $DIR
 fi
 
-echo "Copying files to local corpora directory"
-cp -r $RELEASE $DIR
+echo "Copying files from $RELEASE to $DIR"
+cp -r $RELEASE/data $DIR
+cp $RELEASE/*.xml $DIR
 
 echo TGZ is $TGZ
 if [ -e $TGZ ] ; then
