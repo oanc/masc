@@ -16,10 +16,6 @@ fi
 # variable is used.
 #set -u
 
-echo "root is" $ROOT
-
-echo
-
 # System specific settings
 source ./scripts/$HOSTNAME.sh
 

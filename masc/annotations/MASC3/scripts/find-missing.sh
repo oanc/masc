@@ -17,7 +17,7 @@ for file in `find $RELEASE/data -type f -name \*.txt` ; do
 		so=`echo $file | sed 's/.txt/-'$type'.xml/'`
 		if [ ! -e $so ] ; then
 			#echo `echo $so | sed 's|../data/working/release/||'`
-			echo $so
+			echo `basename $so`
 		fi
 	done
 done

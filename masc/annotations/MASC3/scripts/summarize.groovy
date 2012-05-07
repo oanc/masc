@@ -91,8 +91,8 @@ def writer = new StringWriter()
 def html = new MarkupBuilder(writer)
 
 def files = toSortedList(fileNames)
-def headings = ['txt', 'hdr', 'logical', 'penn', 'nc', 'vc', 'ne', 'mpqa', 'ptb', 'ptbtok', 'fn', 'fntok', 'seg']
-//def headings = ['txt', 'hdr', 'logical', 'penn', 'nc', 'vc', 'ne', 'seg']
+//def headings = ['txt', 'hdr', 'logical', 'penn', 'nc', 'vc', 'ne', 'mpqa', 'ptb', 'ptbtok', 'fn', 'fntok', 'seg']
+def headings = ['txt', 'hdr', 'logical', 'penn', 'nc', 'vc', 'ne', 'seg']
 //toSortedList(columns)
 
 int count = 0;
