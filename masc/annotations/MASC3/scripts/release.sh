@@ -21,12 +21,17 @@ echo "---------------------------------------------------------"
 ./prep.sh
 
 echo "---------------------------------------------------------"
-# Copies the header files generated during MASC2.
-./headers.sh
-
-echo "---------------------------------------------------------"
 # Convert and align the FrameNet files.
 ./framenet.sh
+
+echo "---------------------------------------------------------"
+# Removes leading and trailing whitespace in regions.
+./trim.sh
+./check-align.sh
+
+echo "---------------------------------------------------------"
+# Generates headers from the MASC-MASTER file.
+./headers.sh
 
 #echo "---------------------------------------------------------"
 # Make sure headers have links to all annotations files
@@ -41,10 +46,6 @@ echo "---------------------------------------------------------"
 # Extract tokens from the PTB and FrameNet files.
 # Also links tokens to quarks.
 ./tokenize.sh #SBI
-
-echo "---------------------------------------------------------"
-# Removes leading and trailing whitespace in regions.
-./trim.sh
 
 echo "---------------------------------------------------------"
 # Run all annotation files through the GraphParser

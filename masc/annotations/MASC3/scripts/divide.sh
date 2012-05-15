@@ -9,7 +9,7 @@ if [ ! -e $RELEASE/data ] ; then
 	mkdir $RELEASE/data
 fi
 
-groovy scripts/divide.groovy $DROPBOX/MASC2-3/FULL_MASC $WORK/release $RELEASE/data
+#groovy scripts/divide.groovy $DROPBOX/MASC2-3/FULL_MASC $WORK/release $RELEASE/data
 if [ -e $HEADER ] ; then
 	echo "Copying $HEADER to $RELEASE"
 	cp $HEADER $RELEASE
