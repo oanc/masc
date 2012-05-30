@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cesAna xmlns="http://www.xces.org/schema/2003" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xces.org/schema/2003 utf-8">
+<cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
    <struct type="NounChunk" from="10" to="23"/>
-   <struct type="NounChunk" from="26" to="56"/>
+   <struct type="NounChunk" from="26" to="56">
+      <feat name="kind" value="emailAddress"/>
+   </struct>
+   <struct type="NounChunk" from="62" to="73">
+      <feat name="kind" value="emailAddress"/>
+   </struct>
    <struct type="NounChunk" from="88" to="103"/>
    <struct type="NounChunk" from="128" to="131"/>
    <struct type="NounChunk" from="133" to="144"/>
@@ -27,7 +32,9 @@
    <struct type="NounChunk" from="525" to="543"/>
    <struct type="NounChunk" from="546" to="549"/>
    <struct type="NounChunk" from="563" to="565"/>
-   <struct type="NounChunk" from="567" to="606"/>
+   <struct type="NounChunk" from="567" to="606">
+      <feat name="kind" value="urlAddress"/>
+   </struct>
    <struct type="NounChunk" from="611" to="614"/>
    <struct type="NounChunk" from="620" to="623"/>
    <struct type="NounChunk" from="648" to="656"/>
@@ -41,4 +48,7 @@
    <struct type="NounChunk" from="810" to="825"/>
    <struct type="NounChunk" from="829" to="840"/>
    <struct type="NounChunk" from="844" to="875"/>
+   <struct type="NounChunk" from="845" to="875">
+      <feat name="kind" value="emailAddress"/>
+   </struct>
 </cesAna>
