@@ -103,16 +103,6 @@
    <struct type="NounChunk" from="273" to="286">
       <feat name="id" value="1367"/>
    </struct>
-   <struct type="WHICH" from="295" to="298">
-      <feat name="string" value="who"/>
-      <feat name="id" value="1686"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="either"/>
-      <feat name="cls" value="Person"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="nominative-objective"/>
-      <feat name="gender" value="either"/>
-   </struct>
    <struct type="NounChunk" from="306" to="309">
       <feat name="id" value="1368"/>
    </struct>
@@ -131,16 +121,6 @@
    <struct type="NounChunk" from="419" to="439">
       <feat name="id" value="1373"/>
    </struct>
-   <struct type="WHICH" from="425" to="428">
-      <feat name="string" value="who"/>
-      <feat name="id" value="1687"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="either"/>
-      <feat name="cls" value="Person"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="nominative-objective"/>
-      <feat name="gender" value="either"/>
-   </struct>
    <struct type="NounChunk" from="440" to="445">
       <feat name="id" value="1374"/>
    </struct>
@@ -156,7 +136,6 @@
       <feat name="case" value="nominative"/>
       <feat name="number" value="singular"/>
       <feat name="orgType" value="department"/>
-      <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="NounChunk" from="524" to="527">
       <feat name="id" value="1377"/>
@@ -168,7 +147,6 @@
       <feat name="id" value="1379"/>
    </struct>
    <struct type="Organization" from="570" to="574">
-      <feat name="rule2" value="OrgFinal"/>
       <feat name="orgType" value="department"/>
       <feat name="number" value="singular"/>
       <feat name="case" value="nominative"/>
@@ -190,7 +168,6 @@
       <feat name="case" value="objective"/>
       <feat name="number" value="singular"/>
       <feat name="locType" value="region"/>
-      <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="NounChunk" from="647" to="667">
       <feat name="id" value="1382"/>
@@ -219,19 +196,8 @@
    <struct type="NounChunk" from="778" to="792">
       <feat name="id" value="1390"/>
    </struct>
-   <struct type="PRN" from="780" to="782">
-      <feat name="matches" value="[]"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="singular"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="objective"/>
-      <feat name="string" value="it"/>
-      <feat name="id" value="1688"/>
-   </struct>
    <struct type="Organization" from="780" to="782">
       <feat name="backRefText" value="USDA"/>
-      <feat name="rule2" value="OrgFinal"/>
       <feat name="orgType" value="department"/>
       <feat name="person" value="third"/>
       <feat name="backRefId" value="1474"/>
@@ -241,21 +207,21 @@
       <feat name="corefText" value="that"/>
       <feat name="matches" value="[3220, 3221, 3222, 3223, 3224, 3225, 3226, 3227, 3228, 3229, 3230, 3231, 3232, 3233, 3234]"/>
    </struct>
+   <struct type="PRN" from="780" to="782">
+      <feat name="person" value="third"/>
+      <feat name="case" value="objective"/>
+      <feat name="string" value="it"/>
+      <feat name="id" value="1688"/>
+      <feat name="matches" value="[]"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+   </struct>
    <struct type="NounChunk" from="793" to="797">
       <feat name="id" value="1391"/>
    </struct>
-   <struct type="WHICH" from="804" to="808">
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="either"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="nominative-objective"/>
-      <feat name="string" value="that"/>
-      <feat name="id" value="1689"/>
-   </struct>
    <struct type="Organization" from="804" to="808">
       <feat name="backRefText" value="USDA"/>
-      <feat name="rule2" value="OrgFinal"/>
       <feat name="orgType" value="department"/>
       <feat name="number" value="singular"/>
       <feat name="backRefId" value="3220"/>
@@ -281,23 +247,13 @@
       <feat name="id" value="1396"/>
    </struct>
    <struct type="Organization" from="886" to="890">
+      <feat name="backRefId" value="3221"/>
+      <feat name="person" value="third"/>
+      <feat name="orgType" value="department"/>
       <feat name="backRefText" value="USDA"/>
       <feat name="matches" value="[3220, 3221, 3222, 3223, 3224, 3225, 3226, 3227, 3228, 3229, 3230, 3231, 3232, 3233, 3234]"/>
       <feat name="number" value="singular"/>
       <feat name="case" value="nominative"/>
-      <feat name="backRefId" value="3221"/>
-      <feat name="person" value="third"/>
-      <feat name="orgType" value="department"/>
-      <feat name="rule2" value="OrgFinal"/>
-   </struct>
-   <struct type="WHICH" from="886" to="890">
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="either"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="nominative-objective"/>
-      <feat name="string" value="that"/>
-      <feat name="id" value="1690"/>
    </struct>
    <struct type="NounChunk" from="892" to="913">
       <feat name="id" value="1397"/>
@@ -351,7 +307,6 @@
       <feat name="id" value="1408"/>
    </struct>
    <struct type="Organization" from="1129" to="1133">
-      <feat name="rule2" value="OrgFinal"/>
       <feat name="orgType" value="department"/>
       <feat name="number" value="singular"/>
       <feat name="case" value="objective"/>
@@ -410,19 +365,8 @@
    <struct type="NounChunk" from="1291" to="1299">
       <feat name="id" value="1417"/>
    </struct>
-   <struct type="PRN" from="1296" to="1300">
-      <feat name="matches" value="[]"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="singular"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="nominative"/>
-      <feat name="string" value="this"/>
-      <feat name="id" value="1694"/>
-   </struct>
    <struct type="Organization" from="1296" to="1300">
       <feat name="backRefText" value="USDA"/>
-      <feat name="rule2" value="OrgFinal"/>
       <feat name="orgType" value="department"/>
       <feat name="case" value="objective"/>
       <feat name="backRefId" value="1478"/>
@@ -431,6 +375,16 @@
       <feat name="corefId" value="3224"/>
       <feat name="corefText" value="that"/>
       <feat name="matches" value="[3220, 3221, 3222, 3223, 3224, 3225, 3226, 3227, 3228, 3229, 3230, 3231, 3232, 3233, 3234]"/>
+   </struct>
+   <struct type="PRN" from="1296" to="1300">
+      <feat name="person" value="third"/>
+      <feat name="case" value="nominative"/>
+      <feat name="string" value="this"/>
+      <feat name="id" value="1694"/>
+      <feat name="matches" value="[]"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
    </struct>
    <struct type="NounChunk" from="1303" to="1308"/>
    <struct type="NounChunk" from="1336" to="1344">
@@ -455,24 +409,14 @@
    <struct type="NounChunk" from="1445" to="1446">
       <feat name="id" value="1423"/>
    </struct>
-   <struct type="WHICH" from="1464" to="1468">
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="either"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="nominative-objective"/>
-      <feat name="string" value="that"/>
-      <feat name="id" value="1696"/>
-   </struct>
    <struct type="Organization" from="1464" to="1468">
+      <feat name="case" value="objective"/>
+      <feat name="backRefId" value="3223"/>
+      <feat name="orgType" value="department"/>
       <feat name="backRefText" value="USDA"/>
       <feat name="matches" value="[3220, 3221, 3222, 3223, 3224, 3225, 3226, 3227, 3228, 3229, 3230, 3231, 3232, 3233, 3234]"/>
       <feat name="number" value="singular"/>
       <feat name="person" value="third"/>
-      <feat name="case" value="objective"/>
-      <feat name="backRefId" value="3223"/>
-      <feat name="orgType" value="department"/>
-      <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="NounChunk" from="1471" to="1480"/>
    <struct type="NounChunk" from="1493" to="1507">
@@ -494,7 +438,6 @@
    </struct>
    <struct type="NounChunk" from="1523" to="1527"/>
    <struct type="Organization" from="1531" to="1535">
-      <feat name="rule2" value="OrgFinal"/>
       <feat name="orgType" value="department"/>
       <feat name="number" value="singular"/>
       <feat name="case" value="objective"/>
@@ -529,23 +472,14 @@
       <feat name="id" value="1435"/>
    </struct>
    <struct type="PRN" from="1652" to="1656">
-      <feat name="matches" value="[]"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="plural"/>
-      <feat name="cls" value="Person"/>
       <feat name="person" value="third"/>
       <feat name="case" value="nominative"/>
       <feat name="gender" value="either"/>
       <feat name="string" value="they"/>
-   </struct>
-   <struct type="PRN" from="1652" to="1656">
+      <feat name="matches" value="[]"/>
       <feat name="type" value="anaphoric"/>
       <feat name="number" value="plural"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="nominative"/>
-      <feat name="string" value="they"/>
-      <feat name="id" value="1699"/>
+      <feat name="cls" value="Person"/>
    </struct>
    <struct type="NounChunk" from="1664" to="1672">
       <feat name="id" value="1436"/>
@@ -574,23 +508,14 @@
       <feat name="id" value="1445"/>
    </struct>
    <struct type="PRN" from="1804" to="1808">
-      <feat name="matches" value="[]"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="plural"/>
-      <feat name="cls" value="Thing"/>
       <feat name="person" value="third"/>
       <feat name="case" value="objective"/>
       <feat name="string" value="them"/>
       <feat name="id" value="1701"/>
-   </struct>
-   <struct type="PRN" from="1804" to="1808">
+      <feat name="matches" value="[]"/>
       <feat name="type" value="anaphoric"/>
       <feat name="number" value="plural"/>
-      <feat name="cls" value="Person"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="objective"/>
-      <feat name="gender" value="either"/>
-      <feat name="string" value="them"/>
+      <feat name="cls" value="Thing"/>
    </struct>
    <struct type="NounChunk" from="1812" to="1814"/>
    <struct type="NounChunk" from="1817" to="1837"/>
@@ -612,30 +537,28 @@
       <feat name="id" value="1449"/>
    </struct>
    <struct type="PRN" from="1883" to="1885">
-      <feat name="matches" value="[]"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="singular"/>
-      <feat name="cls" value="Thing"/>
       <feat name="person" value="third"/>
       <feat name="case" value="objective"/>
       <feat name="string" value="it"/>
       <feat name="id" value="1703"/>
+      <feat name="matches" value="[]"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
    </struct>
    <struct type="Organization" from="1883" to="1885">
+      <feat name="case" value="objective"/>
+      <feat name="number" value="singular"/>
+      <feat name="orgType" value="department"/>
       <feat name="backRefText" value="USDA"/>
       <feat name="matches" value="[3220, 3221, 3222, 3223, 3224, 3225, 3226, 3227, 3228, 3229, 3230, 3231, 3232, 3233, 3234]"/>
       <feat name="backRefId" value="1480"/>
       <feat name="person" value="third"/>
-      <feat name="case" value="objective"/>
-      <feat name="number" value="singular"/>
-      <feat name="orgType" value="department"/>
-      <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="NounChunk" from="1889" to="1900">
       <feat name="id" value="1450"/>
    </struct>
    <struct type="Organization" from="1891" to="1895">
-      <feat name="rule2" value="OrgFinal"/>
       <feat name="orgType" value="department"/>
       <feat name="number" value="singular"/>
       <feat name="case" value="nominative"/>
@@ -649,18 +572,8 @@
    <struct type="NounChunk" from="1923" to="1927">
       <feat name="id" value="1452"/>
    </struct>
-   <struct type="WHICH" from="1929" to="1933">
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="either"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="nominative-objective"/>
-      <feat name="string" value="that"/>
-      <feat name="id" value="1704"/>
-   </struct>
    <struct type="Organization" from="1929" to="1933">
       <feat name="backRefText" value="USDA"/>
-      <feat name="rule2" value="OrgFinal"/>
       <feat name="orgType" value="department"/>
       <feat name="number" value="singular"/>
       <feat name="case" value="nominative"/>
@@ -704,16 +617,6 @@
       <feat name="id" value="1460"/>
    </struct>
    <struct type="PRN" from="2090" to="2095">
-      <feat name="matches" value="[]"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="plural"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="possessive"/>
-      <feat name="string" value="their"/>
-      <feat name="id" value="1707"/>
-   </struct>
-   <struct type="PRN" from="2090" to="2095">
       <feat name="type" value="anaphoric"/>
       <feat name="number" value="plural"/>
       <feat name="cls" value="Person"/>
@@ -731,16 +634,6 @@
    </struct>
    <struct type="NounChunk" from="2137" to="2159">
       <feat name="id" value="1464"/>
-   </struct>
-   <struct type="PRN" from="2143" to="2147">
-      <feat name="matches" value="[]"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="plural"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="nominative"/>
-      <feat name="string" value="they"/>
-      <feat name="id" value="1709"/>
    </struct>
    <struct type="PRN" from="2143" to="2147">
       <feat name="type" value="anaphoric"/>
@@ -769,32 +662,30 @@
    <struct type="NounChunk" from="2227" to="2241">
       <feat name="id" value="1470"/>
    </struct>
-   <struct type="PRN" from="2237" to="2239">
-      <feat name="matches" value="[]"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="singular"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="objective"/>
-      <feat name="string" value="It"/>
-      <feat name="id" value="1710"/>
-   </struct>
    <struct type="Organization" from="2237" to="2239">
+      <feat name="case" value="nominative"/>
+      <feat name="number" value="singular"/>
+      <feat name="orgType" value="department"/>
       <feat name="backRefText" value="USDA"/>
       <feat name="matches" value="[3220, 3221, 3222, 3223, 3224, 3225, 3226, 3227, 3228, 3229, 3230, 3231, 3232, 3233, 3234]"/>
       <feat name="backRefId" value="3226"/>
       <feat name="person" value="third"/>
-      <feat name="case" value="nominative"/>
+   </struct>
+   <struct type="PRN" from="2237" to="2239">
+      <feat name="person" value="third"/>
+      <feat name="case" value="objective"/>
+      <feat name="string" value="It"/>
+      <feat name="id" value="1710"/>
+      <feat name="matches" value="[]"/>
+      <feat name="type" value="anaphoric"/>
       <feat name="number" value="singular"/>
-      <feat name="orgType" value="department"/>
-      <feat name="rule2" value="OrgFinal"/>
+      <feat name="cls" value="Thing"/>
    </struct>
    <struct type="NounChunk" from="2243" to="2259">
       <feat name="id" value="1471"/>
    </struct>
    <struct type="Organization" from="2259" to="2263">
       <feat name="matches" value="[1474, 1478, 1480, 1481, 1483, 1484, 1486, 1492, 1510, 1514]"/>
-      <feat name="rule2" value="OrgFinal"/>
       <feat name="orgType" value="department"/>
       <feat name="number" value="singular"/>
       <feat name="case" value="objective"/>
@@ -816,7 +707,6 @@
       <feat name="id" value="1711"/>
    </struct>
    <struct type="Organization" from="2460" to="2464">
-      <feat name="rule2" value="OrgFinal"/>
       <feat name="orgType" value="department"/>
       <feat name="number" value="singular"/>
       <feat name="case" value="nominative"/>
@@ -826,25 +716,24 @@
       <feat name="id" value="1484"/>
       <feat name="matches" value="[1474, 1478, 1480, 1481, 1483, 1484, 1486, 1492, 1510, 1514]"/>
    </struct>
-   <struct type="PRN" from="2515" to="2518">
-      <feat name="matches" value="[]"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="singular"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="case" value="possessive"/>
-      <feat name="person" value="third"/>
-      <feat name="string" value="its"/>
-      <feat name="id" value="1712"/>
-   </struct>
    <struct type="Organization" from="2515" to="2518">
+      <feat name="number" value="singular"/>
+      <feat name="backRefId" value="1484"/>
+      <feat name="orgType" value="department"/>
       <feat name="backRefText" value="USDA"/>
       <feat name="matches" value="[3220, 3221, 3222, 3223, 3224, 3225, 3226, 3227, 3228, 3229, 3230, 3231, 3232, 3233, 3234]"/>
       <feat name="person" value="third"/>
       <feat name="case" value="nominative"/>
+   </struct>
+   <struct type="PRN" from="2515" to="2518">
+      <feat name="case" value="possessive"/>
+      <feat name="person" value="third"/>
+      <feat name="string" value="its"/>
+      <feat name="id" value="1712"/>
+      <feat name="matches" value="[]"/>
+      <feat name="type" value="anaphoric"/>
       <feat name="number" value="singular"/>
-      <feat name="backRefId" value="1484"/>
-      <feat name="orgType" value="department"/>
-      <feat name="rule2" value="OrgFinal"/>
+      <feat name="cls" value="Thing"/>
    </struct>
    <struct type="PRN" from="2713" to="2715">
       <feat name="matches" value="[]"/>
@@ -858,14 +747,14 @@
       <feat name="id" value="1713"/>
    </struct>
    <struct type="PRN" from="3071" to="3076">
-      <feat name="matches" value="[]"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="plural"/>
-      <feat name="cls" value="Thing"/>
       <feat name="person" value="third"/>
       <feat name="case" value="nominative"/>
       <feat name="string" value="these"/>
       <feat name="id" value="1714"/>
+      <feat name="matches" value="[]"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="plural"/>
+      <feat name="cls" value="Thing"/>
    </struct>
    <struct type="PRN" from="3118" to="3120">
       <feat name="matches" value="[]"/>
@@ -891,17 +780,16 @@
       <feat name="case" value="objective"/>
       <feat name="number" value="singular"/>
       <feat name="orgType" value="government"/>
-      <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="PRN" from="3290" to="3294">
-      <feat name="matches" value="[]"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="singular"/>
-      <feat name="cls" value="Location"/>
       <feat name="person" value="third"/>
       <feat name="case" value="objective"/>
       <feat name="string" value="Here"/>
       <feat name="id" value="1716"/>
+      <feat name="matches" value="[]"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Location"/>
    </struct>
    <struct type="PRN" from="3302" to="3303">
       <feat name="matches" value="[]"/>
@@ -992,17 +880,16 @@
       <feat name="id" value="1724"/>
    </struct>
    <struct type="PRN" from="3498" to="3503">
-      <feat name="matches" value="[]"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="plural"/>
-      <feat name="cls" value="Thing"/>
       <feat name="person" value="third"/>
       <feat name="case" value="objective"/>
       <feat name="string" value="those"/>
       <feat name="id" value="1725"/>
+      <feat name="matches" value="[]"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="plural"/>
+      <feat name="cls" value="Thing"/>
    </struct>
    <struct type="Organization" from="3571" to="3575">
-      <feat name="rule2" value="OrgFinal"/>
       <feat name="orgType" value="department"/>
       <feat name="number" value="singular"/>
       <feat name="case" value="objective"/>
@@ -1013,24 +900,23 @@
       <feat name="matches" value="[1474, 1478, 1480, 1481, 1483, 1484, 1486, 1492, 1510, 1514]"/>
    </struct>
    <struct type="PRN" from="3588" to="3591">
-      <feat name="matches" value="[]"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="singular"/>
-      <feat name="cls" value="Thing"/>
       <feat name="case" value="possessive"/>
       <feat name="person" value="third"/>
       <feat name="string" value="its"/>
       <feat name="id" value="1726"/>
+      <feat name="matches" value="[]"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
    </struct>
    <struct type="Organization" from="3588" to="3591">
+      <feat name="number" value="singular"/>
+      <feat name="backRefId" value="1486"/>
+      <feat name="orgType" value="department"/>
       <feat name="backRefText" value="USDA"/>
       <feat name="matches" value="[3220, 3221, 3222, 3223, 3224, 3225, 3226, 3227, 3228, 3229, 3230, 3231, 3232, 3233, 3234]"/>
       <feat name="person" value="third"/>
       <feat name="case" value="objective"/>
-      <feat name="number" value="singular"/>
-      <feat name="backRefId" value="1486"/>
-      <feat name="orgType" value="department"/>
-      <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="PRN" from="3724" to="3725">
       <feat name="matches" value="[]"/>
@@ -1054,34 +940,15 @@
       <feat name="type" value="anaphoric"/>
       <feat name="id" value="1728"/>
    </struct>
-   <struct type="WHICH" from="3741" to="3745">
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="either"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="nominative-objective"/>
-      <feat name="string" value="that"/>
-      <feat name="id" value="1729"/>
-   </struct>
    <struct type="Organization" from="3759" to="3766">
-      <feat name="id" value="1487"/>
-      <feat name="matches" value="[1476, 1487, 1490, 1493, 1495, 1496, 1497, 1500, 1501, 1504, 1505, 1507, 1508, 1509, 1516]"/>
-      <feat name="orgType" value="company"/>
-      <feat name="number" value="singular"/>
       <feat name="case" value="objective"/>
       <feat name="person" value="third"/>
       <feat name="corefId" value="3230"/>
       <feat name="corefText" value="That"/>
-   </struct>
-   <struct type="PRN" from="3810" to="3814">
-      <feat name="matches" value="[]"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="plural"/>
-      <feat name="cls" value="Person"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="nominative"/>
-      <feat name="gender" value="either"/>
-      <feat name="string" value="they"/>
+      <feat name="id" value="1487"/>
+      <feat name="matches" value="[1476, 1487, 1490, 1493, 1495, 1496, 1497, 1500, 1501, 1504, 1505, 1507, 1508, 1509, 1516]"/>
+      <feat name="orgType" value="company"/>
+      <feat name="number" value="singular"/>
    </struct>
    <struct type="PRN" from="3810" to="3814">
       <feat name="type" value="anaphoric"/>
@@ -1103,15 +970,6 @@
       <feat name="type" value="anaphoric"/>
       <feat name="id" value="1732"/>
    </struct>
-   <struct type="WHICH" from="3995" to="3999">
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="either"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="nominative-objective"/>
-      <feat name="string" value="that"/>
-      <feat name="id" value="1733"/>
-   </struct>
    <struct type="PRN" from="4105" to="4108">
       <feat name="matches" value="[]"/>
       <feat name="string" value="our"/>
@@ -1124,14 +982,14 @@
       <feat name="id" value="1734"/>
    </struct>
    <struct type="PRN" from="4147" to="4151">
-      <feat name="matches" value="[]"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="singular"/>
-      <feat name="cls" value="Thing"/>
       <feat name="person" value="third"/>
       <feat name="case" value="objective"/>
       <feat name="string" value="That"/>
       <feat name="id" value="1735"/>
+      <feat name="matches" value="[]"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
    </struct>
    <struct type="Organization" from="4147" to="4151">
       <feat name="backRefText" value="Audubon"/>
@@ -1229,7 +1087,6 @@
    </struct>
    <struct type="Organization" from="4595" to="4599">
       <feat name="matches" value="[1474, 1478, 1480, 1481, 1483, 1484, 1486, 1492, 1510, 1514]"/>
-      <feat name="rule2" value="OrgFinal"/>
       <feat name="orgType" value="department"/>
       <feat name="number" value="singular"/>
       <feat name="case" value="nominative"/>
@@ -1246,7 +1103,6 @@
    </struct>
    <struct type="Location" from="4823" to="4830">
       <feat name="matches" value="[1494, 1513]"/>
-      <feat name="rule2" value="LocFinal"/>
       <feat name="locType" value="country"/>
       <feat name="number" value="singular"/>
       <feat name="case" value="nominative"/>
@@ -1254,14 +1110,14 @@
       <feat name="id" value="1494"/>
    </struct>
    <struct type="Organization" from="4891" to="4898">
-      <feat name="id" value="1495"/>
-      <feat name="matches" value="[1476, 1487, 1490, 1493, 1495, 1496, 1497, 1500, 1501, 1504, 1505, 1507, 1508, 1509, 1516]"/>
-      <feat name="orgType" value="company"/>
-      <feat name="number" value="singular"/>
       <feat name="case" value="nominative"/>
       <feat name="person" value="third"/>
       <feat name="corefId" value="3231"/>
       <feat name="corefText" value="its"/>
+      <feat name="id" value="1495"/>
+      <feat name="matches" value="[1476, 1487, 1490, 1493, 1495, 1496, 1497, 1500, 1501, 1504, 1505, 1507, 1508, 1509, 1516]"/>
+      <feat name="orgType" value="company"/>
+      <feat name="number" value="singular"/>
    </struct>
    <struct type="Organization" from="4914" to="4917">
       <feat name="backRefText" value="Audubon"/>
@@ -1273,14 +1129,14 @@
       <feat name="matches" value="[3220, 3221, 3222, 3223, 3224, 3225, 3226, 3227, 3228, 3229, 3230, 3231, 3232, 3233, 3234]"/>
    </struct>
    <struct type="PRN" from="4914" to="4917">
-      <feat name="matches" value="[]"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="singular"/>
-      <feat name="cls" value="Thing"/>
       <feat name="case" value="possessive"/>
       <feat name="person" value="third"/>
       <feat name="string" value="its"/>
       <feat name="id" value="1743"/>
+      <feat name="matches" value="[]"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
    </struct>
    <struct type="Organization" from="5053" to="5060">
       <feat name="orgType" value="company"/>
@@ -1312,6 +1168,9 @@
       <feat name="type" value="anaphoric"/>
       <feat name="id" value="1745"/>
    </struct>
+   <struct type="NounChunk" from="5267" to="5283">
+      <feat name="kind" value="urlAddress"/>
+   </struct>
    <struct type="Organization" from="5423" to="5430">
       <feat name="orgType" value="company"/>
       <feat name="number" value="singular"/>
@@ -1326,7 +1185,6 @@
       <feat name="case" value="nominative"/>
       <feat name="number" value="singular"/>
       <feat name="orgType" value="company"/>
-      <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="PRN" from="5565" to="5569">
       <feat name="matches" value="[]"/>
@@ -1340,23 +1198,14 @@
       <feat name="id" value="1746"/>
    </struct>
    <struct type="Organization" from="5576" to="5583">
-      <feat name="id" value="1500"/>
-      <feat name="matches" value="[1476, 1487, 1490, 1493, 1495, 1496, 1497, 1500, 1501, 1504, 1505, 1507, 1508, 1509, 1516]"/>
-      <feat name="orgType" value="company"/>
-      <feat name="number" value="singular"/>
       <feat name="case" value="nominative"/>
       <feat name="person" value="third"/>
       <feat name="corefId" value="3232"/>
       <feat name="corefText" value="that"/>
-   </struct>
-   <struct type="WHICH" from="5639" to="5643">
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="either"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="nominative-objective"/>
-      <feat name="string" value="that"/>
-      <feat name="id" value="1747"/>
+      <feat name="id" value="1500"/>
+      <feat name="matches" value="[1476, 1487, 1490, 1493, 1495, 1496, 1497, 1500, 1501, 1504, 1505, 1507, 1508, 1509, 1516]"/>
+      <feat name="orgType" value="company"/>
+      <feat name="number" value="singular"/>
    </struct>
    <struct type="Organization" from="5639" to="5643">
       <feat name="backRefText" value="Audubon"/>
@@ -1383,14 +1232,14 @@
       <feat name="id" value="1502"/>
    </struct>
    <struct type="PRN" from="5874" to="5875">
-      <feat name="matches" value="[]"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="singular"/>
-      <feat name="cls" value="Person"/>
       <feat name="person" value="second"/>
       <feat name="case" value="objective"/>
       <feat name="gender" value="either"/>
       <feat name="string" value="you"/>
+      <feat name="matches" value="[]"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Person"/>
    </struct>
    <struct type="Person" from="5906" to="5918">
       <feat name="gender" value="male"/>
@@ -1424,7 +1273,6 @@
    </struct>
    <struct type="Organization" from="5970" to="6000">
       <feat name="matches" value="[1476, 1487, 1490, 1493, 1495, 1496, 1497, 1500, 1501, 1504, 1505, 1507, 1508, 1509, 1516]"/>
-      <feat name="rule2" value="FacilityFinal"/>
       <feat name="orgType" value="department"/>
       <feat name="number" value="singular"/>
       <feat name="case" value="objective"/>
@@ -1451,23 +1299,14 @@
       <feat name="matches" value="[1476, 1487, 1490, 1493, 1495, 1496, 1497, 1500, 1501, 1504, 1505, 1507, 1508, 1509, 1516]"/>
    </struct>
    <struct type="PRN" from="6180" to="6184">
-      <feat name="string" value="they"/>
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="plural"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="matches" value="[]"/>
-   </struct>
-   <struct type="PRN" from="6180" to="6184">
-      <feat name="string" value="they"/>
-      <feat name="id" value="1752"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="plural"/>
       <feat name="cls" value="Person"/>
       <feat name="person" value="third"/>
       <feat name="case" value="nominative"/>
       <feat name="gender" value="either"/>
+      <feat name="string" value="they"/>
+      <feat name="id" value="1752"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="plural"/>
    </struct>
    <struct type="PRN" from="6202" to="6205">
       <feat name="matches" value="[]"/>
@@ -1514,14 +1353,14 @@
       <feat name="id" value="1757"/>
    </struct>
    <struct type="Organization" from="6401" to="6408">
-      <feat name="id" value="1507"/>
-      <feat name="matches" value="[1476, 1487, 1490, 1493, 1495, 1496, 1497, 1500, 1501, 1504, 1505, 1507, 1508, 1509, 1516]"/>
-      <feat name="orgType" value="company"/>
-      <feat name="number" value="singular"/>
       <feat name="case" value="nominative"/>
       <feat name="person" value="third"/>
       <feat name="corefId" value="3233"/>
       <feat name="corefText" value="That"/>
+      <feat name="id" value="1507"/>
+      <feat name="matches" value="[1476, 1487, 1490, 1493, 1495, 1496, 1497, 1500, 1501, 1504, 1505, 1507, 1508, 1509, 1516]"/>
+      <feat name="orgType" value="company"/>
+      <feat name="number" value="singular"/>
    </struct>
    <struct type="Person" from="6418" to="6428">
       <feat name="gender" value="either"/>
@@ -1540,15 +1379,6 @@
       <feat name="number" value="plural"/>
       <feat name="type" value="anaphoric"/>
       <feat name="id" value="1758"/>
-   </struct>
-   <struct type="WHICH" from="6560" to="6564">
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="either"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="nominative-objective"/>
-      <feat name="string" value="that"/>
-      <feat name="id" value="1759"/>
    </struct>
    <struct type="PRN" from="6565" to="6568">
       <feat name="matches" value="[]"/>
@@ -1573,14 +1403,14 @@
       <feat name="id" value="1761"/>
    </struct>
    <struct type="PRN" from="6598" to="6602">
-      <feat name="matches" value="[]"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="singular"/>
-      <feat name="cls" value="Thing"/>
       <feat name="person" value="third"/>
       <feat name="case" value="objective"/>
       <feat name="string" value="That"/>
       <feat name="id" value="1762"/>
+      <feat name="matches" value="[]"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
    </struct>
    <struct type="Organization" from="6598" to="6602">
       <feat name="backRefText" value="Audubon"/>
@@ -1641,7 +1471,6 @@
       <feat name="matches" value="[1476, 1487, 1490, 1493, 1495, 1496, 1497, 1500, 1501, 1504, 1505, 1507, 1508, 1509, 1516]"/>
    </struct>
    <struct type="Organization" from="6869" to="6873">
-      <feat name="rule2" value="OrgFinal"/>
       <feat name="orgType" value="department"/>
       <feat name="number" value="singular"/>
       <feat name="case" value="objective"/>
@@ -1651,24 +1480,14 @@
       <feat name="id" value="1510"/>
       <feat name="matches" value="[1474, 1478, 1480, 1481, 1483, 1484, 1486, 1492, 1510, 1514]"/>
    </struct>
-   <struct type="WHICH" from="6900" to="6904">
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="either"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="nominative-objective"/>
-      <feat name="string" value="that"/>
-      <feat name="id" value="1766"/>
-   </struct>
    <struct type="Organization" from="6900" to="6904">
+      <feat name="case" value="objective"/>
+      <feat name="number" value="singular"/>
+      <feat name="orgType" value="department"/>
       <feat name="backRefText" value="USDA"/>
       <feat name="matches" value="[3220, 3221, 3222, 3223, 3224, 3225, 3226, 3227, 3228, 3229, 3230, 3231, 3232, 3233, 3234]"/>
       <feat name="backRefId" value="1510"/>
       <feat name="person" value="third"/>
-      <feat name="case" value="objective"/>
-      <feat name="number" value="singular"/>
-      <feat name="orgType" value="department"/>
-      <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="PRN" from="6905" to="6906">
       <feat name="matches" value="[]"/>
@@ -1736,26 +1555,15 @@
       <feat name="type" value="anaphoric"/>
       <feat name="id" value="1772"/>
    </struct>
-   <struct type="WHICH" from="7027" to="7031">
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="either"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="nominative-objective"/>
-      <feat name="string" value="that"/>
-      <feat name="id" value="1773"/>
-   </struct>
    <struct type="Organization" from="7036" to="7059">
       <feat name="id" value="1512"/>
       <feat name="person" value="third"/>
       <feat name="case" value="objective"/>
       <feat name="number" value="singular"/>
       <feat name="orgType" value="newspaper"/>
-      <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="Location" from="7074" to="7081">
       <feat name="matches" value="[1494, 1513]"/>
-      <feat name="rule2" value="LocFinal"/>
       <feat name="locType" value="country"/>
       <feat name="number" value="singular"/>
       <feat name="case" value="objective"/>
@@ -1775,7 +1583,6 @@
    </struct>
    <struct type="Organization" from="7295" to="7299">
       <feat name="matches" value="[1474, 1478, 1480, 1481, 1483, 1484, 1486, 1492, 1510, 1514]"/>
-      <feat name="rule2" value="OrgFinal"/>
       <feat name="orgType" value="department"/>
       <feat name="number" value="singular"/>
       <feat name="case" value="nominative"/>
@@ -1854,23 +1661,14 @@
       <feat name="id" value="1779"/>
    </struct>
    <struct type="PRN" from="7702" to="7707">
-      <feat name="string" value="their"/>
-      <feat name="case" value="possessive"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="plural"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="matches" value="[]"/>
-   </struct>
-   <struct type="PRN" from="7702" to="7707">
-      <feat name="string" value="their"/>
-      <feat name="id" value="1780"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="plural"/>
       <feat name="cls" value="Person"/>
       <feat name="person" value="third"/>
       <feat name="case" value="possessive"/>
       <feat name="gender" value="either"/>
+      <feat name="string" value="their"/>
+      <feat name="id" value="1780"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="plural"/>
    </struct>
    <struct type="PRN" from="7769" to="7773">
       <feat name="matches" value="[]"/>

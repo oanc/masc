@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
+   <struct type="NounChunk" from="10" to="22">
+      <feat name="id" value="113"/>
+   </struct>
    <struct type="Person" from="10" to="22">
       <feat name="gender" value="female"/>
       <feat name="isLast" value="true"/>
       <feat name="isFirst" value="true"/>
       <feat name="id" value="138"/>
    </struct>
-   <struct type="NounChunk" from="10" to="22">
-      <feat name="id" value="113"/>
+   <struct type="NounChunk" from="25" to="42">
+      <feat name="kind" value="emailAddress"/>
+   </struct>
+   <struct type="NounChunk" from="49" to="60">
+      <feat name="kind" value="emailAddress"/>
    </struct>
    <struct type="NounChunk" from="62" to="69">
       <feat name="id" value="114"/>
@@ -17,6 +23,9 @@
    </struct>
    <struct type="NounChunk" from="91" to="95">
       <feat name="id" value="116"/>
+   </struct>
+   <struct type="Date" from="97" to="123">
+      <feat name="kind" value="dateTime"/>
    </struct>
    <struct type="NounChunk" from="97" to="100">
       <feat name="id" value="117"/>
@@ -52,15 +61,6 @@
    </struct>
    <struct type="NounChunk" from="226" to="230">
       <feat name="id" value="124"/>
-   </struct>
-   <struct type="WHICH" from="226" to="230">
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="either"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="nominative-objective"/>
-      <feat name="string" value="that"/>
-      <feat name="id" value="154"/>
    </struct>
    <struct type="NounChunk" from="241" to="246">
       <feat name="id" value="125"/>
@@ -144,5 +144,8 @@
    </struct>
    <struct type="NounChunk" from="443" to="449">
       <feat name="id" value="137"/>
+   </struct>
+   <struct type="NounChunk" from="473" to="507">
+      <feat name="kind" value="urlAddress"/>
    </struct>
 </cesAna>
