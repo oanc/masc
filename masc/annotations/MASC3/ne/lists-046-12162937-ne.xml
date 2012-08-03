@@ -1,30 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
    <struct type="Person" from="35" to="47">
-      <feat name="rule" value="PersonFinal"/>
-      <feat name="rule1" value="PersonFull"/>
+      <feat name="id" value="703"/>
       <feat name="gender" value="male"/>
+      <feat name="isFirst" value="true"/>
    </struct>
-   <struct type="Date" from="74" to="99">
-      <feat name="rule2" value="DateTimeFinal"/>
+   <struct type="Date" from="74" to="105">
       <feat name="kind" value="dateTime"/>
+      <feat name="id" value="1001"/>
    </struct>
    <struct type="Person" from="261" to="265">
-      <feat name="rule" value="PersonFinal"/>
-      <feat name="rule1" value="GazPersonFirst"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="nominative"/>
       <feat name="gender" value="male"/>
+      <feat name="number" value="singular"/>
+      <feat name="id" value="705"/>
    </struct>
    <struct type="Person" from="2298" to="2310">
-      <feat name="rule" value="PersonFinal"/>
-      <feat name="rule1" value="PersonFull"/>
+      <feat name="id" value="706"/>
+      <feat name="number" value="singular"/>
+      <feat name="isLast" value="true"/>
       <feat name="gender" value="male"/>
+      <feat name="case" value="nominative"/>
+      <feat name="person" value="third"/>
+   </struct>
+   <struct type="Organization" from="2373" to="2398">
+      <feat name="id" value="4001"/>
+      <feat name="orgType" value="company"/>
+   </struct>
+   <struct type="Location" from="2400" to="2421">
+      <feat name="id" value="7081"/>
+      <feat name="locType" value="highway_street"/>
    </struct>
    <struct type="Location" from="2423" to="2432">
-      <feat name="rule2" value="LocFinal"/>
-      <feat name="rule1" value="GazLocation"/>
+      <feat name="id" value="707"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="nominative"/>
+      <feat name="number" value="singular"/>
       <feat name="locType" value="city"/>
    </struct>
    <struct type="Location" from="2434" to="2436">
-      <feat name="locType" value="us_region"/>
+      <feat name="locType" value="province_state"/>
+      <feat name="number" value="singular"/>
+      <feat name="case" value="nominative"/>
+      <feat name="person" value="third"/>
+      <feat name="id" value="708"/>
    </struct>
 </cesAna>
