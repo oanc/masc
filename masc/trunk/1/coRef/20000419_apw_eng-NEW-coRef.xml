@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
+   <struct type="Person" from="52" to="69">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Organization" from="71" to="87">
+      <feat name="orgType" value="newspaper/media"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="rule2" value="OrgFinal"/>
+   </struct>
+   <struct type="Location" from="95" to="100">
+      <feat name="locType" value="city"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="rule2" value="LocFinal"/>
+   </struct>
+   <struct type="Location" from="102" to="106">
+      <feat name="locType" value="country"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="rule2" value="LocFinal"/>
+   </struct>
+   <struct type="Organization" from="108" to="110">
+      <feat name="orgType" value="newspaper/media"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="rule2" value="OrgFinal"/>
+   </struct>
+   <struct type="Organization" from="117" to="121">
+      <feat name="orgType" value="government"/>
+   </struct>
+   <struct type="Location" from="117" to="121">
+      <feat name="locType" value="country"/>
+   </struct>
+   <struct type="Organization" from="155" to="159">
+      <feat name="orgType" value="government"/>
+   </struct>
+   <struct type="Location" from="173" to="177">
+      <feat name="locType" value="country"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="rule2" value="LocFinal"/>
+   </struct>
+   <struct type="Date" from="187" to="196">
+      <feat name="rule1" value="GazDateWords"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="kind" value="date"/>
+   </struct>
    <struct type="PRN" from="197" to="199">
+      <feat name="cls" value="Thing"/>
       <feat name="person" value="third"/>
       <feat name="case" value="nominative"/>
       <feat name="string" value="it"/>
@@ -8,9 +51,14 @@
       <feat name="matches" value="[]"/>
       <feat name="type" value="anaphoric"/>
       <feat name="number" value="singular"/>
-      <feat name="cls" value="Thing"/>
+   </struct>
+   <struct type="Location" from="231" to="238">
+      <feat name="locType" value="city"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="PRN" from="250" to="253">
+      <feat name="cls" value="Thing"/>
       <feat name="case" value="possessive"/>
       <feat name="person" value="third"/>
       <feat name="string" value="its"/>
@@ -18,9 +66,22 @@
       <feat name="matches" value="[]"/>
       <feat name="type" value="anaphoric"/>
       <feat name="number" value="singular"/>
-      <feat name="cls" value="Thing"/>
+   </struct>
+   <struct type="Person" from="360" to="369">
+      <feat name="gender" value="male"/>
+   </struct>
+   <struct type="Location" from="373" to="377">
+      <feat name="locType" value="province"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="rule2" value="LocFinal"/>
+   </struct>
+   <struct type="Location" from="434" to="438">
+      <feat name="locType" value="country"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="PRN" from="443" to="446">
+      <feat name="cls" value="Thing"/>
       <feat name="case" value="possessive"/>
       <feat name="person" value="third"/>
       <feat name="string" value="its"/>
@@ -28,9 +89,24 @@
       <feat name="matches" value="[]"/>
       <feat name="type" value="anaphoric"/>
       <feat name="number" value="singular"/>
-      <feat name="cls" value="Thing"/>
+   </struct>
+   <struct type="Date" from="447" to="451">
+      <feat name="rule1" value="TempYear2"/>
+      <feat name="rule2" value="YearOnlyFinal"/>
+      <feat name="kind" value="date"/>
+   </struct>
+   <struct type="Location" from="464" to="470">
+      <feat name="locType" value="city"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="rule2" value="LocFinal"/>
+   </struct>
+   <struct type="Organization" from="485" to="499">
+      <feat name="orgType" value="government"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="PRN" from="569" to="571">
+      <feat name="cls" value="Thing"/>
       <feat name="person" value="third"/>
       <feat name="case" value="nominative"/>
       <feat name="string" value="It"/>
@@ -38,9 +114,14 @@
       <feat name="matches" value="[]"/>
       <feat name="type" value="anaphoric"/>
       <feat name="number" value="singular"/>
-      <feat name="cls" value="Thing"/>
+   </struct>
+   <struct type="Location" from="608" to="612">
+      <feat name="locType" value="country"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="PRN" from="671" to="673">
+      <feat name="cls" value="Thing"/>
       <feat name="person" value="third"/>
       <feat name="case" value="nominative"/>
       <feat name="string" value="it"/>
@@ -48,9 +129,9 @@
       <feat name="matches" value="[]"/>
       <feat name="type" value="anaphoric"/>
       <feat name="number" value="singular"/>
-      <feat name="cls" value="Thing"/>
    </struct>
    <struct type="PRN" from="695" to="699">
+      <feat name="cls" value="Thing"/>
       <feat name="person" value="third"/>
       <feat name="case" value="objective"/>
       <feat name="string" value="them"/>
@@ -58,31 +139,41 @@
       <feat name="matches" value="[]"/>
       <feat name="type" value="anaphoric"/>
       <feat name="number" value="plural"/>
-      <feat name="cls" value="Thing"/>
    </struct>
    <struct type="PRN" from="725" to="727">
-      <feat name="matches" value="[]"/>
-      <feat name="id" value="654"/>
-      <feat name="string" value="he"/>
-      <feat name="gender" value="male"/>
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Person"/>
-      <feat name="number" value="singular"/>
       <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Person"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="nominative"/>
+      <feat name="gender" value="male"/>
+      <feat name="string" value="he"/>
+      <feat name="id" value="654"/>
+      <feat name="matches" value="[]"/>
+   </struct>
+   <struct type="Organization" from="733" to="765">
+      <feat name="orgType" value="newspaper/media"/>
+      <feat name="rule1" value="OrgXKey"/>
+      <feat name="rule2" value="OrgFinal"/>
    </struct>
    <struct type="PRN" from="774" to="776">
-      <feat name="matches" value="[]"/>
-      <feat name="id" value="655"/>
-      <feat name="string" value="he"/>
-      <feat name="gender" value="male"/>
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Person"/>
-      <feat name="number" value="singular"/>
       <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Person"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="nominative"/>
+      <feat name="gender" value="male"/>
+      <feat name="string" value="he"/>
+      <feat name="id" value="655"/>
+      <feat name="matches" value="[]"/>
+   </struct>
+   <struct type="Location" from="854" to="858">
+      <feat name="locType" value="country"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="PRN" from="869" to="872">
+      <feat name="cls" value="Thing"/>
       <feat name="case" value="possessive"/>
       <feat name="person" value="third"/>
       <feat name="string" value="its"/>
@@ -90,20 +181,51 @@
       <feat name="matches" value="[]"/>
       <feat name="type" value="anaphoric"/>
       <feat name="number" value="singular"/>
-      <feat name="cls" value="Thing"/>
+   </struct>
+   <struct type="Organization" from="1019" to="1023">
+      <feat name="orgType" value="government"/>
    </struct>
    <struct type="PRN" from="1046" to="1048">
-      <feat name="matches" value="[]"/>
-      <feat name="id" value="657"/>
-      <feat name="string" value="he"/>
-      <feat name="gender" value="male"/>
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Person"/>
-      <feat name="number" value="singular"/>
       <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Person"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="nominative"/>
+      <feat name="gender" value="male"/>
+      <feat name="string" value="he"/>
+      <feat name="id" value="657"/>
+      <feat name="matches" value="[]"/>
+   </struct>
+   <struct type="Location" from="1062" to="1066">
+      <feat name="locType" value="country"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="rule2" value="LocFinal"/>
+   </struct>
+   <struct type="Location" from="1076" to="1089">
+      <feat name="locType" value="country"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="rule2" value="LocFinal"/>
+   </struct>
+   <struct type="Location" from="1094" to="1101">
+      <feat name="locType" value="country"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="rule2" value="LocFinal"/>
+   </struct>
+   <struct type="Organization" from="1168" to="1182">
+      <feat name="orgType" value="government"/>
+      <feat name="rule1" value="GazOrganization"/>
+      <feat name="rule2" value="OrgFinal"/>
+   </struct>
+   <struct type="Organization" from="1188" to="1203">
+      <feat name="orgType" value="government"/>
+      <feat name="rule1" value="LocOrganization"/>
+      <feat name="rule2" value="OrgFinal"/>
+   </struct>
+   <struct type="Location" from="1188" to="1192">
+      <feat name="locType" value="country"/>
    </struct>
    <struct type="PRN" from="1213" to="1215">
+      <feat name="cls" value="Thing"/>
       <feat name="person" value="third"/>
       <feat name="case" value="nominative"/>
       <feat name="string" value="it"/>
@@ -111,9 +233,14 @@
       <feat name="matches" value="[]"/>
       <feat name="type" value="anaphoric"/>
       <feat name="number" value="singular"/>
-      <feat name="cls" value="Thing"/>
+   </struct>
+   <struct type="Location" from="1237" to="1241">
+      <feat name="locType" value="country"/>
+      <feat name="rule1" value="GazLocation"/>
+      <feat name="rule2" value="LocFinal"/>
    </struct>
    <struct type="PRN" from="1311" to="1315">
+      <feat name="cls" value="Thing"/>
       <feat name="person" value="third"/>
       <feat name="case" value="nominative"/>
       <feat name="string" value="that"/>
@@ -121,6 +248,5 @@
       <feat name="matches" value="[]"/>
       <feat name="type" value="anaphoric"/>
       <feat name="number" value="singular"/>
-      <feat name="cls" value="Thing"/>
    </struct>
 </cesAna>
