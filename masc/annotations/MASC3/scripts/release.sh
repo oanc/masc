@@ -75,13 +75,17 @@ echo "---------------------------------------------------------"
 ./validate.sh data/working/release #SBI
 
 echo "---------------------------------------------------------"
-#echo TODO: The divide.sh and package.sh scripts needs to be updated.
 # Divide the files into written and spoken components.
 ./divide.sh #SBI
 
 echo "---------------------------------------------------------"
 # Copy MASC 1/2 file to the release directory
 ./masc2.sh
+
+echo "---------------------------------------------------------"
+# Load all standoff annotations for all documents.
+./load-all.sh
+
 
 echo "---------------------------------------------------------"
 # Perform sanity checks and write reports.

@@ -49,7 +49,7 @@ TRIM=./apps/trim/target/trim.jar
 FIX=./apps/align
 
 # JVM options
-OPTS=-Xmx800M 
+OPTS="-Xmx500M -Xshare:off -XX:+HeapDumpOnOutOfMemoryError"
 
 # Logging options
 LOPTS=-log=./release.log\ -append\ -level=info

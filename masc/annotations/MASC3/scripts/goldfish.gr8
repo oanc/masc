@@ -1,8 +1,14 @@
 /*
- * The "classic" Goldfish example from Gate.
+ * The "classic" Goldfish example from the Gate documentation.
  *
- * Run the default tokenizer and sentece splitter, annotate all occurences
- * of the word "goldfish" and save the generated annotations.
+ * Runs the ANNIE tokenizer and sentece splitter, annotate all occurences
+ * of the word "goldfish" and saves the generated annotations to a serial
+ * datastore.
+ *
+ * USAGE
+ *
+ * grate goldfish.gr8 <directory_of_files> <datastore_directory>
+ *
  */
  
 import gate.*
@@ -10,9 +16,44 @@ import gate.creole.*
 import gate.creole.metadata.*
 import org.anc.io.SuffixFilter
 
-File root = new File('../data/data')
-def filter = new SuffixFilter('.txt', false)
+// Check the command line parameters.
+File indir = new File(this.args[0])
+if (!indir.exists())
+{
+	println "Input directory not found."
+	return
+}
+if (!indir.isDirectory())
+{
+	println "Specified input is not a directory"
+	return	
+}
 
+File outdir = new File(this.args[1])
+if (!outdir.exists())
+{
+	println "Datastore directory does not exist."
+	return
+}
+if (!outdir.isDirectory())
+{
+	println "Datastore location is not a directory."
+	return
+}
+
+// A file filter that accepts only text files.
+def filter = new FileFilter() {
+	public boolean accept(File file)
+	{
+		return !file.isDirectory() && file.name.endsWith('.txt')
+	}
+}
+
+/*
+ * GATE Processing Resource definitions.
+ */
+ 
+// EchoResource simple echoes the document source URL to System.out.
 @CreoleResource
 class EchoResource extends gate.creole.AbstractLanguageAnalyser
 {
@@ -22,6 +63,8 @@ class EchoResource extends gate.creole.AbstractLanguageAnalyser
 	}
 }
 
+// The Goldfish annotator.  Adds a "Goldfish" annotation to every occurence
+// of the word Goldfish in a document.  This PR is case-sensitive.
 @CreoleResource
 class GoldfishAnnotator extends gate.creole.AbstractLanguageAnalyser {
 	static final String TOKEN = ANNIEConstants.TOKEN_ANNOTATION_TYPE
@@ -29,7 +72,9 @@ class GoldfishAnnotator extends gate.creole.AbstractLanguageAnalyser {
 	static final String KIND = ANNIEConstants.TOKEN_KIND_FEATURE_NAME
 	static final String STRING = ANNIEConstants.TOKEN_STRING_FEATURE_NAME
 	
+	// The name of the input gate.AnnotationSet
 	String inputASName
+	// The name of the output gate.AnnotationSet
 	String outputASName
 	
 	void execute() {
@@ -63,22 +108,23 @@ class GoldfishAnnotator extends gate.creole.AbstractLanguageAnalyser {
 			s.features['Goldfish count'] = sentenceGoldfishCount
 		}
 		document.features['Number of words'] = wordCount
-		document.features['']
 	}
 }
 
+// The ANNIE tokeniser.
 def tokenizer = newResource('gate.creole.tokeniser.DefaultTokeniser') {
 	annotationSetName('Annie')
 }
 
+// The ANNIE sentence splitter.
 def splitter = newResource('gate.creole.splitter.SentenceSplitter') {
 	inputASName('Annie')
 	outputASName('Annie')
 }
 
-println "Creating corpus"
+println "Populating the corpus"
 def corpus = newCorpus('Transient corpus') {
-	root.listFiles(filter).each { file ->
+	indir.listFiles(filter).each { file ->
 		addDocument(file)
 	}
 }
@@ -100,6 +146,7 @@ pipeline.add(echoPR)
 pipeline.add(tokenizer)
 pipeline.add(splitter)
 pipeline.add(goldfishPR)
+
 println "Running pipeline."
 pipeline.execute()
 

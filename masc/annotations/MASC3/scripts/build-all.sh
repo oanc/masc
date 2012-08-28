@@ -71,7 +71,9 @@ build "update-headers" "update-headers"
 #build "masc-headers" "masc-headers"
 build "check-nodes" "check-nodes"
 build "check-docid" "check-docid"
-
+build "check-headers" "check-headers"
+build "check-tokens" "check-tokens"
+build "load-all" "load-all"
 #build_trunk "graf-headers" "graf-headers"
 
 #/tags/masc-1.0.3 

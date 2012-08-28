@@ -21,16 +21,14 @@ final String ASET = 'mpqa'
 final String ATYPE = 'http://www.cs.pitt.edu/mpqa/2003'
 
 /* Processing resource for saving GrAF standoff annotation files. */
-def saveXces = resource('org.anc.gate.SaveStandoff') {
+def saveXces = newResource('org.anc.gate.SaveStandoff') {
 	inputASName('MPQA')
 	annotationType('mpqa')
-	//grafASName(ASET)
-	//grafASType(ATYPE)
 	encoding('UTF-8')
 }
 
 /* Processing resource to save the document content as a utf-8 text file. */
-def saveContent = resource('org.anc.gate.SaveContent') {
+def saveContent = newResource('org.anc.gate.SaveContent') {
 	encoding('UTF-8')
 }
 
@@ -76,10 +74,11 @@ mpqaDir.listFiles().each { dir ->
 		// Load the file into a Gate document.
 		String filename = "${dir.name}.mpqa.xml"
 		File file = new File(dir, filename)
-		Document doc = Factory.newDocument(file.toURI().toURL())
+		Document doc = newDocument(file)
 
-		// Derive the files to generate.
+		// The standoff annotation file to generate.
 		File soFile = new File(destDir, "${dir.name}-mpqa.xml")
+		// The text file that will be generated.
 		File txtFile = new File(destDir, "${dir.name}.txt")
 		
 		// Save the file name to the list of processed files.

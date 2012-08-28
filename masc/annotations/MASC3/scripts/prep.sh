@@ -24,7 +24,7 @@ java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=logical  -id=logical -in=$L
 
 # Updated 9/9/2011 KBS
 echo opening $TOKEN
-java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=penn -id=penn -in=$TOKEN -out=$OUT -saveAs=penn -rename="Token=tok @category=msd" -exf=string
+java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=penn -id=penn -in=$TOKEN -out=$OUT -saveAs=penn -rename="Token=tok @category=msd @root=base" -exf=string
 
 echo opening $NOUNS
 java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=nc -id=nc -in=$NOUNS -out=$OUT -saveAs=nc -rename="np=nchunk NounChunk=nchunk" -accept=nchunk -exf=graf:set

@@ -47,6 +47,10 @@ if [ -e $WEB ] ; then
     # when running on the ANC server.
     echo "Copying archive to web server."
     cp $TGZ $WEB
+else
+	echo "Copying files to the ANC server."
+	scp -P 22022 $TGZ $WEB
+	scp -P 22022 $ZIP $WEB
 fi
 
 echo "Packaging complete."

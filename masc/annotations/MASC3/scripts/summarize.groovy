@@ -36,7 +36,7 @@ List toSortedList(Set s)
 
 if (this.args.size() != 2)
  {
-	println "USAGE: groovy summarize.groovy <source> <html_target>"
+	println "USAGE: groovy summarize.groovy <source> <html_file>"
 	return
 }
 
@@ -46,13 +46,7 @@ if (!dir.exists())
 	println "Input directory not found."
 	return
 }
-File outdir = new File(this.args[1])
-if (!outdir.exists())
-{
-	println "Output directory not found."
-	return
-}
-File htmlFile = new File(outdir, 'annotations.html')
+File htmlFile = new File(this.args[1])
 Set<String> fileNames = new HashSet<String>()
 Set<String> columns = new HashSet<String>()
 def rows = [:]
