@@ -175,8 +175,8 @@
             <fileType name="belief" suffix="cb" a.type="cb" medium="xml"/>
             <fileType name="event" suffix="event" a.type="event" medium="xml"/>
         </fileStruct>
-        <annotationSets>
-            <annotationSet xml:id="xces" lnk:href="http://www.xces.org/schema/2003">
+        <annotationSpaces>
+            <annotationSpace xml:id="anc" lnk:href="http://www.anc.org/ns/masc/">
                 <annotation name="seg" layer="seg">
                     <a.desc>Segmentation into minimal token components</a.desc>
                     <a.resp lnk:href="http://www.anc.org">ANC project</a.resp>
@@ -227,8 +227,8 @@
                     <a.method type="automatic-validated"/>
                     <a.doc lnk:href="http://www.aclweb.org/anthology/W/W09/W09-3012.pdf"/>
                 </annotation>
-            </annotationSet>
-            <annotationSet xml:id="ptb" type="http://www.cis.upenn.edu/~treebank/">
+            </annotationSpace>
+            <annotationSpace xml:id="ptb" type="http://www.cis.upenn.edu/~treebank/">
                 <annotation name="ptb" layer="syntax">
                     <a.desc>Penn Treebank syntax</a.desc>
                     <a.resp lnk:href="http://www.cis.upenn.edu/~treebank/">Penn Treebank
@@ -244,8 +244,8 @@
                     <a.method type="automatic-validated"/>
                     <a.doc lnk:href="http://www.cis.upenn.edu/~treebank/"/>
                 </annotation>
-            </annotationSet>
-            <annotationSet xml:id="fn" type="http://framenet.icsi.berkeley.edu/">
+            </annotationSpace>
+            <annotationSpace xml:id="fn" type="http://framenet.icsi.berkeley.edu/">
                 <annotation name="fn" layer="sem">
                     <a.desc>FrameNet frame elements</a.desc>
                     <a.resp lnk:href="http://framenet.icsi.berkeley.edu/">FrameNet project</a.resp>
@@ -258,8 +258,8 @@
                     <a.method type="automatic-validated"/>
                     <a.doc lnk:href="http://framenet.icsi.berkeley.edu/"/>
                 </annotation>
-            </annotationSet>
-            <annotationSet xml:id="wn">
+            </annotationSpace>
+            <annotationSpace xml:id="wn">
                 <annotation name="wn" layer="sem">
                     <a.desc>WordNet sense tags</a.desc>
                     <a.resp lnk:href="http://www.anc.org">ANC project and Columbia
@@ -267,24 +267,24 @@
                     <a.method type="manual"/>
                     <a.doc lnk:href="http://www.anc.org/MASC/WordNet_Annotations.html"/>
                 </annotation>
-            </annotationSet>
-            <annotationSet xml:id="mpqa">
+            </annotationSpace>
+            <annotationSpace xml:id="mpqa">
                 <annotation name="mpqa" layer="sem">
                     <a.desc>Opinion/subjectivity annotation</a.desc>
                     <a.resp lnk:href="http://www.cs.pitt.edu/mpqa/">University of Pittsburgh</a.resp>
                     <a.method type="manual"/>
                     <a.doc lnk:href="http://www.cs.pitt.edu/mpqa/"/>
                 </annotation>
-            </annotationSet>
-            <annotationSet xml:id="event">
+            </annotationSpace>
+            <annotationSpace xml:id="event">
                 <annotation name="event" layer="sem">
                     <a.desc>Event co-reference annotation</a.desc>
                     <a.resp lnk:href="http://www.lti.cs.cmu.edu/">Language Technologies Institute, Carnegie-Mellon University</a.resp>
                     <a.method type="manual"/>
                     <a.doc lnk:href="http://www.lti.cs.cmu.edu/"/>
                 </annotation>
-            </annotationSet>
-        </annotationSets>
+            </annotationSpace>
+        </annotationSpaces>
         <media>
             <medium xml:id="text" type="text/plain" encoding="utf-8" suffix=".txt"/>
             <medium xml:id="xml" type="text/xml" encoding="utf-8" suffix=".xml"/>
