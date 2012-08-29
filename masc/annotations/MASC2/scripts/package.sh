@@ -1,25 +1,14 @@
 #!/bin/bash
-
+set -eu
 source ./config.sh
 
 echo running package.sh
 
 DATE=`date +%Y-%m-%d`
-VERS=2.0.0
-
-NAME="MASC-$VERS"
+NAME="MASC-$VERSION"
 
 TGZ=$ROOT/$NAME.tgz
 ZIP=$ROOT/$NAME.zip
-DIR=$CORPORA/$NAME
-
-if [ ! -e $DIR ] ; then
-	mkdir $DIR
-fi
-
-echo "Copying files from $RELEASE to $DIR"
-cp -r $RELEASE/data $DIR
-cp $RELEASE/*.xml $DIR
 
 echo TGZ is $TGZ
 if [ -e $TGZ ] ; then
@@ -30,7 +19,6 @@ if [ -e $ZIP ] ; then
 fi
 
 echo "Creating $TGZ"
-#pwd
 cd $RELEASE
 FILES=
 for file in `ls` ; do
@@ -40,6 +28,8 @@ tar czf $TGZ $FILES
 
 echo "Creating $ZIP"
 zip -r -9 -q $ZIP .
+
+# If this is run on the web server we copy the files to the download directory.
 WEB=/var/www/anc/masc
 if [ -e $WEB ] ; then
     # This will (should) only be true 

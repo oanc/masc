@@ -124,7 +124,11 @@ echo "---------------------------------------------------------"
 # Divide the files into written and spoken components.
 ./divide.sh #SBI
 
-#echo "---------------------------------------------------------"
+echo "---------------------------------------------------------"
 # Copies other original annotations, header, etc. and
 # packages everything.
 ./package.sh #SBI
+
+echo "---------------------------------------------------------"
+# Copy data to the local corpora directory
+./local-copy.sh

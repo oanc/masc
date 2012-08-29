@@ -23,6 +23,7 @@ echo
 # System specific settings
 source ./scripts/$HOSTNAME.sh
 
+VERSION=2.0.0
 IN=./data/originals  #original
 #IN=./ #updated on 4/26/2011
 OUT=./data/data
