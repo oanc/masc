@@ -70,5 +70,5 @@ fi
 # packages everything.
 ./package.sh
 
-echo "Copying files to the Corpora directory."
-cp -rf ../data/release/data /var/corpora/MASC-1.0.4
+# Deploy to local corpora directory
+./local-copy.sh

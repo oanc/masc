@@ -40,7 +40,7 @@ HEADER=./data/originals/MASC-corpus-header.xml
 
 echo "Copying original annotations."
 cp -Rf $ORG $RELEASE
-cp -f $HEADER $RELEASE
+cp -f $HEADER $RELEASE/resource-header.xml
 
 # Remove the SVN metadata
 rm -Rf $RELEASE/original-annotations/.svn

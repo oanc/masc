@@ -21,7 +21,7 @@ final String ASET = 'mpqa'
 final String ATYPE = 'http://www.cs.pitt.edu/mpqa/2003'
 
 /* Processing resource for saving GrAF standoff annotation files. */
-def saveXces = resource('org.anc.gate.SaveStandoff') {
+def saveXces = newResource('org.anc.gate.xces.SaveStandoff') {
 	inputASName('MPQA')
 	annotationType('mpqa')
 	//grafASName(ASET)
@@ -30,7 +30,7 @@ def saveXces = resource('org.anc.gate.SaveStandoff') {
 }
 
 /* Processing resource to save the document content as a utf-8 text file. */
-def saveContent = resource('org.anc.gate.SaveContent') {
+def saveContent = newResource('org.anc.gate.SaveContent') {
 	encoding('UTF-8')
 }
 
