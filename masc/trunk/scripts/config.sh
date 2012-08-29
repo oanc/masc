@@ -9,6 +9,7 @@ ROOT=`pwd`
 #	CYGROOT-$ROOT
 #fi
 
+VERSION=1.0.4
 IN=./data/originals
 OUT=./data/data
 WORK=./data/working
