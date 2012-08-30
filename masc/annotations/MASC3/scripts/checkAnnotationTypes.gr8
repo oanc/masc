@@ -1,0 +1,57 @@
+import org.xces.graf.io.dom.DocumentHeader
+
+if (this.args.size() != 2)
+{
+	println "USAGE: grate checkAnnotationTypes.gr8 /path/to/corpus /path/to/result/file.txt"
+	return
+}
+
+def indir = new File(this.args[0])
+if (!indir.exists())
+{
+	println "Input location not found."
+	return
+}
+
+if (!indir.isDirectory())
+{
+	println "Input location is not a directory."
+	return
+}
+
+def outfile = new File(this.args[1])
+
+File datadir = new File(indir, 'data')
+if (!datadir.isDirectory())
+{
+	println "The input directory does not appear to be a valid GrAF corpus."
+	return
+}
+
+def logger = org.slf4j.LoggerFactory.getLogger('checkAnnotationTypes')
+def results = [:]
+datadir.eachDirRecurse { dir ->
+	logger.info("Processing directory {}", dir.path)
+	dir.eachFileMatch(~/.*.hdr/) { file ->
+		//logger.debug("Checking {}", file.path)
+		def header = new DocumentHeader(file)
+		def seen = [:]
+		for (String type : header.annotationTypes)
+		{
+			def n = seen[type] ?: 0
+			seen[type] = n + 1
+		}
+		results[file] = seen
+	}
+}
+
+PrintWriter writer = new PrintWriter(outfile, 'UTF-8')
+results.each { file, seen ->
+	seen.each { id,value ->
+		if (value > 1) 
+		{
+			writer.println("${file.path} : ${id} ${value}")
+		}
+	}
+}
+writer.close()

@@ -15,8 +15,8 @@ mkdir -p $EV
 echo cp cp $IN/event/xces/*.txt $EV
 cp $IN/event/xces/*.txt $EV
 
-echo java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=event -in=$IN/event/xces -out=$EV -saveAs=event -id=ev
-java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=event -in=$IN/event/xces -out=$EV -saveAs=event -id=ev
+echo java $OPTS -jar $CONVERT -xces $LOPTS -set=event -ann=event -in=$IN/event/xces -out=$EV -saveAs=event -id=ev
+java $OPTS -jar $CONVERT -xces $LOPTS -set=event -ann=event -in=$IN/event/xces -out=$EV -saveAs=event -id=ev
 
 # The A1 files and enron-thread are invalid so we don't process them.
 echo rm $EV/A1*.xml
