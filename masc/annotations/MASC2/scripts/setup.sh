@@ -16,8 +16,8 @@ function createDir {
 # Get/update the original MASC annotations.
 if [ -e $IN ] ; then
 	echo "Checking Subversion for data updates."
-	#cd $IN
-	#svn up
+	cd $IN
+	svn up
 else
 	mkdir -p $IN
 	echo "Checking data out of Subversion."

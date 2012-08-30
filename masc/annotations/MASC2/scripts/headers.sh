@@ -3,6 +3,8 @@
 source ./config.sh
 
 echo Generating headers.
+rm -f $DATA/headers/*.*
+
 JAR=$APPS/masc-headers/target/masc-headers.jar
 java $OPTS -jar $JAR $CORPORA 2 $IN/MASC-MASTER.csv $DATA/headers
 
