@@ -15,7 +15,7 @@ java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=hepple -in=$IN/penn-pos -out
 java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=np -in=$IN/noun-chunks -out=$OUT -saveAs=nc -rename="np=nchunk NounChunk=nchunk" -id=nc -accept=nchunk -exf="graf:set graf:id graf:edge"
 java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=vp -in=$IN/verb-chunks -out=$OUT -saveAs=vc -rename="vp=vchunk VerbChunk=vchunk VG=vchunk" -id=vc -accept=vchunk -exf="graf:set graf:id graf:edge"
 java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=NE -in=$IN/ne-all -out=$OUT -rename="Person=person Date=date Location=location Organization=org @orgType=type @locType=type @gender=sex" -exf="rule rule1 rule2" -id=ne -accept="person date location org" -saveAs=ne
-java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=coRef -in=$IN/coRef -out=$OUT -id=coref -saveAs=coref
+#java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=coRef -in=$IN/coRef -out=$OUT -id=coref -saveAs=coref
 
 # Align the opinion data
 #java $OPTS -jar $ALIGN $LOPTS -src=$IN/opinion/graf -target=$OUT -dest=$OUT -type=mpqa -fix=$FIX/opinion-fixes.xml 

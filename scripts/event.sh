@@ -10,7 +10,7 @@ fi
 mkdir -p $EV
 
 cp $IN/event/xces/*.txt $EV
-java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=event -in=$IN/event/xces -out=$EV -saveAs=event -id=event
+java $OPTS -jar $CONVERT -xces $LOPTS -set=event -ann=event -in=$IN/event/xces -out=$EV -saveAs=event -id=event
 
 # The A1 files and enron-thread are invalid so we don't process them.
 rm $EV/A1*.xml
