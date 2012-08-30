@@ -1,6 +1,8 @@
 #!/bin/bash
-set -eu
+set -e
+echo "Running $0"
 source ./config.sh
+set -u
 
 # Copy files to the local corpora directory
 NAME=MASC-$VERSION

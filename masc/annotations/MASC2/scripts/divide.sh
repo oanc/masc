@@ -24,7 +24,7 @@ if [ ! -e $RELEASE/data ] ; then
 fi
 
 groovy scripts/divide.groovy $DROPBOX/MASC2-3/FULL_MASC $WORK/release $RELEASE/data
-cp $DROPBOX/MASC2-3/MASC2-resource-header.xml $RELEASE
+cp $DROPBOX/MASC2-3/MASC2-resource-header.xml $RELEASE/resource-header.xml
 
 exit
 
@@ -48,11 +48,11 @@ java $OPTS -jar $APP $LOPTS -in=$MASC -written=$WRITTEN -spoken=$SPOKEN
 
 # Now move over the original annotations and Corpus header
 ORG=./data/originals/original-annotations
-HEADER=./data/originals/MASC-corpus-header.xml
+#HEADER=./data/originals/MASC-corpus-header.xml
 
 echo "Copying original annotations."
 cp -Rf $ORG $RELEASE
-cp -f $HEADER $RELEASE/resource-header.xml
+#cp -f $HEADER $RELEASE/resource-header.xml
 
 # Remove the SVN metadata
 rm -Rf $RELEASE/original-annotations/.svn

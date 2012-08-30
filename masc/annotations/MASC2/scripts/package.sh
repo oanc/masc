@@ -1,8 +1,8 @@
 #!/bin/bash
-set -eu
-source ./config.sh
-
 echo running package.sh
+set -e
+source ./config.sh
+set -u
 
 DATE=`date +%Y-%m-%d`
 NAME="MASC-$VERSION"
@@ -31,7 +31,7 @@ zip -r -9 -q $ZIP .
 
 # If this is run on the web server we copy the files to the download directory.
 WEB=/var/www/anc/masc
-if [ -e $WEB ] ; then
+if [ -d $WEB ] ; then
     # This will (should) only be true 
     # when running on the ANC server.
     echo "Copying archive to web server."
