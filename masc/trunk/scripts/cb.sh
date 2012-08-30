@@ -9,7 +9,7 @@ if [ -e $CBWORK ] ; then
 else
 	mkdir -p $CBWORK
 fi
-java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=CB -in=$IN/committed-belief -out=$OUT -saveAs=cb -id=cb
-java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=CB -in=$IN/CB-new -out=$CBWORK -saveAs=cb -id=cb
+java $OPTS -jar $CONVERT -xces $LOPTS -set=cb -ann=CB -in=$IN/committed-belief -out=$OUT -saveAs=cb -id=cb
+java $OPTS -jar $CONVERT -xces $LOPTS -set=cb -ann=CB -in=$IN/CB-new -out=$CBWORK -saveAs=cb -id=cb
 cp $IN/CB-new/*.txt $CBWORK
 java $OPTS -jar $ALIGN $LOPTS -src=$CBWORK -target=$OUT -dest=$OUT -type=cb
