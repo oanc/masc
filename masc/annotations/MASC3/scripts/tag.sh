@@ -4,6 +4,7 @@
 
 set -e
 source ./config.sh
+REPO=https://www.anc.org/dev
 
 function usage {
 	echo "USAGE: $0 [tag|branch] branch-name"
@@ -14,9 +15,12 @@ function tag {
 	LOCAL=$1
 	REMOTE=`svn info | grep URL | cut -d/ -f5`
 	cd $LOCAL
-	svn copy . $REPO/$REMOTE/$MODE/$TAGNAME
-	if [ "$MODE" = "branches" ] ; then
-		svn switch $REPO/$REMOTE/$MODE/$TAGNAME .
+	if [ -d .svn ] ; then
+		echo "Creating $ACTION $TAGNAME for $LOCAL"
+		svn copy . $REPO/$REMOTE/$MODE/$TAGNAME -m "Creating $ACTION $TAGNAME for $REMOTE"
+		if [ "$MODE" = "branches" ] ; then
+			svn switch $REPO/$REMOTE/$MODE/$TAGNAME .
+		fi
 	fi
 	cd ..
 }
@@ -26,7 +30,8 @@ if [ "$1" = "" ] ; then
 fi
 
 # Check the command line parameters
-case $2 in
+ACTION=$1
+case $ACTION in
 	tag)
 		MODE="tags"
 		;;
@@ -39,13 +44,9 @@ case $2 in
 		;;
 esac
 
-echo "Shouldn't reach here."
-exit
-
 TAGNAME=$2
 
 set -u
-REPO=https://www.anc.org/dev
 
 cd $APPS
 for app in `ls -d */` ; do
