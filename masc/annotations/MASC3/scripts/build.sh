@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source ./config.sh
+set -eu
 
 # Build a single project used when processing MASC
 
@@ -18,7 +19,7 @@ if [ ! -e $TARGET ] ; then
 	pushd $TARGET
 	echo "Target is"
 	pwd	
-	svn co https://www.anc.org/dev/$1/branches/masc-2 .
+	svn co https://www.anc.org/dev/$1/branches/masc-$VERSION .
 else
 	pushd $TARGET
 	svn up

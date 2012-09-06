@@ -82,10 +82,14 @@ echo "---------------------------------------------------------"
 # Copy MASC 1/2 file to the release directory
 ./masc2.sh
 
+echo "---------------------------------------------------------"
+# Ensure all document headers contains an f.seg entry
+./fix-fid.sh
+
 #echo "---------------------------------------------------------"
 # Load all standoff annotations for all documents.
+# 02Sep12 - Currently causes an out of memory exception.
 #./load-all.sh
-
 
 echo "---------------------------------------------------------"
 # Perform sanity checks and write reports.

@@ -29,6 +29,9 @@ java $OPTS -jar $NODES $LOPTS -in=$RELEASE/data -out=./reports/check-nodes.txt
 java -Xmx2G -jar $TOKENS $LOPTS -in=$RELEASE/data -out=./reports/check-tokens.html -header=$RELEASE/resource-header.xml
 java -Xmx2G -jar $HEADERS $LOPTS -in=$RELEASE/data -out=./reports/check-headers.txt
 
+# Checks file ID formats, checks for missing f.seg elements, checks for missing extents
+grate ./scripts/checkTypes.gr8 $RELEASE/data $DROPBOX/MASC2-3/MASC3-resource-header.xml ./reports
+
 echo Looking for missing files.
 cd ./scripts
 ./find-missing.sh > ../reports/missing-annotations.txt

@@ -1,8 +1,8 @@
 #!/bin/bash
+# Do not use "set -e", some scripts need to check error conditions.
 
-# set -e causes the script to fail when any command
-# fails
-set -e
+# Current MASC version being generated.
+VERSION=3.0.0
 
 cd ..
 ROOT=`pwd`
@@ -12,8 +12,8 @@ if [ "$CYGWIN" != "" ] ; then
 	ROOT=`cygpath -m $ROOT`
 fi
 
-# set -u causes the script to fail if an uninitialized
-# variable is used.
+# Do not use set -u. Some scripts need to check if command line parameters
+# have been passed in.
 #set -u
 
 # System specific settings

@@ -1,0 +1,53 @@
+//import org.xces.graf.api.*
+//import org.xces.graf.io.*
+//import org.xces.graf.io.dom.*
+
+@Grab(group='org.xces.graf', module='graf-xstream', version='0.0.2-SNAPSHOT')
+import org.xces.graf.header.DocumentHeader
+import org.xces.graf.header.io.*
+import org.xces.graf.header.document.*
+
+if (this.args.size() != 1)
+{
+	println "USAGE: grate fixIds.gr8 /path/to/corpus"
+	return 1
+}
+
+println "Running."
+File root = new File(this.args[0])
+File data = new File(root, "data")
+File headerFile = new File(root, "resource-header.xml")
+
+if (!root.exists())
+{
+	println "Specified directory does not exist"
+	return 1
+}
+
+if (!data.exists())
+{
+	println "Data directory not found."
+	return 1
+}
+
+File test = new File(data, "spoken/face-to-face")
+if (!test.exists())
+{
+	println "Test directory not found."
+	return 1
+}
+println "Test is ${test.path}"
+DocumentHeaderStream xstream = new DocumentHeaderStream()
+data.eachDirRecurse { dir ->
+	println "Scanning ${dir.path}"
+	dir.eachFileMatch(~/.*.hdr/) { file ->
+		//DocumentHeader header = new DocumentHeader(file)
+		//header.annotationTypes.each { type ->
+		//	
+		//println file.name
+		DocumentHeader header = xstream.read(file)
+		header.profileDesc.annotations.each { annotation ->
+			println "\t${annotation.fId} ${annotations.content}"
+		}
+	}
+}

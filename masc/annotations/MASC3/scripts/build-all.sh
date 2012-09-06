@@ -2,6 +2,9 @@
 
 source ./config.sh
 
+SVN_ROOT=https://www.anc.org/dev
+SVN_BRANCH=branches/masc-$VERSION
+
 # Build a Java program used during processing.  If the project
 # exists locally it will be updated from the Subversion respository,
 # otherwise the code will be checked out of the repository.
@@ -16,7 +19,7 @@ function build {
 		echo "Current directory is "
 		pwd
 		mkdir $1
-		svn co https://www.anc.org/dev/$2/branches/masc-2 $1
+		svn co $SVN_ROOT/$2/$SVN_BRANCH $1
 		cd $1
 	fi
 	echo Building $1
@@ -33,7 +36,7 @@ function build_trunk {
 		echo Creating $1
 		cd $APPS
 		mkdir $1
-		svn co https://www.anc.org/dev/$2/trunk/ $1
+		svn co $SVN_ROOT/$2/trunk/ $1
 		cd $1
 	fi
 	echo Building $1
@@ -41,8 +44,7 @@ function build_trunk {
 	cd $ROOT
 }
 
-
-echo "Root i $ROOT"
+#echo "Root is $ROOT"
 if [ -e $ROOT/maven.log ] ; then
     rm -f $ROOT/maven.log
 fi
@@ -51,8 +53,7 @@ touch $ROOT/maven.log
 build "convert" "GrafConvert"
 #exit
 
-# Update 9/9/2011 Everything uses build2 now, that is,
-# the masc-1.0.3 tagged versions
+# Update 5/9/2012 Everything uses masc-3.0.0 branch
 build "align" "GrafAlign"
 build "check-ids" "check-ids"
 build "graph-splitter" "graph-splitter"
@@ -74,6 +75,8 @@ build "check-docid" "check-docid"
 build "check-headers" "check-headers"
 build "check-tokens" "check-tokens"
 build "load-all" "load-all"
+build "addsegids" "addsegids"
+
 #build_trunk "graf-headers" "graf-headers"
 
 #/tags/masc-1.0.3 

@@ -1,0 +1,134 @@
+import org.xces.graf.api.*
+import org.xces.graf.io.*
+import org.xces.graf.io.dom.*
+import org.w3c.dom.*
+
+if (this.args.size() != 3)
+{
+	println "USAGE: grate checkTypes.gr8 /path/to/corpus/data /path/to/resource-header.xml /path/to/results.txt"
+	return
+}
+
+File dataDir = new File(this.args[0])
+File headerFile = new File(this.args[1])
+File resultsFile = new File(this.args[2])
+if (resultsFile.isDirectory())
+{
+	resultsFile = new File(resultsFile, "quality-checks.txt")
+}
+
+if (!headerFile.exists())
+{
+	println "Resource header not found: ${headerFile.path}"
+	return
+}
+
+if (!dataDir.exists())
+{
+	println "Data directory not found."
+	return
+}
+
+void checkExtent(File dataDir, PrintWriter results)
+{
+	int fileCount = 0
+	List missingExtent = []
+	List missingSeg = []
+	List malformedTypes = []
+	dataDir.eachDirRecurse { dir ->
+		dir.eachFileMatch(~/.*.hdr/) { file ->
+			++fileCount
+			DocumentHeader header = new DocumentHeader(file)
+			Node extent = header.getNode("/g:documentHeader/g:fileDesc/g:extent")
+			String count = extent.getAttribute('count')
+			if (!count)
+			{
+				missingExtent << file.name
+			}
+			if (!header.getAnnotationLocation('f.seg'))
+			{
+				missingSeg << file.name
+			}
+			boolean bad = false;
+			header.annotationTypes.each { type ->
+				if (!type.startsWith('f.'))
+				{
+					bad = true
+				}
+			}
+			if (bad)
+			{
+				malformedTypes << file.name
+			}
+		}
+	}
+	
+	if (missingExtent.size() == 0)
+	{
+		results.println "All document headers contain an extent element."
+	}
+	else
+	{
+		results.println "Missing extent elements:"
+		missingExtent.each { name ->
+			results.println "\t${name}"
+		}
+	}
+	results.println("")
+	
+	if (missingSeg.size() == 0)
+	{
+		results.println "All document headers contain an f.seg element."
+	}
+	else
+	{
+		results.println "Missing segmentation information for ${missingSeg.size()}/${fileCount} files."
+		missingSeg.each { name ->
+			results.println "\t${name}"
+		}
+	}
+	results.println("")
+	
+	if (malformedTypes.size() == 0)
+	{
+		results.println "All annotation file types are correct."
+	}
+	else
+	{
+		results.println "The following files have malformed annotation file IDs."
+		malformedTypes.each { file ->
+			results.println "\t${file.path}"
+		}
+	}
+}
+
+PrintWriter results = new PrintWriter(resultsFile)
+checkExtent(dataDir, results)
+results.close()
+println "Wrote ${resultsFile.path}"	
+
+
+/*
+def types = [:]
+def yes = Boolean.TRUE
+
+ResourceHeader header = new ResourceHeader(headerFile)
+GrafParser parser = new GrafParser(header)
+dataDir.eachDirRecurse { dir ->
+	dir.eachFileMatch(~/.*-nc.xml/) { file ->  
+		println "Parsing ${file.path}"
+		IGraph graph = parser.parse(file)
+		IStandoffHeader soHeader = graph.getHeader()
+		soHeader.labels.each { label ->
+			//println label
+			types[label] = yes
+		}
+	}
+	return
+}
+
+println "Types:"
+types.each { key,value ->
+	println key
+}
+*/
