@@ -34,6 +34,7 @@ datadir.eachDirRecurse { dir ->
 	logger.info("Processing directory {}", dir.path)
 	dir.eachFileMatch(~/.*.hdr/) { file ->
 		//logger.debug("Checking {}", file.path)
+		println "Checking ${file.path}"
 		def header = new DocumentHeader(file)
 		def seen = [:]
 		for (String type : header.annotationTypes)
@@ -45,13 +46,20 @@ datadir.eachDirRecurse { dir ->
 	}
 }
 
+println "Writing ${outfile.path}"
+int lines = 0
 PrintWriter writer = new PrintWriter(outfile, 'UTF-8')
 results.each { file, seen ->
 	seen.each { id,value ->
 		if (value > 1) 
 		{
+			++lines
 			writer.println("${file.path} : ${id} ${value}")
 		}
 	}
+}
+if (lines == 0)
+{
+	writer.println("No header contains multiple references for the same type.")
 }
 writer.close()

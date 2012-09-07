@@ -14,7 +14,14 @@
 import gate.*
 import gate.creole.*
 import gate.creole.metadata.*
-import org.anc.io.SuffixFilter
+
+if (this.args.size() != 2)
+{
+	println "USAGE: grate goldfish.gr8 /path/to/corpus /path/to/datastore"
+	println "\tThe corpus directory will be processed recursively and savedls  to the datastore."
+	println ""
+	return
+}
 
 // Check the command line parameters.
 File indir = new File(this.args[0])
@@ -29,24 +36,20 @@ if (!indir.isDirectory())
 	return	
 }
 
-File outdir = new File(this.args[1])
-if (!outdir.exists())
+File dsdir = new File(this.args[1])
+if (!dsdir.exists())
 {
-	println "Datastore directory does not exist."
-	return
+	if (!dsdir.mkdirs())
+	{
+		println "Unable to create datastore directory."
+		return
+	}
 }
-if (!outdir.isDirectory())
+
+if (!dsdir.isDirectory())
 {
 	println "Datastore location is not a directory."
 	return
-}
-
-// A file filter that accepts only text files.
-def filter = new FileFilter() {
-	public boolean accept(File file)
-	{
-		return !file.isDirectory() && file.name.endsWith('.txt')
-	}
 }
 
 /*
@@ -123,36 +126,42 @@ def splitter = newResource('gate.creole.splitter.SentenceSplitter') {
 }
 
 println "Populating the corpus"
-def corpus = newCorpus('Transient corpus') {
-	indir.listFiles(filter).each { file ->
-		addDocument(file)
+def corpus = newCorpus('Goldfish corpus') {
+	indir.eachDirRecurse { dir ->
+		dir.eachFileMatch(~/.*.txt/) { file ->
+			addDocument(file)
+		}
 	}
 }
 
+// Register our custom processing resources with GATE.
 def register = Gate.getCreoleRegister()
 register.registerComponent(GoldfishAnnotator)
 register.registerComponent(EchoResource)
+
+// Create instances of our resources. We 'new' them directly since the gate.Factory
+// will have class loading issues with classes defined in the script.
+def echoPR = new EchoResource()
 
 def goldfishPR = new GoldfishAnnotator()
 goldfishPR.inputASName = 'Annie'
 goldfishPR.outputASName = 'Goldfish'
 
-def echoPR = new EchoResource()
-
+// Set up the pipeline, run it, and serialize the corpus to disk.
 println "Setting up pipeline."
-def pipeline = newResource('gate.creole.SerialAnalyserController') { }
-pipeline.setCorpus(corpus)
-pipeline.add(echoPR)
-pipeline.add(tokenizer)
-pipeline.add(splitter)
-pipeline.add(goldfishPR)
+def pipeline = newSerialController() { 
+	setCorpus(corpus)
+	add(echoPR)
+	add(tokenizer)
+	add(splitter)
+	add(goldfishPR)
+}
 
 println "Running pipeline."
 pipeline.execute()
 
 println "Serializing the corpus."
-def dsDir = new File('D:/Temp/GoldfishDS')
-def store = newSerialDataStore(dsDir)
+def store = newSerialDataStore(dsdir)
 def persisted = store.adopt(corpus, null)
 store.sync(persisted)
 println "Done."

@@ -5,10 +5,10 @@ source ./config.sh
 echo running package.sh
 
 DATE=`date +%Y-%m-%d`
-VERS=3.0.0
+#VERS=3.0.0
 
 #FILENAME="MASC-$VERS-$DATE.tgz"
-NAME="MASC-$VERS"
+NAME="MASC-$VERSION"
 
 TGZ=$ROOT/$NAME.tgz
 ZIP=$ROOT/$NAME.zip

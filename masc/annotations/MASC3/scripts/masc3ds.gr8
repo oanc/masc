@@ -13,20 +13,24 @@
  */
 
 import gate.*
+import org.xces.graf.io.*
+import org.xces.graf.io.dom.*
 
 if (this.args.size() != 2)
 {
-	println "USAGE: grate mascds.gr8 <corpus_data_dir> <dataStoreDir>"
+	println "USAGE: grate mascds.gr8 /path/to/corpus /path/to/datastore"
 	return
 }
 
 // Location of the corpus to process
-File indir = new File(this.args[0])
+File corpusDir = new File(this.args[0])
+File data = new File(corpusDir, "data")
+File headerFile = new File(corpusDir, "resource-header.xml")
 
 // Where the Gate datastore will be saved.
 File dsDir = new File(this.args[1])
 
-if (!indir.exists())
+if (!corpusDir.exists())
 {
 	println "MASC directory not found."
 	return
@@ -39,7 +43,9 @@ if (!dsDir.exists() && !dsDir.mkdirs())
 }
 
 // The Gate processing resource used to load GrAF standoff annotation files.
-def loadPR = newResource('org.anc.gate.LoadGrafStandoff') {}
+def loadPR = newResource('org.anc.gate.LoadGrafStandoff') {
+	resourceHeader(headerFile.toURI().toURL())
+}
 
 // The index is used to map text files to their headers and simply
 // saves us a bunch of string substitutions/replacements when trying
@@ -48,7 +54,7 @@ def index = [:]
 
 def corpus = newCorpus('MASC 3.0.0') {
 	// Add each text file to the corpus and the index.
-	indir.eachDirRecurse { dir ->
+	corpusDir.eachDirRecurse { dir ->
 		dir.eachFileMatch(~/.*.txt/) {
 			File hdrFile = new File(it.parentFile, it.name.replace(".txt", ".hdr"))
 			if (hdrFile.exists())
@@ -72,7 +78,7 @@ corpus.each { doc ->
 	if (hdrFile)
 	{
 		// Now try to load each annotation type for this file.
-		def directory = header.parentFile
+		def directory = hdrFile.parentFile
 		def header = new DocumentHeader(hdrFile)
 		//def types = header.getAnnotationTypes()
 		header.annotationTypes.each { type ->
