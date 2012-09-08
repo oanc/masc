@@ -2,7 +2,7 @@
 
 source ./config.sh
 
-echo running validate-headers.sh
+echo running update-headers.sh
 
 JAR=$APPS/update-headers/target/update-headers.jar
 

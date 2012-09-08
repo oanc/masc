@@ -27,7 +27,6 @@ echo "---------------------------------------------------------"
 echo "---------------------------------------------------------"
 # Removes leading and trailing whitespace in regions.
 ./trim.sh
-./check-align.sh
 
 echo "---------------------------------------------------------"
 # Generates headers from the MASC-MASTER file.
@@ -55,7 +54,7 @@ echo "---------------------------------------------------------"
 # Check annotation alignment, that is whitespace at the
 # start or end of an annotation. Makes sure the trim.sh
 # script worked.
-./check-align.sh #SBI
+edit ./check-align.sh #SBI
 
 echo "---------------------------------------------------------"
 # Convert the standoff annotation files in ./data/data to 

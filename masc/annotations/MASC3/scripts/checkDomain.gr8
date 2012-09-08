@@ -1,0 +1,35 @@
+@Grab(group='org.xces.graf', module='graf-xstream', version='0.0.2-SNAPSHOT')
+import org.xces.graf.header.DocumentHeader
+import org.xces.graf.header.io.*
+import org.xces.graf.header.document.*
+
+
+if (this.args.size() != 1)
+{
+	println "USAGE: grate checkDomain.gr8 /path/to/corpus"
+	return 1
+}
+
+File corpus = new File(this.args[0])
+if (!corpus.exists())
+{
+	println "Corpus directory not found."
+	return 2
+}
+
+File data = new File(corpus, "data")
+if (!data.exists())
+{
+	println "Specified directory is not a valid ANC/MASC directory."
+	return 3
+}
+
+DocumentHeaderStream xstream = new DocumentHeaderStream()
+
+data.eachDirRecurse { dir ->
+	dir.eachFileMatch(~/.*.hdr/) { file ->
+		println "Checking header ${file.path}"
+		DocumentHeader header = xstream.read(file)
+		
+	}
+}

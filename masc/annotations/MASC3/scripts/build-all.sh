@@ -2,6 +2,20 @@
 
 source ./config.sh
 
+cd $APPS
+for dir in `ls -d */`; do 
+	cd $dir
+	svn up
+	mvn clean package | tee -a $ROOT/maven.log
+	cd ..
+done
+
+exit
+
+# The code below this point is the "old way" of performing a build-all.
+# It is kept for posterity. The bit that handles getting the code from
+# Subversion is handled by the checkout.sh script.
+
 SVN_ROOT=https://www.anc.org/dev
 SVN_BRANCH=branches/masc-$VERSION
 

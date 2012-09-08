@@ -8,7 +8,8 @@ if [ ! -e $DATA/headers ] ; then
 fi
 
 JAR=$APPS/masc-headers/target/masc-headers.jar
-java $OPTS -jar $JAR $CORPORA 3 $DROPBOX/MASC2-3/MASC-MASTER.csv $DATA/headers
+#java $OPTS -jar $JAR $CORPORA 3 $DROPBOX/MASC2-3/MASC-MASTER.csv $DATA/headers
+java $OPTS -jar $JAR $CORPORA $DATA/headers $DROPBOX/MASC2-3/MASC-MASTER.csv
 
 # Fix and rename the ch3.hdr file.
 sed 's/loc="ch3.txt"/loc="rybczynski-ch3.txt"/' $DATA/headers/rybczynski-ch3.hdr > /tmp/rybczynski-ch3.hdr
@@ -19,5 +20,4 @@ mv /tmp/rybczynski-ch3.hdr $DATA/headers/
 # headers into the output directory
 groovy scripts/copyheaders.groovy $DATA/headers $OUT
 
-echo "TEMP is $TEMP"
 echo "Finished headers.sh"

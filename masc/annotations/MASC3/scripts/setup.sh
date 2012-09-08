@@ -21,7 +21,11 @@ else
 	mkdir -p $IN
 	echo "Checking data out of Subversion."
 	cd $IN
-    svn co https://www.anc.org/dev/masc/annotations/MASC3 .
+    svn co https://www.anc.org/dev/masc/annotations/MASC3edit c .
+fi
+
+if [ -e $DATA/headers ] ; then
+	rm -f $DATA/headers/*.*
 fi
 
 cd $ROOT
