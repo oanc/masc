@@ -1,14 +1,28 @@
 #!/bin/bash
 
 source ./config.sh
+set -eu
+
+if [ -f $ROOT/maven.log ] ; then
+	rm -f $ROOT/maven.log
+fi
 
 cd $APPS
 for dir in `ls -d */`; do 
 	cd $dir
-	svn up
-	mvn clean package | tee -a $ROOT/maven.log
+	if  [ -f pom.xml ] ; then
+		if [ -d .svn ] ; then 
+			svn up
+		fi
+		mvn clean package | tee -a $ROOT/maven.log
+	fi
 	cd ..
 done
+
+echo "Searching for errors."
+grep ERROR $ROOT/maven.log
+
+echo "Done."
 
 exit
 

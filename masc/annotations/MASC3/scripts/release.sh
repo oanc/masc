@@ -32,11 +32,6 @@ echo "---------------------------------------------------------"
 # Generates headers from the MASC-MASTER file.
 ./headers.sh
 
-#echo "---------------------------------------------------------"
-# Make sure headers have links to all annotations files
-# and don't contain links to non-existent header files.
-./update-headers.sh
-
 echo "---------------------------------------------------------"
 # Link MPQA, NE, NC, and VC annotations to the Penn tokens.
 ./link-tokens.sh #SBI
@@ -45,6 +40,11 @@ echo "---------------------------------------------------------"
 # Extract tokens from the PTB and FrameNet files.
 # Also links tokens to quarks.
 ./tokenize.sh #SBI
+
+echo "---------------------------------------------------------"
+# Make sure headers have links to all annotations files
+# and don't contain links to non-existent header files.
+./update-headers.sh
 
 echo "---------------------------------------------------------"
 # Run all annotation files through the GraphParser
