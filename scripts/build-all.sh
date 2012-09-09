@@ -11,7 +11,7 @@ cd $APPS
 for dir in `ls -d */`; do 
 	cd $dir
 	if  [ -f pom.xml ] ; then
-		if [ -d .svn ] ; then 
+		if [ -d .svn ] && [ "$UPDATE" = "true" ] ; then
 			svn up
 		fi
 		mvn clean package | tee -a $ROOT/maven.log
