@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source ./config.sh
+echo "RELEASE is $RELEASE"
 
 case $1 in
 	1.*)

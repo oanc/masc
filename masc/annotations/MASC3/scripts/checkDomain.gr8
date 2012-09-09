@@ -30,6 +30,11 @@ data.eachDirRecurse { dir ->
 	dir.eachFileMatch(~/.*.hdr/) { file ->
 		println "Checking header ${file.path}"
 		DocumentHeader header = xstream.read(file)
-		
+		TextClass textClass = header.profileDesc.textClass
+		String catRef = header.profileDesc.textClass.catRef
+		println "CatRef for ${file.name} is ${catRef}"
 	}
 }
+
+println "Done."
+

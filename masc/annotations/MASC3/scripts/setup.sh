@@ -44,7 +44,10 @@ if [ -e $RELEASE ] ; then
 	echo Deleting previous release data from $RELEASE
 	rm -rf $RELEASE
 fi
-
+if [ -e reports ] ; then
+	echo "Deleting previous run reports."
+	rm -f reports/*.*
+fi
 # Create the build environment
 #mkdir -p $OUT
 #mkdir -p $WORK

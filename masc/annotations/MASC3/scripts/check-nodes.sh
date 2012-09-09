@@ -2,7 +2,7 @@
 
 source ./config.sh
 
-echo check-ids.sh
+echo check-nodes.sh
 
 if [ "$1" == "" ] ; then
 	OUTFILE=check-nodes.txt
