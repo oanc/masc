@@ -1,6 +1,34 @@
 #!/bin/bash
 
 source ./config.sh
+set -eu
+
+if [ -f $ROOT/maven.log ] ; then
+	rm -f $ROOT/maven.log
+fi
+
+cd $APPS
+for dir in `ls -d */`; do 
+	cd $dir
+	if  [ -f pom.xml ] ; then
+		if [ -d .svn ] ; then 
+			svn up
+		fi
+		mvn clean package | tee -a $ROOT/maven.log
+	fi
+	cd ..
+done
+
+echo "Searching for errors."
+grep ERROR $ROOT/maven.log
+
+echo "Done."
+
+exit
+
+## The code below this point is obsolete but is kept for historical reasons.
+
+source ./config.sh
 
 # Build a Java program used during processing.  If the project
 # exists locally it will be updated from the Subversion respository,
