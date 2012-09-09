@@ -27,7 +27,7 @@ groovy ./scripts/summarize.groovy $RELEASE/data ./reports/annotations.html
 java $OPTS -jar $IDS $LOPTS -in=$RELEASE/data -out=./reports/ids.html
 java $OPTS -jar $DOCS $LOPTS -in=$RELEASE/data -out=./reports/docid.txt
 java $OPTS -jar $NODES $LOPTS -in=$RELEASE/data -out=./reports/check-nodes.txt
-java -Xmx2G -jar $TOKENS $LOPTS -in=$RELEASE/data -out=./reports/check-tokens -header=$RELEASE/resource-header.xml
+java -Xmx2G -jar $TOKENS $LOPTS -in=$RELEASE/data -out=./reports -header=$RELEASE/resource-header.xml
 java -Xmx2G -jar $HEADERS $LOPTS -in=$RELEASE/data -out=./reports/check-headers.txt
 java $OPTS -jar $DOMAINS $RELEASE ./reports
 
