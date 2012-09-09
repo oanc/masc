@@ -1,7 +1,6 @@
 #!/bin/bash
 
 source ./config.sh
-set -e
 
 UPDATE="false"
 if [ "$1" = "-up" ] ; then
@@ -12,6 +11,7 @@ if [ -f $ROOT/maven.log ] ; then
 	rm -f $ROOT/maven.log
 fi
 
+set -eu
 cd $APPS
 for dir in `ls -d */`; do 
 	cd $dir
