@@ -1,7 +1,12 @@
 #!/bin/bash
 
 source ./config.sh
-set -eu
+set -e
+
+UPDATE="false"
+if [ "$1" = "-up" ] ; then
+	UPDATE="true"
+fi
 
 if [ -f $ROOT/maven.log ] ; then
 	rm -f $ROOT/maven.log
@@ -11,7 +16,7 @@ cd $APPS
 for dir in `ls -d */`; do 
 	cd $dir
 	if  [ -f pom.xml ] ; then
-		if [ -d .svn ] ; then 
+		if [ -d .svn ] && [ "$UPDATE" = "true" ] ; then
 			svn up
 		fi
 		mvn clean package | tee -a $ROOT/maven.log

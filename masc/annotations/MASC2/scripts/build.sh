@@ -1,27 +1,42 @@
 #!/bin/bash
 
 source ./config.sh
+set -e
+
+function usage
+{
+	echo "USAGE: $0 [-up] project-name"
+	exit 1
+}
+
+if [ "$1" = "" ] ; then
+	usage
+fi
+
+case $1 in
+	-up)
+		if [ "$2" = "" ] ; then
+			usage
+		fi
+		UP="true"
+		TARGET=$APPS/$2
+		;;
+	*)
+		UP="false"
+		TARGET=$APPS/$1
+		;;
+esac
+
 
 # Build a single project used when processing MASC
 
-if [ "$APPS" = "" ] ; then
-	echo "APPS not set."
-	exit 1
+if [ ! -e $TARGET ] ; then
+	echo "Project $TARGET not found."
+	exit 2
 fi
 
-TARGET=$APPS/$1
-echo Target is $TARGET
-#exit 1
-
-if [ ! -e $TARGET ] ; then
-	mkdir $TARGET
-	pushd $TARGET
-	echo "Target is"
-	pwd	
-	svn co https://www.anc.org/dev/$1/branches/masc-2 .
-else
-	pushd $TARGET
+cd $TARGET
+if [ "$UP" = "true" ] ; then
 	svn up
 fi
 mvn clean package
-popd
