@@ -32,7 +32,7 @@ echo "---------------------------------------------------------"
 ## Process event annotations.
 ## ./event.sh #not yet present in MASC 2
 
-echo "---------------------------------------------------------"
+echo "---------------------------------------------------------"edit 
 # Convert and align the MPQA files.
 ./mpqa.sh
 

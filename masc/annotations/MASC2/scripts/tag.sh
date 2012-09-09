@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# This script is obsolete.  Use the branch.sh script instead.
+
 # Tags all the programs in the apps directory.
 
 set -e
