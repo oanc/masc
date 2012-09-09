@@ -3,16 +3,18 @@
 
 import gate.Document
 import gate.Factory
+import org.anc.xml.Transformer
 
-if (this.args.size() != 3)
+if (this.args.size() != 4)
 {
-	println "USAGE: grate graf-corrections.gr8 <txtDir> <source> <destination>"	
+	println "USAGE: grate graf-corrections.gr8 <txtDir> <source> <destination> <resourceHeader>"	
 	return
 }
 
 File txtDir = new File(this.args[0]);
 File inDir = new File(this.args[1]);
 File outDir = new File(this.args[2]);
+File header = new File(this.args[3]);
 
 if (!txtDir.exists())
 {
@@ -32,8 +34,14 @@ if (!outDir.exists())
 	return;
 }
 
+if (!header.exists())
+{
+	println "Resource header not found; ${header.path}."
+	return
+}
+
 /* Processing resource for saving GrAF standoff annotation files. */
-def saveXces = newResource('org.anc.gate.SaveStandoff') {
+def saveXces = newResource('org.anc.gate.xces.SaveStandoff') {
 	annotationType(null)
 	inputASName('Standoff')
 	encoding('UTF-8')
@@ -41,16 +49,38 @@ def saveXces = newResource('org.anc.gate.SaveStandoff') {
 
 def loadGraf = newResource('org.anc.gate.LoadGrafStandoff') {
 	standoffASName('Standoff')	
+	resourceHeader(header.toURI().toURL())
 }
+
+File temp = new File('/tmp/graf')
+if (!temp.exists())
+{
+	if (!temp.mkdirs())
+	{
+		println "Unable to create temporary directory."
+		exit
+	}
+}
+
+File stylesheet = new File('scripts/graf-update.xsl')
+if (!stylesheet.exists())
+{
+	println "Unable to open the stylesheet."
+	return
+}
+
+Transformer transformer = new Transformer(stylesheet)
 
 inDir.listFiles().each { file ->
 	if (file.name.endsWith('.xml'))
 	{
 		println "Converting ${file.path}"
+		File convertedFile = new File(temp, file.name)
+		transformer.transform(file, convertedFile)
 		int dash = file.name.lastIndexOf('-')		
 		String txtFilename = file.name.substring(0, dash) + '.txt';
 		File txtFile = new File(txtDir, txtFilename)
-		loadGraf.sourceUrl = file.toURI().toURL()
+		loadGraf.sourceUrl = convertedFile.toURI().toURL() //file.toURI().toURL()
 		loadGraf.document = newDocument(txtFile)
 		loadGraf.execute()
 		
@@ -59,6 +89,7 @@ inDir.listFiles().each { file ->
 		saveXces.destination = destFile.toURI().toURL()
 		saveXces.execute()
 		
+		//convertedFile.delete()
 	}
 }
 

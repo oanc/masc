@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ -e $HOSTNAME.sh ] ; then
+	echo "Sourcing local configuration script."
+	source $HOSTNAME.sh
+fi
+
 cd ..
 ROOT=`pwd`
 
