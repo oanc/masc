@@ -87,13 +87,13 @@ echo "---------------------------------------------------------"
 
 echo "---------------------------------------------------------"
 # Run all annotation files through the GraphParser
-./parse-all.sh #SBI
+./parse-all.sh 
 
 echo "---------------------------------------------------------"
 # Check annotation alignment, that is whitespace at the
 # start or end of an annotation. Makes sure the trim.sh
 # script worked.
-./check-align.sh #SBI
+./check-align.sh 
 
 echo "---------------------------------------------------------"
 # Convert the standoff annotation files in ./data/data to 
@@ -103,13 +103,13 @@ echo "---------------------------------------------------------"
 ./convert.sh #SBI
 
 echo "---------------------------------------------------------"
-# Convert the existing MASC1 files into the new format.
-./masc1.sh #SBI
+# Copy the MASC1 files.
+./copy-masc1.sh 
 
 echo "---------------------------------------------------------"
 # Perform a schema validation of all document headers and standoff
 # annotation files.
-./validate.sh data/working/release #SBI
+./validate.sh data/working/release 
 
 echo "---------------------------------------------------------"
 # Generate a summary of the annotations for each file before
