@@ -1,4 +1,6 @@
 #!/bin/bash
+set -eu
+eecho "Running $0"
 
 source ./config.sh
 

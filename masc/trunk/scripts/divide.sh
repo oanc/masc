@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+echo "Running $0"
 function check {
 	if [ ! -e $1 ] ; then
 		echo "$1 not found"
@@ -9,27 +11,31 @@ function check {
 
 function clean {
     if [ -e $1 ] ; then
-	rm -f $1/*.*
+		rm -f $1/*.*
     else
-	mkdir -p $1
+		mkdir -p $1
     fi
 }
 
 source ./config.sh
 
+# Where files will be copied to.
 WRITTEN=$RELEASE/data/written
 SPOKEN=$RELEASE/data/spoken
+# Program to do the copying
 APP=$APPS/divide-corpus/target/divide-corpus.jar
 BAK=./data/bak
+# Location of the files to divy up.
+IN=$WORK/graf-1.0.0
 
+# Make sure we have everything.
+check $IN
 check $APP
+
+# Clean up from previous runs.
 clean $RELEASE
-#clean $BAK
 clean $WRITTEN
 clean $SPOKEN
-
-#echo "Making backup copy of files."
-#cp $MASC/* $BAK 
 
 echo "Dividing corpus."
 java $OPTS -jar $APP $LOPTS -in=$MASC -written=$WRITTEN -spoken=$SPOKEN

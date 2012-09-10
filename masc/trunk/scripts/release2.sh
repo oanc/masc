@@ -63,6 +63,9 @@ fi
 # start or end of an annotation.
 ./check-align.sh
 
+# Convert to the lastest (1.0.0) GrAF format.
+./convert.sh
+
 # Divide the files into written and spoken components.
 ./divide.sh
 
