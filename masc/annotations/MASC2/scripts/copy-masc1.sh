@@ -5,7 +5,7 @@
 set -e
 source ./config.sh
 
-echo "running copy-masc1.sh"
+echo "Running $0"
 
 MASC1=$CORPORA/MASC-1.0.4
 

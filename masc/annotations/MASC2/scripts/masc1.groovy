@@ -16,6 +16,11 @@ class Counter
 	}
 }
 
+println "This script is obsolete and no longer used."
+println "As of MASC 1.0.4 the data files no longer need"
+println "a separate conversion step."
+if (true) return
+
 if (this.args.size() != 2)
 {
 	println "USAGE: masc1 <source> <destination>"
