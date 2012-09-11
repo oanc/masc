@@ -38,7 +38,8 @@ clean $WRITTEN
 clean $SPOKEN
 
 echo "Dividing corpus."
-java $OPTS -jar $APP $LOPTS -in=$MASC -written=$WRITTEN -spoken=$SPOKEN
+
+java $OPTS -jar $APP $LOPTS -in=$IN -written=$WRITTEN -spoken=$SPOKEN
 
 # Now move over the original annotations and Corpus header
 ORG=./data/originals/original-annotations
