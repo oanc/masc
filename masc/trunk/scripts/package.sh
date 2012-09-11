@@ -1,6 +1,6 @@
 #!/bin/bash
 set -eu
-eecho "Running $0"
+echo "Running $0"
 
 source ./config.sh
 
