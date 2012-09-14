@@ -9,5 +9,5 @@ echo "Running $0"
 
 MASC1=$CORPORA/MASC-1.0.4
 
-cp $MASC1/written/*.* $WORK/release
-cp $MASC1/spoken/*.* $WORK/release
+cp $MASC1/data/written/*.* $WORK/release
+cp $MASC1/data/spoken/*.* $WORK/release
