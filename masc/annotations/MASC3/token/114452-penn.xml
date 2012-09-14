@@ -123,20 +123,12 @@
       <feat name="length" value="5"/>
       <feat name="string" value="Extra"/>
    </struct>
-   <struct type="Token" from="97" to="98">
-      <feat name="root" value="$"/>
-      <feat name="category" value="$"/>
-      <feat name="symbolkind" value="currency"/>
-      <feat name="kind" value="symbol"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value="$"/>
-   </struct>
-   <struct type="Token" from="98" to="103">
-      <feat name="root" value="3,000"/>
-      <feat name="string" value="3,000"/>
-      <feat name="length" value="5"/>
-      <feat name="category" value="CD"/>
-      <feat name="kind" value="number"/>
+   <struct type="Token" from="97" to="103">
+      <feat name="root" value="$3,000"/>
+      <feat name="string" value="$3,000"/>
+      <feat name="length" value="6"/>
+      <feat name="category" value="NN"/>
+      <feat name="kind" value="money"/>
    </struct>
    <struct type="Token" from="104" to="106">
       <feat name="root" value="in"/>
@@ -215,26 +207,12 @@
       <feat name="category" value="CD"/>
       <feat name="kind" value="number"/>
    </struct>
-   <struct type="Token" from="145" to="150">
-      <feat name="root" value="09:20"/>
-      <feat name="length" value="5"/>
-      <feat name="string" value="09:20"/>
+   <struct type="Token" from="145" to="153">
+      <feat name="kind" value="timeNumber"/>
       <feat name="category" value="NN"/>
-      <feat name="kind" value="time"/>
-   </struct>
-   <struct type="Token" from="150" to="151">
-      <feat name="root" value=":"/>
-      <feat name="category" value=":"/>
-      <feat name="kind" value="punctuation"/>
-      <feat name="length" value="1"/>
-      <feat name="string" value=":"/>
-   </struct>
-   <struct type="Token" from="151" to="153">
-      <feat name="root" value="08"/>
-      <feat name="string" value="08"/>
-      <feat name="length" value="2"/>
-      <feat name="category" value="CD"/>
-      <feat name="kind" value="number"/>
+      <feat name="string" value="09:20:08"/>
+      <feat name="length" value="8"/>
+      <feat name="root" value="09:20:08"/>
    </struct>
    <struct type="Token" from="154" to="155">
       <feat name="root" value="+"/>
