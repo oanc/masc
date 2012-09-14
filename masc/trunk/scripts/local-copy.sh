@@ -14,4 +14,5 @@ fi
 mkdir $CORPORA
 
 cp -rf $RELEASE/data $CORPORA/data
+cp -rf $RELEASE/original-annotations $CORPORA/original-annotations
 cp $RELEASE/resource-header.xml $CORPORA
