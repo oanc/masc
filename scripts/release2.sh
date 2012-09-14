@@ -8,8 +8,8 @@ set -e
 
 # Check if we are supposed to rebuild the applications.
 if [ "$1" = "build" ] ; then
-	#./build-all.sh
-	./build2.sh
+	./build-all.sh
+	#./build2.sh
 fi
 
 # Process the existing XCES annotations.
