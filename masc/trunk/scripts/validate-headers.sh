@@ -40,12 +40,14 @@ if [ ! -e $APPS/$JAR ] ; then
 	# Determine if wget is available, if not use curl to download. At
 	# least one of the programs should be available on any system.
 	GET=`which wget`
-	if [ "$GET" = "" ] ; then
+	if [ -z "$GET" ] ; then
 		echo "wget not available."
 		GET=`which curl`
-		if [ "$GET" = "" ] ; then
+		if [ -z "$GET" ] ; then
 			echo "ERROR: curl not found either. Aborting script."
 			exit 1
+		else
+			GET="curl -0"
 		fi
 	fi
 	pushd $APPS

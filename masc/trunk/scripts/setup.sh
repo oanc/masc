@@ -2,6 +2,12 @@
 
 source ./config.sh
 
+#echo "ROOT: $ROOT"
+#echo "IN  : $IN"
+#echo "OUT : $OUT"
+#echo "WORK: $WORK"
+#exit
+
 # Sets up the processing environment including downloading
 # annotations and creating all required directories.
 
