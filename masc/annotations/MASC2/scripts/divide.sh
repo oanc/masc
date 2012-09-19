@@ -23,8 +23,8 @@ if [ ! -e $RELEASE/data ] ; then
 	mkdir $RELEASE/data
 fi
 
-groovy scripts/divide.groovy $DROPBOX/MASC2-3/FULL_MASC $WORK/release $RELEASE/data
-cp $DROPBOX/MASC2-3/MASC2-resource-header.xml $RELEASE/resource-header.xml
+groovy scripts/divide.groovy $METADATA/FULL_MASC $WORK/release $RELEASE/data
+cp $METADATA/MASC2-resource-header.xml $RELEASE/resource-header.xml
 
 exit
 

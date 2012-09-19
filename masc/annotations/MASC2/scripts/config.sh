@@ -32,6 +32,7 @@ RELEASE=./data/release
 #APPS=$ROOT/apps
 APPS=./apps
 DATA=./data
+METADATA=../meta
 
 # Alias for the release directory for when it is actually
 # the input directory and -in=$OUT looks wrong.
