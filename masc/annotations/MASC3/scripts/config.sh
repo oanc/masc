@@ -17,7 +17,7 @@ fi
 #set -u
 
 # System specific settings
-source ./scripts/$HOSTNAME.sh
+#source ./scripts/$HOSTNAME.sh
 
 IN=./data/originals  #original
 #IN=./ #updated on 4/26/2011
@@ -27,6 +27,7 @@ RELEASE=./data/release
 #APPS=$ROOT/apps
 APPS=./apps
 DATA=./data
+METADATA=../meta
 
 # Alias for the release directory for when it is actually
 # the input directory and -in=$OUT looks wrong.

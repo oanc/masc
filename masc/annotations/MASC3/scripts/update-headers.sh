@@ -67,22 +67,9 @@ if [ ! -e $APPS/$JAR ] ; then
 	# least one of the programs should be available on any system.
 	
 	URL=http://www.anc.org/tools/saxon9he.jar
-	GET=`which wget`	
-	if [ "$GET" = "" ] ; then
-		echo "wget not available."
-		GET=`which curl`
-		if [ "$GET" = "" ] ; then
-			echo "ERROR: curl not found either. Aborting script."
-			exit 1
-		fi
-		# Updated 9/9/2011 
-		# Using 'curl <URL>' on OS X prints the data to stdout. We need
-		# to explicitly specify the output file.
-		GET="$GET -o $SAXON"
-		# End update
-	fi
+
 	pushd $APPS
-	$GET http://www.anc.org/tools/saxon9he.jar
+	wget http://www.anc.org/tools/saxon9he.jar
 	popd
 
 	if [ ! -e $SAXON ] ; then
@@ -94,9 +81,18 @@ fi
 #echo "$APPS/$JAR"
 #echo "$SAXON"
 
+if [ -z "$MASC" ] ; then
+	echo "\$MASC undefined."
+	exit 2
+fi
+if [ ! -d $MASC ] ; then
+	echo "$MASC not found."
+	exit 2
+fi
+
 #echo "java $OPTS -jar $VALIDATOR -in=$MASC -out=$WORK/validation -schema=$SCHEMA -create -update -change"
 java $OPTS -jar $VALIDATOR -level=debug -in=$MASC -out=$WORK/validation -schema=$SCHEMA -create -update -change
-exit #temporary
+#exit #temporary
 
 pushd ./data/data
 for i in `ls *.anc` ; do

@@ -27,12 +27,12 @@ groovy ./scripts/summarize.groovy $RELEASE/data ./reports/annotations.html
 java $OPTS -jar $IDS $LOPTS -in=$RELEASE/data -out=./reports/ids.html
 java $OPTS -jar $DOCS $LOPTS -in=$RELEASE/data -out=./reports/docid.txt
 java $OPTS -jar $NODES $LOPTS -in=$RELEASE/data -out=./reports/check-nodes.txt
-java -Xmx2G -jar $TOKENS $LOPTS -in=$RELEASE/data -out=./reports -header=$RELEASE/resource-header.xml
+java -Xmx2G -jar $TOKENS $LOPTS -in=$RELEASE/data -out=./reports -header=$METADATA/MASC3-resource-header.xml
 java -Xmx2G -jar $HEADERS $LOPTS -in=$RELEASE/data -out=./reports/check-headers.txt
 java $OPTS -jar $DOMAINS $RELEASE ./reports
 
 # Checks file ID formats, checks for missing f.seg elements, checks for missing extents
-grate ./scripts/checkTypes.gr8 $RELEASE/data $DROPBOX/MASC2-3/MASC3-resource-header.xml ./reports
+grate ./scripts/checkTypes.gr8 $RELEASE/data $METADATA/MASC3-resource-header.xml ./reports
 
 echo Looking for missing files.
 cd ./scripts
@@ -40,3 +40,4 @@ cd ./scripts
 ./find-missing-text.sh > ../reports/missing-texts.txt
 ./find-missing-headers.sh > ../reports/missing-headers.txt
 
+echo "All reports generated."

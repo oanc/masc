@@ -4,7 +4,7 @@ set -e
 
 source ./config.sh
 
-path=$DROPBOX/MASC2-3/FULL_MASC
+path=$METADATA/FULL_MASC
 masc=$RELEASE/data
 text=$IN/txtfiles
 
