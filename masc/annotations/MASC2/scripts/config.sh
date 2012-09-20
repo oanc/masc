@@ -21,7 +21,7 @@ echo "root is" $ROOT
 echo
 
 # System specific settings
-source ./scripts/$HOSTNAME.sh
+#source ./scripts/$HOSTNAME.sh
 
 VERSION=2.0.0
 IN=./data/originals  #original

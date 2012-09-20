@@ -3,8 +3,14 @@
 source ./config.sh
 
 echo Generating headers.
-rm -f $DATA/headers/*.*
+if [ -d $DATA/headers ] ; then
+	rm -f $DATA/headers/*.*
+else
+	mkdir -p $DATA/headers
+fi
+
 echo "CORPORA is $CORPORA"
+echo "DATA/headers is $DATA/headers"
 
 JAR=$APPS/masc-headers/target/masc-headers.jar
 #java $OPTS -jar $JAR $CORPORA 2 $IN/MASC-MASTER.csv $DATA/headers
