@@ -1,17 +1,12 @@
 #!/bin/bash
 
-source ./config.sh
-echo "RELEASE is $RELEASE"
+echo "Enter the MASC project root directory:"
+read MASC_ROOT
 
-case $1 in
-	1.*)
-		echo "Version 1.x"
-		;;
-	2|2.*)
-		echo "Version 2.x"
-		;;
-	*)
-		echo "Unknown version."
-		;;
-esac
-echo "Done"
+echo "Enter the destination directory:"
+read CORPORA
+
+echo "MASC root is $MASC_ROOT"
+echo "CORPORA is $CORPORA"
+
+ls $CORPORA
