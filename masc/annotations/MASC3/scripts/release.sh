@@ -51,17 +51,17 @@ echo "---------------------------------------------------------"
 ./parse-all.sh #SBI
 
 echo "---------------------------------------------------------"
-# Check annotation alignment, that is whitespace at the
-# start or end of an annotation. Makes sure the trim.sh
-# script worked.
-edit ./check-align.sh #SBI
-
-echo "---------------------------------------------------------"
 # Convert the standoff annotation files in ./data/data to 
 # the new GrAF format before validation with the new schemas.
 # Also copies the headers, which are already in the new format
 # to the release directory.
 ./convert.sh #SBI
+
+echo "---------------------------------------------------------"
+# Check annotation alignment, that is whitespace at the
+# start or end of an annotation. Makes sure the trim.sh
+# script worked.
+edit ./check-align.sh #SBI
 
 ## TODO Change this to copy files from MASC2.
 #echo "---------------------------------------------------------"

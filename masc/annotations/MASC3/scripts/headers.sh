@@ -9,6 +9,13 @@ else
 	mkdir -p $DATA/headers
 fi
 
+if [ -z "$CORPORA" ] ; then
+	echo "\$CORPORA has not been set. Check your .bashrc and ensure ~/.masc.conf"
+	echo "is being sourced."
+	echo
+	exit 2
+fi
+
 JAR=$APPS/masc-headers/target/masc-headers.jar
 #java $OPTS -jar $JAR $CORPORA 3 $DROPBOX/MASC2-3/MASC-MASTER.csv $DATA/headers
 java $OPTS -jar $JAR $CORPORA $DATA/headers $METADATA/MASC-MASTER.csv 3
