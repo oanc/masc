@@ -47,7 +47,7 @@ if [ ! -e $APPS/$JAR ] ; then
 			echo "ERROR: curl not found either. Aborting script."
 			exit 1
 		else
-			GET="curl -0"
+			GET="curl -O"
 		fi
 	fi
 	pushd $APPS

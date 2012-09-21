@@ -18,7 +18,7 @@ fi
 mkdir $TEMP
 
 # Converts the GrAF files to XCES and puts them in the TEMP directory.
-grate scripts/corrections.gr8 $IN/txtfiles $GRAF $TEMP $DROPBOX/MASC2-resource-header.xml
+grate scripts/corrections.gr8 $IN/txtfiles $GRAF $TEMP $METADATA/MASC2-resource-header.xml
 #exit
 
 # Converts files in the TEMP directory and places them in the data/data directory.
