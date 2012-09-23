@@ -15,7 +15,7 @@ fi
 mkdir -p $DEST
 
 #groovy -Xmx1G ./scripts/convert.groovy $MASC $DEST
-java $OPTS -jar $JAR $LOPTS -in=$MASC -out=$DEST -c
+java $OPTS -jar $JAR $LOPTS -in=$MASC -out=$DEST -c -prefix=MASC1
 
 echo "Renaming header files."
 cd $DEST
