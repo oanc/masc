@@ -46,13 +46,11 @@ String getType(String s)
 void process(Transformer transformer, File indir, File outdir) {
 	//StreamSource ssource
 	//StreamResult sresult
-	if (!outdir.exists())
+	if (!outdir.exists() && !outdir.mkdirs())
 	{
-		if (!outdir.mkdirs())
-		{
-			throw new IOException("Unable to create output directory ${outdir.name}")
-		}
+		throw new IOException("Unable to create output directory ${outdir.name}")
 	}
+	
 	indir.listFiles().each {
 		if (it.isDirectory())
 		{
