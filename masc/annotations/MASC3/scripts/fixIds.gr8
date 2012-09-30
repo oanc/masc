@@ -30,13 +30,13 @@ if (!data.exists())
 	return 1
 }
 
-File test = new File(data, "spoken/face-to-face")
-if (!test.exists())
-{
-	println "Test directory not found."
-	return 1
-}
-println "Test is ${test.path}"
+//File test = new File(data, "spoken/face-to-face")
+//if (!test.exists())
+//{
+//	println "Test directory not found."
+//	return 1
+//}
+//println "Test is ${test.path}"
 DocumentHeaderStream xstream = new DocumentHeaderStream()
 data.eachDirRecurse { dir ->
 	println "Scanning ${dir.path}"
@@ -46,8 +46,17 @@ data.eachDirRecurse { dir ->
 		//	
 		//println file.name
 		DocumentHeader header = xstream.read(file)
-		header.profileDesc.annotations.each { annotation ->
-			println "\t${annotation.fId} ${annotations.content}"
+		//header.profileDesc.annotations.each { annotation ->
+		//	println "\t${annotation.fId} ${annotations.content}"
+		//}
+		String id = header.docId
+		if (id)
+		{
+			println "${file.path} {$header.docId}"
+		}
+		else
+		{
+			println "${file.path} missing"
 		}
 	}
 }

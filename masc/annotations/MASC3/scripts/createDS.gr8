@@ -2,7 +2,7 @@
  * This script loads all GrAF documents into a Gate corpus and saves them
  * to a Gate DataStore for viewing in Gate.
  *
- * USAGE: grate mascds.gr8 <mascDir> <dataStoreDir>
+ * USAGE: grate masc3ds.gr8 <mascDir> <dataStoreDir>
  *
  * mascDir the path to the MASC data files. The path can be relative to the 
  *		script or specified as an absolute path.
@@ -13,17 +13,35 @@
  */
 
 import gate.*
+import org.xces.graf.io.*
+import org.xces.graf.io.dom.*
 
-if (this.args.size() != 2)
+if (this.args.size() != 3)
 {
-	println "USAGE: grate mascds <mascDir> <dataStoreDir>"
+	println "Invalid number of arguments: ${this.args.size()}"
+	println "USAGE"
+	println ""
+	println "grate createDS.gr8 /path/to/corpus /path/to/datastore \"Corpus Name\""
+	println ""
+	println "Creates a GATE datastore and adds each document to the corpus to"
+	println "the datastore.  The corpus is expected to be in the standard LAF/GrAF"
+	println "directory layout."
+	println ""
 	return
 }
 
-File mascDir = new File(this.args[0])
+// Location of the corpus to process
+File corpusDir = new File(this.args[0])
+File data = new File(corpusDir, "data")
+File headerFile = new File(corpusDir, "resource-header.xml")
+
+// Where the Gate datastore will be saved.
 File dsDir = new File(this.args[1])
 
-if (!mascDir.exists())
+// The corpus name used in the datastore.
+String corpusName = this.args[2]
+
+if (!corpusDir.exists())
 {
 	println "MASC directory not found."
 	return
@@ -35,21 +53,26 @@ if (!dsDir.exists() && !dsDir.mkdirs())
 	return
 }
 
-def loadPR = newResource('org.anc.gate.LoadGrafStandoff') {}
-//def filter = new org.anc.io.SuffixFilter('.txt', false)
+// The Gate processing resource used to load GrAF standoff annotation files.
+def loadPR = newResource('org.anc.gate.LoadGrafStandoff') {
+	resourceHeader(headerFile.toURI().toURL())
+}
 
-// The index is used to map URL objects to File objects and simply
+// The index is used to map text files to their headers and simply
 // saves us a bunch of string substitutions/replacements when trying
 // to derive the paths to standoff annotation files.
 def index = [:]
 
-def corpus = newCorpus('MASC 2.0.0') {
+def corpus = newCorpus(corpusName) {
 	// Add each text file to the corpus and the index.
-	mascDir.listFiles().each {
-		if (it.name.endsWith('.txt'))
-		{
-			addDocument(it)
-			index[it.toURI().toURL()] = it
+	corpusDir.eachDirRecurse { dir ->
+		dir.eachFileMatch(~/.*.txt/) {
+			File hdrFile = new File(it.parentFile, it.name.replace(".txt", ".hdr"))
+			if (hdrFile.exists())
+			{
+				index[it.toURI().toURL()] = hdrFile
+			}		
+			addDocument(it)			
 		}
 	}
 }
@@ -59,18 +82,19 @@ def ds = newSerialDataStore(dsDir)
 def persistedCorpus = ds.adopt(corpus, null)
 
 // Now process the annotation types for each document in the corpus.
-def types = ['logical', 's', 'penn', 'ne', 'nc', 'vc', 'mpqa', 'ptb', 'fn']
 corpus.each { doc ->
 	println "Corpus document ${doc.sourceUrl}"
 	// Check if the file is in in the index
-	File txtFile = index[doc.sourceUrl]
-	if (txtFile)
+	File hdrFile = index[doc.sourceUrl]
+	if (hdrFile)
 	{
 		// Now try to load each annotation type for this file.
-		println "Found annotations for ${txtFile.path}."
-		types.each { type ->
-			def soFilename = txtFile.name.replace('.txt', "-${type}.xml")
-			def soFile = new File(txtFile.getParentFile(), soFilename)
+		def directory = hdrFile.parentFile
+		def header = new DocumentHeader(hdrFile)
+		//def types = header.getAnnotationTypes()
+		header.annotationTypes.each { type ->
+			def soFilename = header.getAnnotationLocation(type)
+			def soFile = new File(directory, soFilename)
 			if (soFile.exists())
 			{
 				// We have found a standoff annotation file. Run the
@@ -93,5 +117,5 @@ corpus.each { doc ->
 ds.sync(persistedCorpus)
 ds.close()
 
-// Now go fire up Gate and browse the annotations.
+// The annotations will now be available in Gate.
 println "Done."
