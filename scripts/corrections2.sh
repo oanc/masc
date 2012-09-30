@@ -34,8 +34,8 @@ java $OPTS -jar $CONVERT -xces $LOPTS -in=$TEMP -out=$OUT -set=anc -ann=logical 
 # Convert the XCES files.
 java $OPTS -jar $CONVERT -xces $LOPTS -in=$XCES -out=$OUT -set=anc -ann=s -id=s -rename="Sentence=s" -exf="graf:set graf:id graf:edge"
 java $OPTS -jar $CONVERT -xces $LOPTS -in=$XCES -out=$OUT -set=anc -ann=logical -id=logical -rename="@speaker=who" -exf="graf:set graf:id graf:edge"
-java $OPTS -jar $CONVERT -xces $LOPTS -in=$XCES -out=$OUT -set=anc -ann=hepple -id=penn -rename="Token=tok @category=msd" -saveAs=penn -exf="string graf:set graf:id graf:edge"
-java $OPTS -jar $CONVERT -xces $LOPTS -in=$XCES -out=$OUT -set=anc -ann=penn -id=penn -rename="Token=tok @category=msd" -saveAs=penn -exf="string graf:set graf:id graf:edge"
+java $OPTS -jar $CONVERT -xces $LOPTS -in=$XCES -out=$OUT -set=anc -ann=hepple -id=penn -rename="Token=tok @category=msd" -saveAs=penn -exf="graf:set graf:id graf:edge"
+java $OPTS -jar $CONVERT -xces $LOPTS -in=$XCES -out=$OUT -set=anc -ann=penn -id=penn -rename="Token=tok @category=msd" -saveAs=penn -exf="graf:set graf:id graf:edge"
 java $OPTS -jar $CONVERT -xces $LOPTS -in=$XCES -out=$OUT -ann=nc -set=anc -rename="np=nchunk NounChunk=nchunk" -id=nc -accept=nchunk -exf="graf:set graf:id graf:edge"
 java $OPTS -jar $CONVERT -xces $LOPTS -in=$XCES -out=$OUT -ann=vc -set=anc -rename="VG=vchunk vp=vchunk VerbChunk=vchunk" -id=vc -accept=vchunk -exf="graf:set graf:id graf:edge"
 java $OPTS -jar $CONVERT -xces $LOPTS -in=$XCES -out=$OUT -ann=ne -set=anc -rename="Person=person Date=date Location=location Organization=org @orgType=type @locType=type @gender=sex" -exf="rule rule1 rule2 graf:set graf:id graf:edge" -id=ne -accept="person date location org"
