@@ -1,3 +1,5 @@
+// Note: This program is not used during processing.
+
 @Grab(group='org.tc37sc4.graf', module='graf-api', version='1.2.0')
 import org.xces.graf.api.*
 @Grab(group='org.tc37sc4.graf', module='graf-io', version='1.2.0')
@@ -70,7 +72,6 @@ files.each { filename ->
 		FileOutputStream stream = new FileOutputStream(pennFile)
 		IRenderer renderer = new GrafRenderer(stream, 'UTF-8')
 		renderer.render(graph)
-		stream.flush()
-		stream.close()
+		renderer.close()
 	}
 }
