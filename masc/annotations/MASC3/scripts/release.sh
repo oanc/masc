@@ -74,6 +74,12 @@ echo "---------------------------------------------------------"
 ./validate.sh data/working/release #SBI
 
 echo "---------------------------------------------------------"
+# Fix any dependencies in the standoff annotation files that do
+# not use the correct f.id value (some are missing the "f."
+# prefix).
+./fix-dependencies.sh
+
+echo "---------------------------------------------------------"
 # Divide the files into written and spoken components.
 ./divide.sh #SBI
 
@@ -84,6 +90,11 @@ echo "---------------------------------------------------------"
 echo "---------------------------------------------------------"
 # Ensure all document headers contains an f.seg entry
 ./fix-fid.sh
+
+#echo "---------------------------------------------------------"
+# Add @string attributes to the three penn files that are missing them
+#./fix-strings.sh
+
 
 #echo "---------------------------------------------------------"
 # Load all standoff annotations for all documents.

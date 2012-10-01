@@ -9,11 +9,11 @@ HDR_SCHEMA=http://www.xces.org/ns/GrAF/1.0/graf-document.xsd
 VALIDATOR=$ROOT/apps/validator/target/validator.jar  #original
 
 #VALIDATOR=$ROOT/apps/validator/target/validator-1.0.0-SNAPSHOT.jar  #debug
-
+#LOPTS="-log=./validate.log -level=debug"
 echo Validating standoff files.
-java $OPTS -jar $VALIDATOR -in=$1 -schema=$SO_SCHEMA -suffix=xml $LOPTS  #original 
+java $OPTS -jar $VALIDATOR -R -in=$1 -schema=$SO_SCHEMA -suffix=xml $LOPTS  #original 
 echo Validating headers.
-java $OPTS -jar $VALIDATOR -in=$1 -schema=$HDR_SCHEMA -suffix=hdr $LOPTS  #original 
+java $OPTS -jar $VALIDATOR -R -in=$1 -schema=$HDR_SCHEMA -suffix=hdr $LOPTS  #original 
 
 #echo  java $OPTS -jar  `cygpath -m $VALIDATOR` -in=$MASC -schema=$SCHEMA -suffix=xml $LOPTS
 #java $OPTS -jar  `cygpath -m $VALIDATOR` -in=$MASC -schema=$SCHEMA -suffix=xml $LOPTS  #original 
