@@ -9,7 +9,10 @@ JAR=$APPS/fix-dependencies/target/fix-dependencies.jar
 IN=$WORK/release
 OUT=$WORK/staging
 if [ -d $OUT ] ; then
-	rm $OUT/*.*
+	contents=`ls $OUT`
+	if [ -n "$contents" ] ; then	
+		rm $OUT/*.*
+	fi
 else
 	mkdir $OUT
 fi

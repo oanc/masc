@@ -8,7 +8,7 @@ DATE=`date +%Y-%m-%d`
 #VERS=3.0.0
 
 #FILENAME="MASC-$VERS-$DATE.tgz"
-NAME="MASC-$VERSION"
+NAME="MASC-$VERSION-RC1"
 
 TGZ=$ROOT/$NAME.tgz
 ZIP=$ROOT/$NAME.zip
@@ -41,7 +41,7 @@ tar czf $TGZ $FILES
 
 echo "Creating $ZIP"
 zip -r -9 -q $ZIP .
-WEB=/var/www/anc/masc
+WEB=/home/www/anc/masc
 if [ -e $WEB ] ; then
     # This will (should) only be true 
     # when running on the ANC server.
