@@ -139,10 +139,13 @@ echo "---------------------------------------------------------"
 # Writes :
 ./reports.sh
 
-#echo "---------------------------------------------------------"
-# Copies over original annotations, header, etc. and
-# packages everything.
+echo "---------------------------------------------------------"
+# Create .tgz and .zip archives with the corpus.
 # Reads  :
 # Writes :
 ./package.sh #SBI
   
+echo "---------------------------------------------------------"
+# Copy corpus to local corpora directory and the archives
+# to the ANC web server.
+./deploy.sh

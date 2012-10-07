@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Copies the archives to the local machine and to the ANC web server.
-
 echo "Running $0"
+source ./config.sh
 
 LOCAL=/home/www/anc/masc
 WEB=suderman@anc.org:$LOCAL
@@ -16,8 +16,8 @@ if [ -e $WEB ] ; then
     # This will (should) only be true 
     # when running on the ANC server.
     echo "Copying archive to web server."
-    cp $TGZ $WEB
-    cp $ZIP $WEB
+    cp $TGZ $LOCAL
+    cp $ZIP $LOCAL
 else
 	echo "Copying files to the ANC server."
 	scp -P 22022 $TGZ $WEB
