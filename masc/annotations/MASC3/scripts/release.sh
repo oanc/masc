@@ -91,13 +91,6 @@ echo "---------------------------------------------------------"
 # Convert the existing MASC1 files into the new format.
 #./masc1.sh 
 
-echo "---------------------------------------------------------"
-# Perform a schema validation of all document headers and standoff
-# annotation files.
-# Reads  : ./data/working/release
-# Writes : nothing
-./validate.sh data/working/release #SBI
-
 ### REMOVE ###
 #exit
 
@@ -129,14 +122,16 @@ echo "---------------------------------------------------------"
 ./fix-fid.sh
 
 #echo "---------------------------------------------------------"
-# Add @string attributes to the three penn files that are missing them
-#./fix-strings.sh
-
-
-#echo "---------------------------------------------------------"
 # Load all standoff annotations for all documents.
 # 02Sep12 - Currently causes an out of memory exception.
 #./load-all.sh
+
+echo "---------------------------------------------------------"
+# Perform a schema validation of all document headers and standoff
+# annotation files.
+# Reads  : ./data/release/data
+# Writes : nothing
+./validate.sh data/release/data #SBI
 
 echo "---------------------------------------------------------"
 # Perform sanity checks and write reports.
@@ -150,3 +145,4 @@ echo "---------------------------------------------------------"
 # Reads  :
 # Writes :
 ./package.sh #SBI
+  

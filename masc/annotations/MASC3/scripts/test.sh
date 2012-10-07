@@ -7,4 +7,10 @@ echo "DATA   : $DATA"
 echo "MASC   : $MASC"
 echo "OUT    : $OUT"
 echo "IN     : $IN"
-ls $RELEASE
+
+if [ -z "$SPLITTER" ] ; then
+	echo "SPLITTER is not defined."
+else
+	echo "SPLITTER: $SPLITTER"
+fi
+

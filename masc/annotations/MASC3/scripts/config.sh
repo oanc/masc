@@ -2,11 +2,10 @@
 # Do not use "set -e", some scripts need to check error conditions.
 
 # Current MASC version being generated.
-VERSION=3.0.0
+VERSION=3.0.0-RC1
 
 cd ..
 ROOT=`pwd`
-#echo 'root is $ROOT'
 
 if [ "$CYGWIN" != "" ] ; then
 	ROOT=`cygpath -m $ROOT`
@@ -16,18 +15,23 @@ fi
 # have been passed in.
 #set -u
 
-# System specific settings
-#source ./scripts/$HOSTNAME.sh
-
 IN=./data/originals  #original
-#IN=./ #updated on 4/26/2011
 OUT=./data/data
 WORK=./data/working
 RELEASE=./data/release
-#APPS=$ROOT/apps
 APPS=./apps
 DATA=./data
 METADATA=../meta
+
+# Name of the corpus we are building
+NAME="MASC-$VERSION"
+
+# Archives generated.
+TGZ=$ROOT/$NAME.tgz
+ZIP=$ROOT/$NAME.zip
+
+# Where the corpus will be deployed on the local machine.
+DEPLOY_DIR=$CORPORA/$NAME
 
 # Alias for the release directory for when it is actually
 # the input directory and -in=$OUT looks wrong.
