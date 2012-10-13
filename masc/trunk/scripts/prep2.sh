@@ -10,7 +10,7 @@ java -jar $COPY -in=$IN/new-headers -out=$OUT
 
 # Convert XCES files.
 java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=s -in=$IN/sentence-boundaries -out=$OUT -rename="Sentence=s" -id=s
-java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=logical -in=$IN/logical -out=$OUT -rename="@speaker=who" -id=logical -exf="graf:set graf:id graf:edge"
+java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=logical -in=$IN/logical -out=$OUT -rename="@speaker=who" -id=logical -exf="graf:set graf:id graf:edge"
 #java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=hepple -in=$IN/penn-pos -out=$OUT -saveAs=penn -rename="Token=tok @category=msd @root=base" -id=penn #-exf=string
 java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=penn -in=$IN/tok-with-string -out=$OUT -saveAs=penn -rename="Token=tok @category=msd @root=base" -id=penn #-exf=string
 java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=np -in=$IN/noun-chunks -out=$OUT -saveAs=nc -rename="np=nchunk NounChunk=nchunk" -id=nc -accept=nchunk -exf="graf:set graf:id graf:edge"
