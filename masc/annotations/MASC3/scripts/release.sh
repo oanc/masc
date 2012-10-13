@@ -104,6 +104,13 @@ echo "---------------------------------------------------------"
 ./fix-dependencies.sh
 
 echo "---------------------------------------------------------"
+# Removes extraneous features from tokens.
+# Reads  : ./data/working/release
+# Staging: ./data/working/staging
+# Writes : ./data/working/release
+./fix-penn.sh
+
+echo "---------------------------------------------------------"
 # Divide the files into written and spoken components.
 # Reads  : ./data/work/release
 # Writes : ./data/release
