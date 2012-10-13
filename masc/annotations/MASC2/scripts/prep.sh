@@ -14,7 +14,7 @@ echo opening $IN/Sentence
 java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -id=s -ann=s -in=$IN/Sentence -out=$OUT -rename="Sentence=s" 
 
 echo opening $IN/logical
-java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=logical  -id=logical -in=$IN/logical -out=$OUT -rename="paragraph=p @speaker=who"  
+java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=logical  -id=logical -in=$IN/logical -out=$OUT -rename="paragraph=p @speaker=who"  
 
 # Updated 9/9/2011 KBS
 echo opening $IN/Token
