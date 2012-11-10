@@ -4,23 +4,58 @@
       <feat name="gender" value="either"/>
       <feat name="id" value="305"/>
    </struct>
+   <struct type="Date" from="86" to="115">
+      <feat name="rule2" value="DateTimeFinal"/>
+      <feat name="kind" value="dateTime"/>
+   </struct>
+   <struct type="Date" from="223" to="229">
+      <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="GazDate"/>
+   </struct>
+   <struct type="Date" from="292" to="301">
+      <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="ModifierDate"/>
+   </struct>
    <struct type="Organization" from="380" to="389">
-      <feat name="id" value="592"/>
-      <feat name="number" value="singular"/>
-      <feat name="person" value="third"/>
-      <feat name="case" value="objective"/>
       <feat name="orgType" value="company"/>
+      <feat name="case" value="objective"/>
+      <feat name="person" value="third"/>
+      <feat name="number" value="singular"/>
+      <feat name="id" value="592"/>
+   </struct>
+   <struct type="Date" from="400" to="406">
+      <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="GazDateWords"/>
+   </struct>
+   <struct type="Date" from="408" to="423">
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Money" from="431" to="435"/>
    <struct type="Money" from="450" to="455">
       <feat name="kind" value="number"/>
    </struct>
    <struct type="Organization" from="613" to="622">
-      <feat name="orgType" value="company"/>
-      <feat name="number" value="singular"/>
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
       <feat name="id" value="314"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="nominative"/>
+      <feat name="number" value="singular"/>
+      <feat name="orgType" value="company"/>
+   </struct>
+   <struct type="Date" from="710" to="724">
+      <feat name="kind" value="date"/>
+   </struct>
+   <struct type="Date" from="775" to="788">
+      <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="ModifierDate"/>
+   </struct>
+   <struct type="Date" from="831" to="845">
+      <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="GazDateWords"/>
    </struct>
    <struct type="Organization" from="1007" to="1016">
       <feat name="rule " value="InLoc"/>
@@ -30,5 +65,10 @@
       <feat name="case" value="objective"/>
       <feat name="number" value="singular"/>
       <feat name="orgType" value="company"/>
+   </struct>
+   <struct type="Date" from="1020" to="1028">
+      <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="GazDate"/>
    </struct>
 </cesAna>

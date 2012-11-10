@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
+   <struct type="Date" from="10" to="46">
+      <feat name="rule2" value="DateTimeFinal"/>
+      <feat name="kind" value="dateTime"/>
+   </struct>
    <struct type="Location" from="174" to="176">
       <feat name="id" value="465"/>
       <feat name="locType" value="province_state"/>
@@ -16,13 +20,26 @@
       <feat name="gender" value="male"/>
       <feat name="id" value="468"/>
    </struct>
+   <struct type="Date" from="353" to="361">
+      <feat name="kind" value="date"/>
+      <feat name="rule2" value="DateOnlyFinal"/>
+      <feat name="rule1" value="DateName"/>
+   </struct>
    <struct type="Person" from="457" to="470">
       <feat name="gender" value="male"/>
       <feat name="id" value="470"/>
    </struct>
+   <struct type="Date" from="483" to="502">
+      <feat name="rule2" value="DateTimeFinal"/>
+      <feat name="kind" value="dateTime"/>
+   </struct>
    <struct type="Person" from="511" to="523">
       <feat name="id" value="472"/>
       <feat name="gender" value="female"/>
+   </struct>
+   <struct type="Date" from="525" to="544">
+      <feat name="rule2" value="DateTimeFinal"/>
+      <feat name="kind" value="dateTime"/>
    </struct>
    <struct type="Person" from="553" to="564">
       <feat name="gender" value="male"/>
@@ -73,18 +90,18 @@
       <feat name="locType" value="province_state"/>
    </struct>
    <struct type="Person" from="994" to="1001">
-      <feat name="gender" value="female"/>
-      <feat name="number" value="singular"/>
-      <feat name="case" value="objective"/>
-      <feat name="person" value="third"/>
       <feat name="id" value="486"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="objective"/>
+      <feat name="number" value="singular"/>
+      <feat name="gender" value="female"/>
    </struct>
    <struct type="Organization" from="1119" to="1158">
-      <feat name="person" value="third"/>
-      <feat name="case" value="objective"/>
-      <feat name="number" value="singular"/>
-      <feat name="orgType" value="other"/>
       <feat name="id" value="487"/>
+      <feat name="orgType" value="other"/>
+      <feat name="number" value="singular"/>
+      <feat name="case" value="objective"/>
+      <feat name="person" value="third"/>
    </struct>
    <struct type="Location" from="1119" to="1129">
       <feat name="locType" value="province_state"/>
@@ -93,17 +110,17 @@
       <feat name="person" value="third"/>
    </struct>
    <struct type="Person" from="1433" to="1441">
-      <feat name="id" value="489"/>
-      <feat name="case" value="nominative"/>
-      <feat name="number" value="singular"/>
-      <feat name="person" value="third"/>
       <feat name="gender" value="female"/>
+      <feat name="person" value="third"/>
+      <feat name="number" value="singular"/>
+      <feat name="case" value="nominative"/>
+      <feat name="id" value="489"/>
    </struct>
    <struct type="Organization" from="1442" to="1453">
-      <feat name="orgType" value="company"/>
-      <feat name="number" value="singular"/>
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
       <feat name="id" value="490"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="nominative"/>
+      <feat name="number" value="singular"/>
+      <feat name="orgType" value="company"/>
    </struct>
 </cesAna>
