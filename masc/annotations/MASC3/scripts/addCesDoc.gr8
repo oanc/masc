@@ -1,0 +1,172 @@
+import org.anc.io.SuffixFilter
+import org.anc.util.Queue
+import org.xces.graf.io.*
+import org.xces.graf.io.dom.ResourceHeader
+import org.xces.graf.api.*
+//import org.xces.graf.impl.CharacterAnchorFactory
+import org.xces.graf.impl.Factory
+//@Grab(group='org.anc', module='conf', version='2.1.0')
+//import static org.anc.conf.AnnotationSpaces
+
+if (this.args.size() != 3)
+{
+	println ""
+	println "  USAGE"
+	println ""
+	println "  grate addCesDoc.gr8 <HEADER_FILE> <INPUT_DIR> <OUTPUT_DIR>"
+	println ""
+	return
+}
+
+File headerFile = new File(this.args[0])
+File inputDir = new File(this.args[1])
+File outputDir = new File(this.args[2])
+
+if (!headerFile.exists())
+{
+	println "Header file not found."
+	return
+}
+
+if (!inputDir.exists())
+{
+	println "Input directory not found."
+	return
+}
+
+//if (!outputDir.exists())
+//{
+	//println "Output directory not found."
+	//return
+//}
+
+class Record
+{
+	File input
+	File output
+	
+	public Record(File input, File output)
+	{
+		this.input = input
+		this.output = output
+	}
+}
+
+class Processor
+{
+	GrafLoader loader;
+	GrafParser parser
+	GrafRenderer renderer;
+	IAnnotationSpace XCES = Factory.newAnnotationSpace('xces', 'http://www.anc.org/ns/masc/')
+	//ResourceHeader header
+	
+	public Processor(File headerFile)
+	{
+		ResourceHeader header = new ResourceHeader(headerFile)
+		loader = new GrafLoader(header)
+//		loader.setTypes(["f.logical"])
+		parser = new GrafParser(header)
+		renderer = new GrafRenderer()		
+	}
+	
+	void process(File inputDir, File outputDir)
+	{
+		int count
+		SuffixFilter filter = new SuffixFilter(".hdr", true)
+		Queue<Record> queue = new Queue<Record>()
+		queue.add(new Record(inputDir, outputDir))
+		while (queue.size() > 0)
+		{
+			Record record = queue.remove()
+			if (record.input.isFile())
+			{
+				process(record)
+				++count
+			}
+			else
+			{
+				record.input.listFiles(filter).each { file ->
+					queue.add(new Record(file, new File(record.output, file.name)))
+				}
+			}
+		}
+		
+		println "Processed ${count} files."
+	}
+
+	private void process(Record record)
+	{
+		//println "Loading ${record.input.path}"
+		IGraph graph = loader.load(record.input)
+		
+		int max = -1
+		int min = Integer.MAX_VALUE
+		boolean insert = true
+		String type = 'cesDoc'
+		graph.nodes().each { node ->
+			if (node.annotation.label == 'cesDoc')
+			{
+				// This graph contains a cesDoc so we don't have to do anything.
+				return
+			}
+			node.links.each { link ->
+				link.regions.each { region ->
+					if (region.start.offset < min)
+					{
+						min = region.start.offset
+					}
+					if (region.end.offset > max)
+					{
+						max = region.end.offset
+					}
+				}
+			}
+		}
+
+		// If we've made it this far then we need to an a cesDoc element.
+		File logicalFile = new File(record.input.path.replace(".hdr", "-logical.xml"))
+		if (!logicalFile.exists())
+		{
+			throw new FileNotFoundException("Logical annotations not found. ${logicalFile.path}")
+		}
+		parser.reset()
+		IGraph logical = parser.parse(logicalFile)
+//		parser = null
+		
+		//println "Logical contains ${logical.nodeSetSize} nodes."
+		
+		IAnnotation a = Factory.newAnnotation('xces', 'cesDoc')
+		a.setId("logical-doc-a")
+		INode node = Factory.newNode("logical-doc-n")
+		node.addAnnotation(a)
+		
+		IAnchorFactory anchorFactory = Factory.newCharacterAnchorFactory()
+		IAnchor startAnchor = anchorFactory.newAnchor(min)
+		IAnchor endAnchor = anchorFactory.newAnchor(max)
+		IRegion region = Factory.newRegion("logical-doc-r", startAnchor, endAnchor)
+		node.addRegion(region)
+		
+		logical.addNode(node)
+
+		File parent = record.output.parentFile
+		if (!parent.exists())
+		{
+			if (!parent.mkdirs())
+			{
+				throw new IOException("Unable to create directory ${parent.path}")
+			}
+		}
+		
+		File outputFile = new File(parent, logicalFile.name)
+		println "Writing ${outputFile.path}"
+		FileWriter writer = new FileWriter(outputFile)
+		renderer.setOutput(writer)
+		renderer.render(logical)
+		writer.flush()
+		writer.close()
+	}
+}
+
+Processor processor = new Processor(headerFile)
+processor.process(inputDir, outputDir)
+println "Done."

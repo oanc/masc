@@ -1,0 +1,30 @@
+// Fixes an invalid character (0xC) that was causing serialization
+// issues (0xC is not allowed in XML 1.0, even when encoded). This
+// script only needs to be run once and it not needed in the processing
+// pipeline.
+File file = new File('/Users/suderman/Projects/masc/3/data/originals/txtfiles/fcic_final_report_conclusions.txt')
+
+if ( !file.exists())
+{
+	println "File not found."
+	return
+}
+
+String text = file.getText('UTF-8')
+char[] chars = text.toCharArray()
+boolean modified = false
+for (int i = 0; i < chars.length; ++i)
+{
+	if (chars[i] == 0xC)
+	{
+		modified = true
+		println "Replacing char at ${i}"
+		chars[i] = ' ' as char
+	}
+}
+if (modified)
+{
+	println "Saving file."
+	file.setText(new String(chars), 'UTF-8')
+}
+println "Done."

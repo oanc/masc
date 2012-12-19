@@ -128,6 +128,12 @@ echo "---------------------------------------------------------"
 # Writes : ./data/release/data
 ./fix-fid.sh
 
+echo "---------------------------------------------------------"
+# Adds a cesDoc element to the logical annotations if one doesn't exist.
+# Reads  : ./data/release/data
+# Writes : ./data/release/data
+./fix-doc.sh
+
 #echo "---------------------------------------------------------"
 # Load all standoff annotations for all documents.
 # 02Sep12 - Currently causes an out of memory exception.

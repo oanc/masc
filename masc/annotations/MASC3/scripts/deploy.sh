@@ -8,11 +8,11 @@ LOCAL=/home/www/anc/masc
 WEB=suderman@anc.org:$LOCAL
 
 echo "Copying to local corpora directory"
-cp -r $RELEASE/data $DEPLOY_DIR
-cp $RELEASE/*.xml $DEPLOY_DIR
+#cp -r $RELEASE/data $DEPLOY_DIR
+#cp $RELEASE/*.xml $DEPLOY_DIR
+cp -r $RELEASE $DEPLOY_DIR
 
-
-if [ -e $WEB ] ; then
+if [ -e $ ] ; then
     # This will (should) only be true 
     # when running on the ANC server.
     echo "Copying archive to web server."
