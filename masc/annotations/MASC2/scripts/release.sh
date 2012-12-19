@@ -1,4 +1,4 @@
- #!/bin/sh
+#!/bin/sh
 set -e
 date 
 echo running release.sh
@@ -101,6 +101,7 @@ echo "---------------------------------------------------------"
 # Also copies the headers, which are already in the new format
 # to the release directory.
 ./convert.sh #SBI
+#exit
 
 echo "---------------------------------------------------------"
 # Copy the MASC1 files.
