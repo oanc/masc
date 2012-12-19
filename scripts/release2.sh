@@ -29,7 +29,7 @@ fi
 
 # Convert and align the FrameNet files.
 ./framenet.sh
-
+#exit
 # Process the "out of stream" corrections.
 ./corrections2.sh
 
