@@ -8,8 +8,10 @@ JAR=saxon9he.jar
 SAXON=$ROOT/apps/$JAR
 STYLE=$ROOT/scripts/annotations2.xsl
 #SCHEMA=http://www.anc.org/masc/schema/docheader.xsd
-SCHEMA=file:/$ROOT/scripts/docheader.xsd
+SCHEMA=file:$ROOT/scripts/docheader.xsd
 
+echo "Schema is $SCHEMA"
+#exit 
 if [ "$CYGWIN" != "" ] ; then
 	SAXON=/cygwin/$SAXON
 	STYLE=/cygwin/$STYLE
@@ -68,7 +70,7 @@ fi
 echo "$APPS/$JAR"
 echo "$SAXON"
 
-java $OPTS -jar $VALIDATOR -in=$MASC -out=$WORK/validation -schema=$SCHEMA -create -update -change
+java $OPTS -jar $VALIDATOR $LOPTS -in=$MASC -out=$WORK/validation -schema=$SCHEMA -create -update -change #-log=validation.log -append -level=info
 
 pushd ./data/data
 for i in `ls *.anc` ; do
