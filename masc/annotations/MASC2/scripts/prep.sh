@@ -18,7 +18,7 @@ java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=logical  -id=logical -in=$I
 
 # Updated 9/9/2011 KBS
 echo opening $IN/Token
-java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=penn -id=penn -in=$IN/Token -out=$OUT -saveAs=penn -rename="Token=tok @category=msd @root=base" 
+java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=penn -id=penn -in=$IN/Token -out=$OUT -saveAs=penn -rename="Token=tok @category=msd @root=base" -exf="length orth affix kind"
 
 #echo opening $IN/penn-pos
 #java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=hepple -in=$IN/penn-pos -out=$OUT -saveAs=penn -rename="Token=tok @category=msd" -id=penn #original line
