@@ -1,11 +1,14 @@
 #!/bin/bash
 
+echo Running $0
+
 source ./config.sh
 
 JAR=saxon9he.jar
 SAXON=$ROOT/apps/$JAR
 STYLE=$ROOT/scripts/annotations2.xsl
-SCHEMA=http://www.anc.org/masc/schema/docheader.xsd
+#SCHEMA=http://www.anc.org/masc/schema/docheader.xsd
+SCHEMA=file:/$ROOT/scripts/docheader.xsd
 
 if [ "$CYGWIN" != "" ] ; then
 	SAXON=/cygwin/$SAXON
@@ -31,6 +34,8 @@ function create {
 }
 
 #cd ..
+
+set -eu
 
 create $WORK/validation
 create $WORK/headers
