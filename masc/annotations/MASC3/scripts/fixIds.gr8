@@ -1,11 +1,29 @@
-//import org.xces.graf.api.*
-//import org.xces.graf.io.*
-//import org.xces.graf.io.dom.*
+/**
+ * This script checks the dependsOn entries in each file and ensures the file id values
+ * used are correct.
+ */
+import org.anc.io.*
 
-@Grab(group='org.xces.graf', module='graf-xstream', version='0.0.2-SNAPSHOT')
-import org.xces.graf.header.DocumentHeader
-import org.xces.graf.header.io.*
-import org.xces.graf.header.document.*
+class Printer
+{	
+	PrintWriter writer
+	XmlNodePrinter printer
+	
+	public Printer(File file)
+	{
+		writer = new PrintWriter(file, 'UTF-8')
+		printer = new XmlNodePrinter(writer)
+		printer.setPreserveWhitespace(true)
+		printer.setNamespaceAware(true)
+	}
+	
+	void print(node)
+	{
+		printer.print(node)
+		writer.flush()
+		writer.close()
+	}
+}
 
 if (this.args.size() != 1)
 {
@@ -37,26 +55,46 @@ if (!data.exists())
 //	return 1
 //}
 //println "Test is ${test.path}"
-DocumentHeaderStream xstream = new DocumentHeaderStream()
+
+XmlParser parser = new XmlParser(false, false)
 data.eachDirRecurse { dir ->
-	println "Scanning ${dir.path}"
-	dir.eachFileMatch(~/.*.hdr/) { file ->
-		//DocumentHeader header = new DocumentHeader(file)
-		//header.annotationTypes.each { type ->
-		//	
-		//println file.name
-		DocumentHeader header = xstream.read(file)
-		//header.profileDesc.annotations.each { annotation ->
-		//	println "\t${annotation.fId} ${annotations.content}"
-		//}
-		String id = header.docId
-		if (id)
+	//println "Scanning ${dir.path}"
+	dir.eachFileMatch(~/.*.xml/) { file ->
+		//println "Processing ${file}"
+		boolean modified = false
+		def graph = parser.parse(file)
+		graph.graphHeader.dependencies.dependsOn.each { dep ->
+			String attValue = dep.@"f.id"
+			//println "$attValue"
+			if (!attValue.startsWith('f.'))
+			{
+				dep.@"f.id" = "f.${attValue}"
+				modified = true
+			}
+		}
+		if (modified)
 		{
-			println "${file.path} {$header.docId}"
+			println "Writing ${file.path}"
+			Printer printer = new Printer(file)
+			printer.print(graph)
 		}
 		else
 		{
-			println "${file.path} missing"
+			println "No changes needed to ${file.path}"
 		}
+	}
+	dir.eachFileMatch(~/.*.hdr/) { header ->
+		def documentHeader = parser.parse(header)
+		documentHeader.profileDesc.primaryData[0].@"f.id" = 'f.text'
+		documentHeader.profileDesc.annotations.annotation.each { a->
+			String attValue = a.@"f.id"
+			if (!attValue.startsWith('f.'))
+			{
+				a.@"f.id" = "f.${attValue}"
+			}
+		}
+		println "Writing ${header.path}"
+		Printer printer = new Printer(header)
+		printer.print(documentHeader)
 	}
 }

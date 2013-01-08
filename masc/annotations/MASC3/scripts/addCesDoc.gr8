@@ -96,9 +96,21 @@ class Processor
 
 	private void process(Record record)
 	{
-		//println "Loading ${record.input.path}"
+		println "Loading ${record.input.path}"
 		IGraph graph = loader.load(record.input)
 		
+		/***
+		try
+		{
+			graph = loader.load(record.input)
+		}
+		catch (Exception e)
+		{
+			println "Unable to load graph"
+			println e
+			return
+		}
+		*/
 		int max = -1
 		int min = Integer.MAX_VALUE
 		boolean insert = true

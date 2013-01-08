@@ -117,16 +117,23 @@ echo "---------------------------------------------------------"
 ./divide.sh #SBI
 
 echo "---------------------------------------------------------"
-# Copy MASC 1/2 file to the release directory
+# Copy MASC 2 files to the release directory
 # Reads  : /var/corpora/MASC-2.0.0
 # Writes : ./data/release
 ./masc2.sh
 
 echo "---------------------------------------------------------"
-# Ensure all document headers contains an f.seg entry
+# Ensure all document headers contains an f.seg entry and 
+# all annotation file use correct f.id values.
 # Reads  : ./data/release/data
 # Writes : ./data/release/data
 ./fix-fid.sh
+
+echo "---------------------------------------------------------"
+# Last minute fixes.
+# Reads  : ./data/release/data
+# Writes : ./data/release/data
+#./last-minute-fixes.sh
 
 echo "---------------------------------------------------------"
 # Adds a cesDoc element to the logical annotations if one doesn't exist.

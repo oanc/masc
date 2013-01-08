@@ -1,0 +1,20 @@
+import org.xces.graf.api.*
+import org.xces.graf.io.*
+import org.xces.graf.io.dom.*
+
+File headerFile = new File("/var/corpora/MASC-3.0.0-RC4/resource-header.xml")
+
+File neFile = new File(this.args[0])
+if (!neFile.exists())
+{
+	println "File not found: ${neFile.exists()}"
+	return
+}
+
+GrafParser parser = new GrafParser(new ResourceHeader(headerFile))
+IGraph graph = parser.parse(neFile)
+graph.nodes().each { node ->
+	println "Node: ${node.id}"
+}
+
+println "Done."

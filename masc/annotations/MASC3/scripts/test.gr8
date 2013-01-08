@@ -1,8 +1,39 @@
 /* Grate test. */
+import org.xces.graf.api.*
+import org.xces.graf.io.*
+import org.xces.graf.io.dom.*
 
-if (this.args.size() == 0) {
-	println "No parameters provided."
+//File corpus = new File("/var/corpora/MASC-1.0.4")
+File corpus = new File("/Users/suderman/Projects/masc/3/data/release")
+if (!corpus.exists())
+{
+	println "Corpus not found: ${corpus.path}"
 	return
 }
-println this.args[0].toString()
-println this.args[1].toString()
+
+File data = new File(corpus, "data")
+File headerFile = new File(corpus, "resource-header.xml")
+if (!headerFile.exists())
+{
+	println "Resource header not found."
+	return
+}
+/*
+File file = new File(data, "spoken/court-transcript/Day3PMSession-vc.xml")
+if (!file.exists())
+{
+	println "Data file not found."
+	return
+}
+*/
+//ResourceHeader header = new ResourceHeader(headerFile)
+//GrafParser parser = new GrafParser(header)
+//IGraph graph = parser.parse(file)
+XmlParser parser = new XmlParser()
+File spoken = new File(data, "spoken")
+spoken.eachDirRecurse { dir ->
+	dir.eachFileMatch(~/.*.xml/) { file ->
+		println "Parsing ${file.path}"
+		parser.parse(file)
+	}
+}

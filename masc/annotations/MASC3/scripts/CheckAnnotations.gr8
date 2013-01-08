@@ -1,0 +1,99 @@
+/*
+ * Scans all header files and ensures all annotation files are listed.
+ */
+
+class Printer
+{
+	PrintWriter writer
+	XmlNodePrinter printer
+	
+	public Printer(File file)
+	{
+		writer = new PrintWriter(file, 'UTF-8')
+		printer = new XmlNodePrinter(writer)
+		printer.setPreserveWhitespace(true)
+	}
+	
+	void print(root)
+	{
+		printer.print(root)
+		writer.flush()
+		writer.close()
+	}
+}
+ 
+File resourceHeaderFile = new File("/Users/suderman/Projects/masc/meta/MASC3-resource-header.xml")
+if (!resourceHeaderFile.exists())
+{
+	prinln "MASC 3 resource header not found."
+	return
+}
+def descriptions = [:]
+XmlParser parser = new XmlParser(false, false)
+def resourceHeader = parser.parse(resourceHeaderFile)
+resourceHeader.resourceDesc.annotationDecls.annotationDecl.each { decl ->
+	String id = decl.attribute("xml:id").replace("a.", "f.")
+	String desc = decl."a.desc".text().replaceAll('\\s\\s+', ' ')
+	descriptions[id] = desc 		
+	//println "${id} : ${desc}"
+}
+
+//parser = new XmlParser(false, true)
+File directory = new File(this.args[0])
+def pattern = /.*-(.*)\.xml$/
+directory.eachDirRecurse { dir ->
+	dir.eachFileMatch(~/.*\.hdr/) { file ->
+ 		println file.path
+ 		def header = parser.parse(file)
+ 		boolean save = false
+ 		
+ 		// First iterate through the <annotations> section of the header and collect
+ 		// all the annnotation types that have been defined.
+ 		def types = [:]
+ 		def annotations = header.profileDesc.annotations[0]
+ 		annotations.annotation.each { a ->
+ 			String id = a.@'f.id'
+ 			String path = a.@loc
+ 			if (a.text() == null || a.text() == "")
+ 			{
+ 				println "Missing description for ${id}"
+ 				a.value = descriptions[id]
+ 				if (descriptions[id] == null)
+ 				{
+ 					throw new Exception("No description for ${id}")
+ 				}
+ 				save = true
+ 			}
+ 			types[id] = path
+ 		}
+ 		
+ 		// Now loop through all the standoff annotation files and check if it is 
+ 		// included in the header. If not, add it.
+ 		String basename = file.name.replace('.hdr', '')
+ 		def filter = { it.startsWith(basename) && it.endsWith(".xml") }
+ 		dir.eachFileMatch(filter) { sofile ->
+ 			def matcher = sofile.name =~ pattern
+ 			def type = 'f.' + matcher[0][1]
+ 			def location = types[type]
+ 			if (location == null)
+ 			{
+	 			def atts = [:]
+	 			atts['f.id'] = type
+	 			atts['loc'] = sofile.name	 			
+ 				annotations.appendNode('annotation', atts, descriptions[type])
+ 				println "Missing location information for ${type}"
+ 				save = true
+ 			}
+ 			
+ 		}
+ 		
+ 		// If the header has been modfied it needs to be written to disk.
+ 		if (save)
+ 		{
+ 			//File output = new File(tmpDir, file.name) 			
+ 			Printer printer = new Printer(file)
+ 			println "Writing ${file.path}"
+			printer.print(header)
+		}
+	}
+} 

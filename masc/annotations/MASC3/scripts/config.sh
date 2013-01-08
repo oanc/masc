@@ -2,7 +2,7 @@
 # Do not use "set -e", some scripts need to check error conditions.
 
 # Current MASC version being generated.
-VERSION=3.0.0-RC5
+VERSION=3.0.0-RC6
 
 cd ..
 ROOT=`pwd`
