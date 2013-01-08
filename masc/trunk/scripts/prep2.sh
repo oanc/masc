@@ -12,7 +12,7 @@ java -jar $COPY -in=$IN/new-headers -out=$OUT
 java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=s -in=$IN/sentence-boundaries -out=$OUT -rename="Sentence=s" -id=s
 java $OPTS -jar $CONVERT -xces $LOPTS -set=xces -ann=logical -in=$IN/logical -out=$OUT -rename="@speaker=who" -id=logical -exf="graf:set graf:id graf:edge"
 #java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=hepple -in=$IN/penn-pos -out=$OUT -saveAs=penn -rename="Token=tok @category=msd @root=base" -id=penn #-exf=string
-java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=penn -in=$IN/tok-with-string -out=$OUT -saveAs=penn -rename="Token=tok @category=msd @root=base" -id=penn #-exf=string
+java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=penn -in=$IN/tok-with-string -out=$OUT -saveAs=penn -rename="Token=tok @category=msd @root=base" -id=penn -exf="length orth kind affix"
 java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=np -in=$IN/noun-chunks -out=$OUT -saveAs=nc -rename="np=nchunk NounChunk=nchunk" -id=nc -accept=nchunk -exf="graf:set graf:id graf:edge"
 java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=vp -in=$IN/verb-chunks -out=$OUT -saveAs=vc -rename="vp=vchunk VerbChunk=vchunk VG=vchunk" -id=vc -accept=vchunk -exf="graf:set graf:id graf:edge"
 java $OPTS -jar $CONVERT -xces $LOPTS -set=anc -ann=NE -in=$IN/ne-all -out=$OUT -rename="Person=person Date=date Location=location Organization=org @orgType=type @locType=type @gender=sex" -exf="rule rule1 rule2" -id=ne -accept="person date location org" -saveAs=ne
