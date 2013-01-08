@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+  targetNamespace="http://www.xces.org/ns/GrAF/1.0/" xmlns:schema="http://www.xces.org/ns/GrAF/1.0/">
+  <xs:element name="cesHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="schema:fileDesc"/>
+        <xs:element minOccurs="0" ref="schema:encodingDesc"/>
+        <xs:element ref="schema:profileDesc"/>
+        <xs:element minOccurs="0" ref="schema:revisionDesc"/>
+      </xs:sequence>
+      <xs:attribute name="creator" use="required" type="xs:NCName"/>
+      <xs:attribute name="date.created" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="date.updated" type="xs:NMTOKEN"/>
+      <xs:attribute name="docId" type="xs:NMTOKEN" use="required"/>        
+      <xs:attribute name="version" use="required" type="xs:NMTOKEN"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fileDesc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="schema:titleStmt"/>
+        <xs:element ref="schema:extent"/>
+        <xs:element ref="schema:sourceDesc"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="titleStmt" type="schema:title"/>
+  <xs:element name="extent">
+    <xs:complexType>
+      <xs:attribute name="wordCount" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sourceDesc">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element minOccurs="0" ref="schema:title"/>
+        <xs:element minOccurs="0" ref="schema:author"/>
+        <xs:element minOccurs="0" ref="schema:distributor"/>
+        <xs:element minOccurs="0" ref="schema:idno"/>
+        <xs:element minOccurs="0" ref="schema:publisher"/>
+        <xs:element minOccurs="0" ref="schema:pubAddress"/>
+        <xs:element minOccurs="0" ref="schema:email"/>
+        <xs:element minOccurs="0" ref="schema:url"/>
+        <xs:element minOccurs="0" ref="schema:pubDate"/>
+        <xs:element minOccurs="0" ref="schema:pubName"/>
+        <xs:element minOccurs="0" ref="schema:pubPlace"/>
+        <xs:element minOccurs="0" ref="schema:eAddress"/>
+        <xs:element minOccurs="0" ref="schema:edition"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="edition" type="xs:string"/>
+  <xs:element name="distributor">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="author" type="xs:string"/>
+  <xs:element name="idno">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="publisher">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pubAddress" type="xs:string"/>
+  <xs:element name="eAddress">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="email" type="xs:string"/>
+  <xs:element name="url" type="xs:string"/>
+  <xs:element name="pubDate">
+    <xs:complexType mixed="true">
+      <xs:attribute name="value" type="xs:NMTOKEN"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pubName" type="xs:string"/>
+  <xs:element name="pubPlace" type="xs:anyURI"/>
+  <xs:element name="encodingDesc">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="schema:editorialDecl"/>
+        <xs:element ref="schema:editorialStmt"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editorialDecl" type="xs:string"/>
+  <xs:element name="editorialStmt" type="xs:string"/>
+  <xs:element name="profileDesc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="schema:langUsage"/>
+          <xs:element ref="schema:wsdUsage"/>
+        </xs:sequence>
+        <xs:element ref="schema:textClass"/>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="schema:particDesc"/>
+          <xs:element ref="schema:settingDesc"/>
+        </xs:sequence>
+        <xs:element ref="schema:primaryData"/>
+        <xs:element ref="schema:annotations"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="langUsage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="schema:language"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="language">
+    <xs:complexType mixed="true">
+      <xs:attribute name="iso639" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="wsdUsage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="schema:writingSystem"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="writingSystem">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="textClass">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element minOccurs="0" ref="schema:domain"/>
+        <xs:element minOccurs="0" ref="schema:factuality"/>
+        <xs:element minOccurs="0" ref="schema:preparedness"/>
+        <xs:element minOccurs="0" ref="schema:purpose"/>
+        <xs:element minOccurs="0" ref="schema:subdomain"/>
+        <xs:element minOccurs="0" ref="schema:subject"/>
+        <xs:element minOccurs="0" ref="schema:audience"/>
+        <xs:element minOccurs="0" ref="schema:medium"/>
+      </xs:choice>
+      <xs:attribute name="catRef" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="domain">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="factuality">
+    <xs:complexType>
+      <xs:attribute name="type" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="preparedness">
+    <xs:complexType>
+      <xs:attribute name="type" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="purpose">
+    <xs:complexType>
+      <xs:attribute name="type" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="subdomain" type="xs:string"/>
+  <xs:element name="subject" type="xs:string"/>
+  <xs:element name="audience" type="xs:string"/>
+  <xs:element name="medium" type="xs:string"/>
+  <xs:element name="particDesc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="schema:person"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="person">
+    <xs:complexType mixed="true">
+      <xs:attribute name="age" type="xs:string"/>
+      <xs:attribute name="id" type="xs:NCName"/>
+      <xs:attribute name="role" type="xs:NCName"/>
+      <xs:attribute name="sex" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="settingDesc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="schema:setting"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setting">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element minOccurs="0" ref="schema:time"/>
+        <xs:element minOccurs="0" ref="schema:activity"/>
+        <xs:element minOccurs="0" ref="schema:locale"/>
+      </xs:choice>
+      <xs:attribute name="who"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="time" type="xs:string"/>
+  <xs:element name="activity" type="xs:string"/>
+  <xs:element name="locale" type="xs:string"/>
+  <xs:element name="primaryData">
+    <xs:complexType>
+      <xs:attribute name="loc" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="medium" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="annotations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="schema:annotation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="annotation">
+    <xs:complexType mixed="true">
+      <xs:attribute name="ann.loc" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="type" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="revisionDesc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="schema:change"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="change">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="schema:changeDate"/>
+        <xs:element ref="schema:respName"/>
+        <xs:element maxOccurs="unbounded" ref="schema:item"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="changeDate">
+    <xs:complexType mixed="true">
+      <xs:attribute name="value" type="xs:NMTOKEN"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respName" type="xs:string"/>
+  <xs:element name="item" type="xs:string"/>
+  <xs:complexType name="title">
+    <xs:sequence>
+      <xs:element ref="schema:title"/>
+      <xs:element minOccurs="0" ref="schema:author" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="title" type="xs:string"/>
+</xs:schema>
