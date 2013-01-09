@@ -141,6 +141,13 @@ echo "---------------------------------------------------------"
 # Writes : ./data/release/data
 ./fix-doc.sh
 
+echo "---------------------------------------------------------"
+# Ensures all feature values are represented with @value attributes.
+# Reads  : ./data/release/data
+# Writes : ./data/release/data
+./fix-features.sh
+exit
+
 #echo "---------------------------------------------------------"
 # Load all standoff annotations for all documents.
 # 02Sep12 - Currently causes an out of memory exception.
