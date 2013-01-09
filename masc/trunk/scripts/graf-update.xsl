@@ -100,7 +100,9 @@
             <xsl:attribute name="name">
                 <xsl:value-of select="@name"/>
             </xsl:attribute>
-            <xsl:value-of select="@value"/>
+            <xsl:attribute name="value">
+                <xsl:value-of select="@value"/>
+            </xsl:attribute>
         </xsl:copy>
     </xsl:template>
     
