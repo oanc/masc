@@ -146,7 +146,6 @@ echo "---------------------------------------------------------"
 # Reads  : ./data/release/data
 # Writes : ./data/release/data
 ./fix-features.sh
-exit
 
 #echo "---------------------------------------------------------"
 # Load all standoff annotations for all documents.
