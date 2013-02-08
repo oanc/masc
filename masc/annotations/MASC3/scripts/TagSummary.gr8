@@ -1,0 +1,46 @@
+
+
+File corpus = new File(this.args[0])
+if (!corpus.exists())
+{
+	println "Unable to locate the corpus directory: ${indir.path}"
+	return
+}
+
+File dataDir = new File(corpus, "data")
+if (!dataDir.exists())
+{
+	println "The specified input directory does not appear to be a valid GrAF corpus."
+	return
+}
+
+File headerFile = new File(corpus, "resource-header.xml")
+if (!headerFile.exists())
+{
+	println "Unable to locate the resource header. Is this a valid GrAF corpus?"
+	return
+}
+
+Counter counter = new Counter()
+GrafLoader parser = new GrafLoader(headerFile)
+indir.eachDirRecurse { dir ->
+	dir.eachFileMatch(~/.*\.hdr/) { file ->
+		def counts = [:]
+		println "Loading ${file.path}"
+		IGraph graph = parser.parse(file)
+		graph.nodes().each { node ->
+			node.annotations().each { a ->
+			def	counter = counts[a.label]
+			if (counter == null)
+			{
+				counter = new Counter()
+				counts[a.label] = counter
+			}
+			counter.increment()
+		}
+		counts.each { key,value ->
+			println "${key} ${value}"
+		}
+		println ""
+	}
+}

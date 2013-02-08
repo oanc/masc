@@ -1,3 +1,4 @@
+@GrabResolver(name='anc-releases', root='http://www.anc.org:8080/nexus/content/repositories/releases')
 @Grab(group='org.anc', module='xml', version='2.1.1')
 import org.anc.xml.*
 

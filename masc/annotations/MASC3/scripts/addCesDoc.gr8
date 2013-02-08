@@ -96,7 +96,7 @@ class Processor
 
 	private void process(Record record)
 	{
-		println "Loading ${record.input.path}"
+		//println "Loading ${record.input.path}"
 		IGraph graph = loader.load(record.input)
 		
 		/***
@@ -115,10 +115,12 @@ class Processor
 		int min = Integer.MAX_VALUE
 		boolean insert = true
 		String type = 'cesDoc'
+		boolean found = false
 		graph.nodes().each { node ->
-			if (node.annotation.label == 'cesDoc')
+			if (node.annotation.label == type)
 			{
 				// This graph contains a cesDoc so we don't have to do anything.
+				found = true				
 				return
 			}
 			node.links.each { link ->
@@ -135,6 +137,12 @@ class Processor
 			}
 		}
 
+		if (found)
+		{
+			println "Skipping ${record.input.path}"
+			return
+		}
+		
 		// If we've made it this far then we need to an a cesDoc element.
 		File logicalFile = new File(record.input.path.replace(".hdr", "-logical.xml"))
 		if (!logicalFile.exists())
@@ -147,19 +155,20 @@ class Processor
 		
 		//println "Logical contains ${logical.nodeSetSize} nodes."
 		
-		IAnnotation a = Factory.newAnnotation('xces', 'cesDoc')
+		IAnnotation a = Factory.newAnnotation('cesDoc')
+		a.setAnnotationSpace(XCES)
 		a.setId("logical-doc-a")
 		INode node = Factory.newNode("logical-doc-n")
 		node.addAnnotation(a)
 		
 		IAnchorFactory anchorFactory = Factory.newCharacterAnchorFactory()
 		IAnchor startAnchor = anchorFactory.newAnchor(min)
-		IAnchor endAnchor = anchorFactory.newAnchor(max)
+		IAnchor endAnchor = anchorFactory.newAnchor(max+1)
 		IRegion region = Factory.newRegion("logical-doc-r", startAnchor, endAnchor)
 		node.addRegion(region)
 		
 		logical.addNode(node)
-
+		logical.addRegion(region)
 		File parent = record.output.parentFile
 		if (!parent.exists())
 		{

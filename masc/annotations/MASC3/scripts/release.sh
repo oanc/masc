@@ -33,7 +33,7 @@ echo "---------------------------------------------------------"
 # Removes leading and trailing whitespace in regions.
 # Reads  : ./data/data
 # Writes : ./data/data
-./trim.sh
+#./trim.sh
 
 echo "---------------------------------------------------------"
 # Generates headers from the MASC-MASTER file.
@@ -78,21 +78,18 @@ echo "---------------------------------------------------------"
 # Writes : ./data/working/release
 ./convert.sh #SBI
 
-echo "---------------------------------------------------------"
+#echo "---------------------------------------------------------"
 # Check annotation alignment, that is whitespace at the
 # start or end of an annotation. Makes sure the trim.sh
 # script worked.
 # Reads  : ./data/working/release
 # Writes : nothing
-./check-align.sh #SBI
+#./check-align.sh #SBI
 
 ## TODO Change this to copy files from MASC2.
 #echo "---------------------------------------------------------"
 # Convert the existing MASC1 files into the new format.
 #./masc1.sh 
-
-### REMOVE ###
-#exit
 
 echo "---------------------------------------------------------"
 # Fix any dependencies in the standoff annotation files that do
@@ -146,6 +143,7 @@ echo "---------------------------------------------------------"
 # Reads  : ./data/release/data
 # Writes : ./data/release/data
 ./fix-features.sh
+
 
 #echo "---------------------------------------------------------"
 # Load all standoff annotations for all documents.

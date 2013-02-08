@@ -7,10 +7,10 @@ source ./config.sh
 LOCAL=/home/www/anc/masc/download
 WEB=suderman@anc.org:$LOCAL
 
-echo "Copying to local corpora directory"
+#echo "Copying to local corpora directory"
 #cp -r $RELEASE/data $DEPLOY_DIR
 #cp $RELEASE/*.xml $DEPLOY_DIR
-cp -r $RELEASE $DEPLOY_DIR
+#cp -r $RELEASE $DEPLOY_DIR
 
 if [ -e $LOCAL ] ; then
     # This will (should) only be true 
