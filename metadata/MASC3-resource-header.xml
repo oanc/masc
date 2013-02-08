@@ -102,16 +102,16 @@
                     <category xml:id="ES">
                         <catDesc>essays</catDesc>
                     </category>
-                    <category id="JK">
+                    <category xml:id="JK">
                         <catDesc>jokes</catDesc>
                     </category>
-                    <category id="FT">
+                    <category xml:id="FT">
                         <catDesc>ficlets (fiction)</catDesc>
                     </category>
-                    <category id="MS">
+                    <category xml:id="MS">
                         <catDesc>movie scripts</catDesc>
                     </category>
-                    <category id="TW">
+                    <category xml:id="TW">
                         <catDesc>tweets</catDesc>
                     </category>
                 </category>
@@ -155,33 +155,33 @@
                         f.logical
                         f.ptbtok
                         f.fntok
-                        f.penn-pos
-                        f.nounchunks
-                        f.verbchunks
-                        f.sentence
-                        f.entities
+                        f.penn
+                        f.nc
+                        f.vc
+                        f.s
+                        f.ne
                         f.ptb
-                        f.framenet
-                        f.wordnet
-                        f.opinion
-                        f.belief
+                        f.fn
+                        f.wn
+                        f.mpqa
+                        f.cb
                         f.event"/>
                     <directory xml:id="spoken" d.name="spoken"
-                        f.ids="primary
+                        f.ids="f.primary
                         f.seg
                         f.logical
                         f.ptbtok
                         f.fntok
-                        f.penn-pos
-                        f.nounchunks
-                        f.verbchunks
-                        f.sentence
-                        f.entities
+                        f.penn
+                        f.nc
+                        f.vc
+                        f.s
+                        f.ne
                         f.ptb
-                        f.framenet
-                        f.wordnet
-                        f.opinion
-                        f.belief
+                        f.fn
+                        f.wn
+                        f.mpqa
+                        f.cb
                         f.event"
                     />
                 </directory>
@@ -200,20 +200,20 @@
                 <fileType xml:id="f.fntok" f.suffix="fntok" a.ids="a.fntok" medium="xml">
                     <requires f.id="f.seg"/>
                 </fileType>
-                <fileType xml:id="f.penn-pos" f.suffix="penn" a.ids="a.penn" medium="xml">
+                <fileType xml:id="f.penn" f.suffix="penn" a.ids="a.penn" medium="xml">
                     <requires f.id="f.seg"/>
                 </fileType>
-                <fileType xml:id="f.nounchunks" f.suffix="nc" a.ids="a.nc" medium="xml">
-                    <requires f.id="f.ptbtok"/>
+                <fileType xml:id="f.nc" f.suffix="nc" a.ids="a.nc" medium="xml">
+                    <requires f.id="f.penn"/>
                 </fileType>
-                <fileType xml:id="f.verbchunks" f.suffix="vc" a.ids="a.vc" medium="xml">
-                    <requires f.id="f.ptbtok"/>
+                <fileType xml:id="f.vc" f.suffix="vc" a.ids="a.vc" medium="xml">
+                    <requires f.id="f.penn"/>
                 </fileType>
-                <fileType xml:id="f.sentence" f.suffix="s" a.ids="a.s" medium="xml">
+                <fileType xml:id="f.s" f.suffix="s" a.ids="a.s" medium="xml">
                     <requires f.id="f.primary"/>
                 </fileType>
-                <fileType xml:id="f.entities" f.suffix="ne" a.ids="a.ne" medium="xml">
-                    <requires f.id="f.ptbtok"/>
+                <fileType xml:id="f.ne" f.suffix="ne" a.ids="a.ne" medium="xml">
+                    <requires f.id="f.penn"/>
                 </fileType>
                 <fileType xml:id="f.ptb" f.suffix="ptb" a.ids="a.ptb" medium="xml">
                     <requires f.id="f.ptbtok"/>
@@ -221,22 +221,22 @@
                 <fileType xml:id="f.framenet" f.suffix="fn" a.ids="a.fn" medium="xml">
                     <requires f.id="f.fntok"/>
                 </fileType>
-                <fileType xml:id="f.wordnet" f.suffix="wn" a.ids="a.wn" medium="xml">
-                    <requires f.id="f.sentence"/>
+                <fileType xml:id="f.wn" f.suffix="wn" a.ids="a.wn" medium="xml">
+                    <requires f.id="f.s"/>
                 </fileType>
-                <fileType xml:id="f.opinion" f.suffix="mpqa" a.ids="a.mpqa" medium="xml">
-                    <requires f.id="f.ptbtok"/>
+                <fileType xml:id="f.mpqa" f.suffix="mpqa" a.ids="a.mpqa" medium="xml">
+                    <requires f.id="f.penn"/>
                 </fileType>
-                <fileType xml:id="f.belief" f.suffix="cb" a.ids="a.cb" medium="xml">
-                    <requires f.id="f.ptbtok"/>
+                <fileType xml:id="f.cb" f.suffix="cb" a.ids="a.cb" medium="xml">
+                    <requires f.id="f.penn"/>
                 </fileType>
                 <fileType xml:id="f.event" f.suffix="event" a.ids="a.event" medium="xml">
-                    <requires f.id="f.ptbtok"/>
+                    <requires f.id="f.event"/>
                 </fileType>
             </fileTypes>
         </fileStruct>
         <annotationSpaces>
-            <annotationSpace xml:id="xces" lnk:href="http://www.xces.org/ns/GrAF/1.0/"/>
+            <annotationSpace xml:id="xces" pid="http://www.xces.org/ns/GrAF/1.0/"/>
             <annotationSpace xml:id="anc" pid="http://www.anc.org/ns/masc/"/>
             <annotationSpace xml:id="ptb" pid="http://www.cis.upenn.edu/~treebank/"/>
             <annotationSpace xml:id="wn" pid="http://wordnet.princeton.edu/"/>
