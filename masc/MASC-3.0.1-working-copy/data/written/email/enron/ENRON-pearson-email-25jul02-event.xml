@@ -1,0 +1,76 @@
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:graf="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl>
+      <labelUsage label="Calling" occurs="1"/>
+      <labelUsage label="Not Talking" occurs="1"/>
+      <labelUsage label="Giving1" occurs="1"/>
+      <labelUsage label="Going On2" occurs="1"/>
+      <labelUsage label="Going On1" occurs="1"/>
+      <labelUsage label="Giving2" occurs="1"/>
+    </labelsDecl>
+    <annotationSpaces>
+      <annotationSpace as.id="event"/>
+    </annotationSpaces>
+  </graphHeader>
+  <region xml:id="event-r2" anchors="432 432"/>
+  <region xml:id="event-r1" anchors="432 432"/>
+  <region xml:id="event-r0" anchors="432 432"/>
+  <region xml:id="event-r5" anchors="432 432"/>
+  <region xml:id="event-r4" anchors="432 432"/>
+  <region xml:id="event-r3" anchors="432 432"/>
+  <node xml:id="event-n0">
+    <link targets="event-r0"/>
+  </node>
+  <a xml:id="event-N65609" label="Going On1" ref="event-n0" as="event">
+    <fs>
+      <f name="theme" value="what"/>
+    </fs>
+  </a>
+  <node xml:id="event-n1">
+    <link targets="event-r1"/>
+  </node>
+  <a xml:id="event-N65629" label="Not Talking" ref="event-n1" as="event">
+    <fs>
+      <f name="agent" value="I"/>
+      <f name="time" value="in a while"/>
+      <f name="theme" value="you"/>
+    </fs>
+  </a>
+  <node xml:id="event-n2">
+    <link targets="event-r2"/>
+  </node>
+  <a xml:id="event-N65657" label="Giving1" ref="event-n2" as="event">
+    <fs>
+      <f name="theme" value="scope"/>
+      <f name="recipient" value="you"/>
+    </fs>
+  </a>
+  <node xml:id="event-n3">
+    <link targets="event-r3"/>
+  </node>
+  <a xml:id="event-N65681" label="Going On2" ref="event-n3" as="event">
+    <fs>
+      <f name="theme1" value="whats"/>
+      <f name="theme2" value="me"/>
+    </fs>
+  </a>
+  <node xml:id="event-n4">
+    <link targets="event-r4"/>
+  </node>
+  <a xml:id="event-N65705" label="Giving2" ref="event-n4" as="event">
+    <fs>
+      <f name="recipient" value="me"/>
+      <f name="time" value="sometime"/>
+      <f name="theme" value="Calling"/>
+    </fs>
+  </a>
+  <node xml:id="event-n5">
+    <link targets="event-r5"/>
+  </node>
+  <a xml:id="event-N65733" label="Calling" ref="event-n5" as="event">
+    <fs>
+      <f name="time" value="sometime"/>
+      <f name="recipient" value="me"/>
+    </fs>
+  </a>
+</graph>

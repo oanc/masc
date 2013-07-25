@@ -1,0 +1,64 @@
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:graf="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl>
+      <labelUsage label="person" occurs="1"/>
+      <labelUsage label="location" occurs="2"/>
+      <labelUsage label="date" occurs="1"/>
+    </labelsDecl>
+    <dependencies>
+      <dependsOn f.id="f.penn"/>
+    </dependencies>
+    <annotationSpaces>
+      <annotationSpace as.id="anc"/>
+    </annotationSpaces>
+  </graphHeader>
+  <node xml:id="ne-n0"/>
+  <a xml:id="ne-N65575" label="person" ref="ne-n0" as="anc">
+    <fs>
+      <f name="sex" value="male"/>
+      <f name="id" value="294"/>
+    </fs>
+  </a>
+  <node xml:id="ne-n1"/>
+  <a xml:id="ne-N65595" label="date" ref="ne-n1" as="anc">
+    <fs>
+      <f name="kind" value="dateTime"/>
+      <f name="id" value="1001"/>
+    </fs>
+  </a>
+  <node xml:id="ne-n2"/>
+  <a xml:id="ne-N65615" label="location" ref="ne-n2" as="anc">
+    <fs>
+      <f name="id" value="296"/>
+      <f name="person" value="third"/>
+      <f name="case" value="objective"/>
+      <f name="number" value="singular"/>
+      <f name="type" value="city"/>
+    </fs>
+  </a>
+  <node xml:id="ne-n3"/>
+  <a xml:id="ne-N65647" label="location" ref="ne-n3" as="anc">
+    <fs>
+      <f name="id" value="297"/>
+      <f name="person" value="third"/>
+      <f name="case" value="objective"/>
+      <f name="number" value="singular"/>
+      <f name="type" value="province_state"/>
+    </fs>
+  </a>
+  <edge xml:id="ne-lnk1" from="ne-n0" to="penn-n4"/>
+  <edge xml:id="ne-lnk0" from="ne-n0" to="penn-n3"/>
+  <edge xml:id="ne-lnk14" from="ne-n3" to="penn-n190"/>
+  <edge xml:id="ne-lnk13" from="ne-n2" to="penn-n188"/>
+  <edge xml:id="ne-lnk12" from="ne-n1" to="penn-n36"/>
+  <edge xml:id="ne-lnk9" from="ne-n1" to="penn-n33"/>
+  <edge xml:id="ne-lnk11" from="ne-n1" to="penn-n35"/>
+  <edge xml:id="ne-lnk8" from="ne-n1" to="penn-n32"/>
+  <edge xml:id="ne-lnk10" from="ne-n1" to="penn-n34"/>
+  <edge xml:id="ne-lnk7" from="ne-n1" to="penn-n31"/>
+  <edge xml:id="ne-lnk6" from="ne-n1" to="penn-n30"/>
+  <edge xml:id="ne-lnk5" from="ne-n1" to="penn-n29"/>
+  <edge xml:id="ne-lnk4" from="ne-n1" to="penn-n28"/>
+  <edge xml:id="ne-lnk3" from="ne-n1" to="penn-n27"/>
+  <edge xml:id="ne-lnk2" from="ne-n1" to="penn-n26"/>
+</graph>

@@ -1,0 +1,59 @@
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:graf="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl>
+      <labelUsage label="date" occurs="3"/>
+      <labelUsage label="org" occurs="1"/>
+    </labelsDecl>
+    <dependencies>
+      <dependsOn f.id="f.penn"/>
+    </dependencies>
+    <annotationSpaces>
+      <annotationSpace as.id="anc"/>
+    </annotationSpaces>
+  </graphHeader>
+  <node xml:id="ne-n0"/>
+  <a xml:id="ne-N65571" label="date" ref="ne-n0" as="anc">
+    <fs>
+      <f name="kind" value="dateTime"/>
+      <f name="id" value="1"/>
+    </fs>
+  </a>
+  <node xml:id="ne-n1"/>
+  <a xml:id="ne-N65591" label="date" ref="ne-n1" as="anc">
+    <fs>
+      <f name="id" value="2"/>
+      <f name="kind" value="duration"/>
+    </fs>
+  </a>
+  <node xml:id="ne-n2"/>
+  <a xml:id="ne-N65611" label="date" ref="ne-n2" as="anc">
+    <fs>
+      <f name="id" value="3"/>
+      <f name="kind" value="date"/>
+    </fs>
+  </a>
+  <node xml:id="ne-n3"/>
+  <a xml:id="ne-N65631" label="org" ref="ne-n3" as="anc">
+    <fs>
+      <f name="type" value="other"/>
+      <f name="id" value="162"/>
+    </fs>
+  </a>
+  <edge xml:id="ne-lnk1" from="ne-n0" to="penn-n3"/>
+  <edge xml:id="ne-lnk0" from="ne-n0" to="penn-n2"/>
+  <edge xml:id="ne-lnk16" from="ne-n3" to="penn-n111"/>
+  <edge xml:id="ne-lnk15" from="ne-n3" to="penn-n110"/>
+  <edge xml:id="ne-lnk14" from="ne-n3" to="penn-n109"/>
+  <edge xml:id="ne-lnk13" from="ne-n3" to="penn-n108"/>
+  <edge xml:id="ne-lnk12" from="ne-n2" to="penn-n107"/>
+  <edge xml:id="ne-lnk9" from="ne-n1" to="penn-n58"/>
+  <edge xml:id="ne-lnk11" from="ne-n1" to="penn-n60"/>
+  <edge xml:id="ne-lnk8" from="ne-n1" to="penn-n57"/>
+  <edge xml:id="ne-lnk10" from="ne-n1" to="penn-n59"/>
+  <edge xml:id="ne-lnk7" from="ne-n0" to="penn-n9"/>
+  <edge xml:id="ne-lnk6" from="ne-n0" to="penn-n8"/>
+  <edge xml:id="ne-lnk5" from="ne-n0" to="penn-n7"/>
+  <edge xml:id="ne-lnk4" from="ne-n0" to="penn-n6"/>
+  <edge xml:id="ne-lnk3" from="ne-n0" to="penn-n5"/>
+  <edge xml:id="ne-lnk2" from="ne-n0" to="penn-n4"/>
+</graph>

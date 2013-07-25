@@ -1,0 +1,95 @@
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:graf="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl>
+      <labelUsage label="person" occurs="3"/>
+      <labelUsage label="location" occurs="2"/>
+      <labelUsage label="date" occurs="2"/>
+    </labelsDecl>
+    <dependencies>
+      <dependsOn f.id="f.penn"/>
+    </dependencies>
+    <annotationSpaces>
+      <annotationSpace as.id="anc"/>
+    </annotationSpaces>
+  </graphHeader>
+  <node xml:id="ne-n0"/>
+  <a xml:id="ne-N65575" label="date" ref="ne-n0" as="anc">
+    <fs>
+      <f name="id" value="1029"/>
+      <f name="kind" value="dateTime"/>
+    </fs>
+  </a>
+  <node xml:id="ne-n1"/>
+  <a xml:id="ne-N65595" label="person" ref="ne-n1" as="anc">
+    <fs>
+      <f name="id" value="275"/>
+      <f name="sex" value="male"/>
+    </fs>
+  </a>
+  <node xml:id="ne-n2"/>
+  <a xml:id="ne-N65615" label="person" ref="ne-n2" as="anc">
+    <fs>
+      <f name="id" value="277"/>
+      <f name="person" value="third"/>
+      <f name="case" value="nominative"/>
+      <f name="number" value="singular"/>
+      <f name="sex" value="female"/>
+    </fs>
+  </a>
+  <node xml:id="ne-n3"/>
+  <a xml:id="ne-N65647" label="location" ref="ne-n3" as="anc">
+    <fs>
+      <f name="id" value="279"/>
+      <f name="person" value="third"/>
+      <f name="case" value="nominative"/>
+      <f name="number" value="singular"/>
+      <f name="type" value="province_state"/>
+    </fs>
+  </a>
+  <node xml:id="ne-n4"/>
+  <a xml:id="ne-N65679" label="date" ref="ne-n4" as="anc">
+    <fs>
+      <f name="kind" value="duration"/>
+      <f name="id" value="33265"/>
+    </fs>
+  </a>
+  <node xml:id="ne-n5"/>
+  <a xml:id="ne-N65699" label="person" ref="ne-n5" as="anc">
+    <fs>
+      <f name="id" value="2678"/>
+      <f name="person" value="third"/>
+      <f name="case" value="nominative"/>
+      <f name="number" value="singular"/>
+      <f name="sex" value="male"/>
+    </fs>
+  </a>
+  <node xml:id="ne-n6"/>
+  <a xml:id="ne-N65731" label="location" ref="ne-n6" as="anc">
+    <fs>
+      <f name="number" value="singular"/>
+      <f name="type" value="province_state"/>
+      <f name="id" value="299"/>
+      <f name="person" value="third"/>
+      <f name="case" value="nominative"/>
+    </fs>
+  </a>
+  <edge xml:id="ne-lnk18" from="ne-n6" to="penn-n179"/>
+  <edge xml:id="ne-lnk17" from="ne-n5" to="penn-n177"/>
+  <edge xml:id="ne-lnk16" from="ne-n5" to="penn-n176"/>
+  <edge xml:id="ne-lnk15" from="ne-n4" to="penn-n165"/>
+  <edge xml:id="ne-lnk14" from="ne-n4" to="penn-n164"/>
+  <edge xml:id="ne-lnk13" from="ne-n4" to="penn-n163"/>
+  <edge xml:id="ne-lnk12" from="ne-n3" to="penn-n120"/>
+  <edge xml:id="ne-lnk11" from="ne-n2" to="penn-n118"/>
+  <edge xml:id="ne-lnk10" from="ne-n2" to="penn-n117"/>
+  <edge xml:id="ne-lnk9" from="ne-n1" to="penn-n14"/>
+  <edge xml:id="ne-lnk8" from="ne-n1" to="penn-n13"/>
+  <edge xml:id="ne-lnk7" from="ne-n0" to="penn-n9"/>
+  <edge xml:id="ne-lnk6" from="ne-n0" to="penn-n8"/>
+  <edge xml:id="ne-lnk5" from="ne-n0" to="penn-n7"/>
+  <edge xml:id="ne-lnk4" from="ne-n0" to="penn-n6"/>
+  <edge xml:id="ne-lnk3" from="ne-n0" to="penn-n5"/>
+  <edge xml:id="ne-lnk2" from="ne-n0" to="penn-n4"/>
+  <edge xml:id="ne-lnk1" from="ne-n0" to="penn-n3"/>
+  <edge xml:id="ne-lnk0" from="ne-n0" to="penn-n2"/>
+</graph>

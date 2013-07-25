@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+    <graphHeader>
+        <labelsDecl>
+            <labelUsage label="p" occurs="4"/>
+            <labelUsage label="cesDoc" occurs="1"/>
+            <labelUsage label="heading" occurs="1"/>
+        </labelsDecl>
+        <annotationSpaces>
+            <annotationSpace as.id="xces"/>
+        </annotationSpaces>
+    </graphHeader>
+    <region xml:id="logical-doc-r" anchors="0 596"/>
+    <region xml:id="logical-r0" anchors="0 165"/>
+    <region xml:id="logical-r1" anchors="167 393"/>
+    <region xml:id="logical-r2" anchors="395 405"/>
+    <region xml:id="logical-r3" anchors="407 550"/>
+    <region xml:id="logical-r4" anchors="551 595"/>
+    <node xml:id="logical-doc-n">
+        <link targets="logical-doc-r"/>
+    </node>
+    <a xml:id="logical-doc-a" label="cesDoc" ref="logical-doc-n" as="xces"/>
+    <node xml:id="logical-n0">
+        <link targets="logical-r0"/>
+    </node>
+    <a xml:id="logical-N65573" label="heading" ref="logical-n0" as="xces">
+        <fs>
+            <f name="type" value="email"/>
+        </fs>
+    </a>
+    <node xml:id="logical-n1">
+        <link targets="logical-r1"/>
+    </node>
+    <a xml:id="logical-N65597" label="p" ref="logical-n1" as="xces"/>
+    <node xml:id="logical-n2">
+        <link targets="logical-r2"/>
+    </node>
+    <a xml:id="logical-N65613" label="p" ref="logical-n2" as="xces"/>
+    <node xml:id="logical-n3">
+        <link targets="logical-r3"/>
+    </node>
+    <a xml:id="logical-N65629" label="p" ref="logical-n3" as="xces"/>
+    <node xml:id="logical-n4">
+        <link targets="logical-r4"/>
+    </node>
+    <a xml:id="logical-N65645" label="p" ref="logical-n4" as="xces"/>
+</graph>

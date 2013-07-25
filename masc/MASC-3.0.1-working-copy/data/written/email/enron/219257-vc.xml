@@ -1,0 +1,32 @@
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:graf="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl>
+      <labelUsage label="vchunk" occurs="2"/>
+    </labelsDecl>
+    <dependencies>
+      <dependsOn f.id="f.penn"/>
+    </dependencies>
+    <annotationSpaces>
+      <annotationSpace as.id="anc"/>
+    </annotationSpaces>
+  </graphHeader>
+  <node xml:id="vc-n0"/>
+  <a xml:id="vc-N65567" label="vchunk" ref="vc-n0" as="anc">
+    <fs>
+      <f name="voice" value="active"/>
+      <f name="tense" value="Inf"/>
+      <f name="type" value="NFVG"/>
+    </fs>
+  </a>
+  <node xml:id="vc-n1"/>
+  <a xml:id="vc-N65591" label="vchunk" ref="vc-n1" as="anc">
+    <fs>
+      <f name="neg" value="no"/>
+      <f name="tense" value="Inf"/>
+      <f name="type" value="NFVG"/>
+      <f name="voice" value="active"/>
+    </fs>
+  </a>
+  <edge xml:id="vc-lnk1" from="vc-n1" to="penn-n86"/>
+  <edge xml:id="vc-lnk0" from="vc-n0" to="penn-n85"/>
+</graph>

@@ -1,0 +1,40 @@
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:graf="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl>
+      <labelUsage label="person" occurs="2"/>
+      <labelUsage label="org" occurs="1"/>
+    </labelsDecl>
+    <dependencies>
+      <dependsOn f.id="f.penn"/>
+    </dependencies>
+    <annotationSpaces>
+      <annotationSpace as.id="anc"/>
+    </annotationSpaces>
+  </graphHeader>
+  <node xml:id="ne-n0"/>
+  <a xml:id="ne-N65571" label="org" ref="ne-n0" as="anc">
+    <fs>
+      <f name="type" value="company"/>
+    </fs>
+  </a>
+  <node xml:id="ne-n1"/>
+  <a xml:id="ne-N65587" label="person" ref="ne-n1" as="anc">
+    <fs>
+      <f name="sex" value="female"/>
+    </fs>
+  </a>
+  <node xml:id="ne-n2"/>
+  <a xml:id="ne-N65603" label="person" ref="ne-n2" as="anc">
+    <fs>
+      <f name="sex" value="female"/>
+    </fs>
+  </a>
+  <edge xml:id="ne-lnk3" from="ne-n0" to="penn-n19"/>
+  <edge xml:id="ne-lnk2" from="ne-n0" to="penn-n18"/>
+  <edge xml:id="ne-lnk1" from="ne-n0" to="penn-n17"/>
+  <edge xml:id="ne-lnk0" from="ne-n0" to="penn-n16"/>
+  <edge xml:id="ne-lnk7" from="ne-n2" to="penn-n177"/>
+  <edge xml:id="ne-lnk6" from="ne-n2" to="penn-n176"/>
+  <edge xml:id="ne-lnk5" from="ne-n1" to="penn-n174"/>
+  <edge xml:id="ne-lnk4" from="ne-n1" to="penn-n173"/>
+</graph>

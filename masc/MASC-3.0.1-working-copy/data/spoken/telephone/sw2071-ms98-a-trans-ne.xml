@@ -1,0 +1,36 @@
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:graf="http://www.xces.org/ns/GrAF/1.0/">
+  <graphHeader>
+    <labelsDecl>
+      <labelUsage label="person" occurs="1"/>
+      <labelUsage label="org" occurs="2"/>
+    </labelsDecl>
+    <dependencies>
+      <dependsOn f.id="f.penn"/>
+    </dependencies>
+    <annotationSpaces>
+      <annotationSpace as.id="anc"/>
+    </annotationSpaces>
+  </graphHeader>
+  <node xml:id="ne-n0"/>
+  <a xml:id="ne-N65571" label="person" ref="ne-n0" as="anc">
+    <fs>
+      <f name="sex" value="female"/>
+    </fs>
+  </a>
+  <node xml:id="ne-n1"/>
+  <a xml:id="ne-N65587" label="org" ref="ne-n1" as="anc">
+    <fs>
+      <f name="type" value="corporation"/>
+    </fs>
+  </a>
+  <node xml:id="ne-n2"/>
+  <a xml:id="ne-N65603" label="org" ref="ne-n2" as="anc">
+    <fs>
+      <f name="type" value="corporation"/>
+    </fs>
+  </a>
+  <edge xml:id="ne-lnk3" from="ne-n2" to="penn-n677"/>
+  <edge xml:id="ne-lnk2" from="ne-n1" to="penn-n639"/>
+  <edge xml:id="ne-lnk1" from="ne-n1" to="penn-n638"/>
+  <edge xml:id="ne-lnk0" from="ne-n0" to="penn-n1"/>
+</graph>
