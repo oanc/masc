@@ -1,0 +1,13 @@
+subject = " Re : CHARSET considerations "
+I have n't followed this discussion , but Pine does do a few things with character sets .
+For example if you set Pine to use ISO-8859-1 and send an all ASCII message it will tag it US-ASCII instead of ISO-8859-1 .
+Also , it 's smart enough to display the lower 128 for all incoming messages in the ISO-8859-X characters sets and greek the ones it ca n't if the character set of the receiving Pine is US-ASCII or ISO-8859-X .
+Thought that was what required for minimal MIME compliance .
+Hope I have n't upgraded the sin from omission to comision ....
+LL
+Steve - Thanks for your comments .
+You need n't convince me ; I 've been involved with the MIME charset issue for a long time you 'll note that I am one of the authors of the ISO-2022-JP spec .
+In defense of the other Pine team members , the sin is one of omission rather than of comission ; they wanted to do something about character sets and did n't want to wire in a table of legal values since it might change .
+I 've suggested that as a first pass the charset should only be settable in the system config file , and that the charset always be coerced to US-ASCII unless the text contains 8 - bit characters and $$ or has `` funny '' control characters such as ESC or SI$$SO .
+More work would definitely be needed in this area , but you 'll appreciate that there are other , higher priorities just now ...
+-- Mark --
