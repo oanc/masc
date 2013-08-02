@@ -159,9 +159,9 @@
       <feat name="id" value="c121"/>
    </struct>
    <struct type="MARKER" from="1754" to="1761">
-      <feat name="CONNECT" value="relate"/>
-      <feat name="TYPE" value="ext"/>
       <feat name="NUC" value="N_N"/>
+      <feat name="TYPE" value="ext"/>
+      <feat name="CONNECT" value="relate"/>
    </struct>
    <struct type="Clause" from="1805" to="1840">
       <feat name="type" value="SENTENCE"/>
@@ -264,9 +264,9 @@
       <feat name="id" value="c140"/>
    </struct>
    <struct type="MARKER" from="3026" to="3029">
-      <feat name="CONNECT" value="relate"/>
-      <feat name="TYPE" value="ext"/>
       <feat name="NUC" value="N_N"/>
+      <feat name="TYPE" value="ext"/>
+      <feat name="CONNECT" value="relate"/>
    </struct>
    <struct type="Clause" from="3091" to="3149">
       <feat name="type" value="SENTENCE"/>
@@ -276,9 +276,15 @@
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c142"/>
    </struct>
-   <struct type="Clause" from="3177" to="3223">
+   <struct type="Clause" from="3177" to="3206">
       <feat name="type" value="MARKER_"/>
       <feat name="id" value="c143"/>
+   </struct>
+   <struct type="MARKER" from="3177" to="3181">
+      <feat name="NUC" value="N_S"/>
+   </struct>
+   <struct type="Clause" from="3206" to="3223">
+      <feat name="CONTINUE" value="c142"/>
    </struct>
    <struct type="Clause" from="3224" to="3249">
       <feat name="type" value="SENTENCE"/>
@@ -292,11 +298,14 @@
       <feat name="type" value="MARKER_"/>
       <feat name="id" value="c146"/>
    </struct>
-   <struct type="Clause" from="3290" to="3305">
+   <struct type="MARKER" from="3262" to="3266">
+      <feat name="NUC" value="N_S"/>
+   </struct>
+   <struct type="Clause" from="3290" to="3306">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c147"/>
    </struct>
-   <struct type="Clause" from="3305" to="3322">
+   <struct type="Clause" from="3307" to="3322">
       <feat name="type" value="VERB_"/>
       <feat name="id" value="c148"/>
    </struct>
@@ -304,25 +313,36 @@
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c149"/>
    </struct>
+   <struct type="MARKER" from="3323" to="3332">
+      <feat name="CONNECT" value="relate"/>
+      <feat name="TYPE" value="ext"/>
+      <feat name="NUC" value="N_S"/>
+   </struct>
    <struct type="Clause" from="3428" to="3481">
       <feat name="type" value="COMB_"/>
       <feat name="id" value="c150"/>
    </struct>
+   <struct type="MARKER" from="3428" to="3432">
+      <feat name="NUC" value="N_S"/>
+   </struct>
    <struct type="Clause" from="3587" to="3620">
-      <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c151"/>
+      <feat name="type" value="SENTENCE"/>
    </struct>
-   <struct type="Clause" from="3621" to="3736">
-      <feat name="type" value="VERB_"/>
-      <feat name="id" value="c152"/>
+   <struct type="Clause" from="3621" to="3657"/>
+   <struct type="Clause" from="3658" to="3736">
+      <feat name="CONTINUE" value="c151"/>
    </struct>
-   <struct type="Clause" from="3737" to="3762">
+   <struct type="Clause" from="3737" to="3776">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c153"/>
    </struct>
    <struct type="Clause" from="3777" to="3913">
       <feat name="type" value="MARKER_"/>
       <feat name="id" value="c154"/>
+   </struct>
+   <struct type="MARKER" from="3777" to="3781">
+      <feat name="NUC" value="N_S"/>
    </struct>
    <struct type="Clause" from="3914" to="3966">
       <feat name="type" value="SENTENCE"/>
@@ -332,9 +352,19 @@
       <feat name="type" value="COMB_"/>
       <feat name="id" value="c156"/>
    </struct>
-   <struct type="Clause" from="4055" to="4160">
+   <struct type="MARKER" from="3967" to="3970">
+      <feat name="NUC" value="N_N"/>
+   </struct>
+   <struct type="MARKER" from="3971" to="3982">
+      <feat name="NUC" value="_SN"/>
+   </struct>
+   <struct type="Clause" from="4055" to="4124">
       <feat name="type" value="COMB_"/>
       <feat name="id" value="c157"/>
+   </struct>
+   <struct type="Clause" from="4125" to="4160"/>
+   <struct type="MARKER" from="4125" to="4135">
+      <feat name="NUC" value="N_S"/>
    </struct>
    <struct type="Clause" from="4161" to="4223">
       <feat name="type" value="SENTENCE"/>
@@ -344,6 +374,9 @@
       <feat name="type" value="COMB_"/>
       <feat name="id" value="c159"/>
    </struct>
+   <struct type="MARKER" from="4224" to="4232">
+      <feat name="NUC" value="N_N"/>
+   </struct>
    <struct type="Clause" from="4312" to="4352">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c160"/>
@@ -351,6 +384,9 @@
    <struct type="Clause" from="4353" to="4459">
       <feat name="type" value="COMB_"/>
       <feat name="id" value="c161"/>
+   </struct>
+   <struct type="MARKER" from="4353" to="4358">
+      <feat name="NUC" value="N_N"/>
    </struct>
    <struct type="Clause" from="4460" to="4517">
       <feat name="type" value="SENTENCE"/>
@@ -388,23 +424,29 @@
       <feat name="type" value="MARKER_"/>
       <feat name="id" value="c170"/>
    </struct>
+   <struct type="MARKER" from="4820" to="4823">
+      <feat name="NUC" value="N_N"/>
+   </struct>
    <struct type="Clause" from="4841" to="4857">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c171"/>
    </struct>
-   <struct type="Clause" from="4858" to="4869">
+   <struct type="Clause" from="4858" to="4879">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c172"/>
    </struct>
-   <struct type="Clause" from="4870" to="4919">
+   <struct type="Clause" from="4880" to="4919">
       <feat name="type" value="MARKER_"/>
       <feat name="id" value="c173"/>
+   </struct>
+   <struct type="MARKER" from="4880" to="4883">
+      <feat name="NUC" value="N_N"/>
    </struct>
    <struct type="Clause" from="4920" to="4969">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c174"/>
    </struct>
-   <struct type="Clause" from="4970" to="4977">
+   <struct type="Clause" from="4970" to="4978">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c175"/>
    </struct>
@@ -416,7 +458,7 @@
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c177"/>
    </struct>
-   <struct type="Clause" from="5014" to="5027">
+   <struct type="Clause" from="5014" to="5028">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c178"/>
    </struct>
@@ -436,22 +478,36 @@
       <feat name="type" value="VERB_"/>
       <feat name="id" value="c182"/>
    </struct>
-   <struct type="Clause" from="5096" to="5115">
+   <struct type="Clause" from="5096" to="5105">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c183"/>
    </struct>
-   <struct type="Clause" from="5116" to="5156">
-      <feat name="type" value="SENTENCE"/>
-      <feat name="id" value="c184"/>
+   <struct type="Clause" from="5106" to="5115"/>
+   <struct type="MARKER" from="5106" to="5109">
+      <feat name="NUC" value="N_N"/>
    </struct>
-   <struct type="Clause" from="5157" to="5224">
+   <struct type="Clause" from="5116" to="5123"/>
+   <struct type="Clause" from="5124" to="5156">
+      <feat name="id" value="c184"/>
+      <feat name="" value="SENTENCE"/>
+   </struct>
+   <struct type="MARKER" from="5124" to="5127">
+      <feat name="NUC" value="N_N"/>
+   </struct>
+   <struct type="Clause" from="5157" to="5192">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c185"/>
    </struct>
-   <struct type="Clause" from="5225" to="5258">
+   <struct type="Clause" from="5193" to="5224"/>
+   <struct type="MARKER" from="5193" to="5197">
+      <feat name="NUC" value="N_S"/>
+   </struct>
+   <struct type="Clause" from="5225" to="5240">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c186"/>
    </struct>
+   <struct type="Clause" from="5241" to="5258"/>
+   <struct type="MARKER" from="5241" to="5244"/>
    <struct type="Clause" from="5259" to="5290">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c187"/>
@@ -480,27 +536,38 @@
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c193"/>
    </struct>
-   <struct type="Clause" from="5419" to="5457">
+   <struct type="Clause" from="5419" to="5432">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c194"/>
+   </struct>
+   <struct type="Clause" from="5433" to="5457"/>
+   <struct type="MARKER" from="5433" to="5436">
+      <feat name="NUC" value="N_N"/>
    </struct>
    <struct type="Clause" from="5458" to="5500">
       <feat name="type" value="MARKER_"/>
       <feat name="id" value="c195"/>
    </struct>
+   <struct type="MARKER" from="5458" to="5461">
+      <feat name="NUC" value="N_N"/>
+   </struct>
    <struct type="Clause" from="5501" to="5522">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c196"/>
    </struct>
-   <struct type="Clause" from="5523" to="5576">
+   <struct type="Clause" from="5523" to="5528"/>
+   <struct type="Clause" from="5529" to="5576">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c197"/>
+   </struct>
+   <struct type="MARKER" from="5529" to="5534">
+      <feat name="NUC" value="N_S"/>
    </struct>
    <struct type="Clause" from="5577" to="5589">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c198"/>
    </struct>
-   <struct type="Clause" from="5593" to="5600">
+   <struct type="Clause" from="5590" to="5600">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c199"/>
    </struct>
@@ -524,9 +591,10 @@
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c204"/>
    </struct>
-   <struct type="Clause" from="5904" to="5948">
-      <feat name="type" value="SENTENCE"/>
-      <feat name="id" value="c205"/>
+   <struct type="Clause" from="5904" to="5923"/>
+   <struct type="Clause" from="5924" to="5948"/>
+   <struct type="MARKER" from="5924" to="5927">
+      <feat name="NUC" value="N_N"/>
    </struct>
    <struct type="Clause" from="5949" to="5977">
       <feat name="type" value="SENTENCE"/>
@@ -540,6 +608,11 @@
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c208"/>
    </struct>
+   <struct type="MARKER" from="6002" to="6012">
+      <feat name="CONNECT" value="relate"/>
+      <feat name="TYPE" value="ext"/>
+      <feat name="NUC" value="N_S"/>
+   </struct>
    <struct type="Clause" from="6022" to="6063">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c209"/>
@@ -552,49 +625,79 @@
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c211"/>
    </struct>
-   <struct type="Clause" from="6171" to="6215">
+   <struct type="MARKER" from="6155" to="6159">
+      <feat name="NUC" value="_SN"/>
+   </struct>
+   <struct type="Clause" from="6171" to="6187">
       <feat name="type" value="VERB_"/>
       <feat name="id" value="c212"/>
    </struct>
-   <struct type="Clause" from="6216" to="6223">
+   <struct type="Clause" from="6188" to="6215"/>
+   <struct type="MARKER" from="6188" to="6191">
+      <feat name="NUC" value="N_N"/>
+   </struct>
+   <struct type="Clause" from="6216" to="6224">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c213"/>
    </struct>
-   <struct type="Clause" from="6225" to="6252">
+   <struct type="Clause" from="6225" to="6231"/>
+   <struct type="Clause" from="6232" to="6252">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c214"/>
    </struct>
-   <struct type="Clause" from="6253" to="6263">
+   <struct type="Clause" from="6253" to="6264">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c215"/>
    </struct>
-   <struct type="Clause" from="6265" to="6291">
+   <struct type="Clause" from="6265" to="6284">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c216"/>
    </struct>
+   <struct type="Clause" from="6285" to="6292"/>
    <struct type="Clause" from="6293" to="6303">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c217"/>
    </struct>
-   <struct type="Clause" from="6305" to="6334">
+   <struct type="MARKER" from="6294" to="6296">
+      <feat name="CONNECT" value="relate"/>
+      <feat name="TYPE" value="ext"/>
+      <feat name="NUC" value="N_N"/>
+   </struct>
+   <struct type="Clause" from="6305" to="6310"/>
+   <struct type="Clause" from="6311" to="6334">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c218"/>
    </struct>
-   <struct type="Clause" from="6335" to="6380">
-      <feat name="type" value="SENTENCE"/>
+   <struct type="MARKER" from="6311" to="6314">
+      <feat name="NUC" value="N_N"/>
+   </struct>
+   <struct type="Clause" from="6335" to="6345"/>
+   <struct type="Clause" from="6346" to="6380">
       <feat name="id" value="c219"/>
    </struct>
-   <struct type="Clause" from="6381" to="6430">
-      <feat name="type" value="SENTENCE"/>
+   <struct type="MARKER" from="6346" to="6348">
+      <feat name="NUC" value="N_S"/>
+   </struct>
+   <struct type="Clause" from="6381" to="6402"/>
+   <struct type="MARKER" from="6381" to="6383">
+      <feat name="NUC" value="_SN"/>
+   </struct>
+   <struct type="Clause" from="6403" to="6430">
       <feat name="id" value="c220"/>
    </struct>
    <struct type="Clause" from="6431" to="6448">
       <feat name="type" value="MARKER_"/>
       <feat name="id" value="c221"/>
    </struct>
-   <struct type="Clause" from="6449" to="6499">
-      <feat name="type" value="SENTENCE"/>
+   <struct type="MARKER" from="6431" to="6433">
+      <feat name="NUC" value="N_N"/>
+   </struct>
+   <struct type="Clause" from="6449" to="6474">
       <feat name="id" value="c222"/>
+   </struct>
+   <struct type="Clause" from="6475" to="6499"/>
+   <struct type="MARKER" from="6475" to="6477">
+      <feat name="NUC" value="N_S"/>
    </struct>
    <struct type="Clause" from="6500" to="6508">
       <feat name="type" value="SENTENCE"/>
@@ -604,13 +707,16 @@
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c224"/>
    </struct>
-   <struct type="Clause" from="6654" to="6692">
+   <struct type="Clause" from="6654" to="6721">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c225"/>
    </struct>
-   <struct type="Clause" from="6693" to="6747">
+   <struct type="Clause" from="6722" to="6747">
       <feat name="type" value="VERB_"/>
       <feat name="id" value="c226"/>
+   </struct>
+   <struct type="MARKER" from="6722" to="6725">
+      <feat name="NUC" value="N_N "/>
    </struct>
    <struct type="Clause" from="6748" to="6770">
       <feat name="type" value="SENTENCE"/>
@@ -624,15 +730,11 @@
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c229"/>
    </struct>
-   <struct type="Clause" from="6799" to="6837">
+   <struct type="Clause" from="6799" to="6880">
       <feat name="type" value="SENTENCE"/>
       <feat name="id" value="c230"/>
    </struct>
-   <struct type="Clause" from="6838" to="6880">
-      <feat name="type" value="MARKER_"/>
-      <feat name="id" value="c231"/>
-   </struct>
-   <struct type="Clause" from="6880" to="6896">
+   <struct type="Clause" from="6882" to="6896">
       <feat name="type" value="VERB_"/>
       <feat name="id" value="c232"/>
    </struct>
