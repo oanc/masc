@@ -1,28 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cesAna xmlns="http://www.xces.org/schema/2003" version="1.0">
-<struct type="Clause" from="4" to="125">
-<feat name="type" value="SENTENCE"/>
-</struct>
-<struct type="Clause" from="126" to="163">
-<feat name="type" value="MARKER_"/>
-</struct>
-<struct type="Clause" from="167" to="277">
-<feat name="type" value="SENTENCE"/>
-</struct>
-<struct type="Clause" from="278" to="431">
-<feat name="type" value="VERB_"/>
-</struct>
-<struct type="Clause" from="435" to="549">
-<feat name="type" value="SENTENCE"/>
-</struct>
-<struct type="Clause" from="550" to="599">
-<feat name="type" value="MARKER_"/>
-</struct>
-<struct type="Clause" from="603" to="693">
-<feat name="type" value="SENTENCE"/>
-</struct>
-<struct type="Clause" from="697" to="793">
-<feat name="type" value="SENTENCE"/>
-</struct>
-
+   <struct type="Clause" from="4" to="97"/>
+   <struct type="Clause" from="98" to="163"/>
+   <struct type="MARKER" from="98" to="105">
+      <feat name="ID" value="m1"/>
+      <feat name="NUC" value="N_S"/>
+   </struct>
+   <struct type="Clause" from="167" to="277">
+      <feat name="type" value="SENTENCE"/>
+   </struct>
+   <struct type="Clause" from="278" to="431">
+      <feat name="type" value="VERB_"/>
+   </struct>
+   <struct type="MARKER" from="278" to="287">
+      <feat name="ID" value="m2"/>
+      <feat name="NUC" value="N_S"/>
+   </struct>
+   <struct type="Clause" from="435" to="549">
+      <feat name="type" value="SENTENCE"/>
+   </struct>
+   <struct type="MARKER" from="435" to="446">
+      <feat name="TYPE" value="ext"/>
+      <feat name="NUC" value="N_S"/>
+      <feat name="ID" value="m3"/>
+      <feat name="CONNECT" value="relate"/>
+   </struct>
+   <struct type="Clause" from="550" to="599">
+      <feat name="type" value="MARKER_"/>
+   </struct>
+   <struct type="MARKER" from="550" to="555">
+      <feat name="NUC" value="N_S"/>
+      <feat name="ID" value="m4"/>
+   </struct>
+   <struct type="Clause" from="603" to="693">
+      <feat name="type" value="SENTENCE"/>
+   </struct>
+   <struct type="MARKER" from="615" to="619">
+      <feat name="CONNECT" value="relate"/>
+      <feat name="NUC" value="N_S"/>
+      <feat name="ID" value="m5"/>
+      <feat name="TYPE" value="ext"/>
+   </struct>
+   <struct type="Clause" from="697" to="793">
+      <feat name="type" value="SENTENCE"/>
+   </struct>
 </cesAna>
