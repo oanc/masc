@@ -25,20 +25,20 @@
       <feat name="matches" value="6852"/>
    </struct>
    <struct type="PRN" from="207" to="211">
-      <feat name="id" value="6852"/>
-      <feat name="case" value="objective"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
       <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="objective"/>
+      <feat name="id" value="6852"/>
    </struct>
    <struct type="NounChunk" from="225" to="257">
       <feat name="id" value="6857"/>
    </struct>
    <struct type="Organization" from="229" to="250">
-      <feat name="orgType" value="newspaper/media"/>
-      <feat name="id" value="6859"/>
       <feat name="matches" value="[6859, 6961]"/>
+      <feat name="id" value="6859"/>
+      <feat name="orgType" value="newspaper/media"/>
    </struct>
    <struct type="Date" from="261" to="283">
       <feat name="kind" value="date"/>
@@ -59,12 +59,12 @@
    <struct type="NounChunk" from="352" to="363">
       <feat name="id" value="6893"/>
    </struct>
-   <struct type="NounChunk" from="373" to="386">
-      <feat name="id" value="6900"/>
-   </struct>
    <struct type="Person" from="373" to="386">
       <feat name="gender" value="female"/>
       <feat name="id" value="6899"/>
+   </struct>
+   <struct type="NounChunk" from="373" to="386">
+      <feat name="id" value="6900"/>
    </struct>
    <struct type="NounChunk" from="390" to="418">
       <feat name="id" value="6904"/>
@@ -73,25 +73,17 @@
       <feat name="orgType" value="newspaper"/>
       <feat name="id" value="6906"/>
    </struct>
-   <struct type="NounChunk" from="422" to="425">
-      <feat name="id" value="6912"/>
+   <struct type="Location" from="394" to="402">
+      <feat name="locType" value="city"/>
+      <feat name="id" value="l1"/>
    </struct>
-   <struct type="NounChunk" from="426" to="429">
-      <feat name="id" value="6915"/>
-   </struct>
-   <struct type="NounChunk" from="430" to="434">
+   <struct type="NounChunk" from="421" to="434">
       <feat name="id" value="6918"/>
    </struct>
    <struct type="NounChunk" from="436" to="439">
       <feat name="id" value="6921"/>
    </struct>
-   <struct type="NounChunk" from="441" to="444">
-      <feat name="id" value="6924"/>
-   </struct>
-   <struct type="NounChunk" from="445" to="448">
-      <feat name="id" value="6928"/>
-   </struct>
-   <struct type="NounChunk" from="449" to="453">
+   <struct type="NounChunk" from="441" to="453">
       <feat name="id" value="6930"/>
    </struct>
    <struct type="NounChunk" from="455" to="461">
@@ -109,7 +101,8 @@
    <struct type="Person" from="517" to="530">
       <feat name="gender" value="female"/>
       <feat name="id" value="6952"/>
-      <feat name="matches" value="[6952, 9016]"/>
+      <feat name="matches" value="[6952, 9010, 9016]"/>
+      <feat name="revised" value="SJS"/>
    </struct>
    <struct type="NounChunk" from="517" to="530">
       <feat name="id" value="6953"/>
@@ -122,9 +115,9 @@
       <feat name="id" value="6959"/>
    </struct>
    <struct type="Organization" from="539" to="560">
-      <feat name="orgType" value="newspaper/media"/>
-      <feat name="id" value="6961"/>
       <feat name="matches" value="[6859, 6961]"/>
+      <feat name="id" value="6961"/>
+      <feat name="orgType" value="newspaper/media"/>
    </struct>
    <struct type="NounChunk" from="577" to="604">
       <feat name="id" value="6971"/>
@@ -138,19 +131,23 @@
    <struct type="NounChunk" from="667" to="674">
       <feat name="id" value="6990"/>
    </struct>
+   <struct type="Date" from="667" to="674">
+      <feat name="kind" value="date"/>
+      <feat name="id" value="d1"/>
+   </struct>
    <struct type="NounChunk" from="676" to="696">
       <feat name="id" value="6994"/>
    </struct>
-   <struct type="PRN" from="703" to="705">
-      <feat name="id" value="3972"/>
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
-      <feat name="type" value="anaphoric"/>
-   </struct>
    <struct type="NounChunk" from="703" to="705">
       <feat name="id" value="7000"/>
+   </struct>
+   <struct type="PRN" from="703" to="705">
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="nominative"/>
+      <feat name="id" value="3972"/>
    </struct>
    <struct type="NounChunk" from="730" to="735">
       <feat name="id" value="7010"/>
@@ -161,6 +158,9 @@
    </struct>
    <struct type="NounChunk" from="765" to="769">
       <feat name="id" value="7024"/>
+   </struct>
+   <struct type="PRN" from="765" to="769">
+      <feat name="id" value="prn1"/>
    </struct>
    <struct type="NounChunk" from="785" to="789">
       <feat name="id" value="7032"/>
@@ -189,6 +189,9 @@
    <struct type="NounChunk" from="914" to="918">
       <feat name="id" value="7072"/>
    </struct>
+   <struct type="PRN" from="914" to="918">
+      <feat name="id" value="prn2"/>
+   </struct>
    <struct type="NounChunk" from="932" to="942">
       <feat name="id" value="7077"/>
    </struct>
@@ -201,8 +204,14 @@
    <struct type="NounChunk" from="989" to="993">
       <feat name="id" value="7098"/>
    </struct>
+   <struct type="PRN" from="989" to="993">
+      <feat name="id" value="prn3"/>
+   </struct>
    <struct type="NounChunk" from="1009" to="1024">
       <feat name="id" value="7103"/>
+   </struct>
+   <struct type="PRN" from="1009" to="1014">
+      <feat name="id" value="prn4"/>
    </struct>
    <struct type="NounChunk" from="1024" to="1034">
       <feat name="id" value="7108"/>
@@ -210,11 +219,20 @@
    <struct type="NounChunk" from="1043" to="1062">
       <feat name="id" value="7114"/>
    </struct>
+   <struct type="Markable" from="1069" to="1110">
+      <feat name="id" value="m1"/>
+   </struct>
    <struct type="NounChunk" from="1069" to="1091">
       <feat name="id" value="7121"/>
    </struct>
    <struct type="NounChunk" from="1095" to="1110">
       <feat name="id" value="7126"/>
+   </struct>
+   <struct type="Markable" from="1114" to="1150">
+      <feat name="id" value="m2"/>
+      <feat name="matches" value="[m1]"/>
+      <feat name="property" value="true"/>
+      <feat name="revised" value="SJS"/>
    </struct>
    <struct type="NounChunk" from="1114" to="1130">
       <feat name="id" value="7131"/>
@@ -225,26 +243,19 @@
    <struct type="NounChunk" from="1158" to="1159">
       <feat name="id" value="7148"/>
    </struct>
-   <struct type="Person" from="1158" to="1159">
-      <feat name="number" value="singular"/>
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="first"/>
-      <feat name="matches" value="[7149, 7213, 8948, 8978]"/>
-      <feat name="antecedent_offset" value="1228"/>
-      <feat name="ENTITY_MENTION_TYPE" value="PRONOUN"/>
-      <feat name="id" value="7149"/>
-      <feat name="type" value="anaphoric"/>
-   </struct>
-   <struct type="PRN" from="1170" to="1172">
-      <feat name="case" value="objective"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="id" value="7155"/>
+   <struct type="PRN" from="1158" to="1159">
+      <feat name="id" value="prn5"/>
    </struct>
    <struct type="NounChunk" from="1170" to="1172">
       <feat name="id" value="7153"/>
+   </struct>
+   <struct type="PRN" from="1170" to="1172">
+      <feat name="id" value="7155"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="objective"/>
    </struct>
    <struct type="NounChunk" from="1173" to="1181">
       <feat name="id" value="7157"/>
@@ -253,16 +264,25 @@
    <struct type="NounChunk" from="1185" to="1189">
       <feat name="id" value="7162"/>
    </struct>
+   <struct type="PRN" from="1185" to="1189">
+      <feat name="id" value="71629"/>
+   </struct>
    <struct type="NounChunk" from="1205" to="1220">
       <feat name="id" value="7167"/>
       <feat name="matches" value="7222"/>
    </struct>
-   <struct type="NounChunk" from="1228" to="1238">
-      <feat name="id" value="7175"/>
-   </struct>
    <struct type="Person" from="1228" to="1238">
       <feat name="gender" value="male"/>
       <feat name="id" value="7174"/>
+   </struct>
+   <struct type="NounChunk" from="1228" to="1238">
+      <feat name="id" value="7175"/>
+   </struct>
+   <struct type="Markable" from="1240" to="1280">
+      <feat name="id" value="m3"/>
+      <feat name="matches" value="[7174]"/>
+      <feat name="property" value="true"/>
+      <feat name="revised" value="SJS"/>
    </struct>
    <struct type="NounChunk" from="1240" to="1254">
       <feat name="id" value="7179"/>
@@ -281,45 +301,38 @@
       <feat name="id" value="7191"/>
    </struct>
    <struct type="Location" from="1284" to="1292">
-      <feat name="locType" value="city"/>
-      <feat name="id" value="7194"/>
       <feat name="matches" value="[7194, 9031]"/>
+      <feat name="id" value="7194"/>
+      <feat name="locType" value="city"/>
    </struct>
    <struct type="Location" from="1294" to="1298">
-      <feat name="locType" value="province"/>
-      <feat name="id" value="7196"/>
       <feat name="matches" value="[7196, 9035]"/>
-   </struct>
-   <struct type="NounChunk" from="1315" to="1319">
-      <feat name="id" value="7204"/>
+      <feat name="id" value="7196"/>
+      <feat name="locType" value="province"/>
    </struct>
    <struct type="Date" from="1315" to="1319">
       <feat name="kind" value="date"/>
       <feat name="id" value="7202"/>
    </struct>
-   <struct type="Person" from="1322" to="1323">
-      <feat name="number" value="singular"/>
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="first"/>
-      <feat name="matches" value="[7149, 7213, 8948, 8978]"/>
-      <feat name="antecedent_offset" value="1322"/>
-      <feat name="ENTITY_MENTION_TYPE" value="PRONOUN"/>
-      <feat name="id" value="7213"/>
-      <feat name="type" value="anaphoric"/>
+   <struct type="NounChunk" from="1315" to="1319">
+      <feat name="id" value="7204"/>
    </struct>
    <struct type="NounChunk" from="1322" to="1323">
       <feat name="id" value="7212"/>
+   </struct>
+   <struct type="PRN" from="1322" to="1323">
+      <feat name="id" value="prn6"/>
    </struct>
    <struct type="NounChunk" from="1339" to="1341">
       <feat name="id" value="7219"/>
    </struct>
    <struct type="PRN" from="1339" to="1341">
-      <feat name="case" value="objective"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
-      <feat name="type" value="anaphoric"/>
       <feat name="id" value="7222"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="objective"/>
    </struct>
    <struct type="NounChunk" from="1349" to="1364">
       <feat name="id" value="7227"/>
@@ -331,12 +344,12 @@
    <struct type="NounChunk" from="1412" to="1417">
       <feat name="id" value="7243"/>
    </struct>
+   <struct type="NounChunk" from="1421" to="1430">
+      <feat name="id" value="7246"/>
+   </struct>
    <struct type="Date" from="1421" to="1430">
       <feat name="kind" value="date"/>
       <feat name="id" value="7245"/>
-   </struct>
-   <struct type="NounChunk" from="1421" to="1430">
-      <feat name="id" value="7246"/>
    </struct>
    <struct type="NounChunk" from="1434" to="1467">
       <feat name="id" value="7251"/>
@@ -344,7 +357,8 @@
    <struct type="Location" from="1434" to="1438">
       <feat name="locType" value="country"/>
       <feat name="id" value="7252"/>
-      <feat name="matches" value="[7252, 7335]"/>
+      <feat name="matches" value="[7252, 7335, 7627]"/>
+      <feat name="revised" value="SJS"/>
    </struct>
    <struct type="NounChunk" from="1474" to="1487">
       <feat name="id" value="7264"/>
@@ -362,25 +376,28 @@
       <feat name="id" value="7289"/>
    </struct>
    <struct type="PRN" from="1563" to="1566">
-      <feat name="person" value="third"/>
-      <feat name="case" value="possessive"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
-      <feat name="type" value="anaphoric"/>
       <feat name="id" value="4262"/>
-   </struct>
-   <struct type="PRN" from="1589" to="1591">
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
       <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="case" value="possessive"/>
+      <feat name="person" value="third"/>
    </struct>
    <struct type="NounChunk" from="1589" to="1591">
       <feat name="id" value="7300"/>
    </struct>
-   <struct type="NounChunk" from="1607" to="1649">
+   <struct type="PRN" from="1589" to="1591">
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="nominative"/>
+   </struct>
+   <struct type="NounChunk" from="1607" to="1619">
       <feat name="id" value="7307"/>
+   </struct>
+   <struct type="NounChunk" from="1624" to="1649">
+      <feat name="id" value="73073"/>
    </struct>
    <struct type="NounChunk" from="1668" to="1672">
       <feat name="id" value="7318"/>
@@ -392,13 +409,16 @@
    <struct type="NounChunk" from="1709" to="1724">
       <feat name="id" value="7327"/>
    </struct>
+   <struct type="PRN" from="1709" to="1714">
+      <feat name="id" value="prn7"/>
+   </struct>
    <struct type="NounChunk" from="1726" to="1745">
       <feat name="id" value="7333"/>
    </struct>
    <struct type="Location" from="1730" to="1734">
-      <feat name="locType" value="country"/>
-      <feat name="id" value="7335"/>
       <feat name="matches" value="[7252, 7335]"/>
+      <feat name="id" value="7335"/>
+      <feat name="locType" value="country"/>
    </struct>
    <struct type="NounChunk" from="1764" to="1783">
       <feat name="id" value="7345"/>
@@ -410,12 +430,12 @@
       <feat name="id" value="7361"/>
    </struct>
    <struct type="PRN" from="1860" to="1864">
-      <feat name="id" value="4346"/>
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
       <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="nominative"/>
+      <feat name="id" value="4346"/>
    </struct>
    <struct type="NounChunk" from="1860" to="1864">
       <feat name="id" value="7374"/>
@@ -428,9 +448,16 @@
    </struct>
    <struct type="NounChunk" from="1918" to="1938">
       <feat name="id" value="7387"/>
+      <feat name="matches" value="[7382]"/>
+      <feat name="property" value="true"/>
+      <feat name="revised" value="SJS"/>
    </struct>
    <struct type="NounChunk" from="1960" to="1968">
       <feat name="id" value="7400"/>
+   </struct>
+   <struct type="Date" from="1960" to="1968">
+      <feat name="kind" value="duration"/>
+      <feat name="id" value="d2"/>
    </struct>
    <struct type="NounChunk" from="1999" to="2013">
       <feat name="id" value="7413"/>
@@ -438,6 +465,12 @@
    <struct type="Person" from="1999" to="2013">
       <feat name="gender" value="female"/>
       <feat name="id" value="7412"/>
+   </struct>
+   <struct type="Markable" from="2015" to="2091">
+      <feat name="id" value="m5"/>
+      <feat name="matches" value="[7412]"/>
+      <feat name="property" value="true"/>
+      <feat name="revised" value="SJS"/>
    </struct>
    <struct type="NounChunk" from="2015" to="2028">
       <feat name="id" value="7417"/>
@@ -449,25 +482,25 @@
       <feat name="id" value="7425"/>
    </struct>
    <struct type="Organization" from="2058" to="2091">
-      <feat name="orgType" value="government"/>
-      <feat name="id" value="7427"/>
       <feat name="matches" value="[7427, 7438]"/>
+      <feat name="id" value="7427"/>
+      <feat name="orgType" value="government"/>
    </struct>
    <struct type="NounChunk" from="2098" to="2106">
       <feat name="id" value="7435"/>
    </struct>
    <struct type="Organization" from="2102" to="2106">
-      <feat name="orgType" value="government"/>
-      <feat name="id" value="7438"/>
       <feat name="matches" value="[7427, 7438]"/>
+      <feat name="id" value="7438"/>
+      <feat name="orgType" value="government"/>
+   </struct>
+   <struct type="Date" from="2125" to="2129">
+      <feat name="matches" value="[7445, 8355, 8607]"/>
+      <feat name="id" value="7445"/>
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="NounChunk" from="2125" to="2129">
       <feat name="id" value="7446"/>
-   </struct>
-   <struct type="Date" from="2125" to="2129">
-      <feat name="kind" value="date"/>
-      <feat name="id" value="7445"/>
-      <feat name="matches" value="[7445, 8355, 8607]"/>
    </struct>
    <struct type="NounChunk" from="2131" to="2152">
       <feat name="id" value="7449"/>
@@ -493,18 +526,15 @@
       <feat name="matches" value="7497"/>
    </struct>
    <struct type="PRN" from="2324" to="2329">
-      <feat name="id" value="4468"/>
-      <feat name="case" value="objective"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="plural"/>
       <feat name="type" value="anaphoric"/>
+      <feat name="number" value="plural"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="objective"/>
+      <feat name="id" value="4468"/>
    </struct>
    <struct type="NounChunk" from="2343" to="2364">
       <feat name="id" value="7501"/>
-   </struct>
-   <struct type="NounChunk" from="2376" to="2385">
-      <feat name="id" value="7511"/>
    </struct>
    <struct type="NounChunk" from="2391" to="2401">
       <feat name="id" value="7513"/>
@@ -513,19 +543,19 @@
       <feat name="id" value="7516"/>
    </struct>
    <struct type="Organization" from="2407" to="2435">
-      <feat name="orgType" value="company"/>
-      <feat name="id" value="7518"/>
       <feat name="matches" value="[7518, 7582]"/>
+      <feat name="id" value="7518"/>
+      <feat name="orgType" value="company"/>
    </struct>
    <struct type="NounChunk" from="2442" to="2460">
       <feat name="id" value="7524"/>
    </struct>
+   <struct type="NounChunk" from="2464" to="2472">
+      <feat name="id" value="7531"/>
+   </struct>
    <struct type="Date" from="2464" to="2472">
       <feat name="kind" value="date"/>
       <feat name="id" value="7529"/>
-   </struct>
-   <struct type="NounChunk" from="2464" to="2472">
-      <feat name="id" value="7531"/>
    </struct>
    <struct type="NounChunk" from="2486" to="2492">
       <feat name="id" value="7538"/>
@@ -535,6 +565,10 @@
    </struct>
    <struct type="NounChunk" from="2514" to="2553">
       <feat name="id" value="7548"/>
+   </struct>
+   <struct type="Location" from="2518" to="2528">
+      <feat name="id" value="l2"/>
+      <feat name="locType" value="city"/>
    </struct>
    <struct type="NounChunk" from="2559" to="2584">
       <feat name="id" value="7557"/>
@@ -552,33 +586,33 @@
       <feat name="id" value="7580"/>
    </struct>
    <struct type="Organization" from="2657" to="2685">
-      <feat name="orgType" value="company"/>
-      <feat name="id" value="7582"/>
       <feat name="matches" value="[7518, 7582]"/>
+      <feat name="id" value="7582"/>
+      <feat name="orgType" value="company"/>
    </struct>
    <struct type="NounChunk" from="2720" to="2735">
       <feat name="id" value="7593"/>
    </struct>
+   <struct type="PRN" from="2741" to="2743">
+      <feat name="id" value="840"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="nominative"/>
+   </struct>
    <struct type="NounChunk" from="2741" to="2743">
       <feat name="id" value="7602"/>
-   </struct>
-   <struct type="PRN" from="2741" to="2743">
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="id" value="840"/>
    </struct>
    <struct type="NounChunk" from="2750" to="2781">
       <feat name="id" value="7606"/>
    </struct>
+   <struct type="NounChunk" from="2788" to="2799">
+      <feat name="id" value="7616"/>
+   </struct>
    <struct type="Organization" from="2788" to="2799">
       <feat name="orgType" value="company"/>
       <feat name="id" value="7615"/>
-   </struct>
-   <struct type="NounChunk" from="2788" to="2799">
-      <feat name="id" value="7616"/>
    </struct>
    <struct type="NounChunk" from="2806" to="2821">
       <feat name="id" value="7621"/>
@@ -590,12 +624,12 @@
       <feat name="locType" value="country"/>
       <feat name="id" value="7627"/>
    </struct>
+   <struct type="NounChunk" from="2847" to="2853">
+      <feat name="id" value="7632"/>
+   </struct>
    <struct type="Location" from="2847" to="2853">
       <feat name="locType" value="country"/>
       <feat name="id" value="7633"/>
-   </struct>
-   <struct type="NounChunk" from="2847" to="2853">
-      <feat name="id" value="7632"/>
    </struct>
    <struct type="NounChunk" from="2863" to="2878">
       <feat name="id" value="7637"/>
@@ -619,6 +653,12 @@
    <struct type="Person" from="2953" to="2967">
       <feat name="gender" value="female"/>
       <feat name="id" value="7663"/>
+   </struct>
+   <struct type="Markable" from="2969" to="3026">
+      <feat name="id" value="m8"/>
+      <feat name="matches" value="[7663]"/>
+      <feat name="property" value="true"/>
+      <feat name="revised" value="SJS"/>
    </struct>
    <struct type="NounChunk" from="2997" to="3026">
       <feat name="id" value="7670"/>
@@ -646,8 +686,11 @@
    <struct type="NounChunk" from="3126" to="3141">
       <feat name="id" value="7712"/>
    </struct>
-   <struct type="NounChunk" from="3143" to="3167">
+   <struct type="NounChunk" from="3143" to="3156">
       <feat name="id" value="7716"/>
+   </struct>
+   <struct type="NounChunk" from="3161" to="3167">
+      <feat name="id" value="77163"/>
    </struct>
    <struct type="NounChunk" from="3175" to="3189">
       <feat name="id" value="7725"/>
@@ -656,16 +699,28 @@
       <feat name="gender" value="male"/>
       <feat name="id" value="7726"/>
    </struct>
+   <struct type="Markable" from="3190" to="3235">
+      <feat name="id" value="m10"/>
+      <feat name="matches" value="[7726]"/>
+      <feat name="property" value="true"/>
+      <feat name="revised" value="SJS"/>
+   </struct>
    <struct type="NounChunk" from="3191" to="3213">
       <feat name="id" value="7730"/>
+   </struct>
+   <struct type="Organization" from="3218" to="3235">
+      <feat name="orgType" value="company"/>
+      <feat name="id" value="7736"/>
    </struct>
    <struct type="NounChunk" from="3218" to="3235">
       <feat name="id" value="7735"/>
       <feat name="matches" value="[7701,7755,7777]"/>
    </struct>
-   <struct type="Organization" from="3218" to="3235">
-      <feat name="orgType" value="company"/>
-      <feat name="id" value="7736"/>
+   <struct type="Markable" from="3237" to="3258">
+      <feat name="id" value="m11"/>
+      <feat name="matches" value="[7736]"/>
+      <feat name="property" value="true"/>
+      <feat name="revised" value="SJS"/>
    </struct>
    <struct type="NounChunk" from="3237" to="3244">
       <feat name="id" value="7741"/>
@@ -689,26 +744,29 @@
    <struct type="NounChunk" from="3346" to="3348">
       <feat name="id" value="7778"/>
    </struct>
+   <struct type="PRN" from="3346" to="3348">
+      <feat name="id" value="prn10"/>
+   </struct>
    <struct type="NounChunk" from="3362" to="3380">
       <feat name="id" value="7785"/>
+   </struct>
+   <struct type="PRN" from="3387" to="3391">
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="objective"/>
+      <feat name="id" value="4765"/>
    </struct>
    <struct type="NounChunk" from="3387" to="3391">
       <feat name="id" value="7793"/>
    </struct>
-   <struct type="PRN" from="3387" to="3391">
-      <feat name="id" value="4765"/>
-      <feat name="case" value="objective"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
-      <feat name="type" value="anaphoric"/>
+   <struct type="NounChunk" from="3399" to="3418">
+      <feat name="id" value="7799"/>
    </struct>
    <struct type="Organization" from="3399" to="3418">
       <feat name="orgType" value="company"/>
       <feat name="id" value="7798"/>
-   </struct>
-   <struct type="NounChunk" from="3399" to="3418">
-      <feat name="id" value="7799"/>
    </struct>
    <struct type="NounChunk" from="3425" to="3435">
       <feat name="id" value="7805"/>
@@ -719,16 +777,16 @@
    <struct type="NounChunk" from="3489" to="3492">
       <feat name="id" value="7821"/>
    </struct>
+   <struct type="PRN" from="3496" to="3500">
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="nominative"/>
+      <feat name="id" value="4797"/>
+   </struct>
    <struct type="NounChunk" from="3496" to="3500">
       <feat name="id" value="7825"/>
-   </struct>
-   <struct type="PRN" from="3496" to="3500">
-      <feat name="id" value="4797"/>
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
-      <feat name="type" value="anaphoric"/>
    </struct>
    <struct type="NounChunk" from="3510" to="3516">
       <feat name="id" value="7831"/>
@@ -736,7 +794,6 @@
    <struct type="NounChunk" from="3522" to="3531">
       <feat name="id" value="7836"/>
    </struct>
-   <struct type="NounChunk" from="3536" to="3545"/>
    <struct type="NounChunk" from="3551" to="3558">
       <feat name="id" value="7843"/>
    </struct>
@@ -758,12 +815,12 @@
    <struct type="NounChunk" from="3628" to="3634">
       <feat name="id" value="7868"/>
    </struct>
+   <struct type="NounChunk" from="3638" to="3642">
+      <feat name="id" value="7871"/>
+   </struct>
    <struct type="Date" from="3638" to="3642">
       <feat name="kind" value="date"/>
       <feat name="id" value="7872"/>
-   </struct>
-   <struct type="NounChunk" from="3638" to="3642">
-      <feat name="id" value="7871"/>
    </struct>
    <struct type="NounChunk" from="3647" to="3658">
       <feat name="id" value="7874"/>
@@ -856,12 +913,12 @@
       <feat name="matches" value="8037"/>
    </struct>
    <struct type="PRN" from="4226" to="4230">
-      <feat name="id" value="8037"/>
-      <feat name="case" value="objective"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
       <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="objective"/>
+      <feat name="id" value="8037"/>
    </struct>
    <struct type="NounChunk" from="4240" to="4248">
       <feat name="id" value="8042"/>
@@ -889,9 +946,9 @@
       <feat name="id" value="8077"/>
    </struct>
    <struct type="Person" from="4365" to="4376">
-      <feat name="gender" value="male"/>
-      <feat name="id" value="8076"/>
       <feat name="matches" value="[8076, 8173]"/>
+      <feat name="id" value="8076"/>
+      <feat name="gender" value="male"/>
    </struct>
    <struct type="NounChunk" from="4378" to="4387">
       <feat name="id" value="8081"/>
@@ -910,12 +967,12 @@
       <feat name="id" value="8099"/>
    </struct>
    <struct type="PRN" from="4485" to="4487">
-      <feat name="id" value="8108"/>
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
       <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="nominative"/>
+      <feat name="id" value="8108"/>
    </struct>
    <struct type="NounChunk" from="4485" to="4487">
       <feat name="id" value="8110"/>
@@ -936,8 +993,14 @@
    <struct type="NounChunk" from="4567" to="4584">
       <feat name="id" value="8134"/>
    </struct>
+   <struct type="PRN" from="4567" to="4572">
+      <feat name="id" value="prn11"/>
+   </struct>
    <struct type="NounChunk" from="4590" to="4594">
       <feat name="id" value="8142"/>
+   </struct>
+   <struct type="PRN" from="4590" to="4594">
+      <feat name="id" value="prn12"/>
    </struct>
    <struct type="NounChunk" from="4606" to="4621">
       <feat name="id" value="8149"/>
@@ -954,25 +1017,25 @@
    <struct type="NounChunk" from="4661" to="4670">
       <feat name="id" value="8168"/>
    </struct>
-   <struct type="NounChunk" from="4672" to="4678">
-      <feat name="id" value="8172"/>
-   </struct>
    <struct type="Person" from="4672" to="4678">
       <feat name="gender" value="male"/>
       <feat name="id" value="8173"/>
       <feat name="matchedWithLonger" value="true"/>
       <feat name="matches" value="[8076, 8173]"/>
    </struct>
-   <struct type="NounChunk" from="4686" to="4688">
-      <feat name="id" value="8184"/>
+   <struct type="NounChunk" from="4672" to="4678">
+      <feat name="id" value="8172"/>
    </struct>
    <struct type="PRN" from="4686" to="4688">
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
-      <feat name="type" value="anaphoric"/>
       <feat name="id" value="8183"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="nominative"/>
+   </struct>
+   <struct type="NounChunk" from="4686" to="4688">
+      <feat name="id" value="8184"/>
    </struct>
    <struct type="NounChunk" from="4695" to="4721">
       <feat name="id" value="8188"/>
@@ -980,26 +1043,26 @@
    <struct type="NounChunk" from="4729" to="4742">
       <feat name="id" value="8194"/>
    </struct>
+   <struct type="PRN" from="4744" to="4746">
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="nominative"/>
+   </struct>
    <struct type="NounChunk" from="4744" to="4746">
       <feat name="id" value="8200"/>
-   </struct>
-   <struct type="PRN" from="4744" to="4746">
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
-      <feat name="type" value="anaphoric"/>
    </struct>
    <struct type="NounChunk" from="4749" to="4768">
       <feat name="id" value="8204"/>
    </struct>
+   <struct type="Person" from="4776" to="4785">
+      <feat name="matches" value="[8211, 8297]"/>
+      <feat name="id" value="8211"/>
+      <feat name="gender" value="male"/>
+   </struct>
    <struct type="NounChunk" from="4776" to="4785">
       <feat name="id" value="8212"/>
-   </struct>
-   <struct type="Person" from="4776" to="4785">
-      <feat name="gender" value="male"/>
-      <feat name="id" value="8211"/>
-      <feat name="matches" value="[8211, 8297]"/>
    </struct>
    <struct type="NounChunk" from="4787" to="4805">
       <feat name="id" value="8216"/>
@@ -1026,8 +1089,11 @@
    <struct type="NounChunk" from="4972" to="4983">
       <feat name="id" value="8256"/>
    </struct>
-   <struct type="NounChunk" from="4987" to="5006">
+   <struct type="NounChunk" from="4987" to="4992">
       <feat name="id" value="8259"/>
+   </struct>
+   <struct type="NounChunk" from="4997" to="5006">
+      <feat name="id" value="82593"/>
    </struct>
    <struct type="NounChunk" from="5011" to="5016">
       <feat name="id" value="8264"/>
@@ -1047,25 +1113,25 @@
    <struct type="NounChunk" from="5132" to="5166">
       <feat name="id" value="8289"/>
    </struct>
-   <struct type="NounChunk" from="5168" to="5173">
-      <feat name="id" value="8296"/>
-   </struct>
    <struct type="Person" from="5168" to="5173">
       <feat name="gender" value="male"/>
       <feat name="id" value="8297"/>
       <feat name="matchedWithLonger" value="true"/>
       <feat name="matches" value="[8211, 8297]"/>
    </struct>
-   <struct type="NounChunk" from="5185" to="5189">
-      <feat name="id" value="8305"/>
+   <struct type="NounChunk" from="5168" to="5173">
+      <feat name="id" value="8296"/>
    </struct>
    <struct type="PRN" from="5185" to="5189">
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
-      <feat name="type" value="anaphoric"/>
       <feat name="id" value="8307"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="nominative"/>
+   </struct>
+   <struct type="NounChunk" from="5185" to="5189">
+      <feat name="id" value="8305"/>
    </struct>
    <struct type="NounChunk" from="5199" to="5212">
       <feat name="id" value="8311"/>
@@ -1075,9 +1141,9 @@
       <feat name="id" value="8317"/>
    </struct>
    <struct type="Person" from="5219" to="5230">
-      <feat name="gender" value="male"/>
-      <feat name="id" value="8318"/>
       <feat name="matches" value="[8318, 8475]"/>
+      <feat name="id" value="8318"/>
+      <feat name="gender" value="male"/>
    </struct>
    <struct type="NounChunk" from="5232" to="5247">
       <feat name="id" value="8322"/>
@@ -1091,20 +1157,24 @@
    <struct type="Organization" from="5284" to="5319">
       <feat name="orgType" value="company"/>
       <feat name="id" value="8333"/>
+      <feat name="matches" value="[8333, 8362, 8439]"/>
+      <feat name="revised" value="SJS"/>
    </struct>
    <struct type="NounChunk" from="5294" to="5319">
       <feat name="id" value="8336"/>
+   </struct>
+   <struct type="NounChunk" from="5323" to="5332">
+      <feat name="id" value="8342"/>
    </struct>
    <struct type="Location" from="5323" to="5332">
       <feat name="locType" value="city"/>
       <feat name="id" value="8341"/>
    </struct>
-   <struct type="NounChunk" from="5323" to="5332">
-      <feat name="id" value="8342"/>
-   </struct>
    <struct type="Location" from="5334" to="5340">
-      <feat name="locType" value="province"/>
+      <feat name="locType" value="province__state"/>
       <feat name="id" value="8346"/>
+      <feat name="matches" value="[8346, 8566]"/>
+      <feat name="revised" value="SJS"/>
    </struct>
    <struct type="NounChunk" from="5334" to="5339">
       <feat name="id" value="8347"/>
@@ -1113,9 +1183,9 @@
       <feat name="id" value="8353"/>
    </struct>
    <struct type="Date" from="5349" to="5353">
-      <feat name="kind" value="date"/>
-      <feat name="id" value="8355"/>
       <feat name="matches" value="[7445, 8355, 8607]"/>
+      <feat name="id" value="8355"/>
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="Date" from="5358" to="5362">
       <feat name="kind" value="date"/>
@@ -1125,9 +1195,9 @@
       <feat name="id" value="8360"/>
    </struct>
    <struct type="Organization" from="5368" to="5386">
-      <feat name="orgType" value="company"/>
-      <feat name="id" value="8362"/>
       <feat name="matches" value="[8362, 8439]"/>
+      <feat name="id" value="8362"/>
+      <feat name="orgType" value="company"/>
    </struct>
    <struct type="Money" from="5395" to="5406"/>
    <struct type="NounChunk" from="5395" to="5406">
@@ -1139,6 +1209,9 @@
    </struct>
    <struct type="NounChunk" from="5448" to="5452">
       <feat name="id" value="8382"/>
+   </struct>
+   <struct type="PRN" from="5448" to="5452">
+      <feat name="id" value="prn15"/>
    </struct>
    <struct type="NounChunk" from="5462" to="5469">
       <feat name="id" value="8386"/>
@@ -1170,9 +1243,9 @@
       <feat name="matches" value="8486"/>
    </struct>
    <struct type="Organization" from="5658" to="5676">
-      <feat name="orgType" value="company"/>
-      <feat name="id" value="8439"/>
       <feat name="matches" value="[8362, 8439]"/>
+      <feat name="id" value="8439"/>
+      <feat name="orgType" value="company"/>
    </struct>
    <struct type="NounChunk" from="5680" to="5696">
       <feat name="id" value="8444"/>
@@ -1190,17 +1263,20 @@
       <feat name="id" value="8462"/>
    </struct>
    <struct type="NounChunk" from="5782" to="5793"/>
+   <struct type="NounChunk" from="5796" to="5801">
+      <feat name="id" value="8473"/>
+   </struct>
    <struct type="Person" from="5796" to="5801">
       <feat name="gender" value="male"/>
       <feat name="id" value="8475"/>
       <feat name="matchedWithLonger" value="true"/>
       <feat name="matches" value="[8318, 8475]"/>
    </struct>
-   <struct type="NounChunk" from="5796" to="5801">
-      <feat name="id" value="8473"/>
-   </struct>
    <struct type="NounChunk" from="5809" to="5811">
       <feat name="id" value="8485"/>
+   </struct>
+   <struct type="PRN" from="5809" to="5811">
+      <feat name="id" value="prn16"/>
    </struct>
    <struct type="NounChunk" from="5835" to="5865">
       <feat name="id" value="8495"/>
@@ -1224,6 +1300,10 @@
       <feat name="orgType" value="other"/>
       <feat name="id" value="8533"/>
    </struct>
+   <struct type="Location" from="5996" to="6008">
+      <feat name="locType" value="us_region"/>
+      <feat name="id" value="l3"/>
+   </struct>
    <struct type="NounChunk" from="6017" to="6028">
       <feat name="id" value="8537"/>
    </struct>
@@ -1244,7 +1324,7 @@
       <feat name="id" value="8563"/>
    </struct>
    <struct type="Location" from="6116" to="6126">
-      <feat name="locType" value="province"/>
+      <feat name="locType" value="province_state"/>
       <feat name="id" value="8566"/>
    </struct>
    <struct type="NounChunk" from="6150" to="6177">
@@ -1263,9 +1343,9 @@
       <feat name="id" value="8608"/>
    </struct>
    <struct type="Date" from="6289" to="6293">
-      <feat name="kind" value="date"/>
-      <feat name="id" value="8607"/>
       <feat name="matches" value="[7445, 8355, 8607]"/>
+      <feat name="id" value="8607"/>
+      <feat name="kind" value="date"/>
    </struct>
    <struct type="NounChunk" from="6300" to="6315">
       <feat name="id" value="8614"/>
@@ -1280,15 +1360,21 @@
    <struct type="NounChunk" from="6350" to="6362">
       <feat name="id" value="8624"/>
    </struct>
-   <struct type="NounChunk" from="6369" to="6388">
+   <struct type="NounChunk" from="6369" to="6374">
       <feat name="id" value="8630"/>
       <feat name="matches" value="8641"/>
+   </struct>
+   <struct type="NounChunk" from="6379" to="6388">
+      <feat name="id" value="86303"/>
    </struct>
    <struct type="NounChunk" from="6396" to="6407">
       <feat name="id" value="8635"/>
    </struct>
    <struct type="NounChunk" from="6413" to="6417">
       <feat name="id" value="8640"/>
+   </struct>
+   <struct type="PRN" from="6413" to="6417">
+      <feat name="id" value="prn17"/>
    </struct>
    <struct type="NounChunk" from="6448" to="6457">
       <feat name="id" value="8652"/>
@@ -1314,6 +1400,10 @@
    <struct type="NounChunk" from="6538" to="6552">
       <feat name="id" value="8683"/>
    </struct>
+   <struct type="Date" from="6538" to="6545">
+      <feat name="kind" value="duration"/>
+      <feat name="id" value="d6"/>
+   </struct>
    <struct type="NounChunk" from="6557" to="6565">
       <feat name="id" value="8690"/>
    </struct>
@@ -1323,6 +1413,9 @@
    </struct>
    <struct type="NounChunk" from="6590" to="6600">
       <feat name="id" value="8700"/>
+   </struct>
+   <struct type="PRN" from="6590" to="6595">
+      <feat name="id" value="prn19"/>
    </struct>
    <struct type="NounChunk" from="6604" to="6608">
       <feat name="id" value="8706"/>
@@ -1337,6 +1430,9 @@
    <struct type="NounChunk" from="6719" to="6723">
       <feat name="id" value="8732"/>
    </struct>
+   <struct type="PRN" from="6719" to="6723">
+      <feat name="id" value="prn20"/>
+   </struct>
    <struct type="NounChunk" from="6741" to="6769">
       <feat name="id" value="8738"/>
    </struct>
@@ -1349,16 +1445,19 @@
    <struct type="NounChunk" from="6822" to="6824">
       <feat name="id" value="8760"/>
    </struct>
-   <struct type="PRN" from="6826" to="6828">
-      <feat name="id" value="5738"/>
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
-      <feat name="type" value="anaphoric"/>
+   <struct type="PRN" from="6822" to="6824">
+      <feat name="id" value="prn21"/>
    </struct>
    <struct type="NounChunk" from="6826" to="6828">
       <feat name="id" value="8764"/>
+   </struct>
+   <struct type="PRN" from="6826" to="6828">
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="nominative"/>
+      <feat name="id" value="5738"/>
    </struct>
    <struct type="NounChunk" from="6865" to="6880">
       <feat name="id" value="8778"/>
@@ -1369,14 +1468,17 @@
    <struct type="NounChunk" from="6899" to="6901">
       <feat name="id" value="8789"/>
    </struct>
+   <struct type="PRN" from="6899" to="6901">
+      <feat name="id" value="prn22"/>
+   </struct>
    <struct type="NounChunk" from="6917" to="6928">
       <feat name="id" value="8801"/>
       <feat name="matches" value="[8759,8790,8829,8842]"/>
    </struct>
    <struct type="Person" from="6917" to="6928">
-      <feat name="gender" value="male"/>
-      <feat name="id" value="8802"/>
       <feat name="matches" value="[8802, 8894, 8970]"/>
+      <feat name="id" value="8802"/>
+      <feat name="gender" value="male"/>
    </struct>
    <struct type="NounChunk" from="6930" to="6934">
       <feat name="id" value="8806"/>
@@ -1385,6 +1487,7 @@
       <feat name="locType" value="facility"/>
       <feat name="id" value="8809"/>
       <feat name="matches" value="[8809, 8904]"/>
+      <feat name="revised" value="SJS"/>
    </struct>
    <struct type="NounChunk" from="6938" to="6950">
       <feat name="id" value="8810"/>
@@ -1402,8 +1505,14 @@
    <struct type="NounChunk" from="6998" to="6999">
       <feat name="id" value="8832"/>
    </struct>
+   <struct type="PRN" from="6998" to="6999">
+      <feat name="id" value="prn23"/>
+   </struct>
    <struct type="NounChunk" from="7012" to="7013">
       <feat name="id" value="8843"/>
+   </struct>
+   <struct type="PRN" from="7012" to="7013">
+      <feat name="id" value="prn24"/>
    </struct>
    <struct type="NounChunk" from="7025" to="7043">
       <feat name="id" value="8848"/>
@@ -1414,16 +1523,16 @@
    <struct type="NounChunk" from="7069" to="7084">
       <feat name="id" value="8860"/>
    </struct>
-   <struct type="PRN" from="7114" to="7116">
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="id" value="8872"/>
-   </struct>
    <struct type="NounChunk" from="7114" to="7116">
       <feat name="id" value="8870"/>
+   </struct>
+   <struct type="PRN" from="7114" to="7116">
+      <feat name="id" value="8872"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="nominative"/>
    </struct>
    <struct type="NounChunk" from="7119" to="7137">
       <feat name="id" value="8875"/>
@@ -1432,15 +1541,12 @@
       <feat name="id" value="8888"/>
    </struct>
    <struct type="PRN" from="7172" to="7175">
-      <feat name="person" value="third"/>
-      <feat name="case" value="possessive"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
-      <feat name="type" value="anaphoric"/>
       <feat name="id" value="2113"/>
-   </struct>
-   <struct type="NounChunk" from="7184" to="7190">
-      <feat name="id" value="8895"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="case" value="possessive"/>
+      <feat name="person" value="third"/>
    </struct>
    <struct type="Person" from="7184" to="7190">
       <feat name="gender" value="male"/>
@@ -1448,17 +1554,20 @@
       <feat name="matchedWithLonger" value="true"/>
       <feat name="matches" value="[8802, 8894, 8970]"/>
    </struct>
+   <struct type="NounChunk" from="7184" to="7190">
+      <feat name="id" value="8895"/>
+   </struct>
    <struct type="NounChunk" from="7198" to="7213">
       <feat name="id" value="8899"/>
       <feat name="matches" value="8889"/>
    </struct>
-   <struct type="Location" from="7215" to="7227">
-      <feat name="locType" value="facility"/>
-      <feat name="id" value="8904"/>
-      <feat name="matches" value="[8809, 8904]"/>
-   </struct>
    <struct type="NounChunk" from="7215" to="7227">
       <feat name="id" value="8905"/>
+   </struct>
+   <struct type="Location" from="7215" to="7227">
+      <feat name="matches" value="[8809, 8904]"/>
+      <feat name="id" value="8904"/>
+      <feat name="locType" value="facility"/>
    </struct>
    <struct type="NounChunk" from="7227" to="7234">
       <feat name="id" value="8908"/>
@@ -1481,15 +1590,8 @@
    <struct type="NounChunk" from="7351" to="7352">
       <feat name="id" value="8950"/>
    </struct>
-   <struct type="Person" from="7351" to="7352">
-      <feat name="number" value="singular"/>
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="first"/>
-      <feat name="matches" value="[7149, 7213, 8948, 8978]"/>
-      <feat name="antecedent_offset" value="7401"/>
-      <feat name="ENTITY_MENTION_TYPE" value="PRONOUN"/>
-      <feat name="id" value="8948"/>
-      <feat name="type" value="anaphoric"/>
+   <struct type="PRN" from="7351" to="7352">
+      <feat name="id" value="prn25"/>
    </struct>
    <struct type="NounChunk" from="7370" to="7381">
       <feat name="id" value="8959"/>
@@ -1509,23 +1611,16 @@
    <struct type="NounChunk" from="7415" to="7416">
       <feat name="id" value="8981"/>
    </struct>
-   <struct type="Person" from="7415" to="7416">
-      <feat name="case" value="nominative"/>
-      <feat name="person" value="first"/>
-      <feat name="id" value="8978"/>
-      <feat name="matches" value="[7149, 7213, 8948, 8978]"/>
-      <feat name="antecedent_offset" value="7415"/>
-      <feat name="ENTITY_MENTION_TYPE" value="PRONOUN"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="singular"/>
+   <struct type="PRN" from="7415" to="7416">
+      <feat name="id" value="prn26"/>
    </struct>
    <struct type="PRN" from="7420" to="7422">
-      <feat name="case" value="objective"/>
-      <feat name="person" value="third"/>
-      <feat name="cls" value="Thing"/>
-      <feat name="number" value="singular"/>
-      <feat name="type" value="anaphoric"/>
       <feat name="id" value="2207"/>
+      <feat name="type" value="anaphoric"/>
+      <feat name="number" value="singular"/>
+      <feat name="cls" value="Thing"/>
+      <feat name="person" value="third"/>
+      <feat name="case" value="objective"/>
    </struct>
    <struct type="NounChunk" from="7420" to="7422">
       <feat name="id" value="8987"/>
@@ -1539,59 +1634,52 @@
    <struct type="NounChunk" from="7443" to="7455">
       <feat name="id" value="8997"/>
    </struct>
-   <struct type="Person" from="7484" to="7488">
-      <feat name="gender" value="male"/>
-      <feat name="id" value="9010"/>
-   </struct>
    <struct type="NounChunk" from="7484" to="7488">
       <feat name="id" value="9009"/>
+   </struct>
+   <struct type="Person" from="7484" to="7488">
+      <feat name="gender" value="female"/>
+      <feat name="id" value="9010"/>
    </struct>
    <struct type="NounChunk" from="7495" to="7508">
       <feat name="id" value="9015"/>
    </struct>
    <struct type="Person" from="7495" to="7508">
-      <feat name="gender" value="female"/>
-      <feat name="id" value="9016"/>
       <feat name="matches" value="[6952, 9016]"/>
+      <feat name="id" value="9016"/>
+      <feat name="gender" value="female"/>
    </struct>
    <struct type="NounChunk" from="7512" to="7526">
       <feat name="id" value="9021"/>
-   </struct>
-   <struct type="NounChunk" from="7531" to="7544">
-      <feat name="id" value="9026"/>
    </struct>
    <struct type="Organization" from="7531" to="7544">
       <feat name="orgType" value="newspaper/media"/>
       <feat name="id" value="9027"/>
    </struct>
-   <struct type="Location" from="7548" to="7556">
-      <feat name="locType" value="city"/>
-      <feat name="id" value="9031"/>
-      <feat name="matches" value="[7194, 9031]"/>
+   <struct type="NounChunk" from="7531" to="7544">
+      <feat name="id" value="9026"/>
    </struct>
    <struct type="NounChunk" from="7548" to="7556">
       <feat name="id" value="9033"/>
    </struct>
+   <struct type="Location" from="7548" to="7556">
+      <feat name="matches" value="[7194, 9031]"/>
+      <feat name="id" value="9031"/>
+      <feat name="locType" value="city"/>
+   </struct>
    <struct type="Location" from="7558" to="7562">
-      <feat name="locType" value="province"/>
-      <feat name="id" value="9035"/>
       <feat name="matches" value="[7196, 9035]"/>
+      <feat name="id" value="9035"/>
+      <feat name="locType" value="province"/>
    </struct>
    <struct type="NounChunk" from="7558" to="7561">
       <feat name="id" value="9036"/>
    </struct>
-   <struct type="Person" from="7563" to="7566">
-      <feat name="person" value="third"/>
-      <feat name="type" value="anaphoric"/>
-      <feat name="number" value="singular"/>
-      <feat name="id" value="9042"/>
-      <feat name="antecedent_offset" value="7495"/>
-      <feat name="ENTITY_MENTION_TYPE" value="PRONOUN"/>
-      <feat name="gender" value="female"/>
-      <feat name="case" value="nominative"/>
-   </struct>
    <struct type="NounChunk" from="7563" to="7566">
       <feat name="id" value="9041"/>
+   </struct>
+   <struct type="PRN" from="7563" to="7566">
+      <feat name="id" value="prn30"/>
    </struct>
    <struct type="NounChunk" from="7587" to="7621">
       <feat name="id" value="9048"/>
