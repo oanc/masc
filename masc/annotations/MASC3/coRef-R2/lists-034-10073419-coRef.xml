@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cesAna xmlns="http://www.xces.org/schema/2003" version="">
+<cesAna xmlns="http://www.xces.org/schema/2003" version="null">
    <struct type="NounChunk" from="3" to="8">
       <feat name="id" value="440"/>
    </struct>
@@ -16,7 +16,7 @@
       <feat name="isFirst" value="true"/>
       <feat name="gender" value="male"/>
       <feat name="id" value="548"/>
-      <feat name="matches" value="[548, 564, 565]"/>
+      <feat name="matches" value="[548,564,565,605,608,611,620,621]"/>
    </struct>
    <struct type="NounChunk" from="49" to="54">
       <feat name="id" value="441"/>
@@ -67,11 +67,11 @@
       <feat name="id" value="465"/>
    </struct>
    <struct type="Person" from="265" to="277">
-      <feat name="gender" value="male"/>
+      <feat name="" value="singular"/>
       <feat name="person" value="third"/>
-      <feat name="number" value="singular"/>
+      <feat name="gender" value="male"/>
       <feat name="case" value="nominative"/>
-      <feat name="matches" value="[552, 557, 558]"/>
+      <feat name="matches" value="[552,557,558,606,613]"/>
       <feat name="id" value="552"/>
    </struct>
    <struct type="NounChunk" from="265" to="277">
@@ -88,12 +88,12 @@
    </struct>
    <struct type="NounChunk" from="355" to="392">
       <feat name="id" value="470"/>
-      <feat name="matches" value="[473, 476, 483, 488, 502, 523]"/>
+      <feat name="matches" value="[470,473,476]"/>
    </struct>
    <struct type="Organization" from="360" to="369">
+      <feat name="" value="company"/>
+      <feat name="matches" value="[553,554,556,562,563]"/>
       <feat name="id" value="553"/>
-      <feat name="matches" value="[553, 554, 556, 562, 563]"/>
-      <feat name="orgType" value="company"/>
       <feat name="number" value="singular"/>
       <feat name="case" value="objective"/>
       <feat name="person" value="third"/>
@@ -124,12 +124,12 @@
       <feat name="matches" value="[515]"/>
    </struct>
    <struct type="Organization" from="470" to="474">
-      <feat name="matches" value="[1200, 1203, 1204]"/>
+      <feat name="matches" value="[1200,1203,1204]"/>
       <feat name="orgType" value="other"/>
       <feat name="id" value="1200"/>
    </struct>
    <struct type="Person" from="486" to="496">
-      <feat name="matches" value="[559, 1023]"/>
+      <feat name="matches" value="[1023,559]"/>
       <feat name="person" value="third"/>
       <feat name="gender" value="male"/>
       <feat name="case" value="nominative"/>
@@ -184,6 +184,7 @@
    </struct>
    <struct type="NounChunk" from="702" to="729">
       <feat name="id" value="483"/>
+      <feat name="matches" value="[483,488]"/>
    </struct>
    <struct type="NounChunk" from="733" to="741">
       <feat name="id" value="484"/>
@@ -235,13 +236,13 @@
       <feat name="matches" value="[552, 557, 558]"/>
    </struct>
    <struct type="Person" from="936" to="939">
-      <feat name="person" value="third"/>
+      <feat name="number" value="singular"/>
       <feat name="case" value="nominative"/>
       <feat name="gender" value="male"/>
       <feat name="matches" value="[552, 557, 558]"/>
       <feat name="id" value="558"/>
       <feat name="matchedWithLonger" value="true"/>
-      <feat name="number" value="singular"/>
+      <feat name="" value="third"/>
    </struct>
    <struct type="NounChunk" from="936" to="939">
       <feat name="id" value="493"/>
@@ -264,8 +265,8 @@
       <feat name="id" value="495"/>
    </struct>
    <struct type="Person" from="954" to="964">
-      <feat name="matches" value="[559, 1023]"/>
-      <feat name="person" value="third"/>
+      <feat name="" value="third"/>
+      <feat name="matches" value="[559,1023]"/>
       <feat name="case" value="nominative"/>
       <feat name="id" value="559"/>
       <feat name="gender" value="male"/>
@@ -299,7 +300,7 @@
       <feat name="cls" value="Person"/>
    </struct>
    <struct type="Location" from="1015" to="1017">
-      <feat name="rule " value="InLoc"/>
+      <feat name="" value="InLoc"/>
       <feat name="locType" value="city"/>
       <feat name="number" value="singular"/>
       <feat name="case" value="objective"/>
@@ -390,6 +391,7 @@
    </struct>
    <struct type="NounChunk" from="1239" to="1257">
       <feat name="id" value="509"/>
+      <feat name="matches" value="[509,604,615,616]"/>
    </struct>
    <struct type="NounChunk" from="1262" to="1266">
       <feat name="id" value="510"/>
@@ -412,11 +414,11 @@
       <feat name="id" value="512"/>
    </struct>
    <struct type="PRN" from="1283" to="1285">
-      <feat name="number" value="singular"/>
+      <feat name="" value="it"/>
       <feat name="cls" value="Thing"/>
       <feat name="person" value="third"/>
       <feat name="case" value="objective"/>
-      <feat name="string" value="it"/>
+      <feat name="number" value="singular"/>
       <feat name="id" value="614"/>
       <feat name="matches" value="[509]"/>
       <feat name="type" value="anaphoric"/>
@@ -457,12 +459,12 @@
       <feat name="id" value="517"/>
    </struct>
    <struct type="PRN" from="1368" to="1370">
-      <feat name="number" value="singular"/>
+      <feat name="id" value="616"/>
       <feat name="cls" value="Thing"/>
       <feat name="person" value="third"/>
       <feat name="case" value="nominative"/>
       <feat name="string" value="it"/>
-      <feat name="id" value="616"/>
+      <feat name="number" value="singular"/>
       <feat name="matches" value="[509]"/>
       <feat name="type" value="anaphoric"/>
    </struct>
@@ -490,14 +492,15 @@
    </struct>
    <struct type="NounChunk" from="1594" to="1618">
       <feat name="id" value="528"/>
+      <feat name="matches" value="[528,618]"/>
    </struct>
    <struct type="NounChunk" from="1634" to="1638">
       <feat name="id" value="529"/>
    </struct>
    <struct type="PRN" from="1634" to="1638">
-      <feat name="matches" value="[528]"/>
+      <feat name="" value="either"/>
       <feat name="string" value="they"/>
-      <feat name="gender" value="either"/>
+      <feat name="matches" value="[528]"/>
       <feat name="case" value="nominative"/>
       <feat name="person" value="third"/>
       <feat name="cls" value="Person"/>
@@ -537,9 +540,9 @@
       <feat name="id" value="536"/>
    </struct>
    <struct type="PRN" from="1776" to="1782">
-      <feat name="matches" value="[564]"/>
+      <feat name="" value="either"/>
       <feat name="string" value="myself"/>
-      <feat name="gender" value="either"/>
+      <feat name="matches" value="[564]"/>
       <feat name="case" value="reflexive"/>
       <feat name="person" value="first"/>
       <feat name="cls" value="Person"/>
